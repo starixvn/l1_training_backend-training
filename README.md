@@ -108,7 +108,7 @@ graph LR
     GC -->|SSO/Auth| US
     GC -->|WebSocket| SMS
 
-    LS -->|HTTP| SGAPI
+    LS -->|Get Redirect URL| SGAPI
 
     GAS -->|HTTP| GAA
 
@@ -161,6 +161,143 @@ graph LR
 | Game Admin API            | ASP.NET 5.0 | 7778  | Administrative backend         |
 | Game Admin Site           | ASP.NET 5.0 | 7779  | Administrative frontend        |
 | MongoDB                   | Database    | 27017 | Primary data storage           |
+
+### Detailed Service Descriptions
+
+#### 🎮 **Client Layer Services**
+
+**Game Client (Next.js :8007)**
+
+- **Primary Purpose**: Main gaming frontend application for players
+- **Key Features**:
+  - Real-time game interface with WebSocket connections to Sedie Multiplayer
+  - SSO authentication integration with User Service
+  - Game lobby and session management
+  - Responsive design for desktop and mobile gaming
+  - Direct service endpoint configuration for multiplayer games
+- **User Interactions**: Players access games, manage accounts, view game history
+
+**Game Admin Site (ASP.NET :7779)**
+
+- **Primary Purpose**: Administrative interface for system management
+- **Key Features**:
+  - User account management and monitoring
+  - Game configuration and settings management
+  - System health monitoring and analytics
+  - Administrative controls and permissions
+- **User Interactions**: Administrators manage the gaming platform
+
+#### 🔌 **API Layer Services**
+
+**SG API (ASP.NET :8003)**
+
+- **Primary Purpose**: SG (Sports Gaming) system integration and SSO authentication
+- **Key Features**:
+  - Handles SSO sign-in requests and generates redirect URLs
+  - Manages player authentication with operator tokens
+  - Processes SG system data and transactions
+  - Provides SG game integration endpoints
+  - Supports multiple currencies and operator configurations
+- **Data Storage**: Stores SG-specific configurations, authentication logs, and user data
+
+**Game API (ASP.NET :8002)**
+
+- **Primary Purpose**: Core game business logic and partner communication
+- **Key Features**:
+  - Token verification for authentication via AuthVerificationController
+  - Player portal entry and balance management
+  - Betting operations (PlaceBet) and round management
+  - Game result calculations and payouts
+  - Integration with 1W Simulator for game processing
+  - Partner communication for EnterPortal, Balance, PlaceBet operations
+- **Data Storage**: Stores game transactions, results, and player data
+
+**Game Admin API (ASP.NET :7778)**
+
+- **Primary Purpose**: Backend services for administrative operations
+- **Key Features**:
+  - User management and administrative functions
+  - System configuration management
+  - Analytics and reporting endpoints
+  - Administrative authentication and authorization
+- **Data Storage**: Stores administrative data and system configurations
+
+#### ⚙️ **Service Layer Services**
+
+**User Service (NestJS :8004)**
+
+- **Primary Purpose**: User management, authentication, and session handling
+- **Key Features**:
+  - SSO authentication and session management via signIn method
+  - User profile and account management
+  - Session validation for real-time games
+  - Token verification with 1W Simulator (OW API Client)
+  - User data persistence and retrieval
+  - Partner configuration and currency group management
+  - UM (User Management) service integration
+- **Data Storage**: Stores user profiles, sessions, authentication data, and user configurations
+
+**Sedie Multiplayer Service (Node.js :8006)**
+
+- **Primary Purpose**: Real-time multiplayer dice game engine
+- **Key Features**:
+  - WebSocket-based real-time communication
+  - Multiplayer dice game session management (SeDieMultiplayer)
+  - Real-time game state synchronization
+  - Betting choices: even, odd, red2, red3, red4, white3, white4
+  - 23-second round duration with 18-second betting phase
+  - Bot integration with configurable ratios
+  - Provably fair gaming with server seed management
+- **Data Storage**: Stores real-time game states, betting history, and multiplayer sessions
+
+**Game Management Service (NestJS :8005)**
+
+- **Primary Purpose**: Comprehensive game and system configuration management
+- **Key Features**:
+  - Game configuration management (GameConfigsModule)
+  - Currency and currency group management
+  - User management and notifications
+  - Promotion and jackpot management
+  - Exchange rate management
+  - Operator configuration and domain management
+  - Archive status and aggregation services
+- **Data Storage**: Stores game configurations, currencies, promotions, jackpots, and system settings
+
+#### 🎯 **Simulator Layer Services**
+
+**1W Simulator (ASP.NET :8008)**
+
+- **Primary Purpose**: Third-party API simulation for SabaClub gaming provider
+- **Key Features**:
+  - Simulates SabaClub gaming provider APIs
+  - Handles Placebet and EndRound operations
+  - Customer management and balance simulation
+  - Provides realistic game outcome simulation
+  - Supports multiple operators and currencies
+  - Token verification and authentication simulation
+- **Integration**: Receives game requests from Game API for betting operations
+
+**Lobby Simulator (React :8009)**
+
+- **Primary Purpose**: Testing and development interface for lobby functionality
+- **Key Features**:
+  - SSO URL generation and testing
+  - Lobby interface simulation
+  - User flow testing and validation
+  - Development and debugging tools
+- **Integration**: Connects to SG API for redirect URL generation
+
+#### 🗄️ **Database Layer**
+
+**MongoDB (:27017)**
+
+- **Primary Purpose**: Primary data storage for all services
+- **Key Features**:
+  - Document-based storage for flexible data structures
+  - High-performance read/write operations
+  - Scalable architecture for gaming data
+  - Real-time data access for multiplayer games
+- **Data Types**: User data, game states, transactions, configurations, sessions, currencies, promotions, jackpots
 
 ## Communication Flow
 
@@ -244,11 +381,8 @@ yarn --version    # Should show latest version
 #### 1.3 Start MongoDB
 
 ```bash
-# Start MongoDB service (Windows)
+# Start MongoDB Windows Service (Recommended)
 net start MongoDB
-
-# Or start manually
-mongod --dbpath "C:\data\db"
 
 # Verify MongoDB is running
 mongo --eval "db.runCommand({connectionStatus: 1})"
@@ -256,6 +390,8 @@ mongo --eval "db.runCommand({connectionStatus: 1})"
 # Connect with MongoDB Compass (optional)
 # Open MongoDB Compass and connect to: mongodb://localhost:27017
 ```
+
+**Note**: Use the Windows service for MongoDB startup. Manual startup with `mongod` is not recommended for development.
 
 ### Phase 2: Repository Setup
 
@@ -450,6 +586,16 @@ curl http://localhost:8004/api
 curl http://localhost:8007/health
 ```
 
+#### 5.3 Test Game Flow with Lobby Simulator
+
+1. **Open Lobby Simulator**: Navigate to http://localhost:8009/signin
+2. **Get SSO Token**: Click on the "Get Token" button to generate an SSO URL
+3. **Test Authentication**: The system will redirect you through the authentication flow
+4. **Access Game**: Once authenticated, you can access and test the multiplayer dice game
+5. **Verify Real-time Features**: Test WebSocket connections and real-time game functionality
+
+**Note**: This step verifies the complete authentication flow and game access through the lobby system.
+
 ## Service Configuration
 
 ### Environment Variables
@@ -480,37 +626,20 @@ SYSTEM_TYPE=LOCAL
 
 #### Game Client Configuration
 
-**File**: `services/game-client/configs.json`
+**File**: `services/game-client/public/c.js`
 
-```json
-{
-  "serverDomainMapper": {
-    "localhost": "localhost:8007"
+```javascript
+window.c = {
+  serverDomainMapper: {
+    localhost: "localhost:8007",
   },
-  "proxy": {
-    "ssl": false,
-    "subDomain": "",
-    "path": ""
+  proxy: {
+    ssl: false,
+    subDomain: "",
+    path: "",
   },
-  "socketGatewayPath": "gateway"
-}
-```
-
-### WebSocket Configuration
-
-**Game Settings**: `services/game-client/game-settings.json`
-
-```json
-{
-  "148": {
-    "gameName": "SeDieMultiplayer",
-    "socketInfo": {
-      "namespace": "sediemultiplayer",
-      "path": "sediemultiplayer",
-      "serviceEndpoint": "http://localhost:8006"
-    }
-  }
-}
+  socketGatewayPath: "gateway",
+};
 ```
 
 ## Troubleshooting
@@ -608,44 +737,6 @@ curl http://localhost:8001/.well-known/openid_configuration
 
 # Verify JWT token configuration in all services
 ```
-
-### Debug Logging
-
-Enable detailed logging for troubleshooting:
-
-#### Game Client
-
-```javascript
-// Check browser console for:
-// [SOCKET] Direct connection messages
-// [AUTH SUCCESS/FAILED] messages
-// Network tab for API calls
-```
-
-#### User Service
-
-```typescript
-// Console will show:
-// [AUTH SUCCESS] Authentication Successful
-// [AUTH FAILED] Authentication Failed
-// [UM AUTH FAILED] UM Authentication Failed
-```
-
-### Performance Optimization
-
-#### 🚀 **Fast Startup Tips**
-
-1. **Use SSD**: Install on SSD for faster builds
-2. **Parallel Startup**: Use `run-services.bat` for parallel service startup
-3. **Skip Tests**: Use `--no-tests` flag for faster builds
-4. **Incremental Builds**: Don't clean unless necessary
-
-#### 🚀 **Development Workflow**
-
-1. **Keep Core Services Running**: Auth, User Service, MongoDB
-2. **Restart Only Changed Services**: No need to restart all services
-3. **Use Hot Reload**: Game Client supports hot reload
-4. **Database Persistence**: MongoDB data persists across restarts
 
 ## Development Guidelines
 
