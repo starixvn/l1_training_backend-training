@@ -25,7 +25,7 @@ This training repository provides everything you need to run the complete gaming
 
 #### 🟨 **Node.js Development**
 
-- **Node.js >= 20.x** (Required for game-client)
+- **Node.js >= 20.x**
 - **Yarn** package manager
 - **NPM** package manager
 
