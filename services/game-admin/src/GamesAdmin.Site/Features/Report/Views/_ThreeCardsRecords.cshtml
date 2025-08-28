@@ -1,0 +1,131 @@
+﻿@using GamesAdmin.Core
+@using GamesAdmin.Site.Features.Report.ViewModels;
+
+@model ThreeCardsReportResultViewModel
+
+<div class="row row-table">
+    <div class="col-sm-12">
+        @if (Model.RoundResult.Number != 0)
+        {
+            <table class="table table-bordered  table-hover table-three-cards" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Round ID</th>
+                        <th>Exchange ID</th>
+                        <th>Results</th>
+                        <th>Winning Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">@Model.RoundResult.Number</td>
+                        <td class="text-center">@Model.RoundResult.ExchangeRateId</td>
+                        <td class="text-center threecards-result">
+                            <div class="cards">
+                                @foreach (var card in Model.RoundResult.Result)
+                                {
+                                    <div class="card card-type-@card.Suit">
+                                        <span>@card.Rank</span>
+                                        <img class="img" src="~/images/card_@(card.Suit).png" />
+                                    </div>
+                                }
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            @(Model.RoundResult.SettlementResult.Red ? "Red" : "Black")
+                            @if (Model.RoundResult.SettlementResult.Diamonds)
+                            {
+                                <img class="img card-suit" src="~/images/card_1.png" />
+                            }
+                            @if (Model.RoundResult.SettlementResult.Hearts)
+                            {
+                                <img class="img card-suit" src="~/images/card_0.png" />
+                            }
+                            @if (Model.RoundResult.SettlementResult.Spades)
+                            {
+                                <img class="img card-suit" src="~/images/card_3.png" />
+                            }
+                            @if (Model.RoundResult.SettlementResult.Clubs)
+                            {
+                                <img class="img card-suit" src="~/images/card_2.png" />
+                            }
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        <table class="table table-bordered table-hover sticky-table">
+            <thead>
+                <tr>
+                    <th rowspan="2">Round ID</th>
+                    <th rowspan="2" class="col-date">Date (GMT+7)</th>
+                    <th rowspan="2">Operator</th>
+                    <th rowspan="2">Username</th>
+                    <th rowspan="2" class="col-nickname">Nickname</th>
+                    <th rowspan="2">Currency</th>
+                    <th colspan="6" class="col-number">Stake</th>
+                    <th rowspan="2" class="col-number">Win</th>
+                </tr>
+
+                <tr>
+                    <th>Red</th>
+                    <th>Black</th>
+                    <th>Diamonds</th>
+                    <th>Hearts</th>
+                    <th>Spades</th>
+                    <th>Clubs</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bet in Model.Records)
+                {
+                    <tr>
+                        <td class="text-center">
+                            @Model.RoundResult.Number
+                        </td>
+                        <td>@bet.Time.ToString(Constants.DateTimeFormat)</td>
+                        <td class="text-center">@bet.Partner</td>
+                        <td>@bet.Username</td>
+                        <td>
+                            @bet.Nickname
+                        </td>
+                        <td class="text-center">@bet.Currency</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Red) / Model.BaseCurrencyMultiplier : bet.Red)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Black) / Model.BaseCurrencyMultiplier : bet.Black)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Diamonds) / Model.BaseCurrencyMultiplier : bet.Diamonds)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Hearts) / Model.BaseCurrencyMultiplier : bet.Hearts)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Spades) / Model.BaseCurrencyMultiplier : bet.Spades)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Clubs) / Model.BaseCurrencyMultiplier : bet.Clubs)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.BaseBetWin / Model.BaseCurrencyMultiplier : bet.BetWin)</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                @if (!Model.Records.Any())
+                {
+                    <tr>
+                        <td class="text-center" colspan="13">No data</td>
+                    </tr>
+                }
+                else if (Model.ConvertToUSD)
+                {
+                    <tr class="total">
+                        <td>Total in @Model.BaseCurrency</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Red)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Black)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Diamonds)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Hearts)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Spades)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.ConvertToBase(x.Clubs)) / Model.BaseCurrencyMultiplier)</td>
+                        <td class="text-right">@HtmlHelpers.formatNumber(Model.Records.Sum(x => x.BaseBetWin) / Model.BaseCurrencyMultiplier)</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+    </div>
+</div>

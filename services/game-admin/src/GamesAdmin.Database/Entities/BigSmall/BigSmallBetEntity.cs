@@ -1,0 +1,25 @@
+﻿using GamesAdmin.Database.Attributes;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace GamesAdmin.Database.Entities
+{
+    [BsonCollection("taixiu_cuocs")]
+    public class BigSmallBetEntity : BasePoolBetEntity
+    {
+        [BsonElement("taixiu")]
+        public bool BigSmall { get; set; }
+
+        [BsonElement("tralai")]
+        public decimal? Back { get; set; }
+
+        public decimal? Bet { get; set; }
+
+        public bool? Select { get; set; }
+
+        public decimal Refund { get; set; }
+
+        public string Choice { get; set; }
+
+        public decimal Amount { get; set; }
+    }
+}

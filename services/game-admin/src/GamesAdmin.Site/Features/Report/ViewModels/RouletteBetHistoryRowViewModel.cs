@@ -1,0 +1,13 @@
+﻿namespace GamesAdmin.Site.Features.Report.ViewModels
+{
+    public class RouletteBetHistoryRowViewModel
+    {
+        public RouletteSettlementResultViewModel SettlementResult { get; set; }
+
+        public RouletteBetHistoryRecordViewModel Bet { get; set; }
+
+        public bool ConvertToUSD { get; set; }
+
+        public int BaseCurrencyMultiplier { get; set; }
+    }
+}

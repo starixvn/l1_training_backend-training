@@ -5,7 +5,7 @@ const appSelectorConfig = {
     name: "AppType",
     type: "int",
     options: [
-        { value: 1, name: "Saba.Club" },
+        { value: 10, name: "Saba.Club" },
         { value: 2, name: "Saba Mobi" },
         { value: 3, name: "Mini Saba.Club" },
         { value: 4, name: "Mega Keno" },

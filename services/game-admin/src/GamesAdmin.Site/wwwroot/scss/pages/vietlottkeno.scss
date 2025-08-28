@@ -1,0 +1,98 @@
+﻿@import "../base/variables";
+@import "../components/customize-datatable";
+
+.input-validation-error {
+    border: 1px solid #dc3545;
+}
+
+.list-numbers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-add:hover {
+    text-decoration: none;
+}
+
+// Table
+
+.tble-vietlot {
+    .list-numbers {
+        display: grid;
+        grid-template-columns: repeat(10, 3rem);
+        flex-wrap: wrap;
+        grid-gap: .4rem;
+    }
+
+    .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        border: 1px solid #16aaff;
+    }
+
+    .btn-settle {
+        margin-left: 16px;
+        padding: 4px;
+        border: 1px solid;
+        border-radius: 3px;
+        color: #007bff;
+
+        &:hover {
+            cursor: pointer;
+            color: #da624a;
+        }
+    }
+}
+// Add new round
+.new-round {
+    max-width: 51rem;
+
+    .number {
+        display: block;
+        position: relative;
+        height: 4rem;
+        width: 4rem;
+        padding-left: 30px;
+        margin: 0.4rem;
+        cursor: pointer;
+
+        input {
+            vertical-align: top;
+            margin-right: 1rem;
+            position: absolute;
+            left: 12px;
+            top: -1px;
+            height: 4rem;
+            width: 4rem;
+            opacity: 0;
+        }
+
+        .control_indicator {
+            position: absolute;
+            top: 0.2rem;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+        }
+    }
+    // Hover and focus
+    .number input + .control_indicator {
+        background: #e6e6e6;
+        color: $text-color;
+        cursor: pointer;
+    }
+    // Checked
+    .number input:checked + .control_indicator {
+        background: #16aaff;
+        color: #fff;
+    }
+}

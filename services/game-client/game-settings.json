@@ -5,7 +5,8 @@
         "tolgeeNamespace": "SeDie",
         "socketInfo": {
             "namespace": "sediemultiplayer",
-            "path": "sediemultiplayer"
+            "path": "sediemultiplayer",
+            "serviceEndpoint": "http://localhost:8006"
         },
         "durations": {
             "wholeRound": 23,

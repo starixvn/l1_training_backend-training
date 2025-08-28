@@ -1,0 +1,34 @@
+﻿using System.Collections.Generic;
+using GamesAdmin.Core.Models.GameConfigs;
+using MediatR;
+
+namespace GamesAdmin.Site.Features.GameSettings.Requests
+{
+    public class UpdateGeneralConfigRequest : IRequest<bool>
+    {
+        public UpdateGeneralConfigRequest(GameInfo gameInfo, BotSetting botSetting, EnableSetting enableSetting, OddsMultipliersConfig oddsMultipliers = null, IEnumerable<int> otherGameIdsInGroup = null, TournamentConfig tournamentConfig = null, VideoStreamConfig videoStreamConfig = null)
+        {
+            GameInfo = gameInfo;
+            BotSetting = botSetting;
+            EnableSetting = enableSetting;
+            OddsMultipliers= oddsMultipliers;
+            OtherGameIdsInGroup = otherGameIdsInGroup;
+			TournamentConfig = tournamentConfig;
+			VideoStreamConfig = videoStreamConfig;
+		}
+
+        public GameInfo GameInfo { get; }
+
+        public BotSetting BotSetting { get; }
+
+        public EnableSetting EnableSetting { get; }
+
+        public OddsMultipliersConfig OddsMultipliers { get; }
+
+		public TournamentConfig TournamentConfig { get; }
+
+		public VideoStreamConfig VideoStreamConfig { get; }
+
+		public IEnumerable<int> OtherGameIdsInGroup { get; }
+    }
+}

@@ -13,6 +13,8 @@
 | Game Client               | http://localhost:8007/ |
 | 1W Simulator              | http://localhost:8008/ |
 | Lobby Simulator           | http://localhost:8009/ |
+| Game Admin API            | http://localhost:7778/ |
+| Game Admin Site           | http://localhost:7779/ |
 
 ## Quick Start Using run-services.bat
 

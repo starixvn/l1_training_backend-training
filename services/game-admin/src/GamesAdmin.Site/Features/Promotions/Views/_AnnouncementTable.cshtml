@@ -1,0 +1,141 @@
+﻿@using System.Text;
+@using GamesAdmin.Site.Features._Shared;
+@using GamesAdmin.Core.Enumeration;
+@using GamesAdmin.Site.Extensions;
+@using GamesAdmin.Site.Features.Promotions.ViewModels;
+@model IEnumerable<AnnouncementViewModel>
+@{
+    var hasAdminPermission = Context.HasAdminPermission();
+    var numberOfLanguage = Language.EmptyLanguages.Count;
+}
+
+@functions{
+    public string GetDisplayPromotion(AnnouncementViewModel viewModel)
+    {
+        if (viewModel.IsHappyHours)
+        {
+            return GetHappyHoursPromotionDisplay(viewModel.Promotion);
+        }
+        else
+        {
+            return GetPromotionCampaignDisplay(viewModel.PromotionCampaign);
+        }
+    }
+    public string GetHappyHoursPromotionDisplay(PromotionViewModel promotion)
+    {
+        if (promotion == null)
+        {
+            return string.Empty;
+        }
+
+        var gameName = Game.FromGameId(promotion.GameId).DisplayName;
+        return promotion.IsDaily
+            ? $"{gameName} - From {promotion.StartDate.ToDateFormat()}<br />" +
+              $"to {promotion.EndDate.ToDateFormat()}, {promotion.StartTime.ToTimeFormat()} - {promotion.EndTime.ToTimeFormat()}"
+            : $"{gameName} - From {promotion.StartDate.ToDateFormat()} {promotion.StartTime.ToTimeFormat()}<br />" +
+              $"to {promotion.EndDate.ToDateFormat()} {promotion.EndTime.ToTimeFormat()}";
+    }
+
+    public string GetPromotionCampaignDisplay(PromotionCampaignViewModel promotionCampaign)
+    {
+        if (promotionCampaign == null)
+        {
+            return string.Empty;
+        }
+        return $"{promotionCampaign.Name} - From {promotionCampaign.StartDate.ToDateFormat()} {promotionCampaign.StartTime.ToTimeFormat()}<br />" +
+            $"to {promotionCampaign.EndDate.ToDateFormat()} {promotionCampaign.EndTime.ToTimeFormat()}";
+    }
+
+    public string GetDisplayDateTime(AnnouncementViewModel viewModel)
+    {
+        return $"From {viewModel.StartTime?.ToTimeFormat()} {viewModel.StartTime?.ToDateFormat()}<br />to {viewModel.EndTime?.ToTimeFormat()} {viewModel.EndTime?.ToDateFormat()}";
+    }
+
+    public void RenderMessageRow(string language, AnnouncementViewModel viewModel, bool hasAdminPermission)
+    {
+        var title = viewModel.Title.ContainsKey(language) ? viewModel.Title[language] : string.Empty;
+        var messages = viewModel.Messages.ContainsKey(language) ? viewModel.Messages[language] : string.Empty;
+        <tr>
+            <td style="display: none;"></td>
+            <td style="display: none;"></td>
+            <td class="text-center">@language</td>
+            <td>@title</td>
+            <td>@messages</td>
+            <td style="display: none;">@Html.Raw(GetDisplayDateTime(viewModel))</td>
+            <td style="display: none;">@Html.Raw(GetDisplayPromotion(viewModel))</td>
+            @if (hasAdminPermission)
+            {
+                <td style="display: none;"></td>
+            }
+        </tr>
+    }
+}
+<table id="announcement-table" class="table table-bordered stripe table-light">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Status</th>
+            <th>Language</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Valid day (GMT+7)</th>
+            <th>Promotion Mapping</th>
+            @if (hasAdminPermission)
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var index = 1;
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center" rowspan="@numberOfLanguage">@(index++)</td>
+                    <td class="text-center" rowspan="@numberOfLanguage">
+                        @if (item.Enabled == true)
+                        {
+                            <i class="icon-check"></i>
+                        }
+                        else
+                        {
+                            <i class="icon-cancel"></i>
+                        }
+                    </td>
+                    <td class="text-center">@Language.EN</td>
+                    <td>@item.Title[Language.EN]</td>
+                    <td>@item.Messages[Language.EN]</td>
+                    <td class="text-center" rowspan="@numberOfLanguage">@Html.Raw(GetDisplayDateTime(item))</td>
+                    <td class="text-center" rowspan="@numberOfLanguage">@Html.Raw(GetDisplayPromotion(item))</td>
+                    @if (hasAdminPermission)
+                    {
+                        <td class="text-center" rowspan="@numberOfLanguage">
+                            <a type="button" class="btn btn-success btn-lg"
+                               data-ajax="true"
+                               data-ajax-mode="replace"
+                               data-ajax-update="#update-modal .modal-content .modal-body tbody"
+                               data-ajax-success="promotionAnnouncement.openUpdateForm"
+                               asp-route-id=@item.Id
+                               asp-action="UpdateAnnouncement">
+                                Edit
+                            </a>
+                            <button type="button" class="btn btn-danger btn-lg" onclick="promotionAnnouncement.openModalDelete('@item.Id')">
+                                Delete
+                            </button>
+                        </td>
+                    }
+                </tr>
+                {
+                    RenderMessageRow(Language.VN, item, hasAdminPermission);
+                    RenderMessageRow(Language.CN, item, hasAdminPermission);
+                    RenderMessageRow(Language.TW, item, hasAdminPermission);
+                    RenderMessageRow(Language.TH, item, hasAdminPermission);
+                    RenderMessageRow(Language.ID, item, hasAdminPermission);
+                    RenderMessageRow(Language.JA, item, hasAdminPermission);
+                    RenderMessageRow(Language.ES, item, hasAdminPermission);
+                }
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,173 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-GamesAdmin.Site-CD4B8648-F4AA-4CB6-8646-C66F4D721A19</UserSecretsId>
+    <Configurations>Dev;SIT;UAT;PROD;LOCAL</Configurations>
+    <CodeAnalysisRuleSet>..\..\.sonarlint\l1-game-admincsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings - Copy.LOCAL.json" />
+    <Content Remove="appsettings - Copy.PROD.json" />
+    <Content Remove="appsettings.Debug.json" />
+    <Content Remove="appsettings.Dev.json" />
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\js\domain.min.js" />
+    <Content Remove="wwwroot\js\hilo-report.min.js" />
+    <Content Remove="wwwroot\images\slot-icons\nightclub\" />
+    <Content Remove="wwwroot\js\promotion-leaderboard.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\domain.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\hilo-report.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\promotion-leaderboard.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\scss\pages\online-users.css" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Audit.Mvc.Core" Version="18.1.6" />
+    <PackageReference Include="Audit.NET.MongoDB" Version="18.1.6" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="1.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="3.3.3" />
+    <PackageReference Include="Coravel" Version="3.6.1" />
+    <PackageReference Include="IdentityModel.AspNetCore" Version="1.0.0-rc.4.1" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah" Version="3.2.26">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="refit" Version="7.2.22" />
+    <PackageReference Include="Refit.Newtonsoft.Json" Version="7.2.22" />
+    <PackageReference Include="Sentry" Version="2.1.0" />
+    <PackageReference Include="Sentry.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GamesAdmin.Core\GamesAdmin.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\game-admin\_next\rmtxTm8B14eU70SRrA5fB\" />
+    <Folder Include="wwwroot\game-admin\_next\static\development\pages\next\dist\pages\" />
+    <Folder Include="wwwroot\lib\data-tables\DataTables-1.10.20\" />
+    <Folder Include="wwwroot\images\slot-icons\nightclub\" />
+	<Folder Include="wwwroot\js\lobby\bundles\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="appsettings.Debug.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Include="appsettings.Dev.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\game-admin\**" />
+    <AdditionalFiles Include="..\..\.sonarlint\l1-game-admin\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+    <None Include="wwwroot\js\internal-account.min.js" />
+    <None Include="wwwroot\js\domain.min.js" />
+    <None Include="wwwroot\js\hilo-report.min.js" />
+    <None Include="wwwroot\js\promotion-leaderboard.min.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\af.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ar.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\az.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\bg.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\bn.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\bs.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ca.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\cs.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\da.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\de.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\dsb.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\el.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\en.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\es.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\et.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\eu.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\fa.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\fi.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\fr.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\gl.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\he.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\hi.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\hr.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\hsb.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\hu.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\hy.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\id.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\is.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\it.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ja.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ka.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\km.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ko.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\lt.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\lv.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\mk.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ms.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\nb.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ne.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\nl.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\pl.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ps.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\pt-BR.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\pt.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ro.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\ru.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sk.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sl.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sq.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sr-Cyrl.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sr.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\sv.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\th.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\tk.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\tr.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\uk.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\vi.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\zh-CN.js" />
+    <None Include="wwwroot\lib\select2\dist\js\i18n\zh-TW.js" />
+    <None Include="wwwroot\lib\select2\dist\js\select2.full.js" />
+    <None Include="wwwroot\lib\select2\dist\js\select2.full.min.js" />
+    <None Include="wwwroot\lib\select2\dist\js\select2.js" />
+    <None Include="wwwroot\lib\select2\dist\js\select2.min.js" />
+    <None Include="wwwroot\scss\fonts\admin-icons\demo-files\demo.js" />
+    <None Include="wwwroot\scss\fonts\admin-icons\fonts\icomoon.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <Content Update="configs\sc1\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="configs\sc1\appsettings.LOCAL.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\scss\themes\themel2.min.css">
+      <DependentUpon>themel2.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+</Project>

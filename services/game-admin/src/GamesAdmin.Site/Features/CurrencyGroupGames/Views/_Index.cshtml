@@ -1,0 +1,126 @@
+@{
+    Layout = null;
+}
+
+@using GamesAdmin.Site.Features.CurrencyGroupGames.ViewModels;
+@model IndexViewModel;
+
+@{
+    ViewData["Title"] = "";
+}
+
+@section Styles {
+    <link href="~/css/adjust-bot.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div>
+    <ul class="nav nav-custom" id="setting-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="setting-tab-header" href="#" onclick="currencyGroupGame.toggleTab('setting')">Setting</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="site-exclusion-tab-header" href="#" onclick="currencyGroupGame.toggleTab('site-exclusion')">Site Exclusion</a>
+        </li>
+        @if (Model.GameType == GamesAdmin.Core.Enumeration.GameType.GuaranteedWin)
+        {
+            <li class="nav-item">
+                <a class="nav-link" id="guaranteed-feature-tab-header" href="#" onclick="currencyGroupGame.toggleTab('guaranteed-feature')">Guaranteed Feature</a>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="message-success hidden-cls" id="currency-group-game-successMsg"><i class="icon-check"></i><span>Updated successfully</span></div>
+<div class="message-error hidden-cls" id="currency-group-game-failedMsg"><i class="icon-cancel"></i><span>Error</span></div>
+
+<form class="card-body form" id="currency-group-game-edit-form">
+    <input readonly hidden id="firstGroup" asp-for="@Model.GroupSelectList.FirstOrDefault().Value" />
+    <input readonly hidden asp-for="@Model.GameType" />
+    <input readonly hidden asp-for="@Model.GameName" />
+    <input readonly hidden asp-for="@Model.PartnerId" />
+
+    @if (Model.OtherGameIdsInGroup.Any())
+    {
+        <div class="form-group row ml-0">
+            <div class="col-3">
+                <label class="control-label" for="">Same setting games</label>
+            </div>
+            <div class="col-4">
+                <select hidden multiple class="form-control"
+                    asp-items="Model.OtherGamesInGroup"
+                    asp-for="OtherGameIdsInGroup">
+                </select>
+                <select class="form-control" id="fanexGameIds"></select>
+            </div>
+        </div>
+    }
+
+    <div class="form-group">
+        <div class="col-4">
+            <label class="control-label" for="PartnerIds">Operator : <b>@Model.PartnerName</b></label>
+        </div>
+
+    </div>
+    <div class="form-group" id="setting">
+        <div class="form-group row ml-0">
+            <div class="col-3 mt-3 pb-3">
+                <label class="control-label">Currency Group: </label>
+            </div>
+            <div class="col-4">
+                <select class="form-control"
+                        asp-items="Model.GroupSelectList"
+                        asp-for="GroupId"
+                        onchange="currencyGroupGame.onChangeGroup('@Model.GameName','@Model.GameType',false)">
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row ml-0">
+            <div class="col-3 mt-3 pb-3">
+                <input type="checkbox" asp-for="IsCopySetting" onclick="currencyGroupGame.enableDropDownList(event)" />
+                <label asp-for="IsCopySetting" class="control-label">Copy Setting from:</label>
+            </div>
+            <div class="col-4">
+                <select class="form-control" disabled
+                        asp-items="Model.AllCurrencyGroupList"
+                        asp-for="GroupIdCopy"
+                        onchange="currencyGroupGame.onChangeGroup('@Model.GameName','@Model.GameType',true)">
+                </select>
+            </div>
+        </div>
+
+        <div class="card-body" id="currency-group-game-setting">
+        </div>
+    </div>
+    <div id="site-exclusion" style="display:none;">
+        <br />
+        <div class="message-success hidden-cls" id="updateExclusionsSuccess"><i class="icon-check"></i><span>Updated successfully</span></div>
+        <div class="message-error hidden-cls" id="updateExclusionsFailed"><i class="icon-cancel"></i><span>Error</span></div>
+
+        <div class="text-message ml-4">
+            <label class="font-weight-bold">Input Site Name To Exclude</label>
+            <br />
+            <textarea rows="3" cols="50" id="siteExclusions" placeholder="Names are separated by ';'"></textarea>
+        </div>
+    </div>
+
+    @if (Model.GameType == GamesAdmin.Core.Enumeration.GameType.GuaranteedWin)
+    {
+        <div id="guaranteed-feature" style="display:none;">
+            <div class="form-group row ml-0">
+                <div class="col-3 mt-3 pb-3">
+                    <label class="control-label">Currency Group: </label>
+                </div>
+                <div class="col-4">
+                    <select class="form-control"
+                            asp-items="Model.GroupSelectList"
+                            asp-for="GroupId"
+                            onchange="currencyGroupGame.onChangeGroupInGuaranteedFeature()">
+                    </select>
+                </div>
+            </div>
+            <div id="guaranteed-feature-configs">
+            </div>
+        </div>
+    }
+</form>

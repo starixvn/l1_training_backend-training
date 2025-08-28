@@ -1,0 +1,12 @@
+@using GamesAdmin.Site.Features.GameSettings.ViewModels;
+@model EditViewModel;
+@{
+    Layout = null;
+    ViewData["Title"] = Model.DisplayName;
+}
+
+@section Styles {
+    <link href="~/css/adjust-bot.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<partial name="@Model.DetailsView" model="@Model" />

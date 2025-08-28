@@ -48,7 +48,7 @@ export default class SignIn extends React.Component {
             token: "",
             redirectUrl: "#",
             verifyResult: null,
-            gameId: 0,
+            gameId: 148,
             setting: {
                 owUrl: ""
             },

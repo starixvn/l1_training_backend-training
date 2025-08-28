@@ -1,0 +1,34 @@
+﻿@using GamesAdmin.Site.Features.Report.ViewModels
+
+@model GenerateBoardViewModel
+@{
+    var renderedBoard = Model.GetFormatBoard();
+}
+<table class="table-result-board">
+    <tbody>
+
+        @for (var row = 0; row < renderedBoard.GetLength(0); row++)
+        {
+            <tr>
+                @for (var column = 0; column < renderedBoard[row].Length; column++)
+                {
+                    var multiplierSymbol  = renderedBoard[row][column];
+                    @if (multiplierSymbol.IsMultiplierSymbol)
+                    {
+                        <td class="result-board">
+                            <img class="symbol" src="@Model.SymbolUrl-@(Model.GetMultiplierSymbolCascadingSlot(multiplierSymbol.Multiplier)).png" />
+                            <div class="multiplier">@multiplierSymbol.XMultiplier</div>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <img class="symbol" src="@Model.SymbolUrl-@(multiplierSymbol.Symbol.ToString()).png" />
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+
+</table>

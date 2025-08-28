@@ -1,0 +1,83 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using GamesAdmin.Site.Features.Dashboard.Requests;
+using GamesAdmin.Site.Features.Dashboard.ViewModels;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace GamesAdmin.Site.Features.Dashboard
+{
+    [Authorize]
+    public class DashboardController : Controller
+    {
+        private readonly IMediator mediator;
+
+        public DashboardController(IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var viewModel = await mediator.Send(new GetOnlineUsersRequest());
+
+            return View("~/Features/Dashboard/Views/OnlineUsers.cshtml", viewModel);
+        }
+
+        [HttpGet]
+        public async Task<int> RealOnlineUsers()
+        {
+            return (await mediator.Send(new GetOnlineUsersRequest())).TotalRealPlayer;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> OnlineUsers()
+        {
+            var viewModel = await mediator.Send(new GetOnlineUsersRequest());
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOnlineUsers(bool includeTestAccount, int game, IEnumerable<string> partnerIds)
+        {
+            var result = await mediator.Send(new GetOnlineUsersByGameRequest(game));
+            var users = FilterOnlineUser(partnerIds.AsEnumerable(), result.RealUsers.AsEnumerable());
+
+            if (includeTestAccount)
+            {
+                var testAccounts = FilterOnlineUser(partnerIds.AsEnumerable(), result.TestUsers.AsEnumerable());
+
+                users.AddRange(testAccounts.AsEnumerable());
+            }
+
+            return PartialView("_OnlineUserTable", users);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> BotUsers()
+        {
+            var viewModel = await mediator.Send(new GetOnlineUsersRequest());
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetBotUsers(int game = 0)
+        {
+            var result = await mediator.Send(new GetOnlineUsersByGameRequest(game));
+
+            return PartialView("_BotUserTable", result.Bots);
+        }
+
+        private static List<OnlineUserViewModel> FilterOnlineUser(IEnumerable<string> partnerIds, IEnumerable<OnlineUserViewModel> onlineUsers)
+        {
+            bool filter(OnlineUserViewModel user) => partnerIds.Any(id => string.Equals(id, user.PartnerId));
+
+            return onlineUsers.Where(filter).ToList();
+        }
+    }
+}

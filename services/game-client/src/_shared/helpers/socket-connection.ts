@@ -8,12 +8,29 @@ import useGameStore from "../stores/game-store/game-store";
 import useBettingStore from "../stores/betting-store/betting-store";
 
 export function InitSocketIO(socketInfo: SocketInfo, session: any, gameName: string, gameMessageHandler: GameMessageHandler) {
-    const { proxy, enableMsgpackParser } = getAppSettings();
-    const socketUri = buildServerUrl(socketInfo.namespace);
+    const { proxy, enableMsgpackParser, socketGatewayPath } = getAppSettings();
+
+    // Use direct service endpoint if available, otherwise use the original proxy approach
+    let socketUri: string;
+    let socketPath: string;
+
+    if (socketInfo.serviceEndpoint) {
+        // Direct connection to service endpoint with correct namespace
+        const namespace = `/user/${socketInfo.namespace}`;
+        socketUri = `${socketInfo.serviceEndpoint}${namespace}`;
+        socketPath = "/socket.io";
+        console.log(`[SOCKET] Direct connection to service: ${socketUri} with path: ${socketPath}`);
+    } else {
+        // Original proxy approach through game client
+        socketUri = buildServerUrl(socketInfo.namespace);
+        socketPath = !proxy.path && socketGatewayPath ? `/${socketGatewayPath}/socket.io` : `${proxy.path}/${socketInfo.path}/socket.io`;
+        console.log(`[SOCKET] Proxy connection through game client: ${socketUri}${socketPath}`);
+    }
+
     const socketOption = {
         forceNew: true,
         transports: ["websocket"],
-        path: `${proxy.path}/${socketInfo.path}/socket.io`,
+        path: socketPath,
         upgrade: false,
         parser: enableMsgpackParser ? MsgpackParser : undefined,
     };

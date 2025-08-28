@@ -65,17 +65,18 @@ export class AuthService {
             const request = new VerifyTokenRequest(this.utilsService.normalizeIP(ip), token, userAgent);
             const data = await this.apiClient.verifyToken(request);
             const umSettings = await this.umService.getUMResult(data?.operatorId);
-            const isValidToken = data && data.isSuccessful && this.checkValidAppType(data.appType, system);
+            const isValidToken = data && data.isSuccessful;
             if (!isValidToken) {
-                this.logger.log(
-                    [
-                        `Authentication Failed`,
-                        `Request: ${JSON.stringify(request)}`,
-                        `Result: ${JSON.stringify(data)}`,
-                        `IP Info: ${request.ip}`,
-                        `System: ${system}`,
-                    ].join('\n'),
-                );
+                const authFailedMessage = [
+                    `Authentication Failed`,
+                    `Request: ${JSON.stringify(request)}`,
+                    `Result: ${JSON.stringify(data)}`,
+                    `IP Info: ${request.ip}`,
+                    `System: ${system}`,
+                ].join('\n');
+
+                this.logger.log(authFailedMessage);
+                console.log(`[AUTH FAILED] ${authFailedMessage}`);
 
                 return new AuthenticateResult(
                     false,
@@ -90,6 +91,17 @@ export class AuthService {
                 : false;
 
             if (umSettings.isUM && !isSuperPlayer) {
+                const umFailedMessage = [
+                    `UM Authentication Failed - Not Super Player`,
+                    `Username: ${username}`,
+                    `Member Name: ${user?.local.memberName}`,
+                    `Partner ID: ${user?.local.partnerId ?? user?.local.clientId}`,
+                    `UM Settings: ${JSON.stringify(umSettings.umInfo)}`,
+                    `System: ${system}`,
+                ].join('\n');
+
+                console.log(`[UM AUTH FAILED] ${umFailedMessage}`);
+
                 return new AuthenticateResult(
                     false,
                     new UMResult(umSettings.umInfo.start, umSettings.umInfo.end, umSettings.umInfo.partnerId),
@@ -101,6 +113,18 @@ export class AuthService {
             const currencyGroup = await this.currencyGroupService.getCurrencyGroup(userSession.currencyGroupId);
             const offerGames = await this.getOfferGames(userSession, currencyGroup);
             const fractionalOddsFormat = currencyGroup.fractionalOddsFormat;
+
+            const successMessage = [
+                `Authentication Successful`,
+                `Username: ${userSession.username}`,
+                `Session ID: ${userSession.sessionId}`,
+                `Player Name: ${userSession.playerName}`,
+                `System: ${userSession.system}`,
+                `Currency: ${userSession.currencyCode}`,
+                `Language: ${userSession.language}`,
+            ].join('\n');
+
+            console.log(`[AUTH SUCCESS] ${successMessage}`);
 
             return new AuthenticateResult(
                 true,
@@ -117,7 +141,9 @@ export class AuthService {
                 fractionalOddsFormat,
             );
         } catch (error) {
-            this.logger.error(`Error signing in: ${error}`);
+            const errorMessage = `Error signing in: ${error}`;
+            this.logger.error(errorMessage);
+            console.error(`[AUTH ERROR] ${errorMessage}`, error);
             throw error;
         }
     }

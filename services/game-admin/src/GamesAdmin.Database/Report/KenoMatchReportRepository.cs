@@ -1,0 +1,57 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using GamesAdmin.Core.Models.BetReport;
+using GamesAdmin.Database.Entities;
+using GamesAdmin.Database.Report.Entities;
+using MongoDB.Driver;
+
+namespace GamesAdmin.Database
+{
+    public interface IKenoMatchReportRepository
+    {
+        Task<(TRoundEntity, IEnumerable<KenoMatchBetReportEntity>)> GetAsync<TRoundEntity, TOneEntity>(BetReportFilter filter)
+                where TRoundEntity : KenoMatchRoundEntity, new()
+                where TOneEntity : KenoMatchOneEntity;
+    }
+
+    public class KenoMatchReportRepository : BaseBetReportRepository, IKenoMatchReportRepository
+
+    {
+        public KenoMatchReportRepository(IMongoDatabase database) : base(database)
+        {
+        }
+
+        public async Task<(TRoundEntity, IEnumerable<KenoMatchBetReportEntity>)> GetAsync<TRoundEntity, TOneEntity>(BetReportFilter filter)
+            where TRoundEntity : KenoMatchRoundEntity, new()
+            where TOneEntity : KenoMatchOneEntity
+        {
+            var roundResult = await database.GetCollection<TRoundEntity>(Document.GetCollectionName(typeof(TRoundEntity)))
+                .Find(x => x.Number == filter.RoundId && x.Settled).FirstOrDefaultAsync();
+
+            if (roundResult != null)
+            {
+                var project = GetBaseAggregateBuilder<TOneEntity, KenoMatchBetWithUnwindAccountsEntity>(
+                    filter.RoundId, filter.Nickname, filter.ExcludeBot, filter.ExcludeUUS, filter.PartnerId, filter.Username)
+                    .Project(x => new KenoMatchBetReportEntity
+                    {
+                        Time = x.Time,
+                        Username = x.AccountInfos.IsBot ? x.Accounts.Local.Username : x.Accounts.Local.MemberName,
+                        Nickname = x.AccountInfos.Name,
+                        BetWin = x.Betwin,
+                        TotalBet = x.TotalAmount,
+                        Refund = x.Refund,
+                        UserId = x.Uid,
+                        Currency = x.Currency,
+                        Rate = x.Rate,
+                        PartnerId = x.OperatorId
+                    });
+                var records = await project.ToListAsync();
+
+                return (roundResult, records);
+            }
+
+            return (new TRoundEntity(), Enumerable.Empty<KenoMatchBetReportEntity>());
+        }
+    }
+}

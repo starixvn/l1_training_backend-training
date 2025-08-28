@@ -1,0 +1,44 @@
+﻿@using GamesAdmin.Site.Extensions
+@using GamesAdmin.Site.Features.Report.ViewModels;
+
+@model KenoBetHistoryViewModel
+
+@{ Layout = null; }
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="col-date">Date (GMT+7)</th>
+                    <th>Choice</th>
+                    <th class="col-number">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bet in Model.Bets)
+                {
+
+                    <tr>
+                        <td>@bet.Time.ToString(GamesAdmin.Core.Constants.DateTimeFormat)</td>
+                        <td>
+                            @bet.Choice
+                        </td>
+                        <td class="text-right">
+                            @HtmlHelpers.formatNumber(Model.ConvertToUSD ? bet.ConvertToBase(bet.Amount) / Model.BaseCurrencyMultiplier : bet.Amount)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                @if (!Model.Bets.Any())
+                {
+                    <tr>
+                        <td class="text-center" colspan="13">No data</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+    </div>
+</div>

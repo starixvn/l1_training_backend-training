@@ -1,0 +1,106 @@
+﻿.form {
+    .form-control {
+        padding: 0.8rem 1rem;
+        line-height: 1;
+        height: 3.6rem;
+        border: 1px solid #ced4da;
+        border-radius: .5rem;
+        box-shadow: none !important;
+        outline: initial !important;
+        font-size: 1.6rem;
+        background: #fff;
+        color: #3a3a3a;
+
+        @media screen and (min-device-width: 1300px) {
+            font-size: 1.4rem;
+        }
+
+        &.small {
+            height: 2.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .form-control:disabled,
+    .form-control[readonly] {
+        color: #6c757d;
+        background-color: #e9ecef;
+    }
+
+    .form-group {
+        margin-bottom: 1.6rem;
+    }
+
+    .field-validation-error {
+        margin: 1rem 0;
+    }
+
+
+    &.filter {
+        display: table;
+        background: #fff;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: .5rem;
+        border: 1px solid #dee2e6;
+    }
+
+    legend {
+        width: auto;
+        padding: 0 8px;
+        font-weight: bold;
+
+        .note {
+            font-weight: normal;
+        }
+    }
+
+    fieldset {
+        padding: 3px 20px;
+        border: 1px solid #ced4da;
+    }
+
+    .back-button {
+        margin-right: 1.4rem;
+    }
+
+    .input-validation-error {
+        border-color: #dc3545;
+    }
+}
+
+.filter .list-buttons {
+    display: flex;
+    margin-top: 2.5rem;
+
+    [class^="btn"] {
+        margin-right: 1.6rem;
+    }
+
+    [class^="btn"]:last-child {
+        margin-right: 0;
+    }
+}
+
+%message {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 4px;
+
+
+    [class^="icon-"] {
+        margin-right: 8px;
+    }
+}
+.message-success {
+    @extend %message;
+    border: 1px solid #3ac47d;
+    color: #3ac47d;
+}
+
+.message-error {
+    @extend %message;
+    border: 1px solid #d92550;
+    color: #d92550;
+}

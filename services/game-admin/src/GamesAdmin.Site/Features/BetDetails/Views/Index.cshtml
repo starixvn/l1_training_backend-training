@@ -1,0 +1,78 @@
+﻿@using GamesAdmin.Site._Shared.ViewComponents
+@model GamesAdmin.Site.Features.BetDetails.ViewModels.BetDetailsViewModel
+
+<div class="d-flex">
+    <div class="col-md-12 col-lg-5 card">
+        <form class="card-body form-add form" id="bet-details-form" asp-action="Index" asp-controller="BetDetails" method="post" target="_blank">
+
+            <div class="form-group">
+                <div>
+                    <label asp-for="OperatorId" class="control-label">OperatorId</label>
+                    <select asp-items="@Model.OperatorItem" asp-for="OperatorId" class="form-control"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="SiteId" class="control-label">Site ID</label>
+                    <input type="text" asp-for="SiteId" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="GameType" class="control-label">Game Type</label>
+                    @await Component.InvokeAsync(nameof(SelectGame), new { Name = "GameType" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="RoundId" class="control-label">RoundId</label>
+                    <input type="number" asp-for="RoundId" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlayerId" class="control-label">PlayerId</label>
+                <input type="text" asp-for="PlayerId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="Language" class="control-label"></label>
+                    <select asp-items="@Model.LanguageItem" asp-for="Language" class="form-control"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeZoneOffset" class="control-label">Timezone Offset</label>
+                <input type="number" asp-for="TimeZoneOffset" class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Mode" class="control-label">Mode</label>
+                <select asp-items="@Model.Theme" asp-for="Mode" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" asp-for="FreeBet" />
+                <label asp-for="FreeBet" class="control-label">Free Bet</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" asp-for="UseHmacHash" />
+                <label asp-for="UseHmacHash" class="control-label">Use Hmac Hash</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Get Bet Details" class="btn-submit" />
+                <input type="button" class="btn-submit" id="btn-retrieve-end-round" value="Retrieve End Round" />
+            </div>
+        </form>
+    </div>
+    <fieldset class="col-md-12 col-lg-5 card retrieve-end-round-result-field d-none ml-5">
+        <pre id="retrieve-end-round-result"></pre>
+    </fieldset>
+</div>
+
+@section Scripts
+    {
+    <environment include="Development">
+        <script src="~/js/bet-details.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/bet-details.min.js" asp-append-version="true"></script>
+    </environment>
+}

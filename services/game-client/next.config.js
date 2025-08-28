@@ -61,6 +61,30 @@ const nextConfig = withSentryConfig({
             },
         ];
 
+        // Local development service routing
+        const localServiceRewrites = [
+            // User Service routing
+            {
+                source: "/user/:path*",
+                destination: "http://localhost:8004/:path*",
+            },
+            // Game API routing
+            {
+                source: "/game-api/:path*",
+                destination: "http://localhost:8002/:path*",
+            },
+            // Auth API routing
+            {
+                source: "/auth/:path*",
+                destination: "http://localhost:8001/:path*",
+            },
+            // Game Management Service routing
+            {
+                source: "/game-management-service/:path*",
+                destination: "http://localhost:8005/:path*",
+            },
+        ];
+
         // If a basePath is set, support a dynamic :gameId segment after it
         if (basePath) {
             const baseNoSlash = basePath.endsWith("/") ? basePath.slice(0, -1) : basePath;
@@ -82,7 +106,7 @@ const nextConfig = withSentryConfig({
                     destination: `${baseNoSlash}`,
                 },
             ];
-            return [...base, ...prodGameIdRewrites];
+            return [...base, ...localServiceRewrites, ...prodGameIdRewrites];
         }
 
         // Allow accessing the app under /:gameId/... on localhost without setting basePath
@@ -108,7 +132,7 @@ const nextConfig = withSentryConfig({
             },
         ];
 
-        return [...base, ...devGameIdRewrites];
+        return [...base, ...localServiceRewrites, ...devGameIdRewrites];
     },
     async headers() {
         return [

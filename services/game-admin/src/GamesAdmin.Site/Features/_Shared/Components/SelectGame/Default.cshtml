@@ -1,0 +1,16 @@
+﻿@using GamesAdmin.Site.Features._Shared.Components.SelectGame
+
+@model SelectGameModel
+
+<select asp-items="@Model.Items" value="" name="@Model.Name" id="@Model.Name" class="form-control">
+    @if(Model.SelectAll)
+    {
+        <option value="0" selected>All</option>
+    }
+    else
+    {
+        <option value="" disabled selected></option>
+    }
+</select>
+
+

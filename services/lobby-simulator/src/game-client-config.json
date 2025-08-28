@@ -12,7 +12,7 @@
     "useAuthenticate": true,
     "requestTimeout": 10000,
     "localhost": "http://localhost:8007",
-    "mobileLocalhost": "http://localhost:3000",
+    "mobileLocalhost": "http://localhost:8007",
     "port": 8009,
     "connectSiteUrl": "https://gn-connectsite.lumigame.com/login",
     "enableCors": false,

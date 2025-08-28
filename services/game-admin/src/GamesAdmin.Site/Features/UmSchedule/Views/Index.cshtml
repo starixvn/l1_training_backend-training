@@ -1,0 +1,30 @@
+﻿@using GamesAdmin.Site.Features.UmSchedule.ViewModels;
+@model IndexViewModel;
+
+@{
+    ViewData["Title"] = "UM Schedule page";
+}
+
+<div class="col-md-10 col-lg-6 card">
+    <table id="status-tbl" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Start (UTC)</th>
+                <th>End (UTC)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var schedule in Model.Schedules)
+            {
+                <tr>
+
+                    <td>@schedule.Start</td>
+                    <td>@schedule.End</td>
+                    <td>@schedule.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

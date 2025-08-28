@@ -3,9 +3,7 @@
     "$oid": "63e1c7557f464900016dc095"
   },
   "time": {
-    "$date": {
-      "$numberLong": "-62135596800000"
-    }
+    "$date": "1970-01-01T00:00:00.000Z"
   },
   "__v": 0,
   "name": "Market",
@@ -34,7 +32,9 @@
         "id-ID": "Semua permainan",
         "th-TH": "เกมทั้งหมด",
         "zh-CN": "所有游戏",
-        "zh-TW": "所有遊戲"
+        "zh-TW": "所有遊戲",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -316,6 +316,11 @@
           "gameId": 73,
           "bigSize": false,
           "newTag": false
+        },
+        {
+          "gameId": 148,
+          "bigSize": false,
+          "newTag": true
         }
       ]
     },
@@ -326,7 +331,9 @@
         "id-ID": "Se Die",
         "th-TH": "Se Die (เขย่าหมาก)",
         "zh-CN": "色碟",
-        "zh-TW": "色碟"
+        "zh-TW": "色碟",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -363,7 +370,9 @@
         "id-ID": "Besar Kecil",
         "th-TH": "ใหญ่/เล็ก",
         "zh-CN": "大小",
-        "zh-TW": "大小"
+        "zh-TW": "大小",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -400,7 +409,9 @@
         "id-ID": "Permainan kartu",
         "th-TH": "เกมไพ่",
         "zh-CN": "纸牌游戏",
-        "zh-TW": "紙牌遊戲"
+        "zh-TW": "紙牌遊戲",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -477,7 +488,9 @@
         "id-ID": "Slot",
         "th-TH": "สล็อต",
         "zh-CN": "老虎机",
-        "zh-TW": "老虎機"
+        "zh-TW": "老虎機",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -569,7 +582,9 @@
         "id-ID": "Keno Lotere",
         "th-TH": "Keno ล็อตเตอรี่",
         "zh-CN": "Keno 彩票",
-        "zh-TW": "Keno 彩票"
+        "zh-TW": "Keno 彩票",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -596,7 +611,9 @@
         "id-ID": "Lainnya",
         "th-TH": "อื่นๆ",
         "zh-CN": "其他",
-        "zh-TW": "其他"
+        "zh-TW": "其他",
+        "ja-JP": null,
+        "es-ES": null
       },
       "gameSettings": [
         {
@@ -694,16 +711,15 @@
       }
     ],
     "main": 3
-  }
+  },
+  "centerBanners": []
 },
 {
   "_id": {
     "$oid": "64d0a4268b1f1632817729ef"
   },
   "time": {
-    "$date": {
-      "$numberLong": "-62135596800000"
-    }
+    "$date": "1970-01-01T00:00:00.000Z"
   },
   "__v": 0,
   "name": "Esther Test",
@@ -783,9 +799,7 @@
     "$oid": "64d5aaddd90f965ae91bda95"
   },
   "time": {
-    "$date": {
-      "$numberLong": "-62135596800000"
-    }
+    "$date": "1970-01-01T00:00:00.000Z"
   },
   "__v": 0,
   "name": "Esther Test 2",
@@ -830,9 +844,7 @@
     "$oid": "64f849736b6c122e56e39a58"
   },
   "time": {
-    "$date": {
-      "$numberLong": "-62135596800000"
-    }
+    "$date": "1970-01-01T00:00:00.000Z"
   },
   "__v": 0,
   "name": "Group 123",

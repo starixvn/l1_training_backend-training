@@ -1,0 +1,113 @@
+﻿.table {
+    &.has-background {
+        background-color: #fff;
+    }
+
+    &.table-bordered thead th {
+        border-bottom-width: 2px;
+        text-align: center;
+    }
+
+    td, th {
+        padding: 1rem;
+        border-color: #ddd !important;
+        vertical-align: middle;
+    }
+
+    &.table-bordered {
+        border-color: #ddd;
+    }
+
+    .total {
+        background-color: #fdf6e0;
+
+        td {
+            font-weight: 600;
+        }
+    }
+
+    .icon-action:hover {
+        text-decoration: none;
+    }
+
+    .icon-edit {
+        position: relative;
+        font-size: 1.6rem;
+        color: #6c757d;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .icon-info {
+        position: relative;
+        font-size: 1.6rem;
+        color: #6c757d;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .icon-check {
+        font-size: 1.6rem;
+        color: #3ac47d;
+    }
+
+    .icon-cancel {
+        font-size: 1.6rem;
+        color: #ff0000;
+    }
+
+    &.sticky-table {
+        th {
+            top: -2rem;
+            position: sticky;
+            z-index: 1;
+            background: #fff;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: -2px;
+                border-bottom: 2px solid #ddd;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: -1px;
+                border-top: 1px solid #ddd;
+            }
+        }
+
+        thead {
+            tr:nth-child(2) th {
+                top: 42.73px;
+            }
+        }
+    }
+}
+
+.table-hover {
+    tbody {
+        tr:hover {
+            background: none;
+
+            td {
+                background-color: rgba(0, 0, 0, 0.075);
+            }
+        }
+
+        &:hover {
+            td[rowspan] {
+                background-color: rgba(0, 0, 0, 0.075);
+            }
+        }
+    }
+}

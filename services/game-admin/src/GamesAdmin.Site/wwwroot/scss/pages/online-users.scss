@@ -1,0 +1,56 @@
+﻿@import "../base/variables";
+@import "../components/customize-datatable";
+
+.card {
+    margin: 0;
+
+    .card-header {
+        padding: 1.2rem 1.8rem;
+        background-color: #fff;
+    }
+
+    .card-title {
+        margin-bottom: 0;
+        text-transform: capitalize;
+        color: rgba(31,10,6,0.6);
+        font-size: 1.8rem;
+    }
+}
+
+.filter .form-row > [class*=col-] {
+    margin-bottom: 1.6rem;
+}
+
+.fanex-multiselect-widget {
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: none !important;
+    border-width: 1px;
+    border-style: solid;
+    padding: .75rem 1.3rem .6rem;
+    line-height: 1;
+    display: block;
+
+    input[type="text"] {
+        border-style: none;
+        font-size: 1.3rem;
+        outline: none;
+        text-align: center;
+    }
+
+    .fanex-multiselect-icon {
+        margin-top: -20px;
+    }
+}
+
+.fanex-multiselect-treeview {
+    min-width: 200px;
+    border-radius: .5rem;
+    box-shadow: none !important;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.user-online-inline {
+    padding-top: 22px;
+}

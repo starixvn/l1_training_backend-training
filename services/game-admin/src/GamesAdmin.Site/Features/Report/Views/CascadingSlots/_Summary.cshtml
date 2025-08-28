@@ -1,0 +1,54 @@
+﻿@using GamesAdmin.Site.Features.Report.ViewModels
+@model SummaryViewModel
+
+@{
+    var roundResult = Model.Round;
+}
+<table class="table table-bordered table-cascading-slot">
+    <thead>
+        <tr>
+            <th class="col-round-id">Round Id</th>
+            <th class="col-date">Time</th>
+            <th>Bet Level</th>
+            <th>Coin Value</th>
+            <th>Stake</th>
+            <th>Win</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (roundResult != null)
+        {
+            <tr>
+                <td>
+                    @roundResult.RoundId
+                    <div>@Model.FreeSpinsLabel</div>
+                </td>
+                <td>
+                    @Model.DisplayTime
+                </td>
+                <td>@roundResult.BetLevel</td>
+                <td>@Model.DisplayCoinValue</td>
+                <td>@Model.DisplayTotalAmount</td>
+                <td>@Model.DisplayBetWin</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="text-right">Total</td>
+                <td>@Model.DisplayTotalAmountWithFreeSpin</td>
+                <td>@Model.DisplayBetWin</td>
+            </tr>
+            <tr class="total">
+                <td colspan="4" class="text-right">Win Loss</td>
+                <td></td>
+                <td>@Model.DisplayWinLoss</td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">
+                    NoDataAvailable
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

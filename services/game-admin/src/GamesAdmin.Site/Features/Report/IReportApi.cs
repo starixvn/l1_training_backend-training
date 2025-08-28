@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using GamesAdmin.Core.Models;
+using GamesAdmin.Core.Models.BetReport;
+using GamesAdmin.Core.Models.SlotGame;
+using GamesAdmin.Core.Models.Spins;
+using GamesAdmin.Site.Features._Shared;
+using Refit;
+
+namespace GamesAdmin.Site.Features.Report
+{
+    public interface IReportApi : IBaseAuthorizationApi
+    {
+        [Get("/report/big_small/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<BigSmallBetReport> GetBigSmallReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/big_small_turbo/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<BigSmallBetReport> GetBigSmallTurboReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/odd_even/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<OddEvenBetReport> GetOddEvenReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/odd_even_turbo/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<OddEvenBetReport> GetOddEvenTurboReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/bet_history/game/{gameTypeId}/round/{roundId}/user/{nickname}")]
+        Task<IEnumerable<T>> GetBetHistory<T>(int gameTypeId, long roundId, string nickname) where T : BaseBetHistory;
+
+        [Get("/report/lucky_wheel/users/{nickname}")]
+        Task<IEnumerable<SpinResult>> GetLuckyWheelBetHistory(string nickname);
+
+        [Get("/report/specialsedie/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<SpecialSeDieBetReport> GetSpecialSeDieReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/bet_history/game/specialsedie/round/{roundId}/user/{userId}")]
+        Task<SpecialSeDieBetHistory> GetSpecialSeDieBetHistory(long roundId, string userId);
+
+        [Get("/report/blackjack")]
+        Task<IEnumerable<BlackjackBetRecord>> GetBlackjackReport(BlackjackBetReportFilter filter);
+
+        [Get("/report/pontoon")]
+        Task<IEnumerable<BlackjackBetRecord>> GetPontoonReport(BlackjackBetReportFilter filter);
+
+        [Get("/report/chineseblackjack")]
+        Task<IEnumerable<BlackjackBetRecord>> GetChineseBlackjackReport(BlackjackBetReportFilter filter);
+
+        [Get("/report/slot_game/round/{roundId}/nick/{nickname}?excludeUUS={excludeUUS}&game={game}&partnerId={partnerId}&fromDate={fromDate}&toDate={toDate}&username={username}&convertToUSD={convertToUSD}")]
+        Task<IEnumerable<SlotGameBetRecord>> GetSlotGameReport(
+            long roundId,
+            string nickname,
+            bool excludeUUS,
+            string game,
+            string partnerId,
+            DateTime fromDate,
+            DateTime toDate,
+            string username,
+            bool convertToUSD);
+
+        [Get("/report/jackpot/game/{gameId}?excludeUUS={excludeUUS}&excludeBot={excludeBot}")]
+        Task<IEnumerable<JackpotRecord>> GetJackpotReport(int gameId, DateTime fromDate, DateTime toDate, bool excludeUUS, bool excludeBot);
+
+        [Get("/report/bitcoin_master/round/{roundId}/users/{nickname}?excludeBot={excludeBot}&partnerId={partnerId}&username={username}")]
+        Task<BitcoinMasterBetReport> GetBitcoinMasterReport(long roundId, string nickname, bool excludeBot, string partnerId, string username);
+
+        [Get("/report/bitcoin_master/round/{roundId}/user/{nickname}")]
+        Task<BitcoinMasterBetHistory> GetBitcoinMasterBetReport(long roundId, string nickname);
+
+        [Get("/report")]
+        Task<T> Get<T>(BetReportFilter filter) where T : BetReportBase;
+
+        [Get("/report/holdempoker")]
+        Task<IEnumerable<HoldemPokerBetRecord>> GetHoldemPokerBetReport(HoldemPokerBetReportFilter filter);
+
+        [Get("/report/bet_history/holdempoker")]
+        Task<HoldemPokerBetHistory> GetHoldemPokerBetHistory(HoldemPokerBetHistoryFilter filter);
+
+        [Get("/report/hilo")]
+        Task<IEnumerable<HiLoBetRecord>> GetHiLoReport(HiLoBetReportFilter filter);
+
+        [Get("/report/bethistory")]
+        Task<T> GetBetHistory<T>(BetHistoryFilter filter) where T : BetHistory;
+
+        [Post("/report/cascading_slot")]
+        Task<IEnumerable<CascadingSlotBetRecord>> GetCascadingSlotReport([Body] CascadingSlotReportFilter filter);
+
+        [Post("/report/bet_history/cascading_slot")]
+        Task<CascadingSlotBetHistory> GetCascadingSlotBetHistory([Body] CascadingSlotReportFilter filter);
+
+        [Post("/report/crash_game")]
+        Task<CrashGameBetReport> GetCrashGameReport([Body] CrashGameBetReportFilter filter);
+        
+        [Post("/report/crash_turn_game")]
+        Task<IEnumerable<CrashTurnGameBetRecord>> GetCrashTurnGameReport([Body] CrashTurnGameBetReportFilter filter);
+    }
+}

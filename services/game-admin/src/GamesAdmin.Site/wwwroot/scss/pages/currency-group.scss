@@ -1,0 +1,22 @@
+﻿@import "../base/variables";
+@import "../components/customize-datatable";
+@import "../components/fanex-select";
+
+.btn-add:hover {
+    text-decoration: none;
+}
+
+.table {
+    .btn-edit {
+        width: 4rem;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none
+        }
+    }
+}

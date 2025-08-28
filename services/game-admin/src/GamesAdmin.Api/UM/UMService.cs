@@ -1,0 +1,227 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+using GamesAdmin.Core.Enumeration;
+using GamesAdmin.Core.Models.Um;
+using GamesAdmin.Database;
+using GamesAdmin.Database.Entities;
+using MongoDB.Driver;
+using Sentry;
+
+namespace GamesAdmin.Api.UM
+{
+    public interface IUMService
+    {
+        Task<bool> Process(bool isUM, DateTimeOffset startTime, DateTimeOffset endTime);
+
+        Task<bool> AddSchedule(UmSchedule umSchedule);
+
+        Task<IList<UmSchedule>> GetAll();
+
+        Task<IList<UmSchedule>> GetUnfinished();
+
+        Task<IEnumerable<UmInfo>> GetUMInfo();
+
+        Task<bool> UpdatePartnerUM(bool isUM, DateTimeOffset startTime, DateTimeOffset endTime, string[] partners);
+    }
+
+    public class UMService : IUMService
+    {
+        private readonly ISentryClient sentryClient;
+        private readonly IMapper mapper;
+        private readonly IGenericRepository<UMInfoEntity> umRepository;
+        private readonly IGenericRepository<GameConfigEntity> configRepository;
+        private readonly IGenericRepository<EventScheduleEntity> scheduleRepository;
+        private readonly IGenericRepository<NotificationEntity> notificationRepository;
+        private readonly IGenericRepository<UserSessionEntity> usersessionRepository;
+
+        public UMService(
+            ISentryClient sentryClient,
+            IMapper mapper,
+            IGenericRepository<UMInfoEntity> umRepository,
+            IGenericRepository<GameConfigEntity> configRepository,
+            IGenericRepository<EventScheduleEntity> scheduleRepository,
+            IGenericRepository<NotificationEntity> notificationRepository,
+            IGenericRepository<UserSessionEntity> usersessionRepository)
+        {
+            this.sentryClient = sentryClient;
+            this.mapper = mapper;
+            this.umRepository = umRepository;
+            this.configRepository = configRepository;
+            this.scheduleRepository = scheduleRepository;
+            this.notificationRepository = notificationRepository;
+            this.usersessionRepository = usersessionRepository;
+        }
+
+        public async Task<IEnumerable<UmInfo>> GetUMInfo()
+        {
+            try
+            {
+                return (await umRepository.FilterByAsync(um => !um.Finish))
+                    .Select(um => mapper.Map<UmInfo>(um))
+                    .OrderBy(um => um.End);
+
+            }
+            catch (Exception ex)
+            {
+                sentryClient.CaptureException(ex);
+
+                return null;
+            }
+        }
+
+        public async Task<bool> UpdatePartnerUM(bool isUM, DateTimeOffset startTime, DateTimeOffset endTime, string[] partners)
+        {
+            try
+            {
+                if (partners != null && partners.Length == 0)
+                {
+                    return false;
+                }
+
+                sentryClient.CaptureMessage($"[{string.Join(',', partners)}] - {DateTime.Now} UM Start: {startTime} End: {endTime}");
+
+                var update = Builders<UMInfoEntity>.Update
+                    .Set(field => field.Finish, !isUM)
+                    .Set(field => field.Start, GetDateTime(startTime))
+                    .Set(field => field.End, GetDateTime(endTime))
+                    .Set(field => field.Time, DateTime.UtcNow)
+                    .Set(field => field.IsPartnerUm, true);
+
+                if (isUM)
+                {
+                    await UpdateUserSessions(partners);
+
+                    foreach (var partner in partners)
+                    {
+                        await umRepository.UpdateAsync(um => um.Start == startTime.UtcDateTime && um.IsPartnerUm == true && um.PartnerId == partner,
+                            update,
+                            new UpdateOptions { IsUpsert = true });
+
+                    }
+                }
+                else
+                {
+                    await umRepository.UpdateManyAsync(um => um.Start < DateTime.UtcNow && um.IsPartnerUm == true && partners.Contains(um.PartnerId), update);
+                }
+
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                sentryClient.CaptureException(ex);
+
+                return false;
+            }
+        }
+
+        public Task<bool> Process(bool isUM, DateTimeOffset startTime, DateTimeOffset endTime) => isUM ? Start(startTime, endTime) : End();
+
+        public async Task<bool> Start(DateTimeOffset startTime, DateTimeOffset endTime)
+        {
+            try
+            {
+                sentryClient.CaptureMessage($"{DateTime.Now} UM Start: {startTime} End: {endTime}");
+
+                await UpdateEnableConfig(enable: false);
+                await UpdateUserSessions();
+
+                var update = Builders<UMInfoEntity>.Update
+                    .Set(field => field.Finish, false)
+                    .Set(field => field.Start, GetDateTime(startTime))
+                    .Set(field => field.End, GetDateTime(endTime))
+                    .Set(field => field.Time, DateTime.UtcNow)
+                    .Set(field => field.IsPartnerUm, false);
+
+                await umRepository.UpdateAsync(um => um.Start == startTime.UtcDateTime && um.IsPartnerUm == false, update, new UpdateOptions { IsUpsert = true });
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                sentryClient.CaptureException(ex);
+
+                return false;
+            }
+        }
+
+        public async Task<bool> End()
+        {
+            try
+            {
+                sentryClient.CaptureMessage($"{DateTime.Now} UM Finished");
+                var update = Builders<UMInfoEntity>.Update.Set(field => field.Finish, true);
+
+                await UpdateEnableConfig(enable: true);
+                await umRepository.UpdateManyAsync(um => um.Start < DateTime.UtcNow && um.IsPartnerUm == false, update);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                sentryClient.CaptureException(ex);
+
+                return false;
+            }
+        }
+
+        private async Task UpdateEnableConfig(bool enable)
+        {
+            var update = Builders<GameConfigEntity>.Update.Set(field => field.Enabled, enable);
+
+            await configRepository.UpdateManyAsync(config => true, update);
+        }
+
+        private async Task UpdateUserSessions(string[] partners = null)
+        {
+            const int sessionExpiredTimeInMinutes = 20;
+            var minTime = DateTime.Now.AddMinutes(-sessionExpiredTimeInMinutes);
+            var update = Builders<UserSessionEntity>.Update.Set(field => field.RecheckInTime, minTime);
+
+            if (partners == null)
+            {
+                await usersessionRepository.UpdateManyAsync(ss => minTime < ss.RecheckInTime, update);
+
+            }
+            else
+            {
+                await usersessionRepository.UpdateManyAsync(ss => minTime < ss.RecheckInTime && partners.Contains(ss.ParnerId), update);
+            }
+
+        }
+
+        public async Task<bool> AddSchedule(UmSchedule umSchedule)
+        {
+            var schedule = mapper.Map<EventScheduleEntity>(umSchedule);
+            schedule.EventType = byte.Parse(EventScheduleType.UnderMaintenance.Value);
+
+            var notification = new NotificationEntity
+            {
+                Message = umSchedule.Message,
+                DisplayKind = byte.Parse(NotificationDisplayKind.Marquee.Value)
+            };
+
+            await scheduleRepository.InsertOneAsync(schedule);
+            await notificationRepository.InsertOneAsync(notification);
+
+            return true;
+        }
+
+        public async Task<IList<UmSchedule>> GetAll()
+        => (await scheduleRepository
+            .FilterByAsync(schedule => schedule.EventType == byte.Parse(EventScheduleType.UnderMaintenance.Value)))
+            .Select(schedule => mapper.Map<UmSchedule>(schedule))
+            .ToList();
+
+        public async Task<IList<UmSchedule>> GetUnfinished()
+        => (await umRepository
+            .FilterByAsync(um => !um.Finish))
+            .Select(um => new UmSchedule(um.Start, um.End))
+            .ToList();
+
+        private DateTime GetDateTime(DateTimeOffset dateTimeOffset) => dateTimeOffset == default ? default : dateTimeOffset.ToUniversalTime().UtcDateTime;
+    }
+}

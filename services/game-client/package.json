@@ -8,8 +8,8 @@
     "scripts": {
         "generate-tolgee-data": "npx ts-node --project tsconfig.node.json ./src/_shared/tolgee-generator.ts",
         "analyze": "cross-env ANALYZE=true next build",
-        "dev": "npm run generate-tolgee-data &&  next dev",
-        "dev:game-148": "npm run generate-tolgee-data && cross-env NEXT_PUBLIC_BASE_PATH=/game-148 next dev",
+        "dev": "npm run generate-tolgee-data &&  next dev -p 8007",
+        "dev:game-148": "npm run generate-tolgee-data && cross-env NEXT_PUBLIC_BASE_PATH=/game-148 next dev -p 8007",
         "dev:standalone": "npm run generate-tolgee-data && next build && npm run copy-standalone-assets && node .next/standalone/server.js",
         "copy-standalone-assets": "node scripts/copy-standalone-assets.js",
         "run-code-and-sonar-local": "node sonar-scripts/run-code-and-sonar-local.js",

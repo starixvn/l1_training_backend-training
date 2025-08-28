@@ -1,0 +1,217 @@
+﻿@using System.Security.Claims;
+@using GamesAdmin.Site.Features.GameSettings.ViewModels;
+@using GamesAdmin.Core.Enumeration;
+@model MonitorViewModel;
+
+@{
+    ViewData["Title"] = "Game Monitoring";
+    var role = Context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+}
+
+@section Styles {
+    <link href="~/lib/data-tables/datatables.min.css" rel="stylesheet" />
+    <link href="~/scss/pages/game-status.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="col-md-12 col-lg-6 game-status">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Monitor</th>
+                <th>Round History</th>
+                <th>Service Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (var index = 0; index < Model.GameList.Count; index++)
+            {
+                <tr>
+                    <td>@(Model.GameList[index].DisplayName ?? Model.GameList[index].Name)</td>
+                    <td class="text-center">
+                        @if (Model.GameList[index].EnabledMonitoring)
+                        {
+                            if (@Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.Slots ||
+                            @Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.CascadingSlots ||
+                            @Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.Crash ||
+                            @Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.CrashTurnBase)
+                            {
+                                if (role == Role.Admin.Value)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultSpeedUpGame(event,'@Model.GameList[index].Type', '@Model.GameList[index].Name', '@Model.GameList[index].DisplayName')"><i class="icon-chart"></i></a>
+                                }
+                            }
+                            else if (@Model.GameList[index].Name == Game.Pontoon.Value)
+                            {
+                                if (role == Role.Admin.Value)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultPontoon(event)"><i class="icon-chart"></i></a>
+                                }
+                            }
+                            else if (@Model.GameList[index].Name == Game.ChineseBlackjack.Value)
+                            {
+                                if (role == Role.Admin.Value)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultChineseBlackjack(event)"><i class="icon-chart"></i></a>
+                                }
+                            }
+                            else if (@Model.GameList[index].Name == Game.CasinoHoldemPoker.Value ||
+                                @Model.GameList[index].Name == Game.TexasHoldemPoker.Value)
+                            {
+                                if (role == Role.Admin.Value)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultHoldemPoker(event, '@Model.GameList[index].Name')"><i class="icon-chart"></i></a>
+                                }
+                            }
+                            else if (@Model.GameList[index].Name == Game.FootballDice.Value)
+                            {
+                                if (role == Role.Admin.Value)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultFootballDice(event)"><i class="icon-chart"></i></a>
+                                }
+
+                            }
+                            else
+                            {
+                                if (role == Role.Admin.Value && Model.GameList[index].Name == Game.HiLoValue)
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setControlResultHiLo(event)"><i class="icon-chart"></i></a>
+                                }
+                                else if(role == Role.Admin.Value && Game.BaccaratXGames.Any(x => x.Value == Model.GameList[index].Name))
+                                {
+                                    <a href="#" class="icon-action" onclick="gameStatus.setResultControlBaccaratX('@(Model.GameList[index].Name)', '@(Model.GameList[index].DisplayName)', '@Model.GameList[index].ApplyMultiplier')"><i class="icon-chart"></i></a>
+                                }
+                                else
+                                {
+                                    <a href="#" class="icon-action bet-monitor" data-game-name="@Model.GameList[index].Name"><i class="icon-chart"></i></a>
+                                }
+                            }
+                        }
+                    </td>
+                    <td class="text-center">
+                        @if (Model.GameList[index].EnabledHistory)
+                        {
+                            if (@Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.Slots)
+                            {
+                                <a class="icon-action" href="~/Report/SlotGameReport?game=@Model.GameList[index].GameHistoryUrl"><i class="icon-history"></i></a>
+                            }
+                            else if (@Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.CascadingSlots)
+                            {
+                                <a class="icon-action" href="~/Report/CascadingSlotGameReport?game=@Model.GameList[index].GameHistoryUrl"><i class="icon-history"></i></a>
+                            }
+                            else if (@Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.CrashTurnBase)
+                            {
+                                <a class="icon-action" href="~/Report/CrashTurnGameReport?game=@Model.GameList[index].GameHistoryUrl"><i class="icon-history"></i></a>
+                            }
+                            else if (@Model.GameList[index].Type == GamesAdmin.Core.Enumeration.GameType.Crash)
+                            {
+                                <a class="icon-action" href="~/Report/CrashGameReport?game=@Model.GameList[index].GameHistoryUrl"><i class="icon-history"></i></a>
+                            }
+                            else if (@Model.GameList[index].IsUseHistoryUrl)
+                            {
+                                <a class="icon-action" href="~/Report/@Model.GameList[index].GameHistoryUrl"><i class="icon-history"></i></a>
+                            }
+                            else
+                            {
+                                <a class="icon-action" href="~/Report?game=@Model.GameList[index].Name"><i class="icon-history"></i></a>
+                            }
+                        }
+                    </td>
+                    <td class="text-center">
+                        @if (Model.GameList[index].EnabledServiceStatus)
+                        {
+                            <a class="icon-action" id="service-status" href="#" onclick="gameMonitor.openCheckServiceStatus('@Model.GameList[index].Name')">
+                            <i class="icon-status-check"></i></a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="result-control-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="check-service-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Service status</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="check-service">
+                    <input id="gameIdHidden" hidden />                  
+                    <div class="card-body form">
+                        <fieldset>
+                            <legend>Player</legend>
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <input type="text" id="username" class="input-text" placeholder="Username" />
+                                </div>
+                                <div class="col-lg-6 mt-1">
+                                    <span class="text-success" id="checkSuccess"><i class="icon-status-checked"></i><span> Joined Game</span></span>
+                                    <span class="text-error" id="checkFail"><i class="icon-status-failed"></i><span> Join Game Failed</span></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <input type="password" id="password" class="input-text" placeholder="Password" />
+                                </div>
+                                <div class="col-lg-6 mt-1">
+                                    <span id="roundId" class="font-weight-bold" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4">
+                                    <button type="button" class="btn btn-submit" onclick="gameMonitor.checkServiceStatus()">Check Status</button>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div id="loading-check-service" class="spinner-border mt-2" style="display: none">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="modal-footer">                  
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var jwtAdminUserToken = "@Model.JwtAdminUserToken";
+        var adminMonitoringUrl = "@Model.AdminMonitoringUrl";
+    </script>
+    <environment include="Development">
+        <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/lib/data-tables/datatables.js"></script>
+        <script src="~/js/game-status.js" asp-append-version="true"></script>
+        <script src="~/js/game-monitor.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/game-status.min.js" asp-append-version="true"></script>
+        <script src="~/js/game-monitor.min.js" asp-append-version="true"></script>
+    </environment>
+}

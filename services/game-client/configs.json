@@ -1,6 +1,6 @@
 {
     "serverDomainMapper": {
-        "localhost": "localhost"
+        "localhost": "localhost:8007"
     },
     "proxy": {
         "ssl": false,
@@ -13,7 +13,7 @@
         "tracesSampleRate": 1
     },
     "enableSourceMap": true,
-    "subGuideDomain": "l2-guide-1",
+    "subGuideDomain": "",
     "enableMsgpackParser": false,
     "system": "VG",
     "appType": 10,

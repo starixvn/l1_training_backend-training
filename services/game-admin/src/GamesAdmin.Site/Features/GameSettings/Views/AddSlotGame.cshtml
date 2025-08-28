@@ -1,0 +1,43 @@
+﻿@using GamesAdmin.Site.Features.GameSettings.ViewModels;
+@model AddSlotGameViewModel;
+
+<div class="col-md-12 col-lg-5 card">
+    <form class="card-body form" id="cloneForm">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="GameId" class="control-label"></label>
+            <input asp-for="GameId" type="number" class="form-control" />
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <label asp-for="DisplayName" class="control-label"></label>
+                <input asp-for="DisplayName" onchange="addSlotGame.onUpdateDisplayName(this.value)" class="form-control" />
+            </div>
+            <div class="col-6">
+                <label asp-for="GameName" class="control-label"></label>
+                <input asp-for="GameName" class="form-control" disabled />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div id="selecttype" class="col-6">
+                <label asp-for="GameType" class="control-label"></label>
+                <select class="form-control"  
+                        asp-items="@Model.GameTypes" 
+                        asp-for="GameType" 
+                        onchange="addSlotGame.onChangeGameType()">
+                </select>
+            </div>
+
+            <div id="selectgame" class="col-6">
+                <label asp-for="SelectedGame" class="control-label"></label>
+                <select asp-items="@Model.ExistingGames" asp-for="SelectedGame" class="form-control common-field"></select>
+            </div>
+         </div>
+            <div class="form-group">
+                <input type="button" onclick="addSlotGame.submitForm()" value="Submit" class="btn-submit" />
+            </div>
+    </form>
+</div>

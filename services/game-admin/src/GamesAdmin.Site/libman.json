@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "bootstrap@4.5.0",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@types/jquery@3.3.38",
+      "destination": "wwwroot/lib/types/jquery/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@types/sizzle@2.3.2",
+      "destination": "wwwroot/lib/types/sizzle/"
+    }
+  ]
+}

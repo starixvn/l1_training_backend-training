@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using GamesAdmin.Database.Attributes;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace GamesAdmin.Database.Entities.Promotion
+{
+    [BsonCollection("promotion_configs")]
+    public class PromotionConfigEntity : MiniGameBaseEntity
+    {
+        public int PromotionId { get; set; }
+        public string Status { get; set; }
+        public string Name { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
+        public DateTime UpdatedTime { get; set; }
+        public List<Operator> Operators { get; set; }
+        public List<WinningPrize> WinningPrizes { get; set; }
+        public double ExId { get; set; }
+    }
+}
+
+public class Operator
+{
+    public string OperatorId { get; set; }
+    public string IncludedSiteNames { get; set; }
+    public List<CurrencyGroup> CurrencyGroups { get; set; }
+}
+
+public class CurrencyGroup
+{
+    public string CurrencyGroupId { get; set; }
+    public double OtherGameMinBet { get; set; }
+    public double SlotGameMinBet { get; set; }
+    public bool Enabled { get; set; }
+}
+
+public class WinningPrize
+{
+    public string Ranking { get; set; }
+
+    [BsonRepresentation(BsonType.Double, AllowTruncation = true)]
+    public double Value { get; set; }
+}
