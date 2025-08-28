@@ -69,7 +69,7 @@ Below is the high-level architecture of the local development system:
 ```mermaid
 graph LR
     subgraph "User Layer"
-        USER[👤 User]
+        USER[👤 Player]
         ADMIN[👨‍💼 Admin]
     end
 
@@ -79,8 +79,8 @@ graph LR
     end
 
     subgraph "API Layer"
-        LWEB[Game API<br/>ASP.NET :8002]
         SGAPI[SG API<br/>ASP.NET :8003]
+        LWEB[Game API<br/>ASP.NET :8002]
         GAA[Game Admin API<br/>ASP.NET :7778]
     end
 
@@ -118,6 +118,11 @@ graph LR
     SMS -->|Placebet/EndRound| LWEB
     SMS -->|Session Validation| US
     LWEB -->|Placebet/EndRound| OWS
+
+    %% Database Connections
+    SGAPI --> MONGO
+    LWEB --> MONGO
+    GAA --> MONGO
 
 
 
