@@ -1,4 +1,8 @@
-# Local Development Services
+# Gaming Platform - New Team Member Training
+
+> **🎯 Training Purpose**: Help new team members understand and set up the gaming platform locally for hands-on learning and familiarization.
+
+This training repository provides everything you need to run the complete gaming platform on your local machine. By following this guide, you'll gain hands-on experience with our multi-service architecture, understand how different components interact, and be ready to contribute to the team.
 
 ## Table of Contents
 
@@ -403,7 +407,9 @@ git clone <repository-url>
 cd system-training
 
 # Verify directory structure
-ls services/
+dir services
+# You should see: api-auth, game-admin, game-client, game-management-service,
+# lobby-simulator, ow-simulator, services, sg-api, user-service
 ```
 
 #### 2.2 Set NPM Registry (Important!)
