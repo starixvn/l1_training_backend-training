@@ -69,8 +69,8 @@ Below is the high-level architecture of the local development system:
 ```mermaid
 graph LR
     subgraph "User Layer"
-        USER[👤 Player]
         ADMIN[👨‍💼 Admin]
+        USER[👤 Player]
     end
 
     subgraph "Client Layer"
