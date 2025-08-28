@@ -123,6 +123,9 @@ graph LR
     SGAPI --> MONGO
     LWEB --> MONGO
     GAA --> MONGO
+    US --> MONGO
+    SMS --> MONGO
+    GMS --> MONGO
 
 
 
