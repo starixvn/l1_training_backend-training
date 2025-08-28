@@ -67,66 +67,73 @@ yarn --version
 Below is the high-level architecture of the local development system:
 
 ```mermaid
-graph TB
+graph LR
+    subgraph "User Layer"
+        USER[👤 User]
+        ADMIN[👨‍💼 Admin]
+    end
+
     subgraph "Client Layer"
         GC[Game Client<br/>Next.js :8007]
-        LS[Lobby Simulator<br/>React :8009]
         GAS[Game Admin Site<br/>ASP.NET :7779]
     end
 
-    subgraph "API Gateway Layer"
-        LAUTH[Auth API<br/>ASP.NET :8001]
+    subgraph "API Layer"
         LWEB[Game API<br/>ASP.NET :8002]
         SGAPI[SG API<br/>ASP.NET :8003]
+        GAA[Game Admin API<br/>ASP.NET :7778]
     end
 
     subgraph "Service Layer"
         US[User Service<br/>NestJS :8004]
-        GMS[Game Management<br/>NestJS :8005]
         SMS[Sedie Multiplayer<br/>Node.js :8006]
-        GAA[Game Admin API<br/>ASP.NET :7778]
+        GMS[Game Management<br/>NestJS :8005]
     end
 
     subgraph "Simulator Layer"
         OWS[1W Simulator<br/>ASP.NET :8008]
+        LS[Lobby Simulator<br/>React :8009]
     end
 
     subgraph "Database Layer"
         MONGO[(MongoDB<br/>:27017)]
     end
 
+    %% User Interactions
+    USER -->|Play Games| GC
+    USER -->|Get SSO URL| LS
+    ADMIN -->|Manage System| GAS
+
     %% Core Client Connections
-    GC -->|HTTP| LAUTH
-    GC -->|HTTP| LWEB
+    GC -->|SSO/Auth| US
     GC -->|WebSocket| SMS
 
-    LS -->|HTTP| LAUTH
-    LS -->|HTTP| US
+    LS -->|HTTP| SGAPI
 
     GAS -->|HTTP| GAA
 
     %% Core Service Dependencies
-    US -->|Token Verify| OWS
-    SMS -->|Game Logic| LWEB
-    SMS -->|Auth| LAUTH
+    US -->|Token Verify| LWEB
+    SMS -->|Get Config| GMS
+    SMS -->|Placebet/EndRound| LWEB
+    SMS -->|Session Validation| US
+    LWEB -->|Placebet/EndRound| OWS
 
-    %% Database (simplified)
-    LAUTH -->|Store| MONGO
-    LWEB -->|Store| MONGO
-    US -->|Store| MONGO
-    SMS -->|Store| MONGO
+
 
     %% Styling
+    classDef userLayer fill:#f0f8ff
     classDef clientLayer fill:#e1f5fe
     classDef apiLayer fill:#fff3e0
     classDef serviceLayer fill:#e8f5e8
     classDef simLayer fill:#fce4ec
     classDef dbLayer fill:#f3e5f5
 
-    class GC,LS,GAS clientLayer
-    class LAUTH,LWEB,SGAPI apiLayer
-    class US,GMS,SMS,GAA serviceLayer
-    class OWS simLayer
+    class USER,ADMIN userLayer
+    class GC,GAS clientLayer
+    class LWEB,SGAPI,GAA apiLayer
+    class US,SMS,GMS serviceLayer
+    class LS,OWS simLayer
     class MONGO dbLayer
 ```
 
@@ -154,44 +161,41 @@ The following sequence diagram illustrates how different services communicate du
 ```mermaid
 sequenceDiagram
     participant Client as Game Client
-    participant Auth as Auth API :8001
     participant User as User Service :8004
     participant Game as Game API :8002
     participant SMS as Sedie Multiplayer :8006
     participant OWS as 1W Simulator :8008
     participant DB as MongoDB :27017
 
-    Note over Client,DB: Authentication Flow
-    Client->>Auth: 1. Login request
-    Auth->>DB: 2. Validate credentials
-    Auth-->>Client: 3. Return JWT token
+         Note over Client,DB: Game Session
+     Client->>User: 1. SSO/Authenticate
+     User->>Game: 2. Verify token
+     User->>DB: 3. Create session
+     User-->>Client: 4. Session info
 
-    Note over Client,DB: Game Session
-    Client->>User: 4. Sign in with token
-    User->>OWS: 5. Verify token
-    User->>DB: 6. Create session
-    User-->>Client: 7. Session info
+                                       Note over Client,SMS: Multiplayer Game
+       Client->>SMS: 5. WebSocket connect
+       SMS->>User: 6. Session validation
+       SMS->>GMS: 7. Get game config
+       SMS->>DB: 8. Update state
+       SMS-->>Client: 9. Game ready
 
-    Note over Client,SMS: Multiplayer Game
-    Client->>SMS: 8. WebSocket connect
-    SMS->>Game: 9. Game logic
-    SMS->>Auth: 10. Verify auth
-    SMS->>DB: 11. Update state
-    SMS-->>Client: 12. Game ready
-
-    Note over Client,SMS: Real-time Play
-    Client->>SMS: 13. Place bet
-    SMS->>Game: 14. Process bet
-    SMS->>DB: 15. Save result
-    SMS-->>Client: 16. Game result
+                                                                               Note over Client,SMS: Real-time Play
+                 Client->>SMS: 10. Place bet
+         SMS->>Game: 11. Placebet/EndRound
+         Game->>OWS: 12. Placebet/EndRound
+         SMS->>DB: 13. Save result
+         SMS-->>Client: 14. Game result
 ```
 
 ### Key Communication Patterns
 
-1. **Authentication Flow**: Client → Auth API (JWT tokens) | User Service → 1W Simulator (token verification)
-2. **Game Logic Flow**: Sedie Multiplayer Service → Game API → Auth API
-3. **Real-time Gaming**: Client ↔ Sedie Multiplayer Service (WebSocket)
-4. **Data Persistence**: Core services connect to MongoDB for data storage
+1. **Authentication Flow**: Game Client → User Service (SSO/Authenticate) | User Service → Game API (token verification)
+2. **Game Logic Flow**: Sedie Multiplayer Service → Game Management (get config) → Game API (Placebet/EndRound) → 1W Simulator
+3. **User Operations**: Game Client → User Service (SSO/Authenticate) → Game API (for token verification)
+4. **Real-time Gaming**: Client ↔ Sedie Multiplayer Service (WebSocket) → User Service (session validation) → Game API, Auth API
+5. **Admin Operations**: Game Admin API → User Service, Game API, Sedie Multiplayer Service, Game Management Service
+6. **Data Persistence**: All services connect directly to MongoDB for data storage
 
 ## Step-by-Step Setup
 
@@ -660,13 +664,20 @@ Enable detailed logging for troubleshooting:
 ```
 Core Flow:
 Auth API (8001) ← Game API (8002) ← Sedie Multiplayer (8006)
-User Service (8004) → 1W Simulator (8008) (token verification)
+Game Client (8007) → User Service (8004) (SSO/Authenticate)
+User Service (8004) → Game API (8002) (token verification)
+User Service (8004) ↔ Auth API (8001) (for JWT verification)
+Sedie Multiplayer (8006) → Game Management (8005) (get game config)
+
+Service Interconnections:
+Sedie Multiplayer (8006) → Game API (8002), User Service (8004), Auth API (8001), Game Management (8005)
+Game Admin API (7778) → User Service (8004), Game API (8002), Sedie Multiplayer (8006), Game Management (8005)
 
 Database:
-MongoDB (27017) ← Core Services (Auth, Game API, User, Sedie Multiplayer)
+MongoDB (27017) ← All Services (direct connection)
 
 Client Access:
-Game Client (8007) → Auth API, Game API, Sedie Multiplayer (WebSocket)
+Game Client (8007) → All Services (HTTP/WebSocket)
 ```
 
 ### 🔧 **Best Practices**
