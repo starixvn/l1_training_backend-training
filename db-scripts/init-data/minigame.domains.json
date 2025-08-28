@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "64080dfb1e6f590001522e03"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "value": "lumigame.com;luminetsoft.com"
+}]

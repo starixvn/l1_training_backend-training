@@ -1,0 +1,102 @@
+.history-loading {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+}
+.provably-fair {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px 8px;
+    color: #20e500;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.icon-pf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #159500;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+}
+
+.bet-detail {
+    --more-info-height: 68px;
+}
+
+.history {
+    --more-info-height: 0px;
+}
+
+.bet-history-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-scroll-wrapper {
+    // When expanded, allow scrolling
+    &.expanded {
+        overflow-y: auto;
+    }
+
+    // Hide native scrollbars on mobile/tablet but keep scrolling enabled
+    -ms-overflow-style: none; // IE and old Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar { // Chrome, Safari, new Edge
+        width: 0px;
+        height: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+    }
+
+    // Show scrollbars on desktop
+    @media (min-width: 1024px) {
+        -ms-overflow-style: auto;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
+    
+    // Ensure table takes full width
+    :global(.bet-history-table) {
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+
+.toggle-button-container {
+    margin-top: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    flex-shrink: 0;
+}
+
+.toggle-button {
+    color: var(--primary-text);
+    font-weight: 700;
+    background-color: #000000;
+    border: 1px solid #000000;
+    padding: 0.5rem 1rem;
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        opacity: 0.9;
+    }
+}

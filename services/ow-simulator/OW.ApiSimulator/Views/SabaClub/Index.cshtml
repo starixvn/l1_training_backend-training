@@ -1,0 +1,20 @@
+﻿@inject List<Operator> Operators
+
+<div>
+    <div>Customer</div>
+    <ul>
+        <li><a target="_blank" asp-action="CreateCustomer">Create</a></li>
+        <li><a target="_blank" asp-action="UpdateCustomerBalance">Update Balance</a></li>
+    </ul>
+</div>
+
+<div>
+    <div>Update Operator Results:</div>
+    <ul>
+        @foreach (var @operator in Operators)
+        {
+            <li><a target="_blank" asp-action="UpdateOperator" asp-route-name="@(@operator.Name)">@(@operator.Name)</a></li>
+
+        }
+    </ul>
+</div>

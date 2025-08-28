@@ -1,0 +1,1030 @@
+[
+    {
+        "id": 0,
+        "name": "Sảnh game",
+        "choice": []
+    },
+    {
+        "id": 1,
+        "name": "Tài Xỉu",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Đu dây thắng"
+            },
+            {
+                "id": 4,
+                "name": "Đu dây thua"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Xóc Dĩa",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            },
+            {
+                "id": 3,
+                "name": "3 Đỏ 1 Trắng"
+            },
+            {
+                "id": 4,
+                "name": "4 Đỏ"
+            },
+            {
+                "id": 5,
+                "name": "3 Trắng 1 Đỏ"
+            },
+            {
+                "id": 6,
+                "name": "4 Trắng"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Bầu Cua",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Nai"
+            },
+            {
+                "id": 2,
+                "name": "Bầu"
+            },
+            {
+                "id": 3,
+                "name": "Gà"
+            },
+            {
+                "id": 4,
+                "name": "Cá"
+            },
+            {
+                "id": 5,
+                "name": "Cua"
+            },
+            {
+                "id": 6,
+                "name": "Tôm"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Tài Xỉu Siêu Tốc",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Chẵn Lẻ",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Chẵn Lẻ Siêu Tốc",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Rồng Hổ",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Rồng"
+            },
+            {
+                "id": 2,
+                "name": "Hổ"
+            },
+            {
+                "id": 3,
+                "name": "Hòa"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Keno Pro Max",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Mini Xóc dĩa",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            },
+            {
+                "id": 3,
+                "name": "3 Đỏ 1 Trắng"
+            },
+            {
+                "id": 4,
+                "name": "4 Đỏ"
+            },
+            {
+                "id": 5,
+                "name": "3 Trắng 1 Đỏ"
+            },
+            {
+                "id": 6,
+                "name": "4 Trắng"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Baccarat",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Người chơi"
+            },
+            {
+                "id": 2,
+                "name": "Nhà cái"
+            },
+            {
+                "id": 3,
+                "name": "Hòa"
+            },
+            {
+                "id": 4,
+                "name": "Tài"
+            },
+            {
+                "id": 5,
+                "name": "Xỉu"
+            },
+            {
+                "id": 6,
+                "name": "Người chơi có đôi"
+            },
+            {
+                "id": 7,
+                "name": "Nhà cái có đôi"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Keno Pro Viet",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Keno Mini",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Keno Mini 2",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Keno East",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Keno West",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Keno South",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Keno North",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Roulette",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Xóc Dĩa VIP",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            },
+            {
+                "id": 3,
+                "name": "2 Đỏ 2 Trắng"
+            },
+            {
+                "id": 4,
+                "name": "3 Đỏ 1 Trắng"
+            },
+            {
+                "id": 5,
+                "name": "4 Đỏ"
+            },
+            {
+                "id": 6,
+                "name": "3 Trắng 1 Đỏ"
+            },
+            {
+                "id": 7,
+                "name": "4 Trắng"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Blackjack",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Xóc Đĩa Cân Cửa",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Chẵn"
+            },
+            {
+                "id": 2,
+                "name": "Lẻ"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Tài xỉu Sic Bo",
+        "choice": []
+    },
+    {
+        "id": 26,
+        "name": "Bầu cua VIP",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Nai"
+            },
+            {
+                "id": 2,
+                "name": "Bầu"
+            },
+            {
+                "id": 3,
+                "name": "Gà"
+            },
+            {
+                "id": 4,
+                "name": "Cá"
+            },
+            {
+                "id": 5,
+                "name": "Cua"
+            },
+            {
+                "id": 6,
+                "name": "Tôm"
+            },
+            {
+                "id": 7,
+                "name": "Bộ Ba Bất Kỳ"
+            },
+            {
+                "id": 8,
+                "name": "Trên Cạn"
+            },
+            {
+                "id": 9,
+                "name": "Dưới Nước"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Cào Baccarat VIP",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Nhà Con"
+            },
+            {
+                "id": 2,
+                "name": "Nhà Cái"
+            },
+            {
+                "id": 3,
+                "name": "Tài"
+            },
+            {
+                "id": 4,
+                "name": "Xỉu"
+            },
+            {
+                "id": 5,
+                "name": "Hòa"
+            },
+            {
+                "id": 6,
+                "name": "Con đôi"
+            },
+            {
+                "id": 7,
+                "name": "Cái đôi"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Xóc Đĩa Đối Kháng",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Nhà Con"
+            },
+            {
+                "id": 2,
+                "name": "Nhà Cái"
+            },
+            {
+                "id": 3,
+                "name": "Hòa"
+            },
+            {
+                "id": 4,
+                "name": "Tổng chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Tổng lẻ"
+            },
+            {
+                "id": 6,
+                "name": "Nhà Con chẵn"
+            },
+            {
+                "id": 7,
+                "name": "Nhà Con lẻ"
+            },
+            {
+                "id": 8,
+                "name": "Nhà Con 3 đỏ"
+            },
+            {
+                "id": 9,
+                "name": "Nhà Con 1 đỏ"
+            },
+            {
+                "id": 10,
+                "name": "Nhà Con 4 đỏ"
+            },
+            {
+                "id": 11,
+                "name": "Nhà Con 4 trắng"
+            },
+            {
+                "id": 12,
+                "name": "Nhà Cái chẵn"
+            },
+            {
+                "id": 13,
+                "name": "Nhà Cái lẻ"
+            },
+            {
+                "id": 14,
+                "name": "Nhà Cái 3 đỏ"
+            },
+            {
+                "id": 15,
+                "name": "Nhà Cái 1 đỏ"
+            },
+            {
+                "id": 16,
+                "name": "Nhà Cái 4 đỏ"
+            },
+            {
+                "id": 17,
+                "name": "Nhà Cái 4 trắng"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Long Lân Quy Phụng",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Saba.club Lottery",
+        "choice": []
+    },
+    {
+        "id": 35,
+        "name": "Three Cards",
+        "choice": []
+    },
+    {
+        "id": 38,
+        "name": "Anh Hùng Chim Lạc",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Casino Hold'em",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Texas Hold'em Poker",
+        "choice": []
+    },
+    {
+        "id": 43,
+        "name": "Bitcoin Master",
+        "choice": []
+    },
+    {
+        "id": 45,
+        "name": "High Low",
+        "choice": [
+            {
+                "id": 0,
+                "name": "High"
+            },
+            {
+                "id": 1,
+                "name": "Low"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Night Club",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Treasure Island",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Blockchain Baccarat",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Way To Goal",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Mega Big Small",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Mega Keno",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Mega Keno 2",
+        "choice": [
+            {
+                "id": 1,
+                "name": "Tài"
+            },
+            {
+                "id": 2,
+                "name": "Xỉu"
+            },
+            {
+                "id": 3,
+                "name": "Lẻ"
+            },
+            {
+                "id": 4,
+                "name": "Chẵn"
+            },
+            {
+                "id": 5,
+                "name": "Kim"
+            },
+            {
+                "id": 6,
+                "name": "Mộc"
+            },
+            {
+                "id": 7,
+                "name": "Thủy"
+            },
+            {
+                "id": 8,
+                "name": "Hỏa"
+            },
+            {
+                "id": 9,
+                "name": "Thổ"
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Fruit Slot",
+        "choice": []
+    },
+    {
+        "id": 60,
+        "name": "Fan Tan",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+   },
+   {
+        "id": 62,
+        "name": "Fortune Cat",
+        "choice": []
+    },
+    {
+        "id": 61,
+        "name": "Win Three Cards",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Happy Fish",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Magic Forest",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "name": "BaccaratX Lobby",
+        "choice": [
+            {
+                "id": 0,
+                "name": "N/A"
+            }
+        ]
+    }
+]

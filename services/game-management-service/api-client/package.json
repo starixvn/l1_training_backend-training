@@ -1,0 +1,70 @@
+{
+    "name": "sc-game-management-client",
+    "version": "0.0.2-beta.22",
+    "description": "Game Management Api Client",
+    "main": "./lib/index.js",
+    "typings": "./lib/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix  && prettier --write '{src}/**/*.ts'",
+        "prebuild": "rimraf lib",
+        "build": "tsc",
+        "build:watch": "tsc --watch",
+        "test": "jest",
+        "test-coverage": "jest --collect-coverage",
+        "reg": "npm set registry http://npm.lumigame.com",
+        "pub": "tsc && npm publish --registry http://npm.lumigame.com",
+        "betaver": "npm version prerelease --preid beta",
+        "pubbeta": "tsc && npm publish --registry http://npm.lumigame.com --tag beta",
+        "semantic-release": "semantic-release"
+    },
+    "jestSonar": {
+        "reportPath": "reports",
+        "reportFile": "test-reporter.xml",
+        "indent": 4
+    },
+    "files": [
+        "lib/"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://git3.nexdev.net/l1/backend-services/game-management-service.git"
+    },
+    "keywords": [
+        "game-management",
+        "game-management-client",
+        "sc-game-management-client"
+    ],
+    "author": {
+        "email": "pentagon@sabawork.com",
+        "name": "pentagon"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "axios": "1.6.2",
+        "axios-retry": "^4.0.0"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.12.11",
+        "@commitlint/cli": "^9.1.2",
+        "@commitlint/config-conventional": "^9.1.2",
+        "@semantic-release/changelog": "^5.0.1",
+        "@semantic-release/commit-analyzer": "^8.0.1",
+        "@semantic-release/git": "^9.0.0",
+        "@semantic-release/gitlab": "^6.0.4",
+        "@semantic-release/npm": "^7.0.5",
+        "@semantic-release/release-notes-generator": "^9.0.1",
+        "husky": "^4.2.5",
+        "install": "^0.13.0",
+        "rimraf": "^3.0.2",
+        "sc-semantic-release": "^1.2.0",
+        "semantic-release": "^17.1.1",
+        "typescript": "5.3.2"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}

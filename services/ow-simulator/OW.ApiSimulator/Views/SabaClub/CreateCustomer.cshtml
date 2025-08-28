@@ -1,0 +1,98 @@
+﻿@model OW.ApiSimulator.Models.Customer
+
+<h3>Create Customer</h3>
+
+<form method="post">
+    <input class="btn btn-primary" type="submit" value="Save" />
+    <div class="form-group">
+        <label asp-for="Operator"></label>
+        <select class="form-control" asp-items="@Constants.Operators.Select(x => new SelectListItem(x, x))" asp-for="Operator"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="PlayerId"></label>
+        <input class="form-control" asp-for="PlayerId" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input class="form-control" asp-for="Username" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Balance"></label>
+        <input class="form-control" asp-for="Balance" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MinBet"></label>
+        <input class="form-control" asp-for="MinBet" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxBet"></label>
+        <input class="form-control" asp-for="MaxBet" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Currency"></label>
+        <input class="form-control" asp-for="Currency" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SiteId"></label>
+        <input class="form-control" asp-for="SiteId" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SiteName"></label>
+        <input class="form-control" asp-for="SiteName" />
+    </div>
+    <h4>Delay Time</h4>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="Delay.GetBalance">GetBalance</label>
+            <input class="form-control" asp-for="Delay.GetBalance" />
+        </div>
+        <div class="col-6">
+            <label asp-for="Delay.PlaceBet">PlaceBet</label>
+            <input class="form-control" asp-for="Delay.PlaceBet" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="Delay.EndGame">EndGame</label>
+            <input class="form-control" asp-for="Delay.EndGame" />
+        </div>
+        <div class="col-6">
+            <label asp-for="Delay.GetBetLimit">GetBetLimit</label>
+            <input class="form-control" asp-for="Delay.GetBetLimit" />
+        </div>
+    </div>
+    <h4>Error Codes</h4>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="ErrorCode.GetBalance">GetBalance</label>
+            <input class="form-control" asp-for="ErrorCode.GetBalance" />
+        </div>
+        <div class="col-6">
+            <label asp-for="ErrorCode.PlaceBet">PlaceBet</label>
+            <input class="form-control" asp-for="ErrorCode.PlaceBet" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="ErrorCode.EndGame">EndGame</label>
+            <input class="form-control" asp-for="ErrorCode.EndGame" />
+        </div>
+        <div class="col-6">
+            <label asp-for="ErrorCode.GetBetLimit">GetBetLimit</label>
+            <input class="form-control" asp-for="ErrorCode.GetBetLimit" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="ErrorCode.MemberLogin">Member Login</label>
+            <input class="form-control" asp-for="ErrorCode.MemberLogin" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="ErrorCode.OWLogin">OW Login</label>
+            <input class="form-control" asp-for="ErrorCode.OWLogin" />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,17 @@
+{
+    "name": "mongodb-data-import",
+    "version": "1.0.0",
+    "description": "Import JSON files to MongoDB",
+    "main": "import-data.js",
+    "scripts": {
+        "start": "node import-data.js"
+    },
+    "engines": {
+        "node": "18.20.7"
+    },
+    "dependencies": {
+        "mongodb": "^6.3.0",
+        "fs-extra": "^11.2.0",
+        "path": "^0.12.7"
+    }
+}

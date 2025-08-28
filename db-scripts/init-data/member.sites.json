@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "5e6c934017a6d754fc55e7a7"
+  },
+  "siteId": "licensee1",
+  "backendApi": "backend api",
+  "clientId": "licensee1",
+  "clientSecret": "123licensee1%^&sit",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5e6c934017a6d754fc55e7a8"
+  },
+  "siteId": "licensee13",
+  "backendApi": "backend api",
+  "clientId": "licensee13",
+  "clientSecret": "123licensee1%^&sit",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5e7a48d2d27a533210713424"
+  },
+  "siteId": "4100300",
+  "clientId": "ONEworks1",
+  "clientSecret": "123licensee1%^&sit",
+  "gameClientUrl": "http://games.lumigame.com/",
+  "isMobi": false
+},
+{
+  "_id": {
+    "$oid": "5e7a4927d27a533210713425"
+  },
+  "siteId": "4100304",
+  "clientId": "ONEworks1",
+  "clientSecret": "123licensee1%^&sit",
+  "gameClientUrl": "http://games.lumigame.com/",
+  "isMobi": false
+},
+{
+  "_id": {
+    "$oid": "5e7c74db95d41d71bc7be794"
+  },
+  "siteId": "game-server",
+  "clientId": "game-server",
+  "clientSecret": "gameserver@20luminet&",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5e7c74f795d41d71bc7be795"
+  },
+  "siteId": "api",
+  "clientId": "api",
+  "clientSecret": "api@20luminet&",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5e83fe003fcd575e9c658d9b"
+  },
+  "siteId": "admin-api",
+  "clientId": "admin-api",
+  "clientSecret": "adminapi@20luminet&",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5e8ff5aa3a5ed85a649e9d6d"
+  },
+  "siteId": "gamesimulator",
+  "clientId": "gamesimulator",
+  "clientSecret": "gamesimulator@20luminet&",
+  "gameClientUrl": "https://games.lumigame.com/",
+  "gameMobiClientUrl": "https://l1-m.lumigame.com/",
+  "validCurrencies": [
+    "$US",
+    "IRR",
+    "NTD",
+    "US$",
+    "UT",
+    "Y$US",
+    "YEN",
+    "UUS",
+    "IDR"
+  ],
+  "gameMobiKenoSoccerClientUrl": null,
+  "miniSabaGameClientUrl": "https://l1-mini.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5f5b218b40ea7f79581aa290"
+  },
+  "siteId": "admin-api-server",
+  "clientId": "admin-api-server",
+  "clientSecret": "adminapi@20luminet&",
+  "gameClientUrl": "http://games.lumigame.com/"
+},
+{
+  "_id": {
+    "$oid": "5f85205905aafa1cb01ea0cb"
+  },
+  "siteId": "game-services",
+  "clientId": "game-services",
+  "clientSecret": "gameservices@20luminet&",
+  "gameClientUrl": "http://games.lumigame.com/"
+}]

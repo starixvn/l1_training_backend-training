@@ -1,0 +1,879 @@
+[{
+  "_id": {
+    "$oid": "63e1c7557f464900016dc095"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "name": "Market",
+  "currencyGroupIds": [
+    "61765beed2b6510001f18bd6",
+    "651f88ef53015fd9ed9a501b",
+    "651f8d7453015fd9ed9a501e",
+    "668dff13bf646bf5d15f0ef4",
+    "6705f8efe849e6ba39638f25",
+    "67a31dd6f27222607a92de17",
+    "651f890653015fd9ed9a501c"
+  ],
+  "miniPanelGameIds": [
+    9,
+    6,
+    50,
+    3,
+    45,
+    1
+  ],
+  "categories": [
+    {
+      "name": {
+        "en-US": "All Games",
+        "vi-VN": "Tất Cả",
+        "id-ID": "Semua permainan",
+        "th-TH": "เกมทั้งหมด",
+        "zh-CN": "所有游戏",
+        "zh-TW": "所有遊戲"
+      },
+      "gameSettings": [
+        {
+          "gameId": 104,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 103,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 107,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 93,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 96,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 95,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 102,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 78,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 77,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 22,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 2,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 28,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 9,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 25,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 1,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 4,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 6,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 50,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 70,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 74,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 68,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 66,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 69,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 65,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 29,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 38,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 47,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 49,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 59,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 76,
+          "bigSize": true,
+          "newTag": true
+        },
+        {
+          "gameId": 46,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 62,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 63,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 64,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 8,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 52,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 60,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 75,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 61,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 48,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 67,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 10,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 26,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 3,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 7,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 24,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 72,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 23,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 21,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 31,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 35,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 43,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 39,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 45,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 42,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 73,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Se Die",
+        "vi-VN": "Xóc Đĩa",
+        "id-ID": "Se Die",
+        "th-TH": "Se Die (เขย่าหมาก)",
+        "zh-CN": "色碟",
+        "zh-TW": "色碟"
+      },
+      "gameSettings": [
+        {
+          "gameId": 22,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 28,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 9,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 24,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 2,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Big Small",
+        "vi-VN": "Tài Xỉu",
+        "id-ID": "Besar Kecil",
+        "th-TH": "ใหญ่/เล็ก",
+        "zh-CN": "大小",
+        "zh-TW": "大小"
+      },
+      "gameSettings": [
+        {
+          "gameId": 25,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 1,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 4,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 6,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 50,
+          "bigSize": true,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Card Games",
+        "vi-VN": "Game Bài",
+        "id-ID": "Permainan kartu",
+        "th-TH": "เกมไพ่",
+        "zh-CN": "纸牌游戏",
+        "zh-TW": "紙牌遊戲"
+      },
+      "gameSettings": [
+        {
+          "gameId": 102,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 77,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 72,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 75,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 61,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 10,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 67,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 7,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 23,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 35,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 39,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 45,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 42,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Slots",
+        "vi-VN": "Slots",
+        "id-ID": "Slot",
+        "th-TH": "สล็อต",
+        "zh-CN": "老虎机",
+        "zh-TW": "老虎機"
+      },
+      "gameSettings": [
+        {
+          "gameId": 76,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 74,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 70,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 69,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 68,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 66,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 65,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 29,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 38,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 46,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 47,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 49,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 59,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 62,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 63,
+          "bigSize": true,
+          "newTag": false
+        },
+        {
+          "gameId": 64,
+          "bigSize": true,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Keno Lottery",
+        "vi-VN": "Keno Lottery",
+        "id-ID": "Keno Lotere",
+        "th-TH": "Keno ล็อตเตอรี่",
+        "zh-CN": "Keno 彩票",
+        "zh-TW": "Keno 彩票"
+      },
+      "gameSettings": [
+        {
+          "gameId": 8,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 52,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 31,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Others",
+        "vi-VN": "Game Khác",
+        "id-ID": "Lainnya",
+        "th-TH": "อื่นๆ",
+        "zh-CN": "其他",
+        "zh-TW": "其他"
+      },
+      "gameSettings": [
+        {
+          "gameId": 93,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 71,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 3,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 78,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 21,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 43,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 60,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 26,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 80,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 73,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    }
+  ],
+  "banners": [
+    {
+      "gameId": 93,
+      "displayTime": 5
+    },
+    {
+      "gameId": 102,
+      "displayTime": 10
+    },
+    {
+      "gameId": 42,
+      "displayTime": 5
+    },
+    {
+      "gameId": 77,
+      "displayTime": 5
+    },
+    {
+      "gameId": 75,
+      "displayTime": 5
+    },
+    {
+      "gameId": 67,
+      "displayTime": 5
+    }
+  ],
+  "roundTimerGame": {
+    "games": [
+      {
+        "id": 1,
+        "name": "taixiu"
+      },
+      {
+        "id": 9,
+        "name": "minisedie"
+      },
+      {
+        "id": 3,
+        "name": "baucua"
+      }
+    ],
+    "main": 3
+  }
+},
+{
+  "_id": {
+    "$oid": "64d0a4268b1f1632817729ef"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "name": "Esther Test",
+  "currencyGroupIds": [
+    "618e0507bfa1450001a1498b"
+  ],
+  "miniPanelGameIds": [
+    3,
+    50,
+    7
+  ],
+  "categories": [
+    {
+      "name": {
+        "en-US": "All Games",
+        "vi-VN": "",
+        "id-ID": "",
+        "th-TH": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      },
+      "gameSettings": [
+        {
+          "gameId": 2,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 1,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 3,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 6,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 7,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 50,
+          "bigSize": false,
+          "newTag": false
+        }
+      ]
+    }
+  ],
+  "banners": [],
+  "roundTimerGame": {
+    "games": [
+      {
+        "id": 7,
+        "name": "dragontiger"
+      },
+      {
+        "id": 50,
+        "name": "unbalancedbigsmall1"
+      },
+      {
+        "id": 3,
+        "name": "baucua"
+      }
+    ],
+    "main": 3
+  }
+},
+{
+  "_id": {
+    "$oid": "64d5aaddd90f965ae91bda95"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "name": "Esther Test 2",
+  "currencyGroupIds": [
+    "618389b7b27f5a0001f9adcc"
+  ],
+  "miniPanelGameIds": [
+    3,
+    7,
+    50
+  ],
+  "categories": [
+    {
+      "name": {
+        "en-US": "All Games",
+        "vi-VN": "",
+        "id-ID": "",
+        "th-TH": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      },
+      "gameSettings": []
+    }
+  ],
+  "banners": [],
+  "roundTimerGame": {
+    "games": [
+      {
+        "id": 3,
+        "name": "baucua"
+      },
+      {
+        "id": 50,
+        "name": "unbalancedbigsmall1"
+      }
+    ],
+    "main": -1
+  }
+},
+{
+  "_id": {
+    "$oid": "64f849736b6c122e56e39a58"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "name": "Group 123",
+  "currencyGroupIds": [
+    "6177cd71d6c6210001d30af9"
+  ],
+  "miniPanelGameIds": [
+    9
+  ],
+  "categories": [
+    {
+      "name": {
+        "en-US": "All",
+        "vi-VN": "Tất cả",
+        "id-ID": "All",
+        "th-TH": "All",
+        "zh-CN": "All",
+        "zh-TW": "All"
+      },
+      "gameSettings": [
+        {
+          "gameId": 2,
+          "bigSize": false,
+          "newTag": false
+        },
+        {
+          "gameId": 71,
+          "bigSize": false,
+          "newTag": true
+        },
+        {
+          "gameId": 39,
+          "bigSize": false,
+          "newTag": true
+        }
+      ]
+    }
+  ],
+  "banners": [],
+  "roundTimerGame": {
+    "games": [],
+    "main": 0
+  }
+}]

@@ -1,0 +1,7691 @@
+[{
+  "_id": {
+    "$oid": "617a656d28b7a500016388f9"
+  },
+  "gameId": 2,
+  "gameName": "xocxoc",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 6000,
+  "maxBetPerChoices": {
+    "even": 6000,
+    "odd": 6000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "617a65f528b7a500016388fa"
+  },
+  "gameId": 1,
+  "gameName": "taixiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "617fbb5b36210e00016bcf79"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 21,
+  "gameName": "roulette",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 50000,
+  "maxBetPerChoices": {
+    "straightUp": 50,
+    "split": 200,
+    "street": 300,
+    "triangle": 300,
+    "corner": 400,
+    "fourNumbers": 400,
+    "line": 10000,
+    "column": 20000,
+    "dozen": 20000,
+    "redBlack": 10000,
+    "oddEven": 50000,
+    "bigSmall": 50000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6183901bb27f5a0001f9add1"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 6,
+  "gameName": "oeturbo",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618390bdb27f5a0001f9add4"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 24,
+  "gameName": "specialsedie",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6183a5c586e9c100011c42de"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 9,
+  "gameName": "minisedie",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6184e495496aa00001eb80d1"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 35,
+  "gameName": "threecards",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "red": 40000,
+    "black": 40000,
+    "diamonds": 40000,
+    "hearts": 40000,
+    "spades": 40000,
+    "clubs": 40000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6188ee5fac732a000164fd95"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 25,
+  "gameName": "sicbo",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "specific1": 1000,
+    "specific2": 1000,
+    "specific3": 1000,
+    "specific4": 1000,
+    "specific5": 1000,
+    "specific6": 1000,
+    "big": 2500,
+    "small": 2500,
+    "anyTriple": 1000,
+    "total4": 1000,
+    "total5": 1000,
+    "total6": 1000,
+    "total7": 1000,
+    "total8": 1000,
+    "total9": 200,
+    "total10": 200,
+    "total11": 200,
+    "total12": 200,
+    "total13": 1000,
+    "total14": 1000,
+    "total15": 1000,
+    "total16": 1000,
+    "total17": 1000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "10000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6189ea5dac732a000164fd99"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 3,
+  "gameName": "baucua",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 60000,
+  "maxBetPerChoices": {
+    "fish": 30000,
+    "prawn": 30000,
+    "crab": 30000,
+    "stag": 30000,
+    "gourd": 30000,
+    "rooster": 30000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6189ee6d2a48d70001d9eb80"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 7,
+  "gameName": "dragontiger",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "dragon": 2000,
+    "tiger": 2000,
+    "tie": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "618a4fd02a48d70001d9eb8c"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 8,
+  "gameName": "kenopromax",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "big": 20000,
+    "small": 20000,
+    "even": 20000,
+    "odd": 20000,
+    "earth": 5000,
+    "fire": 15000,
+    "gold": 5000,
+    "water": 20000,
+    "wood": 15000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618a50322a48d70001d9eb8d"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 36,
+  "gameName": "kenomatch1",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "fhBlue": 3000,
+    "fhRed": 3000,
+    "fhOver": 5000,
+    "fhUnder": 5000,
+    "fhOdd": 5000,
+    "fhEven": 5000,
+    "ftBlue": 3000,
+    "ftRed": 3000,
+    "ftOver": 5000,
+    "ftUnder": 5000,
+    "ftOdd": 5000,
+    "ftEven": 5000,
+    "liveFTOdd": 2000,
+    "liveFTEven": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618b4c982a48d70001d9eb8f"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 27,
+  "gameName": "vipbaccarat",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "big": 3000,
+    "small": 3000,
+    "tie": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000
+  },
+  "chips": [
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618b4fde2a48d70001d9eb94"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 26,
+  "gameName": "vipfishprawncrab",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 60000,
+  "maxBetPerChoices": {
+    "fish": 30000,
+    "prawn": 30000,
+    "crab": 30000,
+    "stag": 30000,
+    "gourd": 30000,
+    "rooster": 30000,
+    "anyTriple": 10000,
+    "mountain": 30000,
+    "ocean": 30000
+  },
+  "chips": [
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618cc9d17c6476000130fab7"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 37,
+  "gameName": "kenomatch2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "fhBlue": 2000,
+    "fhRed": 2000,
+    "fhOver": 2000,
+    "fhUnder": 2000,
+    "fhOdd": 2000,
+    "fhEven": 2000,
+    "ftBlue": 2000,
+    "ftRed": 2000,
+    "ftOver": 2000,
+    "ftUnder": 2000,
+    "ftOdd": 2000,
+    "ftEven": 2000,
+    "liveFTOdd": 2000,
+    "liveFTEven": 2000
+  },
+  "chips": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618ccd5d7c6476000130fabc"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 40,
+  "gameName": "kenopower1",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "blue": 5000,
+    "red": 5000,
+    "big": 5000,
+    "small": 5000,
+    "odd": 5000,
+    "even": 5000,
+    "blueBig": 5000,
+    "blueSmall": 5000,
+    "redBig": 5000,
+    "redSmall": 5000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "618ccd807c6476000130fabd"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 41,
+  "gameName": "kenopower2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "blue": 5000,
+    "red": 5000,
+    "big": 5000,
+    "small": 5000,
+    "odd": 5000,
+    "even": 5000,
+    "blueBig": 3000,
+    "blueSmall": 3000,
+    "redBig": 3000,
+    "redSmall": 3000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6191d4314617030001312c7f"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 38,
+  "gameName": "heroesslot",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "defaultCoinValue": 0,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12
+  ],
+  "defaultBetLevel": 0.01
+},
+{
+  "_id": {
+    "$oid": "619346aefe79bb000191f395"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 28,
+  "gameName": "vipsediewar",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 3000,
+    "banker": 3000,
+    "tie": 40000,
+    "even": 40000,
+    "odd": 40000,
+    "playerEven": 40000,
+    "playerOdd": 40000,
+    "playerRed3": 40000,
+    "playerWhite3": 40000,
+    "playerRed4": 40000,
+    "playerWhite4": 2000,
+    "bankerEven": 3000,
+    "bankerOdd": 40000,
+    "bankerRed3": 40000,
+    "bankerWhite3": 40000,
+    "bankerRed4": 40000,
+    "bankerWhite4": 40000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6194746bfe79bb000191f39a"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 16,
+  "gameName": "kenoeast",
+  "enabled": true,
+  "minBet": 5,
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "big": 3000,
+    "small": 3000,
+    "even": 3000,
+    "odd": 3000,
+    "earth": 800,
+    "fire": 2000,
+    "gold": 800,
+    "water": 3000,
+    "wood": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "619477ff5435d100016746eb"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 14,
+  "gameName": "kenomini",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 500,
+    "fire": 1500,
+    "gold": 500,
+    "water": 2000,
+    "wood": 1500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "619478a15435d100016746f0"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 15,
+  "gameName": "kenomini2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 500,
+    "fire": 1000,
+    "gold": 500,
+    "water": 2000,
+    "wood": 1000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "619479545435d100016746f5"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 19,
+  "gameName": "kenonorth",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 500,
+    "fire": 500,
+    "gold": 500,
+    "water": 2000,
+    "wood": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "619479eb5435d100016746f9"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 18,
+  "gameName": "kenosouth",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 1000,
+    "fire": 1000,
+    "gold": 1000,
+    "water": 1000,
+    "wood": 1000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "61947a925435d100016746fd"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 17,
+  "gameName": "kenowest",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 1000,
+    "fire": 1000,
+    "gold": 1000,
+    "water": 1000,
+    "wood": 1000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "61947b775435d10001674701"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 11,
+  "gameName": "kenoproviet",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000
+  },
+  "chips": [
+    "5",
+    "10",
+    "100",
+    "1000"
+  ],
+  "stakeLevels": []
+},
+{
+  "_id": {
+    "$oid": "6194b82a467266000104c14b"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 31,
+  "gameName": "lottery",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "4Sets": 1000,
+    "special": 500,
+    "head": 1000,
+    "tail": 1000,
+    "27Sets": 3000,
+    "others": 3000
+  },
+  "chips": [
+    "1",
+    "2",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6197506e61897f0001d858ed"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 44,
+  "gameName": "kenomatch1",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": []
+},
+{
+  "_id": {
+    "$oid": "61b85493a337100001750b60"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 39,
+  "gameName": "casinoholdempoker",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 80000,
+  "maxBetPerChoices": {
+    "anteBet": 20000,
+    "aaBet": 20000,
+    "callBet": 40000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "61c57037e5b9c00001a4687f"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 43,
+  "gameName": "bitcoinmaster",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "up": 5000,
+    "down": 5000,
+    "odd": 5000,
+    "even": 5000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6233f6afa18f420001f90ef4"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 45,
+  "gameName": "hilo",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 5000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62621cbf1df21800019c2bb6"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 46,
+  "gameName": "nightclub",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.04,
+    0.05,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    15
+  ],
+  "defaultBetLevel": 1,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6269f328b530e70001d7c0ca"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 42,
+  "gameName": "texasholdempoker",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "anteBet": 4000,
+    "callBet": 8000,
+    "turnBet": 4000,
+    "riverBet": 4000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "4000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "628df02da2bd8f00016315f4"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 47,
+  "gameName": "treasureisland",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "stakeLevels": [],
+  "coinValues": [
+    0.01,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1,
+    1.5,
+    2,
+    3,
+    4,
+    5
+  ],
+  "maxWinPerRound": 2000,
+  "defaultCoinValue": 0.01
+},
+{
+  "_id": {
+    "$oid": "62985827df6cd6000145efa0"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 4,
+  "gameName": "txturbo",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "62997eb2df6cd6000145efa9"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "player": 20000,
+    "banker": 20000,
+    "big": 20000,
+    "small": 20000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "chips": [
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "4000",
+    "40000",
+    "200000",
+    "700000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "62998d650c1a000001051c8f"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 22,
+  "gameName": "vipsedie",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "even": 40000,
+    "odd": 40000,
+    "red2": 40000,
+    "red3": 40000,
+    "white3": 40000,
+    "red4": 10000,
+    "white4": 10000
+  },
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6299a1f50c1a000001051c92"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 29,
+  "gameName": "fourguardians",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12
+  ],
+  "defaultBetLevel": 0.01
+},
+{
+  "_id": {
+    "$oid": "6299aad20c1a000001051c95"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 23,
+  "gameName": "blackjack",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 30000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62d0d6492872d000010453ad"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 50,
+  "gameName": "unbalancedbigsmall1",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62d0d8542872d000010453b0"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 51,
+  "gameName": "unbalancedbigsmall2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2500,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62d0de572872d000010453b5"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 54,
+  "gameName": "unbalancedbigsmall3",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62d0de702872d000010453b6"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 55,
+  "gameName": "unbalancedbigsmall4",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "2",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62eb5119e6681a0001b31366"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 48,
+  "gameName": "blockchainbaccarat",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "big": 40000,
+    "small": 40000,
+    "tie": 10000,
+    "playerPair": 10000,
+    "bankerPair": 10000
+  },
+  "chips": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "62f9daab8daf8d7240a28323"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 56,
+  "gameName": "minisedie2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "63074535b0cfe1000154d147"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 57,
+  "gameName": "minisedie3",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "63103d104e5b3f0001e79dd9"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 52,
+  "gameName": "megakeno",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 50000,
+  "maxBetPerChoices": {
+    "big": 50000,
+    "small": 50000,
+    "even": 10000,
+    "odd": 10000,
+    "earth": 1000,
+    "fire": 2000,
+    "gold": 1000,
+    "water": 5000,
+    "wood": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "63103da44e5b3f0001e79dda"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 53,
+  "gameName": "megakeno2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "big": 2000,
+    "small": 2000,
+    "even": 2000,
+    "odd": 2000,
+    "earth": 500,
+    "fire": 1500,
+    "gold": 500,
+    "water": 2000,
+    "wood": 1500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "63107e844e5b3f0001e79ddd"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 49,
+  "gameName": "waytogoal",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12
+  ],
+  "defaultBetLevel": 0.01,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "63186518a94b4400011d3d5a"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 58,
+  "gameName": "minisedie4",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "63bbdda75676040001076c61"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 60,
+  "gameName": "fantan",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "even": 20000,
+    "odd": 20000,
+    "fan1": 10000,
+    "fan2": 10000,
+    "fan3": 10000,
+    "fan4": 10000,
+    "kwok12": 20000,
+    "kwok23": 20000,
+    "kwok34": 20000,
+    "kwok41": 20000,
+    "chun123": 20000,
+    "chun124": 20000,
+    "chun134": 20000,
+    "chun234": 20000
+  },
+  "chips": [
+    "1",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "63be8db65676040001076c63"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 59,
+  "gameName": "fruitslot",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "bar": 2000,
+    "tripleSeven": 2000,
+    "star": 2000,
+    "watermelon": 2000,
+    "bell": 2000,
+    "lemon": 2000,
+    "orange": 2000,
+    "cherry": 2000,
+    "big": 2000,
+    "small": 2000
+  },
+  "chips": [
+    "1",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "63c6172f856ffd000111ad30"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 61,
+  "gameName": "winthreecards",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "dragon": 20000,
+    "phoenix": 20000,
+    "pair8Plus": 10000,
+    "straight": 5000,
+    "flush": 5000,
+    "straightFlush": 500,
+    "threeOfAKind": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "63e20abf26087d0001b5c80a"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 62,
+  "gameName": "fortunecat",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "6465d0b4912c0884cc8c451c"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 63,
+  "gameName": "happyfish",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "6465d143912c0884cc8c451d"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 65,
+  "gameName": "djclub",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "647ee791fc191408a4506bd0"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 64,
+  "gameName": "magicforest",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 1.75,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "64b0bccb19480e02334b9c86"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 68,
+  "gameName": "missionimpossible",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "64b7ad563820b31d4cbb5b41"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 69,
+  "gameName": "blackpink",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "64e464ed6521c63f47945e5a"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 71,
+  "gameName": "colorgame",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "yellow": 2000,
+    "red": 2000,
+    "pink": 2000,
+    "white": 2000,
+    "blue": 2000,
+    "green": 2000,
+    "hot": 2000,
+    "cold": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "64eda0c5143176d2b3d9f507"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 66,
+  "gameName": "candyland",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "stakeLevels": [],
+  "coinValues": [
+    0.01,
+    0.05,
+    0.1,
+    0.5
+  ],
+  "maxWinPerRound": 2000,
+  "defaultCoinValue": 0.01
+},
+{
+  "_id": {
+    "$oid": "64ef00fa882e93cac07589bf"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 67,
+  "gameName": "dragontigerfight",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "dragon": 2000,
+    "tiger": 2000,
+    "tie": 500,
+    "redDragon": 2000,
+    "blackDragon": 2000,
+    "redTiger": 2000,
+    "blackTiger": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "653777c4a969f1f1f237c412"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 27,
+  "gameName": "vipbaccarat",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "big": 3000,
+    "small": 3000,
+    "tie": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000
+  },
+  "chips": [
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "653777d9a969f1f1f237c413"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 1,
+  "gameName": "taixiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6538886ba969f1f1f237c416"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 70,
+  "gameName": "transformers",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2
+},
+{
+  "_id": {
+    "$oid": "6551965650553ec0d51f2544"
+  },
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 10000,
+  "maxBetPerChoices": {
+    "player": 10000,
+    "banker": 10000,
+    "big": 10000,
+    "small": 10000,
+    "tie": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551966050553ec0d51f2545"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 1,
+  "gameName": "taixiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 3000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551967650553ec0d51f2546"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 23,
+  "gameName": "blackjack",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 30000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551968050553ec0d51f2547"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 10000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 500,
+    "bankerPair": 500,
+    "tie": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6551968b50553ec0d51f2548"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 69,
+  "gameName": "blackpink",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551969a50553ec0d51f2549"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 66,
+  "gameName": "candyland",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "stakeLevels": [],
+  "coinValues": [
+    0.01,
+    0.05,
+    0.1,
+    0.5
+  ],
+  "maxWinPerRound": 2000
+},
+{
+  "_id": {
+    "$oid": "655196ae50553ec0d51f254a"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 39,
+  "gameName": "casinoholdempoker",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 80000,
+  "maxBetPerChoices": {
+    "anteBet": 20000,
+    "aaBet": 20000,
+    "callBet": 40000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "655196b850553ec0d51f254b"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 7,
+  "gameName": "dragontiger",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 30000,
+  "maxBetPerChoices": {
+    "dragon": 30000,
+    "tiger": 30000,
+    "tie": 10000
+  },
+  "chips": [
+    "1",
+    "3",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "655196c250553ec0d51f254c"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 67,
+  "gameName": "dragontigerfight",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "dragon": 1995,
+    "tiger": 2000,
+    "tie": 500,
+    "redDragon": 2000,
+    "blackDragon": 2003,
+    "redTiger": 2000,
+    "blackTiger": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "655196cf50553ec0d51f254d"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 3,
+  "gameName": "baucua",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 60000,
+  "maxBetPerChoices": {
+    "fish": 30000,
+    "prawn": 30000,
+    "crab": 30000,
+    "stag": 30000,
+    "gourd": 30000,
+    "rooster": 30000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "655196de50553ec0d51f254e"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 38,
+  "gameName": "heroesslot",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.1,
+    0.2,
+    1
+  ],
+  "defaultBetLevel": 0.1
+},
+{
+  "_id": {
+    "$oid": "655196ef50553ec0d51f254f"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 9,
+  "gameName": "minisedie",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 1000,
+    "white3": 1000,
+    "red4": 500,
+    "white4": 500
+  },
+  "chips": [
+    "1",
+    "5"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "655196f950553ec0d51f2550"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 56,
+  "gameName": "minisedie2",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 1000,
+    "white3": 1000,
+    "red4": 500,
+    "white4": 500
+  },
+  "chips": [
+    "1",
+    "5"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6551970150553ec0d51f2551"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 57,
+  "gameName": "minisedie3",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 1000,
+    "white3": 1000,
+    "red4": 500,
+    "white4": 500
+  },
+  "chips": [
+    "1",
+    "5"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6551970950553ec0d51f2552"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 58,
+  "gameName": "minisedie4",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 1000,
+    "white3": 1000,
+    "red4": 500,
+    "white4": 500
+  },
+  "chips": [
+    "1",
+    "5"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "6551cca450553ec0d51f2553"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 65,
+  "gameName": "djclub",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551d8ce50553ec0d51f2554"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 22,
+  "gameName": "vipsedie",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "even": 40000,
+    "odd": 40000,
+    "red2": 40000,
+    "red3": 40000,
+    "white3": 40000,
+    "red4": 10000,
+    "white4": 10000
+  },
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551d90150553ec0d51f2555"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 29,
+  "gameName": "fourguardians",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.1,
+    0.2,
+    1
+  ],
+  "defaultBetLevel": 0.1
+},
+{
+  "_id": {
+    "$oid": "6551d91a50553ec0d51f2556"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 8,
+  "gameName": "kenopromax",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "big": 20000,
+    "small": 20000,
+    "even": 20000,
+    "odd": 20000,
+    "earth": 5000,
+    "fire": 15000,
+    "gold": 5000,
+    "water": 20000,
+    "wood": 15000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6551d94a50553ec0d51f2557"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 6,
+  "gameName": "oeturbo",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "656417d31e551142f9dd0d79"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 2,
+  "gameName": "xocxoc",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 1000,
+    "white3": 1000,
+    "red4": 500,
+    "white4": 500
+  },
+  "chips": [
+    "1",
+    "5"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65669b584d6f65254d6d3041"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "big": 2000,
+    "small": 2000,
+    "tie": 500,
+    "playerPair": 500,
+    "bankerPair": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "656fe606b7739d7d6f33419c"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 75,
+  "gameName": "bandarqiuqiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "spade": 2000,
+    "heart": 2000,
+    "club": 2000,
+    "diamond": 2000
+  },
+  "chips": [
+    "1",
+    "2",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "657ad7805c0317a468a69d7d"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 75,
+  "gameName": "bandarqiuqiu",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 2500,
+  "maxBetPerChoices": {
+    "spade": 2500,
+    "heart": 2500,
+    "club": 2500,
+    "diamond": 2500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "658269a2be7573676e27161b"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 60,
+  "gameName": "fantan",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "even": 20000,
+    "odd": 20000,
+    "fan1": 10000,
+    "fan2": 10000,
+    "fan3": 10000,
+    "fan4": 10000,
+    "kwok12": 20000,
+    "kwok23": 20000,
+    "kwok34": 20000,
+    "kwok41": 20000,
+    "chun123": 20000,
+    "chun124": 20000,
+    "chun134": 20000,
+    "chun234": 20000
+  },
+  "chips": [
+    "1",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6582a88e7d7e54a3d2a11b19"
+  },
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 75,
+  "gameName": "bandarqiuqiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2500,
+  "maxBetPerChoices": {
+    "spade": 2500,
+    "heart": 2500,
+    "club": 2500,
+    "diamond": 2500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "6583dd37847a3392cb0d4698"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 75,
+  "gameName": "bandarqiuqiu",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2500,
+  "maxBetPerChoices": {
+    "spade": 2500,
+    "heart": 2500,
+    "club": 2500,
+    "diamond": 2500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "65a88c52004adbf3348ac874"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 76,
+  "gameName": "dragonball",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.04,
+    0.06,
+    0.4,
+    0.8,
+    5,
+    10,
+    15,
+    20,
+    25,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    150,
+    250
+  ],
+  "defaultBetLevel": 0.04,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65b0bc0ce67b66c839a9292f"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 74,
+  "gameName": "onepiece",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 2,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65b0bc22e67b66c839a92930"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 74,
+  "gameName": "onepiece",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.1,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "defaultBetLevel": 0.1
+},
+{
+  "_id": {
+    "$oid": "65b86f411c72f33de861b88f"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 71,
+  "gameName": "colorgame",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "yellow": 2000,
+    "red": 2000,
+    "pink": 2000,
+    "white": 2000,
+    "blue": 2000,
+    "green": 2000,
+    "hot": 2000,
+    "cold": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "65d55df9d119202034a0b7e6"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 73,
+  "gameName": "spaceflight",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65e153b5d119202034a0b7e7"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 72,
+  "gameName": "pontoon",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65e7c3dc246f7e9d5812d57d"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 77,
+  "gameName": "chineseblackjack",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "65e976d5bd60453f131d3989"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 2,
+  "gameName": "xocxoc",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 200000,
+  "maxBetPerChoices": {
+    "even": 200000,
+    "odd": 200000,
+    "red3": 200000,
+    "white3": 200000,
+    "red4": 20000,
+    "white4": 20000,
+    "red2": 200000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "20000",
+    "30000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "65e988cabd60453f131d398a"
+  },
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameId": 2,
+  "gameName": "xocxoc",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "even": 20000,
+    "odd": 20000,
+    "red3": 20000,
+    "white3": 20000,
+    "red4": 2000,
+    "white4": 2000,
+    "red2": 20000
+  },
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "664c052c8f18986f4e7a1352"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 78,
+  "gameName": "footballdice",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "home": 2000,
+    "away": 2000,
+    "draw": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "667d1741e5628d5efbbc6864"
+  },
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 48,
+  "gameName": "blockchainbaccarat",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "big": 40000,
+    "small": 40000,
+    "tie": 10000,
+    "playerPair": 10000,
+    "bankerPair": 10000
+  },
+  "chips": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "667d174de5628d5efbbc6865"
+  },
+  "groupId": {
+    "$oid": "651f88e053015fd9ed9a501a"
+  },
+  "gameId": 48,
+  "gameName": "blockchainbaccarat",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 400000,
+  "maxBetPerChoices": {
+    "player": 400000,
+    "banker": 400000,
+    "big": 400000,
+    "small": 400000,
+    "tie": 100000,
+    "playerPair": 100000,
+    "bankerPair": 100000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000",
+    "30000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66866d20bf646bf5d15f06f9"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 80,
+  "gameName": "cointoss",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "668cac31bf646bf5d15f06fc"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 93,
+  "gameName": "footballcointoss",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "668e0586bf646bf5d15f0ef6"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "big": 200000,
+    "small": 200000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "668e05abbf646bf5d15f0ef7"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 75,
+  "gameName": "bandarqiuqiu",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 200000,
+  "maxBetPerChoices": {
+    "spade": 200000,
+    "heart": 200000,
+    "club": 200000,
+    "diamond": 200000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "668e05debf646bf5d15f0ef8"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 48,
+  "gameName": "blockchainbaccarat",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 200000,
+  "maxBetPerChoices": {
+    "player": 200000,
+    "banker": 200000,
+    "big": 200000,
+    "small": 200000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "668e0603bf646bf5d15f0ef9"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 80,
+  "gameName": "cointoss",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 200000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "668e063dbf646bf5d15f0efa"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 2,
+  "gameName": "xocxoc",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 200000,
+  "maxBetPerChoices": {
+    "even": 200000,
+    "odd": 200000,
+    "red3": 200000,
+    "white3": 200000,
+    "red4": 20000,
+    "white4": 20000,
+    "red2": 200000
+  },
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66b9be34070b8950ad366ce5"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 81,
+  "gameName": "bac81",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0
+},
+{
+  "_id": {
+    "$oid": "66bd7eaffb486d52a4e8824b"
+  },
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameId": 81,
+  "gameName": "bac81",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "40000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0
+},
+{
+  "_id": {
+    "$oid": "66bd7f1dfb486d52a4e8824c"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 81,
+  "gameName": "bac81",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 70000,
+    "bankerPair": 70000,
+    "tie": 70000
+  },
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0
+},
+{
+  "_id": {
+    "$oid": "66c30be05a2409c161e88953"
+  },
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 74,
+  "gameName": "onepiece",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "betLevels": [
+    0.1,
+    0.15,
+    0.75,
+    0.2,
+    0.25,
+    0.45,
+    0.5,
+    0.6,
+    0.8,
+    1,
+    1.25,
+    1.5,
+    2,
+    2.05,
+    2.25
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0.25,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66c40ab25a2409c161e88954"
+  },
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 76,
+  "gameName": "dragonball",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5,
+    0.25,
+    0.35,
+    0.4
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 1.5,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66c444115a2409c161e88955"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 76,
+  "gameName": "dragonball",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "betLevels": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    25.5,
+    26.75,
+    100,
+    200,
+    500,
+    1000,
+    1005.25
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 100,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66d801782213bbe178eed8cd"
+  },
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameId": 47,
+  "gameName": "treasureisland",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [
+    10,
+    20,
+    30,
+    50,
+    100,
+    150,
+    200,
+    300,
+    400,
+    500,
+    1000
+  ],
+  "defaultCoinValue": 10,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 20000000
+},
+{
+  "_id": {
+    "$oid": "66daa26b45098edb113f8765"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 84,
+  "gameName": "bac84",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 0,
+  "name": "bac84"
+},
+{
+  "_id": {
+    "$oid": "66e01688b516300674a14a64"
+  },
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 84,
+  "gameName": "bac84",
+  "enabled": true,
+  "minBet": 100,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "big": 200000,
+    "small": 200000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 0,
+  "name": "bac84"
+},
+{
+  "_id": {
+    "$oid": "66e3aee3d55e17ab01a5ea12"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 84,
+  "gameName": "bac84",
+  "enabled": true,
+  "minBet": 10,
+  "maxBet": 10000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 500,
+    "bankerPair": 500,
+    "tie": 500
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000"
+  ],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66e3b1ebd55e17ab01a5ea13"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 81,
+  "gameName": "bac81",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66e956caf021fa243beea3b0"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 98,
+  "gameName": "bac98",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "betLevels": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "defaultCoinValue": 0,
+  "defaultBetLevel": 0,
+  "maxWinPerRound": 0
+},
+{
+  "_id": {
+    "$oid": "66ed3732c64e1762cdb43d6e"
+  },
+  "gameName": "bac100",
+  "gameId": 100,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66ed3edec64e1762cdbaeacf"
+  },
+  "gameId": 98,
+  "gameName": "bac98",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "big": 200000,
+    "small": 200000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66ed3edec64e1762cdbaead0"
+  },
+  "gameId": 100,
+  "gameName": "bac100",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "50000",
+    "100000",
+    "200000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "big": 200000,
+    "small": 200000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66ed3ef3c64e1762cdbaf9dd"
+  },
+  "gameName": "bac98",
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 98,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 10000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 500,
+    "bankerPair": 500,
+    "tie": 500
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66ed3ef3c64e1762cdbaf9de"
+  },
+  "gameName": "bac100",
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameId": 100,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 10000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 500,
+    "bankerPair": 500,
+    "tie": 500
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f12409c64e1762cdb15110"
+  },
+  "gameName": "bac98",
+  "gameId": 98,
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f12409c64e1762cdb15112"
+  },
+  "gameName": "bac84",
+  "gameId": 84,
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f12420c64e1762cdb16395"
+  },
+  "gameName": "bac100",
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameId": 100,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f2252ac64e1762cd723bb6"
+  },
+  "gameName": "bac82",
+  "gameId": 82,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f2252ac64e1762cd723bb7"
+  },
+  "gameName": "bac83",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 83,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f229d4c64e1762cd761725"
+  },
+  "gameId": 102,
+  "gameName": "bac102",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "66f22b95c64e1762cd778693"
+  },
+  "gameName": "bac85",
+  "gameId": 85,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22b95c64e1762cd778694"
+  },
+  "gameName": "bac90",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 90,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22b95c64e1762cd778695"
+  },
+  "gameName": "bac91",
+  "gameId": 91,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22bc7c64e1762cd77b58e"
+  },
+  "gameName": "bac88",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 88,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22bc7c64e1762cd77b58f"
+  },
+  "gameName": "bac89",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 89,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22bf3c64e1762cd77e19e"
+  },
+  "gameName": "bac101",
+  "gameId": 101,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22c67c64e1762cd784c59"
+  },
+  "gameId": 87,
+  "gameName": "bac87",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22c67c64e1762cd784c5a"
+  },
+  "gameName": "bac92",
+  "gameId": 92,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22c67c64e1762cd784c5b"
+  },
+  "gameId": 97,
+  "gameName": "bac97",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f22c67c64e1762cd784c5c"
+  },
+  "gameName": "bac86",
+  "gameId": 86,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66f23cb1c64e1762cd881390"
+  },
+  "gameId": 82,
+  "gameName": "bac82",
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "40000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cb1c64e1762cd881391"
+  },
+  "gameId": 83,
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameName": "bac83",
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "40000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cb1c64e1762cd881392"
+  },
+  "gameId": 88,
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameName": "bac88",
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "40000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cb1c64e1762cd881393"
+  },
+  "gameId": 89,
+  "gameName": "bac89",
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "40000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cd9c64e1762cd883988"
+  },
+  "gameId": 84,
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameName": "bac84",
+  "betLevels": [],
+  "chips": [
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000",
+    "4000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 4000,
+  "maxBetPerChoices": {
+    "player": 4000,
+    "banker": 4000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cd9c64e1762cd883989"
+  },
+  "gameId": 90,
+  "gameName": "bac90",
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "betLevels": [],
+  "chips": [
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000",
+    "4000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 4000,
+  "maxBetPerChoices": {
+    "player": 4000,
+    "banker": 4000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cd9c64e1762cd88398a"
+  },
+  "gameId": 91,
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameName": "bac91",
+  "betLevels": [],
+  "chips": [
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000",
+    "4000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 4000,
+  "maxBetPerChoices": {
+    "player": 4000,
+    "banker": 4000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66f23cd9c64e1762cd88398b"
+  },
+  "gameId": 85,
+  "groupId": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "gameName": "bac85",
+  "betLevels": [],
+  "chips": [
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000",
+    "4000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 4000,
+  "maxBetPerChoices": {
+    "player": 4000,
+    "banker": 4000,
+    "playerPair": 4000,
+    "bankerPair": 4000,
+    "tie": 4000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "66fba655c64e1762cd8e0395"
+  },
+  "gameId": 82,
+  "gameName": "bac82",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 70000,
+    "bankerPair": 70000,
+    "tie": 70000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66fba655c64e1762cd8e039e"
+  },
+  "gameId": 83,
+  "gameName": "bac83",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 70000,
+    "bankerPair": 70000,
+    "tie": 70000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66fba655c64e1762cd8e039f"
+  },
+  "gameId": 88,
+  "gameName": "bac88",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 70000,
+    "bankerPair": 70000,
+    "tie": 70000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66fba655c64e1762cd8e03a0"
+  },
+  "gameName": "bac89",
+  "gameId": 89,
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "100",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 70000,
+    "bankerPair": 70000,
+    "tie": 70000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 100
+},
+{
+  "_id": {
+    "$oid": "66fd014ec64e1762cddfb1d6"
+  },
+  "gameId": 87,
+  "gameName": "bac87",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 700000,
+    "bankerPair": 700000,
+    "tie": 700000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66fd014ec64e1762cddfb1d7"
+  },
+  "gameId": 92,
+  "gameName": "bac92",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 700000,
+    "bankerPair": 700000,
+    "tie": 700000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66fd014ec64e1762cddfb1d8"
+  },
+  "gameName": "bac97",
+  "gameId": 97,
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 700000,
+    "bankerPair": 700000,
+    "tie": 700000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66fd014ec64e1762cddfb1d9"
+  },
+  "gameName": "bac86",
+  "gameId": 86,
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000",
+    "200000",
+    "500000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 700000,
+  "maxBetPerChoices": {
+    "player": 700000,
+    "banker": 700000,
+    "playerPair": 700000,
+    "bankerPair": 700000,
+    "tie": 700000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "66fd019ec64e1762cde037be"
+  },
+  "gameId": 102,
+  "gameName": "bac102",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [],
+  "chips": [
+    "1"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "6705f934c64e1762cd3456a7"
+  },
+  "gameId": 82,
+  "gameName": "bac82",
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000,
+    "tie": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "6705f934c64e1762cd3456e5"
+  },
+  "gameName": "bac83",
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "gameId": 83,
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000,
+    "tie": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "6705f934c64e1762cd3456e8"
+  },
+  "gameId": 88,
+  "gameName": "bac88",
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000,
+    "tie": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "6705f934c64e1762cd3456eb"
+  },
+  "gameName": "bac89",
+  "gameId": 89,
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000,
+    "tie": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "6705f934c64e1762cd3456ed"
+  },
+  "gameId": 81,
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "gameName": "bac81",
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000,
+    "tie": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "6705f97fc64e1762cd34d17a"
+  },
+  "gameId": 10,
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "gameName": "baccarat",
+  "betLevels": [],
+  "chips": [
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "500000",
+    "1000000",
+    "10000000",
+    "20000000",
+    "40000000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 40000000,
+  "maxBetPerChoices": {
+    "player": 40000000,
+    "banker": 40000000,
+    "big": 40000000,
+    "small": 40000000,
+    "tie": 4000000,
+    "playerPair": 4000000,
+    "bankerPair": 4000000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10000
+},
+{
+  "_id": {
+    "$oid": "671600efc64e1762cda7dd85"
+  },
+  "gameId": 102,
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameName": "bac102",
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 1000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "671605d5c64e1762cdad9547"
+  },
+  "gameName": "bac102",
+  "gameId": 102,
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67185fa4c64e1762cd900497"
+  },
+  "gameName": "xocxoc",
+  "gameId": 2,
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "even": 20000,
+    "odd": 20000,
+    "red3": 20000,
+    "white3": 20000,
+    "red4": 2000,
+    "white4": 2000,
+    "red2": 20000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "672196e4c64e1762cdb0e8c7"
+  },
+  "gameName": "waytogoal",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameId": 49,
+  "betLevels": [
+    10,
+    20,
+    50,
+    100,
+    125,
+    150,
+    175,
+    200,
+    250,
+    300,
+    350,
+    400,
+    500
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 10,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67344039c64e1762cdde221c"
+  },
+  "gameId": 46,
+  "gameName": "nightclub",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "betLevels": [
+    10,
+    20,
+    50,
+    100,
+    125,
+    150,
+    175,
+    200,
+    250,
+    300,
+    350,
+    400,
+    500
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 10,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "673d4770c64e1762cdcad477"
+  },
+  "gameId": 103,
+  "gameName": "sevenupdown",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "50",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "up": 2000,
+    "down": 2000,
+    "seven": 1000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "674021bec64e1762cd3c1f4d"
+  },
+  "gameId": 38,
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "gameName": "heroesslot",
+  "betLevels": [
+    10,
+    20,
+    50,
+    100,
+    125,
+    150,
+    175,
+    200,
+    250,
+    300,
+    350,
+    400,
+    500
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 10,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "674d7539c64e1762cde450fe"
+  },
+  "gameId": 103,
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "gameName": "sevenupdown",
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": false,
+  "maxBet": 0,
+  "maxBetPerChoices": {
+    "up": 0,
+    "down": 0,
+    "seven": 0
+  },
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "676cc807afcd05d86ec84f8c"
+  },
+  "gameId": 103,
+  "groupId": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "gameName": "sevenupdown",
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {
+    "up": 0,
+    "down": 0,
+    "seven": 0
+  },
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "676d097815b714f731f6e9cc"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 107,
+  "gameName": "tapfortune",
+  "enabled": true,
+  "minBet": 0,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "chips": [],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    16
+  ],
+  "defaultBetLevel": 0.01,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
+    "$oid": "676e5948afcd05d86e0c1ca6"
+  },
+  "gameName": "christmascrash",
+  "gameId": 106,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 10000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67909a31645432aba0e3ab26"
+  },
+  "gameId": 109,
+  "gameName": "coinmining",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "6790b3ac645432aba0fae20c"
+  },
+  "gameId": 82,
+  "gameName": "bac81",
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "6790b3ac645432aba0fae20d"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameName": "bac81",
+  "gameId": 83,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "6790b3ac645432aba0fae20e"
+  },
+  "gameId": 88,
+  "gameName": "bac81",
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "6790b3ac645432aba0fae20f"
+  },
+  "groupId": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "gameName": "bac81",
+  "gameId": 89,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a31df2645432aba09adc2e"
+  },
+  "gameId": 10,
+  "gameName": "baccarat",
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "4000",
+    "40000",
+    "200000",
+    "700000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "player": 20000,
+    "banker": 20000,
+    "big": 20000,
+    "small": 20000,
+    "tie": 20000,
+    "playerPair": 20000,
+    "bankerPair": 20000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a41fa6645432aba02c115e"
+  },
+  "gameId": 82,
+  "gameName": "bac81",
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a41fa6645432aba02c115f"
+  },
+  "gameId": 83,
+  "gameName": "bac81",
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a41fa6645432aba02c1160"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameName": "bac81",
+  "gameId": 88,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a41fa6645432aba02c1161"
+  },
+  "gameId": 89,
+  "gameName": "bac81",
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a41fa6645432aba02c1162"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 81,
+  "gameName": "bac81",
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 1600,
+  "maxBetPerChoices": {
+    "player": 1600,
+    "banker": 1600,
+    "playerPair": 400,
+    "bankerPair": 400,
+    "tie": 400
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a42064645432aba02cbd21"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameName": "bac102",
+  "gameId": 102,
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67a57b0d645432aba00d0cfe"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 1,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "taixiu",
+  "maxBet": 3000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a57b18645432aba00d16b7"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 4,
+  "betLevels": [],
+  "chips": [
+    "5",
+    "20",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "txturbo",
+  "maxBet": 1000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58732645432aba0190e5a"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 103,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "50",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "sevenupdown",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "up": 2000,
+    "down": 2000,
+    "seven": 1000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58747645432aba01921c4"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 85,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac85",
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58747645432aba01921c5"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 90,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac90",
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58747645432aba01921c6"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 91,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac91",
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58747645432aba01921c7"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 84,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac84",
+  "maxBet": 3000,
+  "maxBetPerChoices": {
+    "player": 2000,
+    "banker": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000,
+    "tie": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58761645432aba0193f5d"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 86,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac86",
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58761645432aba0193f5e"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 92,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac92",
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58761645432aba0193f5f"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 97,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac97",
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58761645432aba0193f60"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 87,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "50000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bac87",
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "playerPair": 5000,
+    "bankerPair": 5000,
+    "tie": 5000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a5878b645432aba01963f9"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 75,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "bandarqiuqiu",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "spade": 2000,
+    "heart": 2000,
+    "club": 2000,
+    "diamond": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a587a0645432aba019894a"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 23,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "blackjack",
+  "maxBet": 30000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a587bf645432aba019a6ba"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 69,
+  "betLevels": [
+    0.15,
+    0.2,
+    0.5,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2,
+    2.25,
+    2.5,
+    3,
+    3.5,
+    4,
+    5
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 2,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "blackpink",
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67a587db645432aba019c4dd"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 48,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "blockchainbaccarat",
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "player": 40000,
+    "banker": 40000,
+    "big": 40000,
+    "small": 40000,
+    "tie": 10000,
+    "playerPair": 10000,
+    "bankerPair": 10000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a587eb645432aba019d55b"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 66,
+  "betLevels": [],
+  "chips": [],
+  "coinValues": [
+    0.01,
+    0.05,
+    0.1,
+    0.5
+  ],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0.01,
+  "enabled": true,
+  "gameName": "candyland",
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 2000,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67a58801645432aba019e94a"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 39,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "casinoholdempoker",
+  "maxBet": 80000,
+  "maxBetPerChoices": {
+    "anteBet": 20000,
+    "aaBet": 20000,
+    "callBet": 40000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58818645432aba019ff1f"
+  },
+  "gameId": 80,
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "cointoss",
+  "maxBet": 2000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58825645432aba01a0dee"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 61,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "winthreecards",
+  "maxBet": 20000,
+  "maxBetPerChoices": {
+    "dragon": 20000,
+    "phoenix": 20000,
+    "pair8Plus": 10000,
+    "straight": 5000,
+    "flush": 5000,
+    "straightFlush": 500,
+    "threeOfAKind": 500
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58838645432aba01a1dbc"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 49,
+  "betLevels": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.4,
+    0.6,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0.01,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "waytogoal",
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67a58845645432aba01a2a7b"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 22,
+  "betLevels": [],
+  "chips": [
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "vipsedie",
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "even": 40000,
+    "odd": 40000,
+    "red2": 40000,
+    "red3": 40000,
+    "white3": 40000,
+    "red4": 10000,
+    "white4": 10000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a5885d645432aba01a42ac"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 26,
+  "betLevels": [],
+  "chips": [
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "vipfishprawncrab",
+  "maxBet": 60000,
+  "maxBetPerChoices": {
+    "fish": 30000,
+    "prawn": 30000,
+    "crab": 30000,
+    "stag": 30000,
+    "gourd": 30000,
+    "rooster": 30000,
+    "anyTriple": 10000,
+    "mountain": 30000,
+    "ocean": 30000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58879645432aba01a5e2b"
+  },
+  "gameId": 27,
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "vipbaccarat",
+  "maxBet": 5000,
+  "maxBetPerChoices": {
+    "player": 5000,
+    "banker": 5000,
+    "big": 3000,
+    "small": 3000,
+    "tie": 2000,
+    "playerPair": 2000,
+    "bankerPair": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 10
+},
+{
+  "_id": {
+    "$oid": "67a58899645432aba01a8001"
+  },
+  "gameId": 6,
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "oeturbo",
+  "maxBet": 20000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a588db645432aba01abfde"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 24,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "specialsedie",
+  "maxBet": 40000,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a588ed645432aba01aced3"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 35,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000",
+    "5000",
+    "10000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "threecards",
+  "maxBet": 40000,
+  "maxBetPerChoices": {
+    "red": 40000,
+    "black": 40000,
+    "diamonds": 40000,
+    "hearts": 40000,
+    "spades": 40000,
+    "clubs": 40000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67a58a81645432aba01c620f"
+  },
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "gameId": 2,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000",
+    "3000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "xocxoc",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "even": 2000,
+    "odd": 2000,
+    "red3": 2000,
+    "white3": 2000,
+    "red4": 300,
+    "white4": 300,
+    "red2": 300
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67b82220645432aba0f89c05"
+  },
+  "gameId": 107,
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "betLevels": [
+    0.1,
+    0.2
+  ],
+  "chips": [],
+  "coinValues": [],
+  "defaultBetLevel": 0.1,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "tapfortune",
+  "maxBet": 0,
+  "maxBetPerChoices": {},
+  "maxWinPerRound": 0,
+  "minBet": 0
+},
+{
+  "_id": {
+    "$oid": "67be8e7d645432aba0e734bf"
+  },
+  "gameId": 104,
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "marblefootball",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "home": 2000,
+    "away": 2000,
+    "draw": 2000,
+    "over": 2000,
+    "under": 2000,
+    "odd": 2000,
+    "even": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67be9410645432aba0eca202"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 96,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "karakrus",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "kara": 2000,
+    "krus": 2000,
+    "head3": 2000,
+    "head2": 2000,
+    "head1": 2000,
+    "tail3": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+},
+{
+  "_id": {
+    "$oid": "67be949b645432aba0ed38e7"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 95,
+  "betLevels": [],
+  "chips": [
+    "1",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "coinValues": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0,
+  "enabled": true,
+  "gameName": "sedie3",
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "red": 2000,
+    "white": 2000,
+    "red3": 2000,
+    "red2": 2000,
+    "red1": 2000,
+    "white3": 2000
+  },
+  "maxWinPerRound": 0,
+  "minBet": 1
+}]

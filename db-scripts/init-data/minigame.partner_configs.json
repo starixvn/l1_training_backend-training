@@ -1,0 +1,229 @@
+[{
+  "_id": {
+    "$oid": "61c5b3d8e5b9c00001a46881"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "partnerId": "ONEworks1",
+  "type": "game_site_exclusions",
+  "value": {
+    "1": [
+      null
+    ],
+    "2": [
+      null
+    ],
+    "3": [
+      null
+    ],
+    "4": [
+      null
+    ],
+    "6": [
+      null
+    ],
+    "7": [
+      "roger"
+    ],
+    "8": [
+      null
+    ],
+    "9": [
+      null
+    ],
+    "10": [
+      null
+    ],
+    "12": [
+      null
+    ],
+    "21": [
+      null
+    ],
+    "22": [
+      null
+    ],
+    "23": [
+      null
+    ],
+    "24": [
+      null
+    ],
+    "25": [
+      "roger"
+    ],
+    "26": [
+      null
+    ],
+    "27": [
+      "test"
+    ],
+    "28": [
+      null
+    ],
+    "29": [
+      null
+    ],
+    "31": [
+      null
+    ],
+    "35": [
+      null
+    ],
+    "36": [
+      null
+    ],
+    "37": [
+      "test"
+    ],
+    "38": [
+      null
+    ],
+    "39": [
+      null
+    ],
+    "40": [
+      null
+    ],
+    "41": [
+      null
+    ],
+    "42": [
+      null
+    ],
+    "43": [
+      null
+    ],
+    "45": [
+      null
+    ],
+    "46": [
+      null
+    ],
+    "47": [
+      null
+    ],
+    "48": [
+      null
+    ],
+    "49": [
+      null
+    ],
+    "50": [
+      null
+    ],
+    "51": [
+      null
+    ],
+    "52": [
+      null
+    ],
+    "54": [
+      null
+    ],
+    "55": [
+      null
+    ],
+    "60": [
+      null
+    ],
+    "61": [
+      null
+    ],
+    "63": [
+      null
+    ],
+    "65": [
+      null
+    ],
+    "67": [
+      null
+    ],
+    "68": [
+      null
+    ],
+    "69": [
+      null
+    ],
+    "71": [
+      null
+    ],
+    "75": [
+      null
+    ],
+    "76": [
+      null
+    ],
+    "77": [
+      null
+    ],
+    "81": [
+      "test"
+    ],
+    "83": [
+      "test"
+    ],
+    "84": [
+      "test"
+    ],
+    "98": [
+      null
+    ],
+    "100": [
+      null
+    ],
+    "102": [
+      "test"
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "62734170b530e70001d7c0cb"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "partnerId": "ONEworks1",
+  "type": "super_players",
+  "value": {
+    "names": [
+      "username_1851726",
+      "username_7208872",
+      "username_7208871",
+      "username_7208873",
+      "dory1"
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "66e130d5d55e17ab01a5ea10"
+  },
+  "time": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "__v": 0,
+  "partnerId": "PFF",
+  "type": "game_site_exclusions",
+  "value": {
+    "84": [
+      "test"
+    ],
+    "98": [
+      "test"
+    ],
+    "100": [
+      "test"
+    ]
+  }
+}]

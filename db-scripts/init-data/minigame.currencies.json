@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "61765bc6d2b6510001f18bd4"
+  },
+  "name": "$US",
+  "code": "USD",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "617680838ea8a26ac8248dfb"
+  },
+  "name": "EURO",
+  "code": "EUR",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "6177cd71d6c6210001d30af9"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "61ea2251281f2a000173da33"
+  },
+  "name": "UUS",
+  "code": "USD",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": true,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "isUncountOnTotal": true
+},
+{
+  "_id": {
+    "$oid": "649befa0eb54a5e25c1def01"
+  },
+  "name": "INH",
+  "code": "VND",
+  "multiplier": 1000,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "649bf121eb54a5e25c1def02"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "64d9ab04ae1e70026c49a598"
+  },
+  "name": "WON",
+  "code": "KRW",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "sbogamesimulator",
+  "groupId": {
+    "$oid": "000000000000000000000000"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "651fa1d66913e1d9dbf9aa26"
+  },
+  "name": "$US",
+  "code": "USD",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "PFF",
+  "groupId": {
+    "$oid": "651fa2c46913e1d9dbf9aa27"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "660a214560658fed37656efa"
+  },
+  "name": "IN",
+  "code": "IDR",
+  "multiplier": 10000,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "660a217260658fed37656efb"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "668dff03bf646bf5d15f0ef3"
+  },
+  "name": "WON",
+  "code": "KRW",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "isUncountOnTotal": false
+},
+{
+  "_id": {
+    "$oid": "6705f8c9e849e6ba39638f24"
+  },
+  "name": "VND2",
+  "code": "VND",
+  "multiplier": 1,
+  "enabled": true,
+  "isTest": false,
+  "partnerId": "ONEworks1",
+  "groupId": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "isUncountOnTotal": false
+}]

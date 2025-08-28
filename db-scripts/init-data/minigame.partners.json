@@ -1,0 +1,19 @@
+[
+  {
+    "_id": {
+      "$oid": "61765bacd2b6510001f18bd3"
+    },
+    "partnerId": "ONEworks1",
+    "name": "1W",
+    "secretKey": "ONEworks1@20luminet&",
+    "clubVersionUrl": "http://localhost:8007/",
+    "mobiVersionUrl": "http://localhost:8007/",
+    "miniVersionUrl": "http://localhost:8007/",
+    "apiUrl": "http://localhost:8007/",
+    "testCurrencyUrl": "http://localhost:8007/",
+    "megaKenoUrl": "http://localhost:8007/",
+    "isDisplayPlayerCurrency": true,
+    "alias": "sp",
+    "mobileDirectUrl": "http://localhost:8007/mobile"
+  }
+]

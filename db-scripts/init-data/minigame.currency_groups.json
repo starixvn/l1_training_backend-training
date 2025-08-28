@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "name": "GrUSD",
+  "enabled": true,
+  "partnerId": "ONEworks1",
+  "fractionalOddsFormat": false
+},
+{
+  "_id": {
+    "$oid": "651f88ef53015fd9ed9a501b"
+  },
+  "name": "GrINH",
+  "enabled": true,
+  "fractionalOddsFormat": false,
+  "partnerId": "ONEworks1"
+},
+{
+  "_id": {
+    "$oid": "651f890653015fd9ed9a501c"
+  },
+  "name": "GrPFF",
+  "enabled": true,
+  "fractionalOddsFormat": false,
+  "partnerId": "PFF"
+},
+{
+  "_id": {
+    "$oid": "651f8d7453015fd9ed9a501e"
+  },
+  "name": "GrEURO",
+  "enabled": true,
+  "fractionalOddsFormat": true,
+  "partnerId": "ONEworks1"
+},
+{
+  "_id": {
+    "$oid": "668dff13bf646bf5d15f0ef4"
+  },
+  "name": "GrWON",
+  "enabled": true,
+  "fractionalOddsFormat": true,
+  "partnerId": "ONEworks1"
+},
+{
+  "_id": {
+    "$oid": "6705f8efe849e6ba39638f25"
+  },
+  "name": "GrVND2",
+  "enabled": true,
+  "fractionalOddsFormat": false,
+  "partnerId": "ONEworks1"
+},
+{
+  "_id": {
+    "$oid": "67a31dd6f27222607a92de17"
+  },
+  "name": "GrTEST",
+  "enabled": true,
+  "fractionalOddsFormat": false,
+  "partnerId": "ONEworks1"
+}]

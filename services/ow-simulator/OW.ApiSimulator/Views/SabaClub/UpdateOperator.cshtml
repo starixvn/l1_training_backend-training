@@ -1,0 +1,17 @@
+﻿@model Operator
+
+<h3>Update Operator - @Model.Name</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="Name" />
+    <partial name="_UpdateEnterPortalResult" for="EnterPortalResult" />
+    <partial name="_UpdateGetBalanceResult" for="GetBalanceResult" />
+    <partial name="_UpdatePlaceBetResult" for="PlaceBetResult" />
+    <partial name="_UpdateEndGameResult" for="EndGameResult" />
+    <partial name="_UpdateVoidGameResult" for="VoidGameResult" />
+    <partial name="_UpdateCheckMaintenanceResult" for="CheckMaintenanceResult" />
+    <partial name="_UpdateGetBetLimitResult" for="GetBetLimitResult" />
+    <partial name="_UpdateHitJackpotResult" for="HitJackpotResult" />
+
+    <input class="btn btn-primary" type="submit" value="Save" />
+</form>

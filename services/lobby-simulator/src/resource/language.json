@@ -1,0 +1,30 @@
+[
+  {
+    "value": "vi-VN",
+    "name": " Tiếng việt"
+  },
+  {
+    "value": "en-US",
+    "name": " English"
+  },
+  {
+    "value": "th-TH",
+    "name": "Thai"
+  },
+  {
+    "value": "id-ID",
+    "name": " Indonesia"
+  },
+  {
+    "value": "zh-CN",
+    "name": "Chinese Simplified"
+  },
+  {
+    "value": "zh-TW",
+    "name": "Chinese Original"
+  },
+  {
+    "value": "zh-Hans",
+    "name": "Chinese New Simplified"
+  }
+]
