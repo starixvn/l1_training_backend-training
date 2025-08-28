@@ -307,8 +307,9 @@ The following sequence diagram illustrates how different services communicate du
 sequenceDiagram
     participant Client as Game Client
     participant User as User Service :8004
-    participant Game as Game API :8002
     participant SMS as Sedie Multiplayer :8006
+    participant GMS as Game Management :8005
+    participant Game as Game API :8002
     participant OWS as 1W Simulator :8008
     participant DB as MongoDB :27017
 
@@ -318,19 +319,18 @@ sequenceDiagram
      User->>DB: 3. Create session
      User-->>Client: 4. Session info
 
-                                       Note over Client,SMS: Multiplayer Game
-       Client->>SMS: 5. WebSocket connect
-       SMS->>User: 6. Session validation
-       SMS->>GMS: 7. Get game config
-       SMS->>DB: 8. Update state
-       SMS-->>Client: 9. Game ready
+                                                                               Note over Client,SMS: Multiplayer Game
+        Client->>SMS: 5. WebSocket connect
+        SMS->>User: 6. Session validation
+        SMS->>GMS: 7. Get game config
+        SMS-->>Client: 8. Game ready
 
-                                                                               Note over Client,SMS: Real-time Play
-                 Client->>SMS: 10. Place bet
-         SMS->>Game: 11. Placebet/EndRound
-         Game->>OWS: 12. Placebet/EndRound
-         SMS->>DB: 13. Save result
-         SMS-->>Client: 14. Game result
+                                                                                                                                                               Note over Client,SMS: Real-time Play
+                  Client->>SMS: 9. Place bet
+          SMS->>Game: 10. Placebet/EndRound
+          Game->>OWS: 11. Placebet/EndRound
+          SMS->>DB: 12. Save result
+          SMS-->>Client: 13. Game result
 ```
 
 ### Key Communication Patterns
