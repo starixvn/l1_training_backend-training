@@ -1,0 +1,205 @@
+version: "3.8"
+
+services:
+  # Identity Server API
+  identity-server-api:
+    build:
+      context: ./services/api-auth
+      dockerfile: AuthApi.Dockerfile
+    container_name: identity-server-api
+    ports:
+      - "8001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # Web API
+  web-api:
+    build:
+      context: ./services/api-auth
+      dockerfile: Api.Dockerfile
+    container_name: web-api
+    ports:
+      - "8002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # SG API
+  sg-api:
+    build:
+      context: ./services/sg-api
+      dockerfile: Dockerfile
+    container_name: sg-api
+    ports:
+      - "8003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # User Service
+  user-service:
+    build:
+      context: ./services/user-service
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "8004:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    networks:
+      - game-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Game Management Service
+  game-management-service:
+    build:
+      context: ./services/game-management-service
+      dockerfile: Dockerfile
+    container_name: game-management-service
+    ports:
+      - "8005:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - game-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Sedie Multiplayer Service
+  sedie-multiplayer-service:
+    build:
+      context: ./services/services/sedie-multiplayer-service
+      dockerfile: Dockerfile
+    container_name: sedie-multiplayer-service
+    ports:
+      - "8006:8006"
+    environment:
+      - NODE_ENV=production
+      - PORT=8006
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # Game Client
+  game-client:
+    build:
+      context: ./services/game-client
+      dockerfile: Dockerfile
+    container_name: game-client
+    ports:
+      - "8007:8007"
+    environment:
+      - NODE_ENV=production
+      - PORT=8007
+      - HOSTNAME=0.0.0.0
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # OW Simulator
+  ow-simulator:
+    build:
+      context: ./services/ow-simulator
+      dockerfile: OW.ApiSimulator/Dockerfile
+    container_name: ow-simulator
+    ports:
+      - "8008:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # Lobby Simulator
+  lobby-simulator:
+    build:
+      context: ./services/lobby-simulator
+      dockerfile: Dockerfile
+    container_name: lobby-simulator
+    ports:
+      - "8009:8009"
+    environment:
+      - NODE_ENV=production
+      - PORT=8009
+    networks:
+      - game-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "src/healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Game Admin API
+  game-admin-api:
+    build:
+      context: ./services/game-admin/src
+      dockerfile: AdminApi.Dockerfile
+    container_name: game-admin-api
+    ports:
+      - "7778:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # Game Admin Site
+  game-admin-site:
+    build:
+      context: ./services/game-admin/src
+      dockerfile: AdminSite.Dockerfile
+    container_name: game-admin-site
+    ports:
+      - "7779:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - game-network
+    restart: unless-stopped
+
+  # MongoDB (if needed for any services)
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - game-network
+    restart: unless-stopped
+
+networks:
+  game-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
