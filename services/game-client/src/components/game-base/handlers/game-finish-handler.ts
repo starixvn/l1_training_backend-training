@@ -27,7 +27,7 @@ export class GameFinishHandler {
     private _roundHistory: Round<object, object>[];
     private _finish: Round<object, object>;
 
-    constructor(private readonly props: GameFinishHandlerProps) { }
+    constructor(private readonly props: GameFinishHandlerProps) {}
 
     set betWin(betWin: number) {
         this._betWin = betWin;
@@ -72,7 +72,11 @@ export class GameFinishHandler {
         const durations = this.props.durations;
         this._finish = finish;
 
-        const roundData = gameRoundDataHandler.buildGameRoundDataAfterReceiveFinishEvent(gameStateContextModel().roundData, result, roundId);
+        const roundData = gameRoundDataHandler.buildGameRoundDataAfterReceiveFinishEvent(
+            gameStateContextModel().roundData,
+            result,
+            roundId
+        );
 
         dispatch({
             type: GameEventActionType.FINISH,
@@ -103,24 +107,28 @@ export class GameFinishHandler {
     };
 
     handleRoundHistory = () => {
-        const roundHistoryClone = [...this._roundHistory];
-        const gameSettings = getGameSettings(this.props.gameId);
+        try {
+            const roundHistoryClone = [...this._roundHistory];
+            const gameSettings = getGameSettings(this.props.gameId);
 
-        this._finish && roundHistoryClone?.unshift(this._finish);
-        if (roundHistoryClone.length > gameSettings.numberOfRoundHistory) {
-            roundHistoryClone.pop();
+            this._finish && roundHistoryClone?.unshift(this._finish);
+            if (roundHistoryClone.length > gameSettings.numberOfRoundHistory) {
+                roundHistoryClone.pop();
+            }
+
+            this._roundHistory = roundHistoryClone;
+            useGameStore.getState().showResultInfoTimeOut({ roundHistory: roundHistoryClone, isShowBlink: false, showResultInfo: true });
+            this.props.dispatch({
+                type: GameEventActionType.SHOW_RESULT_INFO_TIME_OUT,
+                payload: {
+                    showResultInfo: true,
+                    isShowBlink: false,
+                    roundHistory: roundHistoryClone,
+                },
+            });
+        } catch (error) {
+            console.error("Error in handleRoundHistory:", error);
         }
-
-        this._roundHistory = roundHistoryClone;
-        useGameStore.getState().showResultInfoTimeOut({ roundHistory: roundHistoryClone, isShowBlink: false, showResultInfo: true });
-        this.props.dispatch({
-            type: GameEventActionType.SHOW_RESULT_INFO_TIME_OUT,
-            payload: {
-                showResultInfo: true,
-                isShowBlink: false,
-                roundHistory: roundHistoryClone,
-            },
-        });
     };
 
     clearTimeout = () => {

@@ -29,9 +29,6 @@ start cmd /k "echo Building and running user-service... && cd services\user-serv
 :: Start game-management-service (Port 8005)
 start cmd /k "echo Building and running game-management-service... && cd services\game-management-service && yarn install && yarn start:dev"
 
-:: Start sedie-multiplayer-service (Port 8006)
-start cmd /k "echo Building and running sedie-multiplayer-service... && cd services\services\sedie-multiplayer-service && yarn install && npm run dev"
-
 :: Start game-client (Port 8007)
 start cmd /k "echo Building and running game-client... && cd services\game-client && yarn install && yarn dev"
 
@@ -46,6 +43,12 @@ start cmd /k "echo Building and running game-admin-api... && cd services\game-ad
 
 :: Start game-admin-site (Port 7779)
 start cmd /k "echo Building and running game-admin-site... && cd services\game-admin\src\GamesAdmin.Site && dotnet build && dotnet run"
+
+:: Wait 5 seconds for all other services to start
+timeout /t 15
+
+:: Start sedie-multiplayer-service (Port 8006) - Last service to start
+start cmd /k "echo Building and running sedie-multiplayer-service... && cd services\services\sedie-multiplayer-service && yarn install && npm run dev"
 
 echo All services are starting...
 echo.
