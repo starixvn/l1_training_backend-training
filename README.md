@@ -475,6 +475,19 @@ curl http://localhost:8007/health
 
 **Note**: This step verifies the complete authentication flow and game access through the lobby system.
 
+#### 5.4 Test Admin Site
+
+1. **Open Game Admin Site**: Navigate to http://localhost:7779
+2. **Login with Admin Credentials**:
+   - **Username**: `superadmin`
+   - **Password**: `1234aa`
+3. **Verify Admin Access**: Once logged in, you should have access to:
+   - User account management and monitoring
+   - Game configuration and settings management
+   - Administrative controls and permissions
+
+**Note**: This step verifies that the administrative interface is working correctly and that you have proper access to system management functions.
+
 ## Service Configuration
 
 ### Environment Variables
