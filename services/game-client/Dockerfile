@@ -3,14 +3,9 @@ FROM hub.lumigame.com/base/node:24-alpine-25h2 AS base
 FROM base AS deps
 WORKDIR /app
 
-ENV YARN_CACHE_FOLDER=/root/.yarn
-
-RUN --mount=type=cache,target=$YARN_CACHE_FOLDER \
-     yarn cache dir && yarn cache list
 
 COPY package.json yarn.lock ./
-RUN --mount=type=cache,target=$YARN_CACHE_FOLDER \
-     yarn install --frozen-lockfile --verbose
+RUN yarn install --frozen-lockfile --verbose
 
 #RUN npx mod-pruner prune --force
 FROM base AS builder
@@ -35,7 +30,7 @@ RUN yarn build && yarn copy-standalone-assets
 FROM base AS runner
 
 WORKDIR /app
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 # Optionally expose base path at runtime for any custom logic
 ARG NEXT_PUBLIC_BASE_PATH
@@ -53,5 +48,5 @@ RUN chown -R nextjs:nodejs .next
 USER nextjs
 
 EXPOSE 8007
-ENV PORT 8007
-CMD HOSTNAME="0.0.0.0" node server.js
+ENV PORT=8007
+CMD ["node", "server.js"]

@@ -3,13 +3,21 @@ FROM hub.lumigame.com/base/node:20.9.0-alpine
 
 USER root
 
-ENV NODE_ENV $NODE_ENV
 RUN mkdir /app && chown node:node /app
 WORKDIR /app
 ENV NODE_OPTIONS="--openssl-legacy-provider"
-COPY ./L1.GameLobbySimulator .
+
+# Copy all files first
+COPY . .
+
+# Install all dependencies (including devDependencies for build)
 RUN yarn install
+
+# Build the application
 RUN yarn build
+
+# Set production environment after build
+ENV NODE_ENV=production
 
 EXPOSE 8009
 
