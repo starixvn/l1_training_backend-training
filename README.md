@@ -149,159 +149,32 @@ graph LR
     class MONGO dbLayer
 ```
 
-### Service Port Mapping
+### Service Overview & Details
 
-| Service                   | Technology  | Port  | Purpose                        |
-| ------------------------- | ----------- | ----- | ------------------------------ |
-| Auth API (Identity)       | ASP.NET 5.0 | 8001  | Authentication & Authorization |
-| Game API (Web)            | ASP.NET 5.0 | 8002  | Main game business logic       |
-| SG API                    | ASP.NET 5.0 | 8003  | SG system integration          |
-| User Service              | NestJS      | 8004  | User management & sessions     |
-| Game Management Service   | NestJS      | 8005  | Game configuration & settings  |
-| Sedie Multiplayer Service | Node.js     | 8006  | Real-time multiplayer games    |
-| Game Client               | Next.js     | 8007  | Frontend web application       |
-| 1W Simulator              | ASP.NET 5.0 | 8008  | Third-party API simulation     |
-| Lobby Simulator           | React       | 8009  | Lobby testing interface        |
-| Game Admin API            | ASP.NET 5.0 | 7778  | Administrative backend         |
-| Game Admin Site           | ASP.NET 5.0 | 7779  | Administrative frontend        |
-| MongoDB                   | Database    | 27017 | Primary data storage           |
+This comprehensive table provides all the essential information about each service in the gaming platform:
 
-### Detailed Service Descriptions
+| Service                       | Technology  | Port  | Layer     | Primary Purpose                                            | Key Features                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Data Storage                                                                                     |
+| ----------------------------- | ----------- | ----- | --------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Auth API (Identity)**       | ASP.NET 5.0 | 8001  | API       | **Service-to-Service Authentication & Authorization**      | • JWT token generation and validation for inter-service communication<br>• OpenID Connect implementation for service authentication<br>• Service identity management and token validation<br>• **NOT for end-user authentication**                                                                                                                                                                                                                                                                                | Service authentication logs, service credentials, inter-service tokens                           |
+| **Game API (Web)**            | ASP.NET 5.0 | 8002  | API       | **SSO Token Validation & External Operator API Gateway**   | • SSO token validation via AuthVerificationController<br>• Receives game service requests (get balance, placebet, endround)<br>• Forwards requests to external operator APIs (1W Simulator)<br>• **NOT handling game business logic**<br>• Acts as proxy between internal services and external gaming providers<br>• Manages communication with SabaClub gaming provider APIs                                                                                                                                    | Request/response logs, token validation records, external API communication logs                 |
+| **SG API**                    | ASP.NET 5.0 | 8003  | API       | **SABA.games API Integration & External Operator Gateway** | • Handles requests from external operator APIs (SignIn, Retrieve End Round, Get Daily Summary)<br>• Manages SABA.games system integration and authentication<br>• Processes external operator data and transactions<br>• Provides SABA.games API endpoints for external systems<br>• Supports multiple currencies and operator configurations<br>• **NOT for internal SSO authentication**                                                                                                                        | SABA.games API configurations, external operator logs, transaction data, daily summaries         |
+| **User Service**              | NestJS      | 8004  | Service   | User management, authentication, and session handling      | • SSO authentication and session management via signIn method<br>• User profile and account management<br>• Session validation for real-time games<br>• Token verification with 1W Simulator (OW API Client)<br>• User data persistence and retrieval<br>• Partner configuration and currency group management<br>• UM (User Management) service integration                                                                                                                                                      | User profiles, sessions, authentication data, and user configurations                            |
+| **Game Management Service**   | NestJS      | 8005  | Service   | Comprehensive game and system configuration management     | • Game configuration management (GameConfigsModule)<br>• Currency and currency group management<br>• User management and notifications<br>• Promotion and jackpot management<br>• Exchange rate management<br>• Operator configuration and domain management<br>• Archive status and aggregation services                                                                                                                                                                                                         | Game configurations, currencies, promotions, jackpots, and system settings                       |
+| **Sedie Multiplayer Service** | Node.js     | 8006  | Service   | **Sample Game Service for Demo & Learning**                | • **Reference implementation for new team members to study**<br>• WebSocket-based real-time communication<br>• Multiplayer dice game session management (SeDieMultiplayer)<br>• Real-time game state synchronization<br>• Betting choices: even, odd, red2, red3, red4, white3, white4<br>• 23-second round duration with 18-second betting phase<br>• Bot integration with configurable ratios<br>• Provably fair gaming with server seed management<br>• **Template for implementing new game services**        | Real-time game states, betting history, and multiplayer sessions                                 |
+| **Game Client**               | Next.js     | 8007  | Client    | **Demo Game Client for Learning & Reference**              | • **Reference implementation for new team members to study game client development**<br>• Demonstrates complete game flow code and architecture<br>• Shows communication patterns between game client and game services<br>• Real-time game interface with WebSocket connections to Sedie Multiplayer<br>• SSO authentication integration with User Service<br>• Game lobby and session management<br>• Responsive design for desktop and mobile gaming<br>• **Template for implementing new game clients**       | Frontend assets, game flow code examples, client-service communication patterns                  |
+| **1W Simulator**              | ASP.NET 5.0 | 8008  | Simulator | **External Operator API Simulation for Testing**           | • **Simulates external operator APIs to enable full game flow testing**<br>• Allows complete game flow testing without real external operator integration<br>• Handles Placebet and EndRound operations for SabaClub gaming provider simulation<br>• Customer management and balance simulation<br>• Provides realistic game outcome simulation<br>• Supports multiple operators and currencies<br>• Token verification and authentication simulation<br>• **Essential for development and testing environments** | Simulated gaming data, external operator configurations, and test scenarios                      |
+| **Lobby Simulator**           | React       | 8009  | Simulator | **External Operator Player Site Simulation**               | • **Acts as a Player Site page of the External Operator**<br>• Requests SG API to make SignIn requests for testing<br>• Enables full flow testing from SignIn to playing games<br>• Simulates external operator player portal interface<br>• SSO URL generation and testing<br>• User flow testing and validation<br>• **Essential for testing complete authentication and game flow**                                                                                                                            | Test data, external operator player site configurations, and simulation scenarios                |
+| **Game Admin API**            | ASP.NET 5.0 | 7778  | API       | Backend services for administrative operations             | • User management and administrative functions<br>• System configuration management<br>• Analytics and reporting endpoints<br>• Administrative authentication and authorization                                                                                                                                                                                                                                                                                                                                   | Administrative data and system configurations                                                    |
+| **Game Admin Site**           | ASP.NET 5.0 | 7779  | Client    | Administrative interface for system management             | • User account management and monitoring<br>• Game configuration and settings management<br>• System health monitoring and analytics<br>• Administrative controls and permissions                                                                                                                                                                                                                                                                                                                                 | Administrative UI and configurations                                                             |
+| **MongoDB**                   | Database    | 27017 | Database  | Primary data storage for all services                      | • Document-based storage for flexible data structures<br>• High-performance read/write operations<br>• Scalable architecture for gaming data<br>• Real-time data access for multiplayer games                                                                                                                                                                                                                                                                                                                     | User data, game states, transactions, configurations, sessions, currencies, promotions, jackpots |
 
-#### 🎮 **Client Layer Services**
+**Layer Classification:**
 
-**Game Client (Next.js :8007)**
-
-- **Primary Purpose**: Main gaming frontend application for players
-- **Key Features**:
-  - Real-time game interface with WebSocket connections to Sedie Multiplayer
-  - SSO authentication integration with User Service
-  - Game lobby and session management
-  - Responsive design for desktop and mobile gaming
-  - Direct service endpoint configuration for multiplayer games
-- **User Interactions**: Players access games, manage accounts, view game history
-
-**Game Admin Site (ASP.NET :7779)**
-
-- **Primary Purpose**: Administrative interface for system management
-- **Key Features**:
-  - User account management and monitoring
-  - Game configuration and settings management
-  - System health monitoring and analytics
-  - Administrative controls and permissions
-- **User Interactions**: Administrators manage the gaming platform
-
-#### 🔌 **API Layer Services**
-
-**SG API (ASP.NET :8003)**
-
-- **Primary Purpose**: SG (Sports Gaming) system integration and SSO authentication
-- **Key Features**:
-  - Handles SSO sign-in requests and generates redirect URLs
-  - Manages player authentication with operator tokens
-  - Processes SG system data and transactions
-  - Provides SG game integration endpoints
-  - Supports multiple currencies and operator configurations
-- **Data Storage**: Stores SG-specific configurations, authentication logs, and user data
-
-**Game API (ASP.NET :8002)**
-
-- **Primary Purpose**: Core game business logic and partner communication
-- **Key Features**:
-  - Token verification for authentication via AuthVerificationController
-  - Player portal entry and balance management
-  - Betting operations (PlaceBet) and round management
-  - Game result calculations and payouts
-  - Integration with 1W Simulator for game processing
-  - Partner communication for EnterPortal, Balance, PlaceBet operations
-- **Data Storage**: Stores game transactions, results, and player data
-
-**Game Admin API (ASP.NET :7778)**
-
-- **Primary Purpose**: Backend services for administrative operations
-- **Key Features**:
-  - User management and administrative functions
-  - System configuration management
-  - Analytics and reporting endpoints
-  - Administrative authentication and authorization
-- **Data Storage**: Stores administrative data and system configurations
-
-#### ⚙️ **Service Layer Services**
-
-**User Service (NestJS :8004)**
-
-- **Primary Purpose**: User management, authentication, and session handling
-- **Key Features**:
-  - SSO authentication and session management via signIn method
-  - User profile and account management
-  - Session validation for real-time games
-  - Token verification with 1W Simulator (OW API Client)
-  - User data persistence and retrieval
-  - Partner configuration and currency group management
-  - UM (User Management) service integration
-- **Data Storage**: Stores user profiles, sessions, authentication data, and user configurations
-
-**Sedie Multiplayer Service (Node.js :8006)**
-
-- **Primary Purpose**: Real-time multiplayer dice game engine
-- **Key Features**:
-  - WebSocket-based real-time communication
-  - Multiplayer dice game session management (SeDieMultiplayer)
-  - Real-time game state synchronization
-  - Betting choices: even, odd, red2, red3, red4, white3, white4
-  - 23-second round duration with 18-second betting phase
-  - Bot integration with configurable ratios
-  - Provably fair gaming with server seed management
-- **Data Storage**: Stores real-time game states, betting history, and multiplayer sessions
-
-**Game Management Service (NestJS :8005)**
-
-- **Primary Purpose**: Comprehensive game and system configuration management
-- **Key Features**:
-  - Game configuration management (GameConfigsModule)
-  - Currency and currency group management
-  - User management and notifications
-  - Promotion and jackpot management
-  - Exchange rate management
-  - Operator configuration and domain management
-  - Archive status and aggregation services
-- **Data Storage**: Stores game configurations, currencies, promotions, jackpots, and system settings
-
-#### 🎯 **Simulator Layer Services**
-
-**1W Simulator (ASP.NET :8008)**
-
-- **Primary Purpose**: Third-party API simulation for SabaClub gaming provider
-- **Key Features**:
-  - Simulates SabaClub gaming provider APIs
-  - Handles Placebet and EndRound operations
-  - Customer management and balance simulation
-  - Provides realistic game outcome simulation
-  - Supports multiple operators and currencies
-  - Token verification and authentication simulation
-- **Integration**: Receives game requests from Game API for betting operations
-
-**Lobby Simulator (React :8009)**
-
-- **Primary Purpose**: Testing and development interface for lobby functionality
-- **Key Features**:
-  - SSO URL generation and testing
-  - Lobby interface simulation
-  - User flow testing and validation
-  - Development and debugging tools
-- **Integration**: Connects to SG API for redirect URL generation
-
-#### 🗄️ **Database Layer**
-
-**MongoDB (:27017)**
-
-- **Primary Purpose**: Primary data storage for all services
-- **Key Features**:
-  - Document-based storage for flexible data structures
-  - High-performance read/write operations
-  - Scalable architecture for gaming data
-  - Real-time data access for multiplayer games
-- **Data Types**: User data, game states, transactions, configurations, sessions, currencies, promotions, jackpots
+- **Client Layer**: User-facing applications (Game Client, Game Admin Site)
+- **API Layer**: Backend APIs for business logic (Auth API, Game API, SG API, Game Admin API)
+- **Service Layer**: Core business services (User Service, Game Management Service, Sedie Multiplayer Service)
+- **Simulator Layer**: Development and testing tools (1W Simulator, Lobby Simulator)
+- **Database Layer**: Data persistence (MongoDB)
 
 ## Communication Flow
 
