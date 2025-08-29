@@ -467,6 +467,8 @@ curl http://localhost:8007/health
 
 #### 5.3 Test Game Flow with Lobby Simulator
 
+![SSO Flow](images/sso.png)
+
 1. **Open Lobby Simulator**: Navigate to http://localhost:8009/signin
 2. **Get SSO Token**: Click on the "Get Token" button to generate an SSO URL
 3. **Test Authentication**: The system will redirect you through the authentication flow
@@ -476,6 +478,8 @@ curl http://localhost:8007/health
 **Note**: This step verifies the complete authentication flow and game access through the lobby system.
 
 #### 5.4 Test Admin Site
+
+![Admin Interface](images/admin.png)
 
 1. **Open Game Admin Site**: Navigate to http://localhost:7779
 2. **Login with Admin Credentials**:
