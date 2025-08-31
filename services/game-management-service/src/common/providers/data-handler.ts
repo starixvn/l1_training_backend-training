@@ -46,12 +46,12 @@ export class DataHandler {
         }
     }
 
-    async updateData<T>(
+    async updateData(
         model: Model<any>,
         filter: FilterQuery<Document>,
         updates: UpdateQuery<Document>,
         options?: QueryOptions,
-    ): Promise<Result<T>> {
+    ): Promise<Result<any>> {
         try {
             const result = await model.updateOne(filter, updates, options).lean().exec();
             return new Result(ErrorCodes.Success, ErrorMessages.Empty, result);
@@ -61,12 +61,12 @@ export class DataHandler {
         }
     }
 
-    async updateManyData<T>(
+    async updateManyData(
         model: Model<any>,
         filter: FilterQuery<Document>,
         updates: UpdateQuery<Document>,
         options?: QueryOptions,
-    ): Promise<Result<T>> {
+    ): Promise<Result<any>> {
         try {
             const result = await model.updateMany(filter, updates, options).exec();
             return new Result(ErrorCodes.Success, ErrorMessages.Empty, result);

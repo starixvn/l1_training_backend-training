@@ -59,7 +59,7 @@ const initCurrencyGroupGames = async (moduleFixture: TestingModule) => {
     const item = new CurrencyGroupGames();
     item.gameId = 12;
     item.gameName = 'baccarat';
-    item.groupId = 'abc';
+    item.groupId = new Types.ObjectId('507f1f77bcf86cd799439011'); // 使用有效的 ObjectId
     item.enabled = true;
     item.minBet = 1;
     item.maxBet = 10;
@@ -96,7 +96,7 @@ const initCurrencies = async (moduleFixture: TestingModule) => {
     item.multiplier = 10;
     item.isTest = false;
     item.partnerId = 'p1';
-    item.groupId = 'g1';
+    item.groupId = new Types.ObjectId('507f1f77bcf86cd799439012'); // 使用有效的 ObjectId
 
     await model.insertMany([item]);
 };

@@ -27,7 +27,7 @@ export class UserSessionsService {
         return userSessionCreated.save();
     }
 
-    async updateReCheckInTime(sessionId: string): Promise<UserSessionDocument> {
+    async updateReCheckInTime(sessionId: string): Promise<any> {
         return this.userSessionModel.updateOne({ sessionId: sessionId }, { $set: { recheckInTime: new Date() } }).exec();
     }
 
@@ -50,7 +50,7 @@ export class UserSessionsService {
         return differenceInMinutes > this.sessionTimeoutInMinutes;
     }
 
-    async updateCurrencyGroup(sessionId: string, currencyGroupId: string): Promise<UserSessionDocument> {
+    async updateCurrencyGroup(sessionId: string, currencyGroupId: string): Promise<any> {
         return this.userSessionModel.updateOne({ sessionId: sessionId }, { $set: { currencyGroupId } }).exec();
     }
 

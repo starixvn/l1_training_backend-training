@@ -39,6 +39,7 @@ Before running the gaming platform, ensure you have the following installed:
    # Using Homebrew
    brew tap mongodb/brew
    brew install mongodb-community
+   brew install mongodb/brew/mongodb-community
    ```
 
 #### Optional Software
