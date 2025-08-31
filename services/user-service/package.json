@@ -22,6 +22,7 @@
         "reg": "npm set registry http://npm.lumigame.com"
     },
     "dependencies": {
+        "@fastify/static": "^5.0.0",
         "@nestjs/axios": "^0.0.7",
         "@nestjs/common": "7.6.5",
         "@nestjs/config": "^2.3.4",

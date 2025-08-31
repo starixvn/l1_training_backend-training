@@ -35,7 +35,7 @@ async function bootstrap() {
     });
 
     const domain = app.get(DomainService);
-    console.log(process.env.ENV.toLocaleLowerCase());
+    console.log((process.env.NODE_ENV || 'development').toLocaleLowerCase());
 
     app.enableCors({
         origin: (origin, callback) => {
