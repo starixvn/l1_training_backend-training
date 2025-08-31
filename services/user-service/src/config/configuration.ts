@@ -1,6 +1,6 @@
 export default () => ({
     database: {
-        uri: process.env.DATABASE_URI + 'minigame',
+        uri: process.env.DATABASE_URI,
     },
     api: {
         baseURL: process.env.API_URI,

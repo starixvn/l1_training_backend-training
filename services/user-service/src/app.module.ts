@@ -27,6 +27,7 @@ import { LobbyModule } from './lobby/lobby.module';
 import { DomainModule } from './domain/domain.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ExchangeRateModule } from './exchange_rates/exchange-rate.module';
+import { TestController } from './test.controller';
 
 @Module({
     imports: [
@@ -60,7 +61,7 @@ import { ExchangeRateModule } from './exchange_rates/exchange-rate.module';
         ScheduleModule.forRoot(),
         ExchangeRateModule
     ],
-    controllers: [AppController],
+    controllers: [AppController, TestController],
     providers: [AppService],
 })
 export class AppModule implements NestModule {
