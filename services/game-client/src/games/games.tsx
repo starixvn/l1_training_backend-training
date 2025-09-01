@@ -28,6 +28,7 @@ const LoadingGameComponent = () => (
 
 // SeBall removed
 const SeDieMultiPlayer = dynamic(() => import("./sedie-multiplayer/page"), { loading: () => <LoadingGameComponent /> });
+const SoccerPinGoal = dynamic(() => import("./soccer-pingoal/page"), { loading: () => <LoadingGameComponent /> });
 
 export const Games: React.FC<Props> = ({
     setApiErrorMessage,
@@ -75,6 +76,10 @@ export const Games: React.FC<Props> = ({
 
         if (gameId === GameIds.SeDieMultiplayer) {
             return <SeDieMultiPlayer key={`game-${gameId}`} {...gameProps} />;
+        }
+        
+        if (gameId === GameIds.SoccerPinGoal) {
+            return <SoccerPinGoal key={`game-${gameId}`} {...gameProps} />;
         }
 
         return null;

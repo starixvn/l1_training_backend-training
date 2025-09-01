@@ -15,6 +15,7 @@ This Docker Compose configuration **builds and runs** all game services from loc
 | Game Client               | http://localhost:8007 | 8007  |
 | OW Simulator              | http://localhost:8008 | 8008  |
 | Lobby Simulator           | http://localhost:8009 | 8009  |
+| Soccer PinGoal Service    | http://localhost:8010 | 8010  |
 | Game Admin API            | http://localhost:7778 | 7778  |
 | Game Admin Site           | http://localhost:7779 | 7779  |
 | MongoDB                   | localhost:27017       | 27017 |
@@ -108,7 +109,8 @@ docker-compose up -d --build
 
 - **User Service**: User management service (port 5000)
 - **Game Management Service**: Game management service (port 3000)
-- **Sedie Multiplayer Service**: Multiplayer game service (port 8006)
+- **Sedie Multiplayer Service**: Multiplayer dice game service (port 8006)
+- **Soccer PinGoal Service**: Soccer penalty shooting game service (port 8010)
 - **Game Client**: Game client application (port 8007)
 - **Lobby Simulator**: Game lobby simulator (port 8009)
 
@@ -125,6 +127,7 @@ Each service builds from its local source code:
 - `./services/user-service/` - User Service
 - `./services/game-management-service/` - Game Management Service
 - `./services/services/sedie-multiplayer-service/` - Sedie Multiplayer Service
+- `./services/services/soccer-pingoal-service/` - Soccer PinGoal Service
 - `./services/game-client/` - Game Client
 - `./services/ow-simulator/` - OW Simulator
 - `./services/lobby-simulator/` - Lobby Simulator

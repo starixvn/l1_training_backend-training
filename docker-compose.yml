@@ -101,6 +101,21 @@ services:
       - game-network
     restart: unless-stopped
 
+  # Soccer PinGoal Service
+  soccer-pingoal-service:
+    build:
+      context: ./services/services/soccer-pingoal-service
+      dockerfile: Dockerfile
+    container_name: soccer-pingoal-service
+    ports:
+      - "8010:8010"
+    environment:
+      - NODE_ENV=production
+      - PORT=8010
+    networks:
+      - game-network
+    restart: unless-stopped
+
   # Game Client
   game-client:
     build:
