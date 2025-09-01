@@ -1,180 +1,338 @@
-# SeDie Multiplayer Game
+# Soccer PinGoal - 彈珠台軌道競賽遊戲
 
-## Overview
+## 🎮 遊戲概述
 
-SeDie is a multiplayer dice-based betting game where players can bet on various outcomes based on dice rolls. The game features real-time multiplayer functionality with comprehensive betting options and visual feedback.
+Soccer PinGoal 是一款基於彈珠台機制的多人實時競賽遊戲。玩家選擇軌道和對手數量，珠子在軌道中下落並撞擊得分物件，最高分獲勝。遊戲特色在於結合了策略選擇與運氣元素，提供刺激的多人競技體驗。
 
-## Game Rules
+## 🏗️ 遊戲規則
 
-### Betting Options
+### 基本玩法
 
-#### Main Options
+1. **軌道選擇**: 玩家從6條垂直軌道（Tunnel 1-6）中選擇一條放置自己的珠子
+2. **對手設置**: 選擇1-5個對手珠子，系統會隨機分配到剩餘軌道
+3. **珠子掉落**: 所有珠子同時從軌道頂部開始下落
+4. **分數累積**: 珠子撞擊軌道中的物件獲得分數
+5. **勝負判定**: 分數最高的珠子獲勝，平分情況下玩家也算獲勝
 
--   **ODD**: Bet on the sum of dice being odd
--   **EVEN**: Bet on the sum of dice being even
+### 得分系統
 
-#### Sub Options
+#### 得分物件類型
+- **綠色小圓形**: 1分物件（出現機率 50%）
+- **黃色三角形**: 2分物件（出現機率 30%）
+- **紅色菱形**: 3分物件（出現機率 20%）
 
--   **RED2**: Bet on specific red dice combinations
--   **RED3**: Bet on specific red dice combinations
--   **RED4**: Bet on specific red dice combinations
--   **WHITE3**: Bet on specific white dice combinations
--   **WHITE4**: Bet on specific white dice combinations
+#### 碰撞機制
+- 每條軌道包含10個隨機分佈的得分物件
+- 高分物件較難撞到（撞擊概率較低）
+- 珠子軌跡受物理引擎影響，增加真實感
 
-### Game Flow
+### 賠率系統
 
-1. **Betting Phase**: Players place bets on their chosen options
-2. **Locking Phase**: Betting is closed, no more bets accepted
-3. **Result Phase**: Dice are rolled and results displayed
-4. **Settlement Phase**: Winners are determined and payouts calculated
+賠率根據對手數量動態調整，風險越高獲利越大：
 
-## Components
+| 對手數量 | 獲勝機率 | 賠率倍數 | 風險等級 |
+|---------|---------|----------|----------|
+| 1個對手 | 50.0%   | 1.8x     | 低風險   |
+| 2個對手 | 33.3%   | 2.5x     | 中低風險 |
+| 3個對手 | 25.0%   | 3.2x     | 中等風險 |
+| 4個對手 | 20.0%   | 4.0x     | 高風險   |
+| 5個對手 | 16.7%   | 5.5x     | 極高風險 |
 
-### Core Components
+### 遊戲流程
 
--   **SeDieMultiPlayer**: Main game class extending GameBase
--   **SeDieBettingBlock**: Betting interface container
--   **SeDieBetOptionsComponent**: Individual betting options with visual feedback
--   **SeDieResultBlock**: Game results display with statistics
--   **SeDieWinningAnimation**: Winning animations and effects
--   **SeDieGameRoundDataHandler**: Game data processing and validation
+1. **投注階段 (25秒)**: 選擇軌道、對手數量和投注金額
+2. **準備階段 (3秒)**: 系統分配對手軌道，顯示所有珠子起始位置
+3. **遊戲階段 (5秒)**: 珠子掉落動畫，實時顯示分數累積
+4. **結算階段 (2秒)**: 公布最終結果，計算並派發獎金
 
-### Features
+## 🎯 核心組件
 
--   **Real-time Multiplayer**: Live betting and result updates
--   **Visual Feedback**: Hover effects, animations, and state indicators
--   **Statistics**: Comprehensive game statistics and history
--   **Responsive Design**: Mobile-friendly interface
--   **Accessibility**: Clear visual indicators and feedback
+### 主要遊戲組件
 
-## Technical Implementation
+- **TunnelGameMultiPlayer**: 主遊戲類，繼承自 GameBase
+- **TunnelSelector**: 6條軌道的選擇器組件
+- **OpponentCounter**: 對手數量選擇組件（1-5個）
+- **TunnelGameField**: 遊戲場地顯示，包含所有軌道
+- **TunnelColumn**: 單條軌道組件，顯示珠子和得分物件
+- **OddsDisplay**: 賠率和潛在獲利顯示
+- **BallAnimation**: 珠子掉落動畫控制器
 
-### Architecture
+### 輔助功能組件
 
--   **Event-driven**: Uses event consumers and publishers for real-time updates
--   **State Management**: Centralized game state with React contexts
--   **Dependency Injection**: Awilix container for managing dependencies
--   **Modular Design**: Separated concerns for maintainability
+- **TunnelGameRoundDataHandler**: 遊戲數據處理和驗證
+- **PhysicsEngine**: 物理引擎，模擬珠子掉落和碰撞
+- **RandomNumberGenerator**: 隨機數生成器，確保遊戲公平性
+- **ScoreCalculator**: 分數計算器，處理碰撞得分
 
-### Key Technologies
+## 🎨 視覺特色
 
--   **React**: Component-based UI framework
--   **TypeScript**: Type-safe development
--   **SCSS**: Advanced CSS preprocessing
--   **Socket.io**: Real-time communication
--   **MongoDB**: Data persistence
+### 軌道設計
+- **6條彩色軌道**: 每條軌道有獨特的顏色標識
+- **得分物件**: 不同分值的物件有不同的顏色和形狀
+- **珠子設計**: 玩家珠子和對手珠子有明顯的視覺區別
+- **動畫效果**: 流暢的掉落軌跡和碰撞效果
 
-### Styling
+### 界面設計
+- **現代化UI**: 漸層背景、陰影效果和圓角設計
+- **響應式佈局**: 完美適配手機和電腦屏幕
+- **實時反饋**: 選擇軌道時的高亮效果和賠率更新
+- **得分動畫**: 碰撞時的得分彈出動畫
 
--   **Modern UI**: Gradient backgrounds, shadows, and animations
--   **Responsive**: Mobile-first design approach
--   **Theming**: Consistent color scheme and visual hierarchy
--   **Animations**: Smooth transitions and hover effects
+## ⚙️ 技術實現
 
-## Configuration
+### 核心技術架構
 
-### Game Settings
+- **事件驅動**: 使用事件消費者和發布者處理實時遊戲更新
+- **狀態管理**: React Context 集中管理遊戲狀態
+- **物理模擬**: 自建輕量級物理引擎，模擬珠子掉落
+- **隨機數生成**: 使用14個獨立隨機數控制遊戲所有隨機要素
 
--   Betting limits and validation
--   Round timing and phases
--   Animation durations and effects
--   Localization support
+### 關鍵算法
 
-### Environment Variables
+#### 軌道分配算法
+```typescript
+// Fisher-Yates 洗牌算法分配對手軌道
+function allocateOpponentTunnels(
+  playerTunnel: number,
+  opponentCount: number, 
+  randomNumbers: number[]
+): number[]
+```
 
--   API endpoints
--   Database connections
--   Socket configurations
--   Feature flags
+#### 物理模擬引擎
+```typescript
+// 珠子掉落和碰撞檢測
+function simulateBallDrop(
+  tunnelObjects: ScoreObject[],
+  collisionFactor: number
+): BallSimulation
+```
 
-## Development
+#### 分數計算系統
+```typescript
+// 基於概率的碰撞檢測
+const hitProbabilities = {
+  1: 0.8,  // 1分物件 80% 撞擊率
+  2: 0.6,  // 2分物件 60% 撞擊率
+  3: 0.4   // 3分物件 40% 撞擊率
+}
+```
 
-### Setup
+### 技術棧
 
-1. Install dependencies: `npm install`
-2. Configure environment variables
-3. Start development server: `npm run dev`
+- **前端**: React 18+ + TypeScript + SCSS
+- **後端**: Node.js + NestJS Framework
+- **通訊**: Socket.io WebSocket 實時通訊
+- **數據庫**: MongoDB 遊戲數據持久化
+- **部署**: Docker + Docker Compose
 
-### Testing
+## 🔒 公平性保證
 
--   Unit tests for game logic
--   Integration tests for components
--   E2E tests for game flow
+### Provably Fair 系統
+- **隨機種子**: serverSeed + clientSeed + nonce
+- **結果驗證**: 玩家可驗證每局遊戲結果的公平性
+- **透明算法**: 所有隨機數生成算法公開透明
+- **防作弊機制**: 多重驗證確保遊戲結果不可預測
 
-### Building
+### 安全措施
+- **時序驗證**: 防止超時投注和時間操縱
+- **行為分析**: 檢測異常投注模式
+- **速率限制**: 防止自動化腳本濫用
+- **數據加密**: 所有通訊數據TLS加密傳輸
 
--   Production build: `npm run build`
--   Docker containerization support
--   Environment-specific configurations
+## 📊 配置設定
 
-## Deployment
+### 遊戲基本設定
+- **遊戲ID**: 200
+- **遊戲名稱**: SoccerPinGoal
+- **服務端口**: 8010
+- **總回合時長**: 35秒
+  - 投注階段: 25秒
+  - 準備階段: 3秒
+  - 遊戲階段: 5秒
+  - 結算階段: 2秒
 
-### Requirements
+### 遊戲平衡參數
+- **軌道數量**: 6條固定軌道
+- **對手範圍**: 1-5個對手可選
+- **物件密度**: 每條軌道10個得分物件
+- **分值分佈**: 1分(50%) : 2分(30%) : 3分(20%)
+- **歷史記錄**: 保存最近100場遊戲
 
--   Node.js 16+
--   MongoDB 4.4+
--   Redis (for session management)
--   WebSocket support
+### 環境變數
+```bash
+# 服務配置
+PORT=8010
+SERVICE_NAME=soccer-pingoal-service
+LOG_IDENTIFIER=soccer-pingoal
 
-### Deployment Options
+# 遊戲參數
+TUNNEL_COUNT=6
+OBJECTS_PER_TRACK=10
+REQUIRED_RANDOM_COUNT=14
+MAX_BET_AMOUNT=1000
 
--   **Docker**: Containerized deployment
--   **Kubernetes**: Scalable orchestration
--   **Cloud Platforms**: AWS, GCP, Azure support
--   **On-premise**: Traditional server deployment
+# 物理引擎
+PHYSICS_SPEED=1.0
+ANIMATION_DURATION=5000
+COLLISION_PRECISION=0.05
+```
 
-## Monitoring
+## 🚀 開發指南
 
-### Metrics
+### 快速開始
 
--   Game performance indicators
--   User engagement statistics
--   Error rates and debugging
--   Real-time game analytics
+1. **克隆項目**:
+   ```bash
+   git clone [repository-url]
+   cd services/services/soccer-pingoal-service
+   ```
 
-### Logging
+2. **安裝依賴**:
+   ```bash
+   npm install
+   ```
 
--   Structured logging with sc-common
--   Error tracking and reporting
--   Performance monitoring
--   Audit trails for compliance
+3. **啟動開發服務器**:
+   ```bash
+   npm run dev
+   ```
 
-## Future Enhancements
+4. **啟動前端**:
+   ```bash
+   cd ../../game-client
+   npm run dev
+   ```
 
-### Planned Features
+### 項目結構
+```
+soccer-pingoal/
+├── 後端服務 (soccer-pingoal-service/)
+│   ├── src/
+│   │   ├── constants.ts              # 遊戲常數定義
+│   │   ├── game-settings.ts          # 遊戲設定配置
+│   │   ├── helpers/
+│   │   │   ├── result-helper.ts      # 結果計算邏輯
+│   │   │   ├── tunnel-allocation.ts  # 軌道分配算法
+│   │   │   └── physics-simulation.ts # 物理模擬引擎
+│   │   ├── types/                    # TypeScript 類型定義
+│   │   ├── consumers/                # 事件消費者
+│   │   └── publishers/               # 事件發布者
+│   └── tests/                        # 測試檔案
+└── 前端客戶端 (game-client/src/games/soccer-pingoal/)
+    ├── page.tsx                      # 主遊戲頁面
+    ├── tunnel-game-constants.ts      # 前端常數
+    ├── components/
+    │   ├── tunnel-selector.tsx       # 軌道選擇器
+    │   ├── opponent-counter.tsx      # 對手數量選擇
+    │   ├── tunnel-game-field.tsx     # 遊戲場地
+    │   ├── tunnel-column.tsx         # 軌道列
+    │   ├── odds-display.tsx          # 賠率顯示
+    │   └── ball-animation.tsx        # 珠子動畫
+    ├── styles/                       # 樣式檔案
+    ├── round-history/                # 歷史記錄
+    └── provably-fair/                # 公平性驗證
+```
 
--   Advanced betting strategies
--   Tournament modes
--   Social features and leaderboards
--   AI-powered game analysis
--   Mobile app development
+### 測試策略
 
-### Technical Improvements
+#### 單元測試
+```bash
+# 後端邏輯測試
+npm run test
 
--   Performance optimization
--   Enhanced security measures
--   Better error handling
--   Improved accessibility
--   Internationalization support
+# 前端組件測試  
+npm run test:components
+```
 
-## Contributing
+#### 整合測試
+```bash
+# 完整遊戲流程測試
+npm run test:integration
+```
 
-### Guidelines
+#### 壓力測試
+```bash
+# 高並發場景測試
+npm run test:load
+```
 
--   Follow established coding standards
--   Write comprehensive tests
--   Update documentation
--   Review and test changes
--   Follow the project's architecture patterns
+## 📱 移動端適配
 
-### Code Style
+### 響應式設計
+- **軌道佈局**: 手機上採用3x2網格佈局顯示6條軌道
+- **觸控優化**: 按鈕尺寸適合手指操作
+- **性能優化**: 針對低端設備優化動畫效果
+- **網絡優化**: 壓縮遊戲狀態數據，適應移動網絡
 
--   4-space indentation
--   140 character line limit
--   ES6+ features
--   TypeScript strict mode
--   Consistent naming conventions
+### 移動端特殊功能
+- **震動反饋**: 珠子碰撞時的觸覺反饋
+- **橫豎屏適配**: 支援設備旋轉
+- **離線緩存**: 關鍵資源本地緩存
+- **推送通知**: 遊戲結果推送
 
-## License
+## 📈 監控與分析
 
-This project is proprietary software. All rights reserved.
+### 遊戲指標
+- **參與度**: 每日活躍玩家數和遊戲局數
+- **軌道熱門度**: 各軌道被選擇的頻率統計
+- **對手偏好**: 玩家選擇對手數量的分佈
+- **勝率統計**: 各配置下的實際勝率
+- **平均遊戲時長**: 從投注到結算的完整時間
+
+### 技術監控
+- **響應時間**: API 響應時間和 WebSocket 延遲
+- **錯誤率**: 遊戲邏輯錯誤和網絡錯誤統計
+- **併發處理**: 同時在線用戶數和服務器負載
+- **數據庫性能**: 查詢效率和存儲使用情況
+
+## 🔮 未來規劃
+
+### 短期目標（1-3個月）
+- **視覺升級**: 3D軌道效果和更豐富的動畫
+- **音效系統**: 碰撞聲音和背景音樂
+- **成就系統**: 連勝記錄和特殊成就徽章
+- **社交功能**: 好友對戰和排行榜
+
+### 中期目標（3-6個月）
+- **錦標賽模式**: 多人淘汰賽和積分賽
+- **自訂軌道**: 玩家可以設計自己的軌道佈局
+- **VIP功能**: 高級玩家專屬軌道和特權
+- **數據分析**: 詳細的個人統計和趨勢分析
+
+### 長期目標（6-12個月）
+- **AR/VR 支援**: 沉浸式遊戲體驗
+- **機器學習**: AI 對手和智能推薦系統
+- **跨平台同步**: 手機、電腦、平板數據同步
+- **國際化**: 多語言支援和全球服務器
+
+## 👥 貢獻指南
+
+### 開發規範
+- **代碼風格**: 遵循 ESLint 和 Prettier 配置
+- **命名規範**: 使用清晰的軌道和遊戲相關命名
+- **註解要求**: 複雜算法必須有詳細註解
+- **測試覆蓋**: 新功能必須包含對應測試
+- **文檔更新**: 代碼變更時同步更新相關文檔
+
+### 提交流程
+1. **Fork 專案**: 從主分支建立個人分支
+2. **本地開發**: 在本地環境進行開發和測試
+3. **提交審查**: 建立 Pull Request 進行代碼審查
+4. **整合測試**: 通過所有自動化測試
+5. **合併主分支**: 審查通過後合併到主分支
+
+## 📄 授權條款
+
+本專案為專有軟體，專為博彩遊戲平台開發。版權所有，保留一切權利。
+
+---
+
+**遊戲特色總結**：
+- 🎲 **創新玩法**: 結合彈珠台和競賽元素的獨特遊戲機制
+- ⚡ **實時體驗**: WebSocket 技術提供流暢的多人遊戲體驗  
+- 🔍 **公平透明**: Provably Fair 系統確保遊戲結果公正可驗證
+- 📱 **全平台**: 完美適配桌面和移動設備
+- 🎨 **視覺精美**: 現代化界面設計和流暢動畫效果
+
+*立即體驗這款革命性的軌道競賽遊戲！* 🚀
