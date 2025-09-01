@@ -141,7 +141,11 @@ const SoccerPinGoalFC = (props) => {
                 systemDispatch: useSystemDispatch(),
                 translate: t,
                 tolgeeNamespace,
-                hedgeBetGroups: [[SoccerPinGoalBetOptions.GOAL, SoccerPinGoalBetOptions.MISS]],
+                hedgeBetGroups: [
+                    [SoccerPinGoalBetOptions.WIN, SoccerPinGoalBetOptions.LOSE],
+                    // 保留舊的對沖組以向後兼容
+                    [SoccerPinGoalBetOptions.GOAL, SoccerPinGoalBetOptions.MISS]
+                ],
             }}
         />
     );

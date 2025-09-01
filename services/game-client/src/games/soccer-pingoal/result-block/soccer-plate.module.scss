@@ -1,213 +1,210 @@
-// Plate and buttons component styles
-.plate-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
-    transform-origin: center bottom;
+// Soccer PinGoal - 軌道彈珠遊戲結果顯示樣式
+// 簡化版樣式，專注於文字結果顯示
+
+.tunnel-result-display {
+    // 結果顯示卡片的基本樣式
+    animation: fadeInScale 0.5s ease-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e7ff;
 }
 
-.plate-buttons-idle {
-    transform: translateX(0) translateY(0) rotate(0deg) scaleX(1) scaleY(1);
-}
-
-.plate-buttons-shake {
-    animation: shake3 calc(var(--shake-duration) / 2) ease-in-out 2;
-}
-
-.plate {
-    width: var(--plate-size);
-    height: var(--plate-size);
-    background-image: url("/static/images/sedie-multiplayer/result/plate.png?v=#{$version-image}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-}
-
-// Buttons container and positioning
-.buttons-container {
-    position: relative;
-    width: var(--boundary-size);
-    height: var(--boundary-size);
-    margin: calc((var(--plate-size) - var(--boundary-size)) / 2) auto 0;
-    border-radius: 50%; // Changed to circle
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
-    position: absolute;
-    width: var(--button-size);
-    height: var(--button-size);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-}
-
-// Bowl styles and animations
-.bowl {
-    width: var(--bowl-size);
-    height: var(--bowl-size);
-    background-image: url("/static/images/sedie-multiplayer/result/bowl.png?v=#{$version-image}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% + 2px));
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.bowl-open {
-    // Open animation - bowl moves up and fades out
-    animation: open 1.5s ease-in-out forwards;
-}
-
-.bowl-close {
-    // Close animation - bowl appears and moves down
-    animation: close var(--close-duration) ease-in-out forwards;
-}
-
-// Shake animation keyframes (same for both bowl and plate)
-@keyframes shake2 {
-    0%,
-    100% {
-        transform: scaleX(1) scaleY(1);
-    }
-    15% {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
-    30% {
-        transform: scaleX(1.1) scaleY(1.1);
-    }
-    45% {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
-    60% {
-        transform: scaleX(1.1) scaleY(1.1);
-    }
-    75% {
-        transform: scaleX(1.1) scaleY(1.1);
-    }
-    90% {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
-}
-@keyframes shake {
-    0%,
-    100% {
-        transform: translateX(0) translateY(0) rotate(0deg);
-    }
-    10% {
-        transform: translateX(-8px) translateY(-4px) rotate(-3deg);
-    }
-    20% {
-        transform: translateX(8px) translateY(-4px) rotate(3deg);
-    }
-    30% {
-        transform: translateX(-8px) translateY(4px) rotate(-3deg);
-    }
-    40% {
-        transform: translateX(8px) translateY(4px) rotate(3deg);
-    }
-    50% {
-        transform: translateX(-4px) translateY(-8px) rotate(-2deg);
-    }
-    60% {
-        transform: translateX(4px) translateY(-8px) rotate(2deg);
-    }
-    70% {
-        transform: translateX(-4px) translateY(8px) rotate(-2deg);
-    }
-    80% {
-        transform: translateX(4px) translateY(8px) rotate(2deg);
-    }
-    90% {
-        transform: translateX(-2px) translateY(-2px) rotate(-1deg);
-    }
-}
-
-@keyframes shake3 {
-    0%,
-    100% {
-        transform: translateX(0) translateY(0) rotate(0deg) scaleX(1) scaleY(1);
-    }
-    10% {
-        transform: translateX(-8px) translateY(-4px) rotate(-3deg);
-    }
-    15% {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
-    20% {
-        transform: translateX(8px) translateY(-4px) rotate(3deg);
-    }
-    30% {
-        transform: translateX(-8px) translateY(4px) rotate(-3deg) scaleX(1.1) scaleY(1.1);
-    }
-    40% {
-        transform: translateX(8px) translateY(4px) rotate(3deg);
-    }
-    45% {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
-    50% {
-        transform: translateX(-4px) translateY(-8px) rotate(-2deg);
-    }
-    60% {
-        transform: translateX(4px) translateY(-8px) rotate(2deg) scaleX(1.1) scaleY(1.1);
-    }
-    70% {
-        transform: translateX(-4px) translateY(8px) rotate(-2deg);
-    }
-    75% {
-        transform: scaleX(1.1) scaleY(1.1);
-    }
-    80% {
-        transform: translateX(4px) translateY(8px) rotate(2deg);
-    }
-    90% {
-        transform: translateX(-2px) translateY(-2px) rotate(-1deg) scaleX(0.8) scaleY(0.8);
-    }
-}
-
-// Open animation keyframes
-@keyframes open {
-    0% {
-        transform: translate(-50%, calc(-50% + 2px)) scale(1);
-        opacity: 1;
-    }
-    80% {
-        transform: translate(calc(-50% + 35px), calc(-50% - 35px)) scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(calc(-50% + 100px), calc(-50% - 100px)) scale(0.8);
+@keyframes fadeInScale {
+    from {
         opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
-// Close animation keyframes
-@keyframes close {
-    0% {
-        transform: translate(calc(-50% + 100px), calc(-50% - 100px)) scale(0.8);
-        opacity: 1;
+// 遊戲狀態指示器
+.game-status-indicator {
+    &.preparing {
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        border: 2px solid #3b82f6;
     }
-    100% {
-        transform: translate(-50%, calc(-50% + 2px)) scale(1);
-        opacity: 1;
+    
+    &.result-ready {
+        background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+        border: 2px solid #10b981;
+    }
+}
+
+// 結果卡片樣式
+.result-card {
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// 勝負狀態樣式
+.win-status {
+    &.win {
+        background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        border-color: #22c55e;
+        
+        .status-icon {
+            color: #15803d;
+        }
+        
+        .status-text {
+            color: #166534;
+        }
+    }
+    
+    &.lose {
+        background: linear-gradient(135deg, #fee2e2, #fecaca);
+        border-color: #ef4444;
+        
+        .status-icon {
+            color: #dc2626;
+        }
+        
+        .status-text {
+            color: #991b1b;
+        }
+    }
+}
+
+// 信息網格樣式
+.info-grid {
+    .info-item {
+        padding: 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.7);
+        transition: background-color 0.2s ease;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .value {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+    }
+}
+
+// 統計信息樣式
+.stats-container {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border: 1px solid #93c5fd;
+    
+    .stat-item {
+        .stat-label {
+            color: #4b5563;
+            font-size: 0.875rem;
+        }
+        
+        .stat-value {
+            font-weight: 600;
+            
+            &.probability {
+                color: #2563eb;
+            }
+            
+            &.odds {
+                color: #059669;
+            }
+        }
+    }
+}
+
+// 影片信息樣式
+.video-info {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #f59e0b;
+    
+    .video-url {
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 0.75rem;
+        word-break: break-all;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 8px;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+}
+
+// 準備階段樣式
+.preparing-stage {
+    .preparing-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+        animation: bounce 2s infinite;
+    }
+    
+    .preparing-text {
+        color: #1e40af;
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+    
+    .preparing-subtitle {
+        color: #3b82f6;
+        font-size: 0.875rem;
+        margin-top: 8px;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -8px, 0);
+    }
+    70% {
+        transform: translate3d(0, -4px, 0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+// 響應式設計
+@media (max-width: 640px) {
+    .tunnel-result-display {
+        margin: 0 16px;
+        padding: 16px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .stats-container {
+        .stat-item {
+            text-align: center;
+        }
+    }
+}
+
+// 深色模式支持
+@media (prefers-color-scheme: dark) {
+    .tunnel-result-display {
+        background: #1f2937;
+        border-color: #374151;
+        color: #f9fafb;
+    }
+    
+    .info-grid .info-item {
+        background: rgba(55, 65, 81, 0.7);
+        
+        &:hover {
+            background: rgba(55, 65, 81, 0.9);
+        }
     }
 }
