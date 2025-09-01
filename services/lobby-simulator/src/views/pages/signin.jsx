@@ -534,6 +534,28 @@ export default class SignIn extends React.Component {
                                     this.redirectToInstantVersion();
                                 }}
                             />
+                            <input
+                                type="button"
+                                id="redirect-to-sedie"
+                                className="secondary"
+                                value="🎮 SeDie Multiplayer (Game ID: 148)"
+                                onClick={() => {
+                                    this.setState({ gameId: 148 }, () => {
+                                        this.handleSubmit();
+                                    });
+                                }}
+                            />
+                            <input
+                                type="button"
+                                id="redirect-to-soccer-pingoal"
+                                className="secondary"
+                                value="🎯 Soccer PinGoal 軌道彈珠遊戲 (Game ID: 200)"
+                                onClick={() => {
+                                    this.setState({ gameId: 200 }, () => {
+                                        this.handleSubmit();
+                                    });
+                                }}
+                            />
                             {this.state.appType === 7 && (
                                 <input
                                     type="button"

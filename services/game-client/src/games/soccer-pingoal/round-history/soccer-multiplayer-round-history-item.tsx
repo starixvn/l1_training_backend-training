@@ -1,4 +1,4 @@
-import { SeDieResult, SeDieSettlementResult } from "../sedie-multiplayer-constants";
+import { SoccerPinGoalResult, SoccerPinGoalSettlementResult } from "../soccer-multiplayer-constants";
 import styles from "./style.module.scss";
 
 export const SedieMultiplayerRoundHistoryItem = ({

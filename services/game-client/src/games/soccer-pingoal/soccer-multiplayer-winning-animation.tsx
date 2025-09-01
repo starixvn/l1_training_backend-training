@@ -3,8 +3,8 @@ import { useMemoriedImage } from "../../_shared/react-hooks";
 import { isHighLightWinningResult } from "../../_shared/react-hooks/use-high-light";
 import { RoundState } from "../../components/game-base/type";
 import { Spritesheet } from "../../components/game-components/sprites-sheet";
-import { SeDieBetOptions } from "./sedie-multiplayer-constants";
-import Styles from "./sedie-multiplayer.module.scss";
+import { SoccerPinGoalBetOptions } from "./soccer-multiplayer-constants";
+import Styles from "./soccer-multiplayer.module.scss";
 
 type Props = {
     choice: string;
@@ -16,13 +16,14 @@ type Props = {
 };
 
 const ChoiceWinningSize = {
-    [SeDieBetOptions.ODD]: [186, 104],
-    [SeDieBetOptions.EVEN]: [186, 104],
-    [SeDieBetOptions.RED2]: [146, 74],
-    [SeDieBetOptions.RED3]: [146, 74],
-    [SeDieBetOptions.RED4]: [146, 74],
-    [SeDieBetOptions.WHITE3]: [146, 74],
-    [SeDieBetOptions.WHITE4]: [146, 74],
+    [SoccerPinGoalBetOptions.WIN]: [186, 104],
+    [SoccerPinGoalBetOptions.LOSE]: [186, 104],
+    [SoccerPinGoalBetOptions.tunnel1]: [146, 74],
+    [SoccerPinGoalBetOptions.tunnel2]: [146, 74],
+    [SoccerPinGoalBetOptions.tunnel3]: [146, 74],
+    [SoccerPinGoalBetOptions.tunnel4]: [146, 74],
+    [SoccerPinGoalBetOptions.tunnel5]: [146, 74],
+    [SoccerPinGoalBetOptions.tunnel6]: [146, 74],
 };
 
 const SeDieMultiplayerWinningAnimation: React.FC<Props> = ({ choice, resourceName, roundState, settlementResult, showResultInfo }) => {

@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { SeDieBetOptions } from "../sedie-multiplayer-constants";
+import { SoccerPinGoalBetOptions } from "../soccer-multiplayer-constants";
 import styles from "./style.module.scss";
 const Odds = dynamic(() => import("../../../components/game-components/bet-option/odds"));
 const OwnBet = dynamic(() => import("../../../components/game-components/bet-option/own-bet"));
@@ -10,21 +10,22 @@ const PrevHighlightBetOption = dynamic(() => import("./highight-prev-round-bet-o
 const ChipEffect = dynamic(() => import("../../../components/game-components/bet-option/chip-effect"));
 
 const subChoiceImages = {
-    [SeDieBetOptions.WHITE4]: [false, false, false, false],
-    [SeDieBetOptions.WHITE3]: [true, false, false, false],
-    [SeDieBetOptions.RED2]: [true, true, false, false],
-    [SeDieBetOptions.RED3]: [true, true, true, false],
-    [SeDieBetOptions.RED4]: [true, true, true, true],
+    [SoccerPinGoalBetOptions.tunnel1]: [false, false, false, false],
+    [SoccerPinGoalBetOptions.tunnel2]: [true, false, false, false],
+    [SoccerPinGoalBetOptions.tunnel3]: [true, true, false, false],
+    [SoccerPinGoalBetOptions.tunnel4]: [true, true, true, false],
+    [SoccerPinGoalBetOptions.tunnel5]: [true, true, true, true],
+    [SoccerPinGoalBetOptions.tunnel6]: [true, true, true, true],
 };
 
 export const SedieMultiplayerSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
     return (
         <div className={`flex rounded-2xl mt-2 h-[120px] w-[370px] md:w-[465px] ${styles["sub-bet-option"]}`}>
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SeDieBetOptions.WHITE4} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SeDieBetOptions.WHITE3} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SeDieBetOptions.RED2} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SeDieBetOptions.RED3} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SeDieBetOptions.RED4} />
+            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel1} />
+            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel2} />
+            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel3} />
+            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel4} />
+            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel5} />
         </div>
     );
 };
@@ -37,7 +38,7 @@ const SedieMultiplayerSubBetOption = ({ tolgeeNamespace, choice }: { tolgeeNames
                 className={`flex flex-wrap items-center justify-center p-2 w-[74px] md:w-[93px] md:px-5 gap-1`}
                 style={{ "--dot-size": "20px" } as React.CSSProperties}
             >
-                {subChoiceImages[choice].map((isRed, index) => (
+                {(subChoiceImages[choice] || []).map((isRed, index) => (
                     <div key={index} className={`${isRed ? styles["dot-red"] : styles["dot-white"]}`}></div>
                 ))}
             </div>

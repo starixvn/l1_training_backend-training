@@ -1,6 +1,6 @@
 import React from "react";
 import ScoreboardSeDie from "../scoreboard/scoreboard";
-import { mainChoices, SeDieChoices, SeDieStatisticColors } from "../sedie-multiplayer-constants";
+import { mainChoices, SoccerPinGoalChoices, SoccerPinGoalStatisticColors } from "../soccer-multiplayer-constants";
 import PercentageStatistic from "../../../components/game-components/statistic";
 import Image from "next/image";
 import useGameStore from "../../../_shared/stores/game-store/game-store";

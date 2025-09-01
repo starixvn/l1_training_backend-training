@@ -42,5 +42,51 @@
                 "sedie-multi-player/highlight-winning-white4.png"
             ]
         }
+    },
+    "200": {
+        "id": 200,
+        "gameName": "SoccerPinGoal",
+        "tolgeeNamespace": "SoccerPinGoal",
+        "socketInfo": {
+            "namespace": "soccerpingoal",
+            "path": "soccerpingoal",
+            "serviceEndpoint": "http://localhost:8010"
+        },
+        "durations": {
+            "wholeRound": 35,
+            "wholeTurn": 35,
+            "placingBets": 25,
+            "lockingBet": 2,
+            "showResult": 5,
+            "resultAnimation": 2,
+            "beforePlaceBet": 0,
+            "switchRoundAnimation": 0,
+            "startNewRoundAnim": 0
+        },
+        "numberOfRoundHistory": 100,
+        "gamePath": "soccer-pingoal",
+        "gameResourceConfigs": {
+            "path": "soccer-pingoal",
+            "optionalPaths": [
+                "soccer-pingoal/highlight-winning-tunnel1",
+                "soccer-pingoal/highlight-winning-tunnel2",
+                "soccer-pingoal/highlight-winning-tunnel3",
+                "soccer-pingoal/highlight-winning-tunnel4",
+                "soccer-pingoal/highlight-winning-tunnel5",
+                "soccer-pingoal/highlight-winning-tunnel6",
+                "soccer-pingoal/highlight-winning-win",
+                "soccer-pingoal/highlight-winning-lose"
+            ],
+            "cachePaths": [
+                "soccer-pingoal/highlight-winning-tunnel1.png",
+                "soccer-pingoal/highlight-winning-tunnel2.png",
+                "soccer-pingoal/highlight-winning-tunnel3.png",
+                "soccer-pingoal/highlight-winning-tunnel4.png",
+                "soccer-pingoal/highlight-winning-tunnel5.png",
+                "soccer-pingoal/highlight-winning-tunnel6.png",
+                "soccer-pingoal/highlight-winning-win.png",
+                "soccer-pingoal/highlight-winning-lose.png"
+            ]
+        }
     }
 }

@@ -4,7 +4,7 @@ import { SwitchableScoreboard } from "../../../components/game-components/round-
 import { BigRoadElement } from "../../../components/game-components/round-history/scoreboard/elements";
 import { SeDieBigRoadConverter, SeDieBigRoadElement } from "./scoreboard-elements";
 import Styles from "./scoreboard.module.scss";
-import { SeDieResult, SeDieSettlementResult } from "../sedie-multiplayer-constants";
+import { SoccerPinGoalResult, SoccerPinGoalSettlementResult } from "../soccer-multiplayer-constants";
 
 export type ScoreboardComponentProps = {
     roundHistory: Round<SeDieResult, SeDieSettlementResult>[];

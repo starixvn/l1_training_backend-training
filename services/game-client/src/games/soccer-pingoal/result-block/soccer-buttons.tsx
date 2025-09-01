@@ -1,4 +1,4 @@
-import styles from "./sedie-plate.module.scss";
+import styles from "./soccer-plate.module.scss";
 import Image from "next/image";
 
 export const SedieButtons = ({

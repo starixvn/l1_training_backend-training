@@ -6,7 +6,7 @@ import { registerBigRoadElement } from "../../../_shared/helpers/scoreboard-regi
 import { GameIds } from "../../../_shared/constants";
 import styles from "./scoreboard-elements.module.scss";
 import dotStyles from "../../../components/game-components/round-history/dot/dot.module.scss";
-import { SeDieBetOptions, SeDieSettlementResult } from "../sedie-multiplayer-constants";
+import { SoccerPinGoalBetOptions, SoccerPinGoalSettlementResult } from "../soccer-multiplayer-constants";
 
 export class SeDieBigRoadConverter extends Converter<SeDieSettlementResult> {
     static addBlinkNode(rounds: SeDieSettlementResult[]) {
@@ -24,7 +24,7 @@ export class SeDieBigRoadConverter extends Converter<SeDieSettlementResult> {
     static readonly instance = new SeDieBigRoadConverter();
 
     protected positiveKey(): string {
-        return SeDieBetOptions.ODD;
+        return SoccerPinGoalBetOptions.WIN;
     }
 
     protected specialKey(): string {
