@@ -79,6 +79,11 @@ namespace L1.WebApi
             if (env.IsDevelopment())
             {
                 app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "SC API v1");
+                    c.RoutePrefix = "swagger";
+                });
                 app.UseReDoc(c =>
                 {
                     c.DocumentTitle = "SC API Documentation";

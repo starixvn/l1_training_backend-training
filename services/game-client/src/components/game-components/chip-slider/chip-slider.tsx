@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
 import { useSelectChipSound } from "../../../_shared/react-hooks";
 import { Chip } from "./chip";
@@ -19,7 +19,7 @@ export const ChipSlider: React.FC<{
     const [enabledPrevBtn, setEnabledPrevBtn] = useState(true);
     const [enabledNextBtn, setEnabledNextBtn] = useState(true);
     const [isSliding, setIsSliding] = useState(false);
-    let sliderRef = null;
+    const sliderRef = useRef<Slider>(null);
     const playClickChip = useSelectChipSound();
 
     const handleSelectChip = (chipValue: number) => {
@@ -43,15 +43,15 @@ export const ChipSlider: React.FC<{
     };
 
     const onClickNext = () => {
-        if (enabledNextBtn && !isSliding) {
-            sliderRef.slickNext();
+        if (enabledNextBtn && !isSliding && sliderRef.current) {
+            sliderRef.current.slickNext();
             disableSelectChipWhenSliding();
         }
     };
 
     const onClickPrev = () => {
-        if (enabledPrevBtn && !isSliding) {
-            sliderRef.slickPrev();
+        if (enabledPrevBtn && !isSliding && sliderRef.current) {
+            sliderRef.current.slickPrev();
             disableSelectChipWhenSliding();
         }
     };
@@ -62,12 +62,12 @@ export const ChipSlider: React.FC<{
     };
 
     useEffect(() => {
-        if (sliderRef) {
+        if (sliderRef.current) {
             let chipIndex = chipValues.indexOf(selectedChip);
             if (chipValues.length > slidesToShow && chipIndex >= chipValues.length - slidesToShow) {
                 chipIndex = chipValues.length - slidesToShow;
             }
-            sliderRef.slickGoTo(chipIndex);
+            sliderRef.current.slickGoTo(chipIndex);
             checkStatusButtons(chipIndex);
         }
     }, [selectedChip]);
@@ -116,9 +116,7 @@ export const ChipSlider: React.FC<{
             <div className="absolute w-[270px] md:w-[220px]">
                 {chipValues?.length > 0 && (
                     <Slider
-                        ref={(c) => {
-                            sliderRef = c;
-                        }}
+                        ref={sliderRef}
                         {...SliderSetting}
                     >
                         {chipValues.map((value) => (

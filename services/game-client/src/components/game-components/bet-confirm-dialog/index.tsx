@@ -10,7 +10,7 @@ const BetConfirmDialog = () => {
     const dispatch = usePlaceBetDispatch();
     const placeBetContext = usePlaceBetContext();
     const { authorizeInfo, enableQuickBet } = usePlayerContext();
-    const enabledQuickBet = authorizeInfo?.user?.settings.quickBet || enableQuickBet;
+    const enabledQuickBet = authorizeInfo?.user?.settings?.quickBet || enableQuickBet;
     const suggestBet = placeBetContext.suggestBet;
     const currentBetChoice = suggestBet.currentBetChoice;
     const outstandingBalance = suggestBet.suggestBetAmount;

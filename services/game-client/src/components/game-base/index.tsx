@@ -189,7 +189,7 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
     }
 
     getPlayerBalance = () => {
-        return (this.context as PlayerContextModel).authorizeInfo.user.red;
+        return (this.context as PlayerContextModel).authorizeInfo?.user?.red || 0;
     };
 
     onDestroy() {
@@ -531,7 +531,7 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
 
     placeBet(betChoice: string, amount: number) {
         const { authorizeInfo, enableQuickBet } = this.context as PlayerContextModel;
-        const enabledQuickBet = authorizeInfo?.user?.settings.quickBet || enableQuickBet;
+        const enabledQuickBet = authorizeInfo?.user?.settings?.quickBet || enableQuickBet;
 
         this.placeBetHandler.placeBet(betChoice, amount, enabledQuickBet, this.props.gameStateContextModel, this.props.systemContextModel);
     }

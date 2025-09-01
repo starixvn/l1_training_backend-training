@@ -90,7 +90,7 @@ class Dashboard extends React.Component<DashboardProps, DashboardState> {
 
     updateUserBalance = (balance: number, setBalanceByPlaceBet = true) => {
         const authorizeInfo = { ...this.state.authorizeInfo };
-        if (authorizeInfo.user.red !== balance) {
+        if (authorizeInfo?.user && authorizeInfo.user.red !== balance) {
             authorizeInfo.user.red = balance;
             broadcastUserInfoRed(authorizeInfo.user.red);
             this.isUpdatingBalance = setBalanceByPlaceBet;

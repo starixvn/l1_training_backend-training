@@ -11,7 +11,7 @@ const ConfirmBet: React.FC = () => {
     const gameActionContext = useGameActionContext();
     const placeBetContext = usePlaceBetContext();
     const { authorizeInfo, enableQuickBet } = usePlayerContext();
-    const enabledQuickBet = authorizeInfo?.user?.settings.quickBet || enableQuickBet;
+    const enabledQuickBet = authorizeInfo?.user?.settings?.quickBet || enableQuickBet;
     const clickSound = useClickSound();
     const { t } = useSNTranslate();
 
