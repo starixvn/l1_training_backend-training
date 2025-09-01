@@ -57,12 +57,82 @@ start_service() {
     echo ""
 }
 
+# Set environment variables for .NET
+export PATH=$HOME/.dotnet:$PATH
+export DOTNET_ROOT=$HOME/.dotnet
+
 # Set npm registry to use company registry
 echo -e "${YELLOW}Setting npm registry...${NC}"
 npm set registry https://npm.lumigame.com/ >/dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo -e "${YELLOW}Warning: Failed to set npm registry, continuing anyway...${NC}"
 fi
+echo ""
+
+# Check and start MongoDB first
+echo -e "${CYAN}========================================${NC}"
+echo -e "${CYAN}Checking MongoDB Status${NC}"
+echo -e "${CYAN}========================================${NC}"
+echo ""
+
+# Function to check if MongoDB is running
+check_mongodb() {
+    pgrep mongod >/dev/null 2>&1
+}
+
+# Function to start MongoDB
+start_mongodb() {
+    echo -e "${YELLOW}Starting MongoDB...${NC}"
+    
+    # Try to start with brew services first
+    if command_exists "brew"; then
+        echo -e "${GRAY}Attempting to start MongoDB via brew services...${NC}"
+        brew services start mongodb/brew/mongodb-community >/dev/null 2>&1
+        sleep 3
+        
+        if check_mongodb; then
+            echo -e "${GREEN}✓ MongoDB started successfully via brew services${NC}"
+            return 0
+        else
+            echo -e "${YELLOW}Brew services failed, trying manual start...${NC}"
+        fi
+    fi
+    
+    # Manual start as fallback
+    echo -e "${GRAY}Starting MongoDB manually...${NC}"
+    if [ -d "/opt/homebrew/var/mongodb" ]; then
+        mongod --dbpath /opt/homebrew/var/mongodb > /dev/null 2>&1 &
+    elif [ -d "/usr/local/var/mongodb" ]; then
+        mongod --dbpath /usr/local/var/mongodb > /dev/null 2>&1 &
+    else
+        echo -e "${RED}Error: MongoDB data directory not found${NC}"
+        echo -e "${YELLOW}Please ensure MongoDB is properly installed${NC}"
+        return 1
+    fi
+    
+    # Wait and check if MongoDB started
+    sleep 5
+    if check_mongodb; then
+        echo -e "${GREEN}✓ MongoDB started successfully${NC}"
+        return 0
+    else
+        echo -e "${RED}✗ Failed to start MongoDB${NC}"
+        return 1
+    fi
+}
+
+# Check if MongoDB is running
+if check_mongodb; then
+    echo -e "${GREEN}✓ MongoDB is already running${NC}"
+else
+    echo -e "${YELLOW}MongoDB is not running, starting it...${NC}"
+    if ! start_mongodb; then
+        echo -e "${RED}Failed to start MongoDB. Please start it manually and try again.${NC}"
+        echo -e "${YELLOW}Manual start command: mongod --dbpath /opt/homebrew/var/mongodb${NC}"
+        exit 1
+    fi
+fi
+
 echo ""
 
 # Import database first
