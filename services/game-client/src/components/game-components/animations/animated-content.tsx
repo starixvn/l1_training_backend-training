@@ -1,12 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register once in module scope
-if (!(gsap as any)._scrollTriggerRegistered) {
-    gsap.registerPlugin(ScrollTrigger);
-    (gsap as any)._scrollTriggerRegistered = true;
-}
+// Dynamic imports for SSR compatibility
+let gsap: any = null;
+let ScrollTrigger: any = null;
+
+const loadGSAP = async () => {
+    if (typeof window !== "undefined" && !gsap) {
+        const gsapModule = await import("gsap");
+        const scrollTriggerModule = await import("gsap/ScrollTrigger");
+        
+        gsap = gsapModule.gsap;
+        ScrollTrigger = scrollTriggerModule.ScrollTrigger;
+        
+        if (!(gsap as any)._scrollTriggerRegistered) {
+            gsap.registerPlugin(ScrollTrigger);
+            (gsap as any)._scrollTriggerRegistered = true;
+        }
+    }
+    return { gsap, ScrollTrigger };
+};
 
 export type AnimatedContentProps = {
     children: React.ReactNode;
@@ -40,41 +52,61 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
+        // Only run on client side
+        if (typeof window === "undefined") {
+            return () => {};
+        }
+
         const el = ref.current;
         if (!el) {
             return () => {};
         }
 
-        const axis = direction === "horizontal" ? "x" : "y";
-        const offset = reverse ? -distance : distance;
-        const startPct = (1 - Math.min(Math.max(threshold, 0), 1)) * 100;
+        // Load GSAP dynamically
+        loadGSAP().then(({ gsap: gsapInstance, ScrollTrigger: ScrollTriggerInstance }) => {
+            if (!gsapInstance || !ScrollTriggerInstance) return;
 
-        gsap.set(el, {
-            [axis]: offset,
-            scale,
-            opacity: animateOpacity ? initialOpacity : 1,
-        } as any);
+            const axis = direction === "horizontal" ? "x" : "y";
+            const offset = reverse ? -distance : distance;
+            const startPct = (1 - Math.min(Math.max(threshold, 0), 1)) * 100;
 
-        gsap.to(el, {
-            [axis]: 0,
-            scale: 1,
-            opacity: 1,
-            duration,
-            ease,
-            delay,
-            onComplete,
-            scrollTrigger: {
-                trigger: el,
-                start: `top ${startPct}%`,
-                toggleActions: "play none none none",
-                once: true,
-            },
-        } as any);
+            gsapInstance.set(el, {
+                [axis]: offset,
+                scale,
+                opacity: animateOpacity ? initialOpacity : 1,
+            } as any);
+
+            gsapInstance.to(el, {
+                [axis]: 0,
+                scale: 1,
+                opacity: 1,
+                duration,
+                ease,
+                delay,
+                onComplete,
+                scrollTrigger: {
+                    trigger: el,
+                    start: `top ${startPct}%`,
+                    toggleActions: "play none none none",
+                    once: true,
+                },
+            } as any);
+        }).catch(() => {
+            // Fallback: just show content without animation
+            if (el) {
+                el.style.opacity = "1";
+                el.style.transform = "none";
+            }
+        });
 
         return () => {
             try {
-                ScrollTrigger.getAll().forEach((t) => t.kill());
-                gsap.killTweensOf(el);
+                if (ScrollTrigger && typeof ScrollTrigger.getAll === "function") {
+                    ScrollTrigger.getAll().forEach((t: any) => t.kill());
+                }
+                if (gsap && typeof gsap.killTweensOf === "function") {
+                    gsap.killTweensOf(el);
+                }
             } catch { }
         };
     }, [
@@ -95,5 +127,3 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
 };
 
 export default AnimatedContent;
-
-

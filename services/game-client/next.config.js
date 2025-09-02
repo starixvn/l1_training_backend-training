@@ -21,7 +21,7 @@ const buildVersion = new Date().getTime();
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = withSentryConfig({
+const baseConfig = {
     publicRuntimeConfig: baseAppSettings,
     productionBrowserSourceMaps: false,
     sentry: {
@@ -42,6 +42,23 @@ const nextConfig = withSentryConfig({
         if (options.dev) {
             // Use fast source maps for development
             config.devtool = 'cheap-module-source-map';
+            
+            // Enhanced HMR configuration
+            config.optimization = {
+                ...config.optimization,
+                removeAvailableModules: false,
+                removeEmptyChunks: false,
+                splitChunks: false,
+            };
+            
+            // Ensure HMR is properly enabled
+            if (options.isServer === false) {
+                config.resolve.fallback = {
+                    ...config.resolve.fallback,
+                    fs: false,
+                    module: false,
+                };
+            }
         } else {
             // Disable source maps in production for security/performance
             config.devtool = false;
@@ -57,12 +74,21 @@ const nextConfig = withSentryConfig({
             },
         });
 
+        // Fix GSAP SSR issues
+        if (options.isServer) {
+            config.externals = config.externals || [];
+            config.externals.push({
+                'gsap/ScrollTrigger': 'gsap/ScrollTrigger',
+                'gsap': 'gsap'
+            });
+        }
+
         return config;
     },
     basePath,
     assetPrefix: basePath || undefined,
     env: {
-        buildVersion,
+        buildVersion: buildVersion.toString(),
         REACT_APP_TOLGEE_API_URL: "https://tolgee.sabagame.com/",
         REACT_APP_TOLGEE_API_KEY: "tgpak_gvpw45brha2xg3btoztxeytunvudc5dbn5twqodtonztc",
     },
@@ -74,17 +100,8 @@ const nextConfig = withSentryConfig({
             },
         ];
 
-        // In development, prioritize webpack HMR files
-        const developmentRewrites = process.env.NODE_ENV === 'development' ? [
-            {
-                source: "/_next/webpack-hmr",
-                destination: "/_next/webpack-hmr",
-            },
-            {
-                source: "/_next/static/webpack/:path*",
-                destination: "/_next/static/webpack/:path*",
-            },
-        ] : [];
+        // In development, completely avoid conflicting rewrites for webpack HMR
+        const developmentRewrites = process.env.NODE_ENV === 'development' ? [] : [];
 
         // Local development service routing
         const localServiceRewrites = [
@@ -182,6 +199,11 @@ const nextConfig = withSentryConfig({
         prependData: `$version-image: '${buildVersion}';`,
     },
     output: "standalone",
-});
+};
+
+// Apply Sentry config conditionally to avoid development issues
+const nextConfig = process.env.NODE_ENV === 'production' 
+    ? withSentryConfig(baseConfig)
+    : baseConfig;
 
 module.exports = withBundleAnalyzer(nextConfig);
