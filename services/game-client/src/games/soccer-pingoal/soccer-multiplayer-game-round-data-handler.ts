@@ -1,41 +1,43 @@
 import { GameRoundDataHandler } from "../../components/game-base/handlers/game-round-data-handler";
 
-export class SeDieGameRoundDataHandler extends GameRoundDataHandler {
+export class SoccerPinGoalGameRoundDataHandler extends GameRoundDataHandler {
     buildGameRoundDataAfterReceiveFinishEvent(previousRoundData: any, result: any, roundId: number) {
         const resultRoundData = {
-            dice: [result.dice],
+            goal: result.goal,
+            winningTunnel: result.winningTunnel,
             winningChoice: result.winningChoice,
             timestamp: new Date().toISOString(),
             roundId: roundId,
         };
 
         return {
-            dice: previousRoundData?.dice?.concat(resultRoundData.dice) || resultRoundData.dice,
+            goals: previousRoundData?.goals?.concat([resultRoundData.goal]) || [resultRoundData.goal],
+            winningTunnel: result.winningTunnel,
             winningChoice: result.winningChoice,
             timestamp: resultRoundData.timestamp,
             roundId: resultRoundData.roundId,
-            gameType: 'sedie-multiplayer',
-            totalDice: result.dice?.length || 0,
+            gameType: 'soccer-pingoal',
             statistics: this.calculateStatistics(previousRoundData, result),
         };
     }
 
     private calculateStatistics(previousRoundData: any, result: any) {
-        const allDice = previousRoundData?.dice?.concat([result.dice]) || [result.dice];
+        const allGoals = previousRoundData?.goals?.concat([result.goal]) || [result.goal];
 
-        const diceFrequency: { [key: number]: number } = {};
-        allDice.flat().forEach((value: number) => {
-            diceFrequency[value] = (diceFrequency[value] || 0) + 1;
-        });
+        const tunnelFrequency: { [key: number]: number } = {};
+        if (result.winningTunnel) {
+            tunnelFrequency[result.winningTunnel] = (previousRoundData?.statistics?.tunnelFrequency?.[result.winningTunnel] || 0) + 1;
+        }
 
         const winningPatterns = {
-            odd: 0,
-            even: 0,
-            red2: 0,
-            red3: 0,
-            red4: 0,
-            white3: 0,
-            white4: 0,
+            tunnel1: 0,
+            tunnel2: 0,
+            tunnel3: 0,
+            tunnel4: 0,
+            tunnel5: 0,
+            tunnel6: 0,
+            win: 0,
+            lose: 0,
         };
 
         if (previousRoundData?.statistics?.winningPatterns) {
@@ -49,38 +51,28 @@ export class SeDieGameRoundDataHandler extends GameRoundDataHandler {
         }
 
         return {
-            diceFrequency,
+            tunnelFrequency,
             winningPatterns,
-            totalRounds: allDice.length,
-            averageDiceValue: this.calculateAverage(allDice.flat()),
+            totalRounds: allGoals.length,
+            totalGoals: allGoals.filter(goal => goal === true).length,
         };
-    }
-
-    private calculateAverage(values: number[]): number {
-        if (values.length === 0) {
-            return 0;
-        }
-        const sum = values.reduce((acc, val) => acc + val, 0);
-        return Math.round((sum / values.length) * 100) / 100;
     }
 
     validateGameRoundData(roundData: any): boolean {
         if (!roundData) {
             return false;
         }
-        const requiredFields = ['dice', 'winningChoice', 'roundId'];
+        const requiredFields = ['goal', 'roundId'];
         for (const field of requiredFields) {
-            if (!roundData[field]) {
+            if (roundData[field] === undefined) {
                 return false;
             }
         }
-        if (roundData.dice) {
-            const diceArray = Array.isArray(roundData.dice) ? roundData.dice.flat() : [roundData.dice];
-            for (const value of diceArray) {
-                if (typeof value !== 'number' || value < 1 || value > 6) {
-                    return false;
-                }
-            }
+        if (typeof roundData.goal !== 'boolean') {
+            return false;
+        }
+        if (roundData.winningTunnel && (typeof roundData.winningTunnel !== 'number' || roundData.winningTunnel < 1 || roundData.winningTunnel > 6)) {
+            return false;
         }
         return true;
     }
