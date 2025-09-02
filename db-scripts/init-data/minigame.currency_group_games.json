@@ -7729,6 +7729,47 @@
 },
 {
   "_id": {
+    "$oid": "68afe4e12738a8d2072f96bd"
+  },
+  "groupId": {
+    "$oid": "61765beed2b6510001f18bd6"
+  },
+  "gameId": 200,
+  "gameName": "soccerpingoal",
+  "enabled": true,
+  "minBet": 1,
+  "maxBet": 2000,
+  "maxBetPerChoices": {
+    "tunnel1": 500,
+    "tunnel2": 500,
+    "tunnel3": 500,
+    "tunnel4": 500,
+    "tunnel5": 500,
+    "tunnel6": 500,
+    "win": 2000,
+    "lose": 2000
+  },
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "coinValues": [],
+  "maxWinPerRound": 0,
+  "betLevels": [],
+  "defaultBetLevel": 0,
+  "defaultCoinValue": 0
+},
+{
+  "_id": {
     "$oid": "67a58800645432aba0200001"
   },
   "groupId": {
