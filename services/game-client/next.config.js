@@ -25,14 +25,27 @@ const nextConfig = withSentryConfig({
     publicRuntimeConfig: baseAppSettings,
     productionBrowserSourceMaps: false,
     sentry: {
-        disableServerWebpackPlugin: true,
-        disableClientWebpackPlugin: true,
+        // Only disable Sentry plugins in development to prevent HMR issues
+        disableServerWebpackPlugin: process.env.NODE_ENV === 'development',
+        disableClientWebpackPlugin: process.env.NODE_ENV === 'development',
         hideSourceMaps: true,
     },
-    generateBuildId: async () => uuidv4(),
+    generateBuildId: async () => {
+        // Use stable build ID in development to prevent HMR issues
+        if (process.env.NODE_ENV === 'development' || process.env.NEXT_CONFIG === 'dev') {
+            return 'development';
+        }
+        return uuidv4();
+    },
     webpack: (config, options) => {
-        // Disable source maps
-        config.devtool = false;
+        // Configure source maps based on environment
+        if (options.dev) {
+            // Use fast source maps for development
+            config.devtool = 'cheap-module-source-map';
+        } else {
+            // Disable source maps in production for security/performance
+            config.devtool = false;
+        }
 
         config.module.rules.push({
             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|mp3|webp)$/,
@@ -60,6 +73,18 @@ const nextConfig = withSentryConfig({
                 destination: "/api/health",
             },
         ];
+
+        // In development, prioritize webpack HMR files
+        const developmentRewrites = process.env.NODE_ENV === 'development' ? [
+            {
+                source: "/_next/webpack-hmr",
+                destination: "/_next/webpack-hmr",
+            },
+            {
+                source: "/_next/static/webpack/:path*",
+                destination: "/_next/static/webpack/:path*",
+            },
+        ] : [];
 
         // Local development service routing
         const localServiceRewrites = [
@@ -106,7 +131,7 @@ const nextConfig = withSentryConfig({
                     destination: `${baseNoSlash}`,
                 },
             ];
-            return [...base, ...localServiceRewrites, ...prodGameIdRewrites];
+            return [...base, ...developmentRewrites, ...localServiceRewrites, ...prodGameIdRewrites];
         }
 
         // Allow accessing the app under /:gameId/... on localhost without setting basePath
@@ -132,9 +157,14 @@ const nextConfig = withSentryConfig({
             },
         ];
 
-        return [...base, ...localServiceRewrites, ...devGameIdRewrites];
+        return [...base, ...developmentRewrites, ...localServiceRewrites, ...devGameIdRewrites];
     },
     async headers() {
+        // Different cache policies for development vs production
+        const cacheValue = process.env.NODE_ENV === 'development' || process.env.NEXT_CONFIG === 'dev'
+            ? "no-cache, no-store, must-revalidate"  // Disable caching in development
+            : "public, max-age=31536000, must-revalidate";  // Long-term caching in production
+
         return [
             {
                 source: "/:all*(js|png|json|mp3|webp|svg|jpg|gif)",
@@ -142,7 +172,7 @@ const nextConfig = withSentryConfig({
                 headers: [
                     {
                         key: "Cache-Control",
-                        value: "public, max-age=31536000, must-revalidate",
+                        value: cacheValue,
                     },
                 ],
             },
