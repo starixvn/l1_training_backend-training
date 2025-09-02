@@ -194,8 +194,8 @@ const SplashScreen: React.FC = () => {
             // Validate if the gameId is available in the enabled games
             const enabledRenderGameSettings = getEnabledRenderGameSettings(lobbyConfigs as any, authorizeInfo);
 
-            // Bypass validation for SeDie so we can deep-link even if not in lobby/offer
-            let isGameAvailable = toLoadGameId === GameIds.SeDieMultiplayer;
+            // Bypass validation for SeDie and SoccerPinGoal so we can deep-link even if not in lobby/offer
+            let isGameAvailable = toLoadGameId === GameIds.SeDieMultiplayer || toLoadGameId === GameIds.SoccerPinGoal;
             if (!isGameAvailable) {
                 isGameAvailable = enabledRenderGameSettings.some((game) => game.id === toLoadGameId);
             }
