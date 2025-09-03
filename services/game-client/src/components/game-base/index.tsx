@@ -221,11 +221,19 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
     }
 
     onPreloadResourceDone = () => {
+        // Debug logging for SoccerPinGoal
+        if (this.props.id === 200) {
+            console.log('[GameBase] SoccerPinGoal onPreloadResourceDone called, setting isLoaded: true');
+        }
         this.setState({ isLoaded: true });
     };
 
     preloadResource = () => {
         const playerContext = this.context as PlayerContextModel;
+        // Debug logging for SoccerPinGoal
+        if (this.props.id === 200) {
+            console.log('[GameBase] SoccerPinGoal preloadResource called, rendering PreloadResources');
+        }
         return (
             <PreloadResources setIsDonePreload={this.onPreloadResourceDone} gameId={this.props.id} locale={playerContext?.locale || "en"} />
         );
@@ -724,6 +732,11 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
         const { signedIn, roundState, disabledMessage, disconnectReason, availableInGameData } = this.props.gameStateContextModel;
         const { isLoaded } = this.state;
         const isDisabledGame = roundState === RoundState.Disabled;
+
+        // Debug logging for SoccerPinGoal
+        if (this.props.id === 200) {
+            console.log(`[GameBase] SoccerPinGoal render - isLoaded: ${isLoaded}, signedIn: ${signedIn}, availableInGameData: ${availableInGameData}`);
+        }
 
         return (
             <GameContainer>

@@ -115,10 +115,10 @@ export const ChipSlider: React.FC<{
                 </svg>
             </div>
             <div className="absolute w-[270px] md:w-[220px]">
-                {/* @ts-ignore */}
                 {chipValues?.length > 0 && (
+                    // @ts-ignore
                     <Slider
-                        ref={sliderRef}
+                        ref={sliderRef as any}
                         {...SliderSetting}
                     >
                         {chipValues.map((value) => (

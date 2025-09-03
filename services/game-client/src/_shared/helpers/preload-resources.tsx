@@ -547,6 +547,16 @@ const PreloadResources: React.FC<PreloadResourcesProps> = ({
 
     // Main preload effect using the global manager
     useEffect(() => {
+        // 臨時修復：SoccerPinGoal 直接跳過圖片預載入
+        if (gameId === 200) {
+            console.log('[PreloadResources] Skipping preload for SoccerPinGoal (gameId: 200)');
+            setTimeout(() => {
+                updateProgressBar(100, progressBarId);
+                setIsDonePreload();
+            }, 100);
+            return undefined;
+        }
+        
         if (!router?.isReady || !enablePreloadResource || gameId < 0) {
             updateProgressBar(100, progressBarId);
             setIsDonePreload();

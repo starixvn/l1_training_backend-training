@@ -117,6 +117,17 @@ class SoccerPinGoalMultiPlayer extends GameBase<GameBaseProps, SoccerPinGoalStat
     renderBetDetailModal() {
         return <SoccerPinGoalMultiplayerBetDetailModal />;
     }
+
+    getRenderTemplate() {
+        return (
+            <div className="game-template">
+                {this.renderRoundHistory()}
+                {this.renderResultBlock()}
+                {this.renderBettingBlock()}
+                {this.renderBetControl()}
+            </div>
+        );
+    }
 }
 
 const SoccerPinGoalWrapper = (props) => {
