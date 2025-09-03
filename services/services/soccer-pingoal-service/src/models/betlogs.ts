@@ -22,5 +22,5 @@ const schema = new mongoose.Schema({
     appType: { type: Number, default: 0 },
 });
 
-const modelName = `${gameSettings.name.toLocaleLowerCase()}_betlogs`;
+const modelName = `${gameSettings.name.toLowerCase()}_betlogs`;
 export default mongoose.model(modelName, schema);

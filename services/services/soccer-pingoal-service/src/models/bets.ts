@@ -13,7 +13,7 @@ const bet = {
 };
 
 const bets = mongoose.model(
-    `${gameSettings.name.toLocaleLowerCase()}_bets`,
+    `${gameSettings.name.toLowerCase()}_bets`,
     new mongoose.Schema({
         ...BetSchema.betBaseSchema,
         ...bet,
@@ -21,7 +21,7 @@ const bets = mongoose.model(
 );
 
 const tmpBets = mongoose.model(
-    `${gameSettings.name.toLocaleLowerCase()}_tmpbets`,
+    `${gameSettings.name.toLowerCase()}_tmpbets`,
     new mongoose.Schema({ ...BetSchema.tempBetBaseSchema, ...bet })
 );
 

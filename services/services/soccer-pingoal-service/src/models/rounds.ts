@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import gameSettings from "../game-settings";
 
-const modelName = `${gameSettings.name.toLocaleLowerCase()}_rounds`;
+const modelName = `${gameSettings.name.toLowerCase()}_rounds`;
 
 const resultSchema = new mongoose.Schema(
     {

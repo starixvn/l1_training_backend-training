@@ -1,4 +1,5 @@
 import { Table } from "sc-game-base";
+import { MongoClient } from 'mongodb';
 
 export default class GameData extends Table.TableGameData {
     playerResultBoard: { players: any[]; totalPlayers: number; isSettled: boolean; };
