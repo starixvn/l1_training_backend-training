@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
+import type { Settings } from "react-slick";
 import { useSelectChipSound } from "../../../_shared/react-hooks";
 import { Chip } from "./chip";
 import Styles from "./chip-slider.module.scss";
@@ -81,7 +82,7 @@ export const ChipSlider: React.FC<{
         setIsSliding(false);
     };
 
-    const SliderSetting = {
+    const SliderSetting: Settings = {
         speed: SlidingTimeInMillisecond,
         infinite: false,
         adaptiveHeight: true,
@@ -114,6 +115,7 @@ export const ChipSlider: React.FC<{
                 </svg>
             </div>
             <div className="absolute w-[270px] md:w-[220px]">
+                {/* @ts-ignore */}
                 {chipValues?.length > 0 && (
                     <Slider
                         ref={sliderRef}
