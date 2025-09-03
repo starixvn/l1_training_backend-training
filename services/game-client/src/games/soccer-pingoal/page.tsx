@@ -24,6 +24,8 @@ import SoccerPinGoalMultiplayerBetDetailModal from "./history";
 const OwnTotalBet = lazy(() => import("../../components/game-components/own-total-bet/own-total-bet"));
 const DoubleBetIcon = lazy(() => import("../../components/game-components/rebet/double-bet-icon"));
 const AutoRebetIcon = lazy(() => import("../../components/game-components/rebet/auto-rebet-icon"));
+const Background = lazy(() => import("../../components/game-components/background"));
+const PlayerResultBoard = lazy(() => import("../../components/game-components/player-result-board/player-result-board").then(module => ({ default: module.PlayerResultBoard })));
 
 export type SoccerPinGoalState = {
     statisticGroup?: number;
@@ -118,13 +120,43 @@ class SoccerPinGoalMultiPlayer extends GameBase<GameBaseProps, SoccerPinGoalStat
         return <SoccerPinGoalMultiplayerBetDetailModal />;
     }
 
+    renderLeftSide() {
+        return (
+            <div className="col-span-12 lg:col-span-8 mb-3 px-3">
+                {this.renderGameFrame()}
+                {this.renderBetControl()}
+                {this.renderMenu()}
+            </div>
+        );
+    }
+
+    renderRightSide() {
+        return (
+            <div className="col-span-12 lg:col-span-4 mb-3 px-3">
+                <PlayerResultBoard />
+            </div>
+        );
+    }
+
+    renderGameFrame() {
+        return (
+            <div className="flex flex-col items-center justify-center relative">
+                <Background gameId={this.props.id} />
+                {this.renderRoundHistory()}
+                {this.renderCountdownTimer()}
+                <div className="flex flex-col">
+                    {this.props.gameStateContextModel.availableInGameData && this.renderResultBlock()}
+                    {this.renderBetOptions()}
+                </div>
+            </div>
+        );
+    }
+
     getRenderTemplate() {
         return (
-            <div className="game-template">
-                {this.renderRoundHistory()}
-                {this.renderResultBlock()}
-                {this.renderBettingBlock()}
-                {this.renderBetControl()}
+            <div className="grid grid-cols-12 gap-0">
+                {this.renderLeftSide()}
+                {this.renderRightSide()}
             </div>
         );
     }
