@@ -17,12 +17,55 @@
 }
 
 .sub-bet-option {
-    background-image: url("/static/images/sedie-multiplayer/sub-bet-option-bg.svg");
+    background-image: url("/static/images/soccer-pingoal/sub-bet-option-bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+// Soccer PinGoal 隧道選項樣式
+.sub-bet-tunnel1,
+.sub-bet-tunnel2,
+.sub-bet-tunnel3,
+.sub-bet-tunnel4,
+.sub-bet-tunnel5,
+.sub-bet-tunnel6 {
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 10%, #ffffff 50%, transparent 90%);
+    }
+}
+
+.sub-bet-tunnel1 {
+    background-image: url("/static/images/soccer-pingoal/tunnel1-bg.svg");
+}
+.sub-bet-tunnel2 {
+    background-image: url("/static/images/soccer-pingoal/tunnel2-bg.svg");
+}
+.sub-bet-tunnel3 {
+    background-image: url("/static/images/soccer-pingoal/tunnel3-bg.svg");
+}
+.sub-bet-tunnel4 {
+    background-image: url("/static/images/soccer-pingoal/tunnel4-bg.svg");
+}
+.sub-bet-tunnel5 {
+    background-image: url("/static/images/soccer-pingoal/tunnel5-bg.svg");
+}
+.sub-bet-tunnel6 {
+    background-image: url("/static/images/soccer-pingoal/tunnel6-bg.svg");
+}
+
+// 保留舊樣式以向後兼容
 .sub-bet-white4,
 .sub-bet-white3,
 .sub-bet-red2,
@@ -48,11 +91,25 @@
 }
 
 .main-option {
-    background-image: url("/static/images/sedie-multiplayer/odd-bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
+    
+    // Soccer PinGoal 主選項樣式
+    &.win {
+        background-image: url("/static/images/soccer-pingoal/win-bg.svg");
+    }
+    
+    &.draw {
+        background-image: url("/static/images/soccer-pingoal/draw-bg.svg");
+    }
+    
+    &.lose {
+        background-image: url("/static/images/soccer-pingoal/lose-bg.svg");
+    }
+
+    // 保留舊樣式以向後兼容
     &.odd {
         background-image: url("/static/images/sedie-multiplayer/odd-bg.svg");
         @media (width >= 48rem) {
@@ -66,6 +123,7 @@
             background-image: url("/static/images/sedie-multiplayer/md-even-bg.svg");
         }
     }
+    
     .btn-ripple {
         border-radius: 10px;
         margin-right: 10px;

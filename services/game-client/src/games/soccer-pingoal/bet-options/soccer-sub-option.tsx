@@ -20,17 +20,18 @@ const subChoiceImages = {
 
 export const SedieMultiplayerSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
     return (
-        <div className={`flex rounded-2xl mt-2 h-[120px] w-[370px] md:w-[465px] ${styles["sub-bet-option"]}`}>
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel1} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel2} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel3} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel4} />
-            <SedieMultiplayerSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel5} />
+        <div className={`flex rounded-2xl mt-2 h-[120px] w-[444px] md:w-[558px] ${styles["sub-bet-option"]}`}>
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel1} />
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel2} />
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel3} />
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel4} />
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel5} />
+            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel6} />
         </div>
     );
 };
 
-const SedieMultiplayerSubBetOption = ({ tolgeeNamespace, choice }: { tolgeeNamespace: string; choice: string }) => {
+const SoccerPinGoalSubBetOption = ({ tolgeeNamespace, choice }: { tolgeeNamespace: string; choice: string }) => {
     const className = `sub-bet-${choice}`;
     const renderImages = (choice: string) => {
         return (

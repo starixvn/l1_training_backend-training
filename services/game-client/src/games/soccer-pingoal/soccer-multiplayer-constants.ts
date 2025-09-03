@@ -23,6 +23,7 @@ export const SoccerPinGoalOpponentOptions = {
 export const SoccerPinGoalBetOptions = {
     WIN: "win",
     LOSE: "lose",
+    DRAW: "draw",
     // 保留舊選項以向後兼容
     GOAL: "goal",
     MISS: "miss",
@@ -50,6 +51,7 @@ export const SoccerPinGoalChoices = {
     // 輸贏選項
     win: "win",
     lose: "lose",
+    draw: "draw",
     // 保留舊選項以向後兼容
     goal: "goal",
     miss: "miss",
@@ -71,7 +73,7 @@ export const opponentChoices = [
     SoccerPinGoalChoices.opponent4, SoccerPinGoalChoices.opponent5
 ];
 
-export const mainChoices = [SoccerPinGoalChoices.win, SoccerPinGoalChoices.lose];
+export const mainChoices = [SoccerPinGoalChoices.win, SoccerPinGoalChoices.draw, SoccerPinGoalChoices.lose];
 
 // 保留舊的分組以向後兼容
 export const positionChoices = [SoccerPinGoalChoices.left, SoccerPinGoalChoices.center, SoccerPinGoalChoices.right];
@@ -156,6 +158,7 @@ export type SoccerPinGoalSettlementResult = {
     opponent5: boolean;
     // 輸贏結果
     win: boolean;
+    draw: boolean;
     lose: boolean;
     // 保留舊選項以向後兼容
     goal: boolean;

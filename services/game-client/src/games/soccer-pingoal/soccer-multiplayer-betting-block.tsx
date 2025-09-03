@@ -1,17 +1,17 @@
 import dynamic from "next/dynamic";
 import { FC } from "react";
 
-import SeDieMultiplayerBetOptions from "./bet-options/soccer-multiplayer-bet-options";
+import SoccerPinGoalBetOptionsComponent from "./bet-options/soccer-multiplayer-bet-options";
 
 const WinningBalanceEffect = dynamic(() => import("../../components/game-components/balance-effect/winning-balance-effect"));
 
-const SeDieMultiplayerBettingBlock: FC = () => {
+const SoccerPinGoalMultiplayerBettingBlock: FC = () => {
     return (
         <div className="relative">
-            <SeDieMultiplayerBetOptions />
+            <SoccerPinGoalBetOptionsComponent />
             <WinningBalanceEffect />
         </div>
     );
 };
 
-export default SeDieMultiplayerBettingBlock;
+export default SoccerPinGoalMultiplayerBettingBlock;

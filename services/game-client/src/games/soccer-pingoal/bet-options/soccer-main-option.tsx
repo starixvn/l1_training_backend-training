@@ -9,13 +9,13 @@ const HighlightBetOption = dynamic(() => import("./highlight-bet-option"));
 const PrevHighlightBetOption = dynamic(() => import("./highight-prev-round-bet-option"));
 const ChipEffect = dynamic(() => import("../../../components/game-components/bet-option/chip-effect"));
 
-export const SedieMultiplayerMainOption = ({ tolgeeNamespace, choice }: { tolgeeNamespace: string; choice: string }) => {
+export const SoccerPinGoalMainOption = ({ tolgeeNamespace, choice }: { tolgeeNamespace: string; choice: string }) => {
     const choiceStyle = `${styles[choice]} ${styles["main-option"]}`;
     const buttonId = `${tolgeeNamespace}-choice-${choice}`;
 
     return (
         <div className="relative">
-            <div className={` text-white relative w-[180px] h-[138px] flex flex-col justify-around ${choiceStyle} md:w-[229px]`}>
+            <div className={` text-white relative w-[116px] h-[138px] flex flex-col justify-around ${choiceStyle} md:w-[148px]`}>
                 <TotalBet choice={choice} className={"h-6 pt-1 flex items-center justify-center"} tolgeeNamespace={tolgeeNamespace} />
                 <div>
                     <BetChoice tolgeeNamespace={tolgeeNamespace} choice={choice} className=" text-xl font-bold" />
