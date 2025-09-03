@@ -101,6 +101,7 @@ export class GameMessageHandler {
     };
 
     handleSignedIn = () => {
+        console.log(`[GameMessageHandler] 🎉 handleSignedIn called - dispatching SIGN_IN action`);
         this.dispatch({
             type: GameEventActionType.SIGN_IN,
             payload: {},

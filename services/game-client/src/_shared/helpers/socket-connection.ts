@@ -64,9 +64,25 @@ export function InitSocketIO(socketInfo: SocketInfo, session: any, gameName: str
         });
 
         socket.on(messageEventType.SIGNED_IN, () => {
-            console.log(`[SOCKET] Received signedIn event for ${gameName}, emitting inGame`);
+            console.log(`[SOCKET] ✅ Received signedIn event for ${gameName}, emitting inGame`);
             socket.emit("inGame", gameName);
             gameMessageHandler.broadcastGameEvent({ [messageEventType.SIGNED_IN]: true });
+        });
+
+        // Debug: Listen to all events to see what's actually being received
+        socket.onAny((eventName, ...args) => {
+            console.log(`[SOCKET] 📨 ${gameName} received event: ${eventName}`, args);
+            
+            // Check if message event contains signin information
+            if (eventName === 'message' && args.length > 0) {
+                const messageData = args[0];
+                console.log(`[SOCKET] 🔍 Message event data:`, JSON.stringify(messageData, null, 2));
+                
+                // Check if this message indicates successful signin
+                if (messageData && (messageData.signedIn || messageData.isAuthenticated || messageData.signin)) {
+                    console.log(`[SOCKET] 🚨 Message contains signin data! Should trigger signedIn event.`);
+                }
+            }
         });
 
         socket.on(messageEventType.SOCKET_CONNECT_ERROR, () => {

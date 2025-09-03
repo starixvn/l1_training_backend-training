@@ -52,6 +52,7 @@ function handleDisconnectAction(state: GameStateContextModel): GameStateContextM
 }
 
 function handleSignInAction(state: GameStateContextModel): GameStateContextModel {
+    console.log(`[GameStateContext] 🔥 handleSignInAction called - setting signedIn: true`);
     return {
         ...state,
         signedIn: true,

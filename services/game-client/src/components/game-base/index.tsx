@@ -733,12 +733,9 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
         const { isLoaded } = this.state;
         const isDisabledGame = roundState === RoundState.Disabled;
 
-        // TEMPORARY FIX: Force signedIn and availableInGameData for SoccerPinGoal to bypass Socket.IO signin issue
+        // Debug logging for SoccerPinGoal - TEMPORARY FIX DISABLED FOR DIAGNOSIS
         if (this.props.id === 200) {
-            console.log(`[GameBase] SoccerPinGoal render - BEFORE: isLoaded: ${isLoaded}, signedIn: ${signedIn}, availableInGameData: ${availableInGameData}`);
-            signedIn = true;
-            availableInGameData = true;
-            console.log(`[GameBase] SoccerPinGoal render - AFTER OVERRIDE: isLoaded: ${isLoaded}, signedIn: ${signedIn}, availableInGameData: ${availableInGameData}`);
+            console.log(`[GameBase] SoccerPinGoal render - isLoaded: ${isLoaded}, signedIn: ${signedIn}, availableInGameData: ${availableInGameData}`);
         }
 
         return (
