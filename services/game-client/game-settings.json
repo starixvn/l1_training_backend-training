@@ -48,7 +48,7 @@
         "gameName": "SoccerPinGoal",
         "tolgeeNamespace": "SoccerPinGoal",
         "socketInfo": {
-            "namespace": "SoccerPinGoal",
+            "namespace": "soccerpingoal",
             "path": "soccerpingoal",
             "serviceEndpoint": "http://localhost:8010"
         },

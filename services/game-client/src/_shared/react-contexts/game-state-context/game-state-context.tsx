@@ -55,7 +55,7 @@ function handleSignInAction(state: GameStateContextModel): GameStateContextModel
     return {
         ...state,
         signedIn: true,
-        availableInGameData: true, // 臨時修復：直接設為 true
+        availableInGameData: false,
     };
 }
 
