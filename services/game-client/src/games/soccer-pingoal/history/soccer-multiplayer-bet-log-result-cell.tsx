@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import Styles from "../history/history.module.scss";
 
-const SedieMultiplayerBetLogResultCell: FC<{ result?: { balls?: number[] } | Record<string, boolean> | null }> = ({ result }) => {
+const SoccerPinGoalBetLogResultCell: FC<{ result?: { balls?: number[] } | Record<string, boolean> | null }> = ({ result }) => {
     const balls = Array.isArray(result?.balls) ? result.balls : [];
 
     const activeKeys: string[] = !balls.length && result && typeof result === "object"
@@ -26,6 +26,6 @@ const SedieMultiplayerBetLogResultCell: FC<{ result?: { balls?: number[] } | Rec
     );
 };
 
-export default SedieMultiplayerBetLogResultCell;
+export default SoccerPinGoalBetLogResultCell;
 
 

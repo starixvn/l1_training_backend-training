@@ -8,20 +8,20 @@ import styles from "./scoreboard-elements.module.scss";
 import dotStyles from "../../../components/game-components/round-history/dot/dot.module.scss";
 import { SoccerPinGoalBetOptions, SoccerPinGoalSettlementResult } from "../soccer-multiplayer-constants";
 
-export class SeDieBigRoadConverter extends Converter<SeDieSettlementResult> {
-    static addBlinkNode(rounds: SeDieSettlementResult[]) {
-        const lastRound = rounds.find((round) => round.odd || round.even);
+export class SoccerPinGoalBigRoadConverter extends Converter<SoccerPinGoalSettlementResult> {
+    static addBlinkNode(rounds: SoccerPinGoalSettlementResult[]) {
+        const lastRound = rounds.find((round) => round.win || round.lose);
 
         const blinkRound = {
-            odd: lastRound?.odd,
-            even: undefined,
+            win: lastRound?.win,
+            lose: undefined,
             roundId: 0,
         } as any;
 
         rounds.unshift(blinkRound);
     }
 
-    static readonly instance = new SeDieBigRoadConverter();
+    static readonly instance = new SoccerPinGoalBigRoadConverter();
 
     protected positiveKey(): string {
         return SoccerPinGoalBetOptions.WIN;
@@ -32,25 +32,25 @@ export class SeDieBigRoadConverter extends Converter<SeDieSettlementResult> {
     }
 }
 
-export class SeDieBigRoadElement extends BigRoadElement<SeDieSettlementResult> {
-    renderElement(round: BigRoadRound<SeDieSettlementResult>): ReactNode {
-        const odd = round.data.some((result) => result.odd);
-        const even = round.data.some((result) => result.even);
-        const isBlinkNode = round.data.some((result) => result.even === undefined || result.odd === undefined);
+export class SoccerPinGoalBigRoadElement extends BigRoadElement<SoccerPinGoalSettlementResult> {
+    renderElement(round: BigRoadRound<SoccerPinGoalSettlementResult>): ReactNode {
+        const win = round.data.some((result) => result.win);
+        const lose = round.data.some((result) => result.lose);
+        const isBlinkNode = round.data.some((result) => result.lose === undefined || result.win === undefined);
 
         if (isBlinkNode) {
             return <span className={`${dotStyles["dot-next"]} ${dotStyles["blink"]}`}></span>;
-        } else if (odd) {
+        } else if (win) {
+            return <span className={styles.green}></span>;
+        } else if (lose) {
             return <span className={styles.red}></span>;
-        } else if (even) {
-            return <span className={styles.blue}></span>;
         } else {
             return <></>;
         }
     }
 }
 
-// Register for SeDieMultiplayer only
-registerBigRoadElement(SeDieBigRoadElement, SeDieBigRoadConverter as any, GameIds.SeDieMultiplayer);
+// Register for SoccerPinGoal only
+registerBigRoadElement(SoccerPinGoalBigRoadElement, SoccerPinGoalBigRoadConverter as any, GameIds.SoccerPinGoal);
 
 

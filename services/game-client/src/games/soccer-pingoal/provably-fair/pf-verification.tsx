@@ -29,14 +29,14 @@ const PFVerification: FC = () => {
 
     const winningSubOption = getWinningSubOption(betDetailData.drawInfo.settlementResult);
     const IMAGE_SIZE = 36;
-    const DICES_EACH_ROUND = 4; // Updated for Sedie Multi Player
+    const TUNNELS_EACH_ROUND = 6; // Updated for Soccer PinGoal
 
     const verifyInfo = useMemo(
         () =>
             PfRoundBaseHelper.buildVerifyInfo({
                 pfResult: betDetailData.drawInfo.pfResult,
                 combinedHash,
-                dicesEachRound: DICES_EACH_ROUND,
+                dicesEachRound: TUNNELS_EACH_ROUND,
             }),
         [combinedHash]
     );
@@ -47,18 +47,18 @@ const PFVerification: FC = () => {
     };
 
     const diceIndexRender = () => {
-        return Array.from(Array(DICES_EACH_ROUND), (_, index) => {
+        return Array.from(Array(TUNNELS_EACH_ROUND), (_, index) => {
             const { randomNumbers, convertNumber, diceIndexes } = verifyInfo;
-            const diceIndexText = t(`${ResourceTypes.SEDIE_MULTIPLAYER}.pf_verifier_tool_button`, {
+            const tunnelIndexText = t(`${ResourceTypes.SOCCER_PINGOAL}.pf_verifier_tool_button`, {
                 value: index + 1,
             });
 
-            const diceResult = diceIndexes[index] % 2 === 0 ? t(`${ResourceTypes.SEDIE_MULTIPLAYER}.glossary_white`) : t(`${ResourceTypes.SEDIE_MULTIPLAYER}.glossary_red`);
+            const tunnelResult = diceIndexes[index] % 6 === 0 ? t(`${ResourceTypes.SOCCER_PINGOAL}.glossary_tunnel1`) : t(`${ResourceTypes.SOCCER_PINGOAL}.glossary_tunnel${(diceIndexes[index] % 6) + 1}`);
 
-            const line = `<span style="color: #ffbc11; font-weight: 600">${diceIndexText}</span>
+            const line = `<span style="color: #ffbc11; font-weight: 600">${tunnelIndexText}</span>
             - <span style="font-weight: 600">${t(`${ResourceTypes.COMMON}.pf_verification_para_1`)} </span> = ((${randomNumbers[index]}+${
                 convertNumber[index]
-            }) mod 2) = <span font-weight: 600">${diceIndexes[index]}</span> <span style="font-weight: 600">-> ${diceResult}</span>`;
+            }) mod 6) = <span font-weight: 600">${diceIndexes[index]}</span> <span style="font-weight: 600">-> ${tunnelResult}</span>`;
 
             return (
                 <p key={index}>
@@ -106,7 +106,7 @@ const PFVerification: FC = () => {
                     >
                         <div className="flex gap-2 items-center">
                         <Image 
-                            src={`/static/images/sedie-multiplayer/bet-detail-${winningSubOption}.svg`} 
+                            src={`/static/images/soccer-pingoal/bet-detail-${winningSubOption}.svg`} 
                             alt={`${winningSubOption} result`} 
                             width={IMAGE_SIZE} 
                             height={IMAGE_SIZE} 

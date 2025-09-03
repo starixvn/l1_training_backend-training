@@ -2,17 +2,17 @@ import { Component, ReactNode, memo } from "react";
 import { Round } from "../../../components/game-base/type";
 import { SwitchableScoreboard } from "../../../components/game-components/round-history/scoreboard";
 import { BigRoadElement } from "../../../components/game-components/round-history/scoreboard/elements";
-import { SeDieBigRoadConverter, SeDieBigRoadElement } from "./scoreboard-elements";
+import { SoccerPinGoalBigRoadConverter, SoccerPinGoalBigRoadElement } from "./scoreboard-elements";
 import Styles from "./scoreboard.module.scss";
 import { SoccerPinGoalResult, SoccerPinGoalSettlementResult } from "../soccer-multiplayer-constants";
 
 export type ScoreboardComponentProps = {
-    roundHistory: Round<SeDieResult, SeDieSettlementResult>[];
+    roundHistory: Round<SoccerPinGoalResult, SoccerPinGoalSettlementResult>[];
     isShowBlink: boolean;
     playResultAnimation?: boolean;
 };
 
-class ScoreboardSeDie extends Component<ScoreboardComponentProps> {
+class ScoreboardSoccerPinGoal extends Component<ScoreboardComponentProps> {
     private scoreboardColumns = 20;
 
     updateScoreboardColumns = (actualColumns: number) => {
@@ -53,10 +53,10 @@ class ScoreboardSeDie extends Component<ScoreboardComponentProps> {
 
 
         if (isShowBlink) {
-            SeDieBigRoadConverter.addBlinkNode(settlementsWithIdx as any);
+            SoccerPinGoalBigRoadConverter.addBlinkNode(settlementsWithIdx as any);
         }
 
-        const arrange = BigRoadElement.arrange(SeDieBigRoadConverter.instance as any);
+        const arrange = BigRoadElement.arrange(SoccerPinGoalBigRoadConverter.instance as any);
         const arrangeWithLogs = (rounds: any[], scoreboard: any) => arrange(rounds, scoreboard) as any[];
 
         return (
@@ -65,7 +65,7 @@ class ScoreboardSeDie extends Component<ScoreboardComponentProps> {
                     rounds={settlementsWithIdx as any}
                     scoreboards={[
                         {
-                            element: SeDieBigRoadElement as unknown as React.ComponentType<any>,
+                            element: SoccerPinGoalBigRoadElement as unknown as React.ComponentType<any>,
                             arrange: arrangeWithLogs as any,
                             column: this.scoreboardColumns,
                             row: 6,
@@ -82,6 +82,6 @@ class ScoreboardSeDie extends Component<ScoreboardComponentProps> {
     }
 }
 
-export default memo(ScoreboardSeDie);
+export default memo(ScoreboardSoccerPinGoal);
 
 

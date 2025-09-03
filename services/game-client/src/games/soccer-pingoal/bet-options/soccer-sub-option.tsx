@@ -18,7 +18,7 @@ const subChoiceImages = {
     [SoccerPinGoalBetOptions.tunnel6]: [true, true, true, true],
 };
 
-export const SedieMultiplayerSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
+export const SoccerPinGoalSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
     return (
         <div className={`flex rounded-2xl mt-2 h-[120px] w-[444px] md:w-[558px] ${styles["sub-bet-option"]}`}>
             <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel1} />

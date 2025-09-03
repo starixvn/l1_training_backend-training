@@ -109,18 +109,18 @@
         background-image: url("/static/images/soccer-pingoal/lose-bg.svg");
     }
 
-    // 保留舊樣式以向後兼容
+    // 保留舊樣式以向後兼容 (使用 soccer-pingoal 路徑)
     &.odd {
-        background-image: url("/static/images/sedie-multiplayer/odd-bg.svg");
+        background-image: url("/static/images/soccer-pingoal/odd-bg.svg");
         @media (width >= 48rem) {
-            background-image: url("/static/images/sedie-multiplayer/md-odd-bg.svg");
+            background-image: url("/static/images/soccer-pingoal/md-odd-bg.svg");
         }
     }
 
     &.even {
-        background-image: url("/static/images/sedie-multiplayer/even-bg.svg");
+        background-image: url("/static/images/soccer-pingoal/even-bg.svg");
         @media (width >= 48rem) {
-            background-image: url("/static/images/sedie-multiplayer/md-even-bg.svg");
+            background-image: url("/static/images/soccer-pingoal/md-even-bg.svg");
         }
     }
     

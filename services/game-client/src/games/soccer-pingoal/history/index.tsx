@@ -8,7 +8,7 @@ import PFVerificationModal from "../../../components/game-components/provably-fa
 import { PFVerification, makeFileNameExport, renderPFVerifyResultBlock } from "../provably-fair";
 import { BetChoice, BetDetailResultBlock, produceDataBetDetailRow } from "./soccer-multiplayer-bet-detail-result-block";
 
-const SeDieMultiplayerBetDetailModal: FC = () => {
+const SoccerPinGoalBetDetailModal: FC = () => {
     return (
         <>
             <BetDetailModal>
@@ -26,4 +26,4 @@ const SeDieMultiplayerBetDetailModal: FC = () => {
     );
 };
 
-export default SeDieMultiplayerBetDetailModal;
+export default SoccerPinGoalBetDetailModal;

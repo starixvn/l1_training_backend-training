@@ -6,7 +6,7 @@ import { useCommonTranslate, useTranslator } from "../../../_shared/react-hooks"
 import { DrawInfo } from "../../../components/game-base/type";
 import { SoccerPinGoalBetOptions } from "../soccer-multiplayer-constants";
 
-export interface RoundInfoSeDie extends DrawInfo {
+export interface RoundInfoSoccerPinGoal extends DrawInfo {
     roundId: number;
     result: {
         balls?: Array<number>;
@@ -44,7 +44,7 @@ const calculateWin = (isWin: boolean, amount: number, odds: number): number => {
     return isWin ? amount * odds : 0;
 };
 
-export const BetDetailResultBlock: FC<{ roundInfo: RoundInfoSeDie }> = ({ roundInfo: drawInfo }) => {
+export const BetDetailResultBlock: FC<{ roundInfo: RoundInfoSoccerPinGoal }> = ({ roundInfo: drawInfo }) => {
     const { t: translateCommon } = useCommonTranslate();
     const { roundId, settlementResult } = drawInfo;
 
@@ -81,7 +81,7 @@ export const BetDetailResultBlock: FC<{ roundInfo: RoundInfoSeDie }> = ({ roundI
     );
 };
 
-export const produceDataBetDetailRow = (item: any, drawInfo: RoundInfoSeDie) => {
+export const produceDataBetDetailRow = (item: any, drawInfo: RoundInfoSoccerPinGoal) => {
     const win = calculateWin(
         drawInfo.settlementResult?.[item.choice],
         item.amount,

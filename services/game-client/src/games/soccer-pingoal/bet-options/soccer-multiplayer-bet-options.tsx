@@ -2,7 +2,7 @@
 
 import { useGameContext } from "../../../_shared/react-contexts";
 import { SoccerPinGoalBetOptions } from "../soccer-multiplayer-constants";
-import { SedieMultiplayerSubBetOptions } from "./soccer-sub-option";
+import { SoccerPinGoalSubBetOptions } from "./soccer-sub-option";
 import { SoccerPinGoalMainOption } from "./soccer-main-option";
 
 const SoccerPinGoalBetOptionsComponent = () => {
@@ -10,7 +10,7 @@ const SoccerPinGoalBetOptionsComponent = () => {
 
     return (
         <>
-            <SedieMultiplayerSubBetOptions tolgeeNamespace={tolgeeNamespace} />
+            <SoccerPinGoalSubBetOptions tolgeeNamespace={tolgeeNamespace} />
             <div className="flex justify-between my-2 md:mb-6 gap-2">
                 <SoccerPinGoalMainOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.WIN} />
                 <SoccerPinGoalMainOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.DRAW} />

@@ -1,5 +1,5 @@
 export default {
-    hostingPort: 5000,
+    hostingPort: 8200,
     apiSettings: {
         enabledApi: true,
         apiUrl: "https://api.lumigame.com",
@@ -31,7 +31,7 @@ export default {
     },
     sentry: {
         sentryUrl: "https://13f39b8359404ed5aec23655e64ccf78@sentry.lumigame.com/2",
-        logIdentifier: "sedie-multiplayer-integration-test-ci",
+        logIdentifier: "soccer-pingoal-integration-test-ci",
         env: "LOCAL",
     },
     authenticateSettings: {
@@ -43,7 +43,7 @@ export default {
         audiences: ["api", "admin-api"],
     },
     userServiceSettings: {
-        url: "http://127.0.0.1:5000",
+        url: "http://127.0.0.1:8004",
     },
     metrics: {
         enable: true,
@@ -51,7 +51,7 @@ export default {
     },
     enableMsgpackParser: false,
     gameManagementApiSettings: {
-        BASE: "http://localhost:5000",
+        BASE: "http://localhost:8200",
     },
     disableCors: true,
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import ScoreboardSeDie from "../scoreboard/scoreboard";
-import { mainChoices, SoccerPinGoalChoices, SoccerPinGoalStatisticColors } from "../soccer-multiplayer-constants";
+import ScoreboardSoccerPinGoal from "../scoreboard/scoreboard";
+import { mainChoices, SoccerPinGoalChoices, SoccerPinGoalStatisticColors, tunnelChoices } from "../soccer-multiplayer-constants";
 import PercentageStatistic from "../../../components/game-components/statistic";
 import Image from "next/image";
 import useGameStore from "../../../_shared/stores/game-store/game-store";
@@ -8,17 +8,17 @@ import { useShallow } from "zustand/react/shallow";
 import Styles from "./statistic-popup.module.scss";
 import AnimatedContent from "../../../components/game-components/animations/animated-content";
 
-interface SedieMultiplayerStatisticPopupProps {
+interface SoccerMultiplayerStatisticPopupProps {
     onClose?: () => void;
     inline?: boolean;
 }
 
-export const SedieMultiplayerStatisticPopup: React.FC<SedieMultiplayerStatisticPopupProps> = ({ onClose, inline }) => {
+export const SoccerMultiplayerStatisticPopup: React.FC<SoccerMultiplayerStatisticPopupProps> = ({ onClose, inline }) => {
     const { roundHistory, isShowBlink } = useGameStore(
         useShallow((state) => ({ roundHistory: state.roundHistory, isShowBlink: state.isShowBlink }))
     );
 
-    const sideChoices = [SeDieChoices.white4, SeDieChoices.white3, SeDieChoices.red2, SeDieChoices.red3, SeDieChoices.red4];
+    const sideChoices = tunnelChoices;
 
     const [isClosing, setIsClosing] = React.useState(false);
 
@@ -61,11 +61,12 @@ export const SedieMultiplayerStatisticPopup: React.FC<SedieMultiplayerStatisticP
                             mainChoices={sideChoices as any}
                             iconRenderer={(choice) => {
                                 const map = {
-                                    red2: "/static/images/sedie-multiplayer/statistic-icon-red2.webp",
-                                    red3: "/static/images/sedie-multiplayer/statistic-icon-red3.webp",
-                                    red4: "/static/images/sedie-multiplayer/statistic-icon-red4.webp",
-                                    white3: "/static/images/sedie-multiplayer/statistic-icon-white3.webp",
-                                    white4: "/static/images/sedie-multiplayer/statistic-icon-white4.webp",
+                                    tunnel1: "/static/images/soccer-pingoal/statistic-icon-tunnel1.webp",
+                                    tunnel2: "/static/images/soccer-pingoal/statistic-icon-tunnel2.webp",
+                                    tunnel3: "/static/images/soccer-pingoal/statistic-icon-tunnel3.webp",
+                                    tunnel4: "/static/images/soccer-pingoal/statistic-icon-tunnel4.webp",
+                                    tunnel5: "/static/images/soccer-pingoal/statistic-icon-tunnel5.webp",
+                                    tunnel6: "/static/images/soccer-pingoal/statistic-icon-tunnel6.webp",
                                 } as Record<string, string>;
                                 const src = map[choice];
                                 return src ? <Image src={src} alt={choice} width={16} height={16} /> : null;
@@ -75,12 +76,12 @@ export const SedieMultiplayerStatisticPopup: React.FC<SedieMultiplayerStatisticP
                             roundHistory={roundHistory as any}
                             mainChoices={mainChoices as any}
                             renderAsBar={true}
-                            barColors={SeDieStatisticColors}
+                            barColors={SoccerPinGoalStatisticColors}
                             barHeightPx={12}
                             roundedRadiusPx={12}
                             barLabelFontSizePx={14}
                         />
-                        <ScoreboardSeDie roundHistory={roundHistory as any} isShowBlink={isShowBlink} />
+                        <ScoreboardSoccerPinGoal roundHistory={roundHistory as any} isShowBlink={isShowBlink} />
                     </div>
                 </div>
             </AnimatedContent>

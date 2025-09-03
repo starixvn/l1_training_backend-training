@@ -21,6 +21,20 @@ export const SoccerPinGoalOpponentOptions = {
 
 // 主要投注選項（輸贏）
 export const SoccerPinGoalBetOptions = {
+    // 隧道選項
+    tunnel1: "tunnel1",
+    tunnel2: "tunnel2", 
+    tunnel3: "tunnel3",
+    tunnel4: "tunnel4",
+    tunnel5: "tunnel5",
+    tunnel6: "tunnel6",
+    // 對手數量選項
+    opponent1: "opponent1",
+    opponent2: "opponent2",
+    opponent3: "opponent3",
+    opponent4: "opponent4",
+    opponent5: "opponent5",
+    // 主要輸贏選項
     WIN: "win",
     LOSE: "lose",
     DRAW: "draw",

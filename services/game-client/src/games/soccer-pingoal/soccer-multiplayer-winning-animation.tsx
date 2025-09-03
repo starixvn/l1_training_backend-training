@@ -26,11 +26,11 @@ const ChoiceWinningSize = {
     [SoccerPinGoalBetOptions.tunnel6]: [146, 74],
 };
 
-const SeDieMultiplayerWinningAnimation: React.FC<Props> = ({ choice, resourceName, roundState, settlementResult, showResultInfo }) => {
+const SoccerPinGoalWinningAnimation: React.FC<Props> = ({ choice, resourceName, roundState, settlementResult, showResultInfo }) => {
     const winningHighLightResult = isHighLightWinningResult;
     const [width, height] = ChoiceWinningSize[choice] || [146, 74];
 
-    const imagePath = `/static/images/sedie-multiplayer/highlight-winning-${resourceName}.png`;
+    const imagePath = `/static/images/soccer-pingoal/highlight-winning-${resourceName}.png`;
     const { data } = useMemoriedImage(imagePath);
 
     if (!data) {
@@ -60,4 +60,4 @@ const SeDieMultiplayerWinningAnimation: React.FC<Props> = ({ choice, resourceNam
     );
 };
 
-export default SeDieMultiplayerWinningAnimation;
+export default SoccerPinGoalWinningAnimation;

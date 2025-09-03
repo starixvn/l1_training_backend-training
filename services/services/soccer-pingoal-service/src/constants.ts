@@ -25,12 +25,27 @@ export const MAIN_BET_CHOICES = {
     lose: "lose",
 };
 
-// 所有投注選項（保持向後兼容）
+// 所有投注選項（與前端保持一致）
 export const BET_CHOICES = {
-    // 新的軌道遊戲選項
-    ...TUNNEL_CHOICES,
-    ...OPPONENT_CHOICES,
-    ...MAIN_BET_CHOICES,
+    // 主要輸贏選項
+    win: "win",
+    draw: "draw", 
+    lose: "lose",
+    
+    // 隧道選項
+    tunnel1: "tunnel1",
+    tunnel2: "tunnel2", 
+    tunnel3: "tunnel3",
+    tunnel4: "tunnel4",
+    tunnel5: "tunnel5",
+    tunnel6: "tunnel6",
+    
+    // 對手數量選項
+    opponent1: "opponent1",
+    opponent2: "opponent2",
+    opponent3: "opponent3",
+    opponent4: "opponent4",
+    opponent5: "opponent5",
     
     // 舊的足球遊戲選項（向後兼容）
     goal: "goal",

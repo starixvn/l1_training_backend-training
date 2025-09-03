@@ -1,14 +1,20 @@
 export default {
-    id: 148,
-    name: "SeDieMultiplayer",
+    id: 200,
+    name: "SoccerPinGoal",
     durations: {
-        wholeRound: 23,
-        placingBets: 18,
+        wholeRound: 35,
+        placingBets: 25,
         lockingBet: 3,
-        shakeThePlateDuration: 1,
+        preparation: 3,
+        videoPlaying: 5,
+        settlement: 2,
     },
-    choices: ["even", "odd", "red3", "red4", "white3", "white4", "red2"],
-    choicesMapper: { even: 1, odd: 2, red3: 3, red4: 4, white3: 5, white4: 6, red2: 7 },
-    hedgeBetGroups: [["even", "odd"]],
+    choices: ["win", "draw", "lose", "tunnel1", "tunnel2", "tunnel3", "tunnel4", "tunnel5", "tunnel6", "opponent1", "opponent2", "opponent3", "opponent4", "opponent5"],
+    choicesMapper: { 
+        win: 1, draw: 2, lose: 3, 
+        tunnel1: 4, tunnel2: 5, tunnel3: 6, tunnel4: 7, tunnel5: 8, tunnel6: 9,
+        opponent1: 10, opponent2: 11, opponent3: 12, opponent4: 13, opponent5: 14
+    },
+    hedgeBetGroups: [["win", "lose"]],
     provablyFair: true,
 };
