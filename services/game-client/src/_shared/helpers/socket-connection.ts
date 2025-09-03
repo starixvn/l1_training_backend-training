@@ -52,11 +52,19 @@ export function InitSocketIO(socketInfo: SocketInfo, session: any, gameName: str
         });
 
         socket.on(messageEventType.SOCKET_CONNECTED, () => {
+            console.log(`[SOCKET] Connected to ${gameName}, emitting signin with session:`, session);
             socket.emit("signin", session);
+            
+            // Debug: Set timeout to check if signin response is received
+            setTimeout(() => {
+                console.log(`[SOCKET] DEBUG: 3 seconds after signin, current connected status:`, socket.connected);
+            }, 3000);
+            
             gameMessageHandler.broadcastGameEvent({ [messageEventType.SOCKET_CONNECTED]: true });
         });
 
         socket.on(messageEventType.SIGNED_IN, () => {
+            console.log(`[SOCKET] Received signedIn event for ${gameName}, emitting inGame`);
             socket.emit("inGame", gameName);
             gameMessageHandler.broadcastGameEvent({ [messageEventType.SIGNED_IN]: true });
         });
