@@ -24,6 +24,17 @@
         border-radius: 10px;
     }
 
+    // Soccer PinGoal 主選項樣式
+    &.win,
+    &.draw,
+    &.lose {
+        border-radius: 20px;
+        &::before {
+            border-radius: 20px;
+        }
+    }
+
+    // 保留舊樣式以向後兼容
     &.odd,
     &.even {
         border-radius: 20px;

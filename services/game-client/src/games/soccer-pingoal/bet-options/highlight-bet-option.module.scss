@@ -15,6 +15,35 @@
         width: 93px;
     }
 
+    // Soccer PinGoal 主選項 (WIN/DRAW/LOSE)
+    &.win,
+    &.draw,
+    &.lose {
+        width: 116px;
+        height: 138px;
+        @media (width >= 48rem) {
+            width: 148px;
+        }
+    }
+
+    // Soccer PinGoal 隧道選項 (tunnel1-tunnel6)
+    &.tunnel1,
+    &.tunnel2,
+    &.tunnel3,
+    &.tunnel4,
+    &.tunnel5,
+    &.tunnel6 {
+        border-radius: var(--border-radius);
+    }
+
+    // 主選項圓角
+    &.win,
+    &.draw,
+    &.lose {
+        border-radius: 20px;
+    }
+
+    // 保留舊樣式以向後兼容
     &.odd,
     &.even {
         width: 180px;
