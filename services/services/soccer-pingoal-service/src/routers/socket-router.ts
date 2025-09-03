@@ -16,7 +16,8 @@ export default class SocketRouter extends BaseSocketRouter {
         // Add signin event debugging
         console.log(`[SoccerPinGoal SocketRouter] 📝 Setting up event listeners...`);
         this.socketClient.on("signin", (data) => {
-            console.log(`[SoccerPinGoal SocketRouter] 📨 SIGNIN EVENT RECEIVED from client ${socketClient.id}:`, JSON.stringify(data, null, 2));
+            console.log(`[SoccerPinGoal SocketRouter] 📨 SIGNIN EVENT RECEIVED from client ${socketClient.id}`);
+            // console.log(`[SoccerPinGoal SocketRouter] 📨 SIGNIN DATA:`, JSON.stringify(data, null, 2)); // 簡化日誌
         });
         
         this.socketClient.on("rebet", this.handleRebet.bind(this));

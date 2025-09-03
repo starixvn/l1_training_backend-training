@@ -17,7 +17,7 @@ import TableGameData from "./game-data";
 
 const run = async () => {
     console.log(`[SoccerPinGoal App] 🚀 Starting SoccerPinGoal service...`);
-    console.log(`[SoccerPinGoal App] ⚙️  Game settings:`, JSON.stringify(gameSettings, null, 2));
+    // console.log(`[SoccerPinGoal App] ⚙️  Game settings:`, JSON.stringify(gameSettings, null, 2)); // 簡化日誌
     console.log(`[SoccerPinGoal App] ⚙️  Hosting port: ${appConfigs.hostingPort}`);
     
     const definition = new Table.TableGameDefinition(gameSettings, generateResult, getSettlementResult, () => {});

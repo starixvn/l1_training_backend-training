@@ -71,7 +71,7 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
     handleSignInSuccess(socketClient: Socket, userInfo: any, userSession: any) {
         console.log(`[SoccerPinGoal UserSigninConsumer] 🎯 handleSignInSuccess called for user: ${userInfo?.id || 'unknown'}`);
         console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 socketClient.id: ${socketClient.id}`);
-        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 userSession:`, JSON.stringify(userSession, null, 2));
+        // console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 userSession:`, JSON.stringify(userSession, null, 2)); // 簡化日誌
         
         super.handleSignInSuccess(socketClient, userInfo, userSession);
         console.log(`[SoccerPinGoal UserSigninConsumer] ✅ super.handleSignInSuccess completed`);
