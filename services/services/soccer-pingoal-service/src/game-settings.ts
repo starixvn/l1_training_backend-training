@@ -11,7 +11,7 @@ import {
 
 export default {
     id: 200,
-    name: "soccerpingoal",
+    name: "SoccerPinGoal",
     
     // 遊戲時間設定（簡化版）
     durations: {
