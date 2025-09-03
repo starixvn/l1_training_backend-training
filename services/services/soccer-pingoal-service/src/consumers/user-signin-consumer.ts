@@ -28,10 +28,62 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
         this.playerResultBoardManager = playerResultBoardManager;
     }
 
+    consume(player: any, payload: any) {
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🚀 consume() called with player:`, player?.id || 'unknown');
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 payload.system:`, payload?.system);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 gameData.gameConfigs:`, JSON.stringify(this.gameData.gameConfigs, null, 2));
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 gameData.delayStartTime:`, this.gameData.delayStartTime);
+        
+        // Check the condition that determines if game is disabled
+        const configs = this.gameData.gameConfigs;
+        const configuredlyDisabled = !configs || !configs.enabled;
+        const disabled = configuredlyDisabled || this.gameData.delayStartTime > 0;
+        
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 configuredlyDisabled:`, configuredlyDisabled);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 disabled:`, disabled);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 Will call super.consume:`, !disabled || payload?.system === 2 || payload?.system === 3);
+        
+        // 🚨 緊急修復：如果 gameConfigs 為空，等待並重試
+        if (Object.keys(configs || {}).length === 0) {
+            console.log(`[SoccerPinGoal UserSigninConsumer] ⏳ gameConfigs is empty, delaying signin for 2 seconds...`);
+            setTimeout(() => {
+                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retrying consume after delay...`);
+                console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 gameData.gameConfigs after delay:`, JSON.stringify(this.gameData.gameConfigs, null, 2));
+                
+                const retryConfigs = this.gameData.gameConfigs;
+                const retryConfiguredlyDisabled = !retryConfigs || !retryConfigs.enabled;
+                const retryDisabled = retryConfiguredlyDisabled || this.gameData.delayStartTime > 0;
+                
+                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry configuredlyDisabled:`, retryConfiguredlyDisabled);
+                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry disabled:`, retryDisabled);
+                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry will call super.consume:`, !retryDisabled || payload?.system === 2 || payload?.system === 3);
+                
+                super.consume(player, payload);
+                console.log(`[SoccerPinGoal UserSigninConsumer] ✅ Delayed super.consume() completed`);
+            }, 2000);
+            return;
+        }
+        
+        super.consume(player, payload);
+        console.log(`[SoccerPinGoal UserSigninConsumer] ✅ super.consume() completed`);
+    }
+
     handleSignInSuccess(socketClient: Socket, userInfo: any, userSession: any) {
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🎯 handleSignInSuccess called for user: ${userInfo?.id || 'unknown'}`);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 socketClient.id: ${socketClient.id}`);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 userSession:`, JSON.stringify(userSession, null, 2));
+        
         super.handleSignInSuccess(socketClient, userInfo, userSession);
+        console.log(`[SoccerPinGoal UserSigninConsumer] ✅ super.handleSignInSuccess completed`);
         
         const boardData = this.playerResultBoardManager.getBoardData();
         this.playerResultBoardPublisher.publishBoardDataToUser(userInfo.id, boardData);
+        console.log(`[SoccerPinGoal UserSigninConsumer] 📊 Board data published to user: ${userInfo.id}`);
+    }
+
+    handleSignInFailed(socketClient: Socket, reason: string) {
+        console.log(`[SoccerPinGoal UserSigninConsumer] ❌ handleSignInFailed called for client: ${socketClient.id}, reason: ${reason}`);
+        super.handleSignInFailed(socketClient, reason);
+        console.log(`[SoccerPinGoal UserSigninConsumer] ❌ super.handleSignInFailed completed`);
     }
 }

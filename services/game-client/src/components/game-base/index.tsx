@@ -733,7 +733,7 @@ abstract class GameBase<P extends GameBaseProps, S extends GameBaseState> extend
         const { isLoaded } = this.state;
         const isDisabledGame = roundState === RoundState.Disabled;
 
-        // Debug logging for SoccerPinGoal - TEMPORARY FIX DISABLED FOR DIAGNOSIS
+        // Debug logging for SoccerPinGoal
         if (this.props.id === 200) {
             console.log(`[GameBase] SoccerPinGoal render - isLoaded: ${isLoaded}, signedIn: ${signedIn}, availableInGameData: ${availableInGameData}`);
         }

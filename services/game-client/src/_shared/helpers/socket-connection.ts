@@ -73,12 +73,20 @@ export function InitSocketIO(socketInfo: SocketInfo, session: any, gameName: str
         socket.onAny((eventName, ...args) => {
             console.log(`[SOCKET] 📨 ${gameName} received event: ${eventName}`, args);
             
-            // Check if message event contains signin information
+            // WORKAROUND: Check if message event indicates signin success for SoccerPinGoal
             if (eventName === 'message' && args.length > 0) {
                 const messageData = args[0];
                 console.log(`[SOCKET] 🔍 Message event data:`, JSON.stringify(messageData, null, 2));
                 
-                // Check if this message indicates successful signin
+                // SoccerPinGoal specific workaround: um: true indicates signin success
+                if (gameName === 'SoccerPinGoal' && messageData && messageData.um === true) {
+                    console.log(`[SOCKET] 🔧 WORKAROUND: SoccerPinGoal message with um=true detected, manually triggering signedIn`);
+                    // Manually trigger signedIn event for SoccerPinGoal
+                    socket.emit("inGame", gameName);
+                    gameMessageHandler.broadcastGameEvent({ [messageEventType.SIGNED_IN]: true });
+                }
+                
+                // Check if this message indicates successful signin for other games
                 if (messageData && (messageData.signedIn || messageData.isAuthenticated || messageData.signin)) {
                     console.log(`[SOCKET] 🚨 Message contains signin data! Should trigger signedIn event.`);
                 }

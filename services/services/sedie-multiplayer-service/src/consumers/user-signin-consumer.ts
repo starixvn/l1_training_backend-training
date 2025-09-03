@@ -28,10 +28,25 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
         this.playerResultBoardManager = playerResultBoardManager;
     }
 
+    consume(player: any, payload: any) {
+        console.log(`[SeDie UserSigninConsumer] 🚀 consume() called with player:`, player?.id || 'unknown', 'payload keys:', Object.keys(payload || {}));
+        super.consume(player, payload);
+        console.log(`[SeDie UserSigninConsumer] ✅ super.consume() completed`);
+    }
+
     handleSignInSuccess(socketClient: Socket, userInfo: any, userSession: any) {
+        console.log(`[SeDie UserSigninConsumer] 🎯 handleSignInSuccess called for user: ${userInfo?.id || 'unknown'}`);
         super.handleSignInSuccess(socketClient, userInfo, userSession);
+        console.log(`[SeDie UserSigninConsumer] ✅ super.handleSignInSuccess completed`);
         
         const boardData = this.playerResultBoardManager.getBoardData();
         this.playerResultBoardPublisher.publishBoardDataToUser(userInfo.id, boardData);
+        console.log(`[SeDie UserSigninConsumer] 📊 Board data published to user: ${userInfo.id}`);
+    }
+
+    handleSignInFailed(socketClient: Socket, reason: string) {
+        console.log(`[SeDie UserSigninConsumer] ❌ handleSignInFailed called for client: ${socketClient.id}, reason: ${reason}`);
+        super.handleSignInFailed(socketClient, reason);
+        console.log(`[SeDie UserSigninConsumer] ❌ super.handleSignInFailed completed`);
     }
 }
