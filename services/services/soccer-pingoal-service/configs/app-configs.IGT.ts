@@ -1,5 +1,5 @@
 export default {
-    hostingPort: 8200,
+    hostingPort: 8010,
     apiSettings: {
         enabledApi: true,
         apiUrl: "https://api.lumigame.com",
@@ -51,7 +51,7 @@ export default {
     },
     enableMsgpackParser: false,
     gameManagementApiSettings: {
-        BASE: "http://localhost:8200",
+        BASE: "http://localhost:8005",
     },
     disableCors: true,
 };

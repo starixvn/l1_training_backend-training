@@ -111,8 +111,11 @@ start_service "Game Admin Site" "cd services/game-admin/src/GamesAdmin.Site && d
 echo -e "${YELLOW}Waiting 15 seconds for all services to start...${NC}"
 sleep 15
 
-# Start sedie-multiplayer-service (Port 8006) - Last service to start
+# Start sedie-multiplayer-service (Port 8006) 
 start_service "Sedie Multiplayer Service" "cd services/services/sedie-multiplayer-service && yarn install && npm run dev" 8006
+
+# Start soccer-pingoal-service (Port 8010) 
+start_service "Soccer PinGoal Service" "cd services/services/soccer-pingoal-service && yarn install && npm run dev" 8010
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}All services are starting...${NC}"
