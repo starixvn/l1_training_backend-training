@@ -43,26 +43,7 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
         console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 disabled:`, disabled);
         console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 Will call super.consume:`, !disabled || payload?.system === 2 || payload?.system === 3);
         
-        // 🚨 緊急修復：如果 gameConfigs 為空，等待並重試
-        if (Object.keys(configs || {}).length === 0) {
-            console.log(`[SoccerPinGoal UserSigninConsumer] ⏳ gameConfigs is empty, delaying signin for 2 seconds...`);
-            setTimeout(() => {
-                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retrying consume after delay...`);
-                console.log(`[SoccerPinGoal UserSigninConsumer] 🔍 gameData.gameConfigs after delay:`, JSON.stringify(this.gameData.gameConfigs, null, 2));
-                
-                const retryConfigs = this.gameData.gameConfigs;
-                const retryConfiguredlyDisabled = !retryConfigs || !retryConfigs.enabled;
-                const retryDisabled = retryConfiguredlyDisabled || this.gameData.delayStartTime > 0;
-                
-                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry configuredlyDisabled:`, retryConfiguredlyDisabled);
-                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry disabled:`, retryDisabled);
-                console.log(`[SoccerPinGoal UserSigninConsumer] 🔄 Retry will call super.consume:`, !retryDisabled || payload?.system === 2 || payload?.system === 3);
-                
-                super.consume(player, payload);
-                console.log(`[SoccerPinGoal UserSigninConsumer] ✅ Delayed super.consume() completed`);
-            }, 2000);
-            return;
-        }
+        
         
         super.consume(player, payload);
         console.log(`[SoccerPinGoal UserSigninConsumer] ✅ super.consume() completed`);

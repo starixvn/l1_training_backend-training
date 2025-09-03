@@ -56,7 +56,7 @@ function handleSignInAction(state: GameStateContextModel): GameStateContextModel
     return {
         ...state,
         signedIn: true,
-        availableInGameData: false,
+        availableInGameData: true,
     };
 }
 
