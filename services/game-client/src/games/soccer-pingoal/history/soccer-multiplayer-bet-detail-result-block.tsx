@@ -122,7 +122,7 @@ export const BetChoice: FC<{ choice: string }> = ({ choice }) => {
     if (choice === SoccerPinGoalBetOptions.WIN) {
         return (
             <span className="font-text flex justify-center items-center px-2 py-1 bg-green-100 rounded text-green-800">
-                勝
+                Red
             </span>
         );
     }
@@ -130,7 +130,15 @@ export const BetChoice: FC<{ choice: string }> = ({ choice }) => {
     if (choice === SoccerPinGoalBetOptions.LOSE) {
         return (
             <span className="font-text flex justify-center items-center px-2 py-1 bg-red-100 rounded text-red-800">
-                敗
+                Blue
+            </span>
+        );
+    }
+
+    if (choice === SoccerPinGoalBetOptions.DRAW) {
+        return (
+            <span className="font-text flex justify-center items-center px-2 py-1 bg-gray-100 rounded text-gray-800">
+                Draw
             </span>
         );
     }

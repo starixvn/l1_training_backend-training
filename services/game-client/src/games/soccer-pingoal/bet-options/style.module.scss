@@ -96,17 +96,17 @@
     background-repeat: no-repeat;
     border-radius: 20px;
     
-    // Soccer PinGoal 主選項樣式
+    // Soccer PinGoal 主選項樣式 - 使用純色背景避免文字重疊
     &.win {
-        background-image: url("/static/images/soccer-pingoal/win-bg.svg");
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); // Red for "Red"
     }
     
     &.draw {
-        background-image: url("/static/images/soccer-pingoal/draw-bg.svg");
+        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); // Green for "Draw"
     }
     
     &.lose {
-        background-image: url("/static/images/soccer-pingoal/lose-bg.svg");
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); // Blue for "Blue"
     }
 
     // 保留舊樣式以向後兼容 (使用 soccer-pingoal 路徑)
