@@ -1,64 +1,116 @@
-import dynamic from "next/dynamic";
-import { SoccerPinGoalBetOptions } from "../soccer-multiplayer-constants";
-import styles from "./style.module.scss";
-const Odds = dynamic(() => import("../../../components/game-components/bet-option/odds"));
-const OwnBet = dynamic(() => import("../../../components/game-components/bet-option/own-bet"));
-const TotalBet = dynamic(() => import("../../../components/game-components/bet-option/total-bet"));
-const RippleButton = dynamic(() => import("../../../components/game-components/bet-option/ripple-button"));
-const HighlightBetOption = dynamic(() => import("./highlight-bet-option"));
-const PrevHighlightBetOption = dynamic(() => import("./highight-prev-round-bet-option"));
-const ChipEffect = dynamic(() => import("../../../components/game-components/bet-option/chip-effect"));
+import React, { useState } from "react";
 
-const subChoiceImages = {
-    [SoccerPinGoalBetOptions.tunnel1]: [false, false, false, false],
-    [SoccerPinGoalBetOptions.tunnel2]: [true, false, false, false],
-    [SoccerPinGoalBetOptions.tunnel3]: [true, true, false, false],
-    [SoccerPinGoalBetOptions.tunnel4]: [true, true, true, false],
-    [SoccerPinGoalBetOptions.tunnel5]: [true, true, true, true],
-    [SoccerPinGoalBetOptions.tunnel6]: [true, true, true, true],
-};
+type SelectionMode = 'player' | 'opponent';
 
 export const SoccerPinGoalSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
+    const [playerTrack, setPlayerTrack] = useState<number | null>(null);
+    const [opponentTrack, setOpponentTrack] = useState<number | null>(null);
+    const [selectionMode, setSelectionMode] = useState<SelectionMode>('player');
+
+    const handleTrackClick = (track: number) => {
+        if (selectionMode === 'player') {
+            setPlayerTrack(track);
+        } else {
+            setOpponentTrack(track);
+        }
+    };
+
     return (
-        <div className={`flex rounded-2xl mt-2 h-[120px] w-[444px] md:w-[558px] ${styles["sub-bet-option"]}`}>
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel1} />
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel2} />
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel3} />
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel4} />
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel5} />
-            <SoccerPinGoalSubBetOption tolgeeNamespace={tolgeeNamespace} choice={SoccerPinGoalBetOptions.tunnel6} />
+        <div className="bg-gray-800 rounded-2xl p-4 mt-2 w-full max-w-[558px]">
+            {/* 模式切換按鈕 */}
+            <div className="flex gap-2 mb-4 justify-center">
+                <button
+                    className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 ${
+                        selectionMode === 'player'
+                            ? 'bg-red-500 text-white shadow-lg'
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                    onClick={() => setSelectionMode('player')}
+                >
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    選擇玩家軌道
+                </button>
+                <button
+                    className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 ${
+                        selectionMode === 'opponent'
+                            ? 'bg-blue-500 text-white shadow-lg'
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                    onClick={() => setSelectionMode('opponent')}
+                >
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    選擇對手軌道
+                </button>
+            </div>
+
+            {/* 軌道選擇 */}
+            <div className="flex gap-2 justify-center">
+                {[1, 2, 3, 4, 5, 6].map((track) => (
+                    <TrackOption
+                        key={track}
+                        track={track}
+                        playerTrack={playerTrack}
+                        opponentTrack={opponentTrack}
+                        onClick={() => handleTrackClick(track)}
+                    />
+                ))}
+            </div>
+
+            {/* 選擇狀態顯示 */}
+            <div className="mt-4 text-center text-sm">
+                <div className="flex justify-center items-center gap-4 text-gray-300">
+                    <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <span>玩家軌道: {playerTrack || '未選擇'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span>對手軌道: {opponentTrack || '未選擇'}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
 
-const SoccerPinGoalSubBetOption = ({ tolgeeNamespace, choice }: { tolgeeNamespace: string; choice: string }) => {
-    const className = `sub-bet-${choice}`;
-    const renderImages = (choice: string) => {
-        return (
-            <div
-                className={`flex flex-wrap items-center justify-center p-2 w-[74px] md:w-[93px] md:px-5 gap-1`}
-                style={{ "--dot-size": "20px" } as React.CSSProperties}
-            >
-                {(subChoiceImages[choice] || []).map((isRed, index) => (
-                    <div key={index} className={`${isRed ? styles["dot-red"] : styles["dot-white"]}`}></div>
-                ))}
-            </div>
-        );
-    };
+interface TrackOptionProps {
+    track: number;
+    playerTrack: number | null;
+    opponentTrack: number | null;
+    onClick: () => void;
+}
+
+const TrackOption: React.FC<TrackOptionProps> = ({ track, playerTrack, opponentTrack, onClick }) => {
+    const baseClasses = "w-12 h-12 rounded-full border-2 flex items-center justify-center font-bold text-lg cursor-pointer transition-all duration-200 hover:scale-110";
+    
+    // 判斷軌道狀態
+    const isPlayerTrack = playerTrack === track;
+    const isOpponentTrack = opponentTrack === track;
+    const isUnselected = !isPlayerTrack && !isOpponentTrack;
+
+    let colorClasses = "";
+    let textColor = "";
+
+    if (isPlayerTrack) {
+        // 玩家軌道：紅色
+        colorClasses = "bg-red-500 border-red-400 shadow-lg shadow-red-500/30";
+        textColor = "text-white";
+    } else if (isOpponentTrack) {
+        // 對手軌道：藍色
+        colorClasses = "bg-blue-500 border-blue-400 shadow-lg shadow-blue-500/30";
+        textColor = "text-white";
+    } else {
+        // 未選擇：與背景同色
+        colorClasses = "bg-gray-800 border-gray-600";
+        textColor = "text-gray-600";
+    }
+
     return (
-        <div className="relative">
-            <div className={`flex-1 text-white relative h-[full] w-[74px] md:w-[93px] ${styles[className]}`}>
-                <TotalBet choice={choice} className={"h-6 pt-1 flex items-center justify-center"} tolgeeNamespace={tolgeeNamespace} />
-                {renderImages(choice)}
-                <Odds choice={choice} tolgeeNamespace={tolgeeNamespace} isFormatOddsAuto={true} />
-                <div className="h-5 mb-0.5">
-                    <OwnBet choice={choice} tolgeeNamespace={tolgeeNamespace} />
-                </div>
-                <RippleButton className={`${styles["btn-ripple"]}`} id={`${tolgeeNamespace}-choice-${choice}`} choice={choice} />
-            </div>
-            <ChipEffect choice={choice} />
-            <HighlightBetOption choice={choice} />
-            <PrevHighlightBetOption choice={choice} />
+        <div 
+            className={`${baseClasses} ${colorClasses} ${textColor}`}
+            onClick={onClick}
+        >
+            {track}
         </div>
     );
 };
