@@ -42,6 +42,7 @@ export function InitSocketIO(socketInfo: SocketInfo, session: any, gameName: str
         useGameStore.getState().setSocket(socket);
 
         socket.off(gameName).on(gameName, (message) => {
+            console.log(`[SOCKET] 📨 ${gameName} event content:`, JSON.stringify(message, null, 2));
             gameMessageHandler.broadcastGameEvent(message);
             useGameStore.getState().registerEvent(message);
             useBettingStore.getState().registerEvent(message);

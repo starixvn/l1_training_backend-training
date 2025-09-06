@@ -13,6 +13,10 @@ const ChipControlPanel: React.FC = () => {
             userStakeLevel: state.userStakeLevel,
         }))
     );
+    
+    // 🔍 Debug: 檢查籌碼數據狀態
+    console.log(`[ChipControlPanel] 🎯 gameConfigs:`, gameConfigs);
+    console.log(`[ChipControlPanel] 🎯 userStakeLevel:`, userStakeLevel);
     const { selectedChip, setSelectedChip, isAutoRebetActive } = useBettingStore(
         useShallow((state) => ({
             selectedChip: state.selectedChip,
