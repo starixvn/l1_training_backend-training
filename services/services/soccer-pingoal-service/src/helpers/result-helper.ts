@@ -88,7 +88,73 @@ function extractGameParams(randomNumbers: number[]): { playerTunnel: number, opp
 }
 
 /**
- * 主要遊戲結果生成函數
+ * 新的 PinGoal 遊戲結果生成函數
+ * 基於玩家和對手軌道選擇生成結果
+ */
+export const generatePinGoalResult = ({ 
+    playerTrack, 
+    opponentTrack,
+    finalHash, 
+    serverSeed 
+}: { 
+    playerTrack: number;
+    opponentTrack: number;
+    finalHash?: string; 
+    serverSeed?: string;
+}): SoccerShotResult => {
+    console.log(`[ResultHelper] 🎯 Generating PinGoal result for Player: Track ${playerTrack}, Opponent: Track ${opponentTrack}`);
+
+    // 如果沒有提供種子，使用簡單的隨機數
+    const randomValue = finalHash && serverSeed ? 
+        generateRandomValue(finalHash, serverSeed) : 
+        Math.random();
+
+    // PinGoal 遊戲邏輯：軌道號碼越高，優勢越大
+    const playerAdvantage = playerTrack / 6; // 0.17 to 1.0
+    const opponentAdvantage = opponentTrack / 6; // 0.17 to 1.0
+    
+    // 加入隨機因素 (30% 影響)
+    const playerScore = playerAdvantage + (randomValue * 0.3);
+    const opponentScore = opponentAdvantage + ((1 - randomValue) * 0.3);
+    
+    // 判定結果
+    let playerWin: boolean | null;
+    if (Math.abs(playerScore - opponentScore) < 0.1) {
+        playerWin = null; // Draw - 分數太接近
+    } else {
+        playerWin = playerScore > opponentScore;
+    }
+    
+    // 生成對應的影片URL
+    const videoUrl = generateVideoUrl(playerTrack, 1, playerWin !== false); // 簡化為單一對手
+
+    console.log(`[ResultHelper] 🏆 Result: Player ${playerScore.toFixed(2)} vs Opponent ${opponentScore.toFixed(2)} = ${playerWin === null ? 'Draw' : playerWin ? 'Win' : 'Lose'}`);
+
+    // 返回標準格式
+    return {
+        isGoal: playerWin !== false,  // Draw 或 Win 都算正面結果
+        horizontalZone: playerTrack <= 2 ? 'left' : playerTrack <= 4 ? 'center' : 'right',
+        verticalZone: opponentTrack <= 3 ? 'bottom' : 'top',
+        ballX: playerTrack / 6,
+        ballY: opponentTrack / 6,
+        keeperX: 0.5,
+        keeperY: 0.5,
+        shotPower: playerScore,
+        shotAccuracy: randomValue,
+        // PinGoal 特定字段
+        playerTunnel: playerTrack,
+        opponentCount: 1, // 簡化為單一對手
+        videoUrl: videoUrl,
+        randomValue: randomValue,
+        // 新增字段來傳遞詳細結果
+        playerScore: Math.round(playerScore * 100) / 100,
+        opponentScore: Math.round(opponentScore * 100) / 100,
+        playerWin: playerWin
+    };
+};
+
+/**
+ * 原始的遊戲結果生成函數（保持向後兼容）
  * 簡化版：僅基於機率判定輸贏，返回對應影片URL
  */
 export const generateResult = ({ 

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useGameContext } from "../../../_shared/react-contexts";
+import { messageEventType } from "../../../components/game-base/handlers";
 
 type SelectionMode = 'player' | 'opponent';
 type GameState = 'selection' | 'playing' | 'result';
 type GameResult = 'Red' | 'Blue' | 'Draw';
 
 export const SoccerPinGoalSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespace: string }) => {
+    const { gameMessageHandler } = useGameContext();
     const [playerTrack, setPlayerTrack] = useState<number | null>(null);
     const [opponentTrack, setOpponentTrack] = useState<number | null>(null);
     const [selectionMode, setSelectionMode] = useState<SelectionMode>('player');
@@ -22,18 +25,21 @@ export const SoccerPinGoalSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespac
     };
 
     const handleStartGame = () => {
-        if (!playerTrack || !opponentTrack) return; // 必須選擇兩個軌道才能開始
+        if (!playerTrack || !opponentTrack || !gameMessageHandler) return; // 必須選擇兩個軌道才能開始
         
         setGameState('playing');
         
-        // 模擬遊戲進行（未來這裡會播放影片）
-        setTimeout(() => {
-            // 隨機產生遊戲結果
-            const results: GameResult[] = ['Red', 'Blue', 'Draw'];
-            const randomResult = results[Math.floor(Math.random() * results.length)];
-            setGameResult(randomResult);
-            setGameState('result');
-        }, 2000); // 2秒後顯示結果
+        // 發送開始遊戲請求到後端 Game Server
+        gameMessageHandler.broadcastGameEvent({
+            [messageEventType.SEND_SOCKET_MESSAGE]: {
+                event: "startPinGoalGame",
+                data: {
+                    playerTrack,
+                    opponentTrack,
+                    gameType: "pingoal"
+                }
+            }
+        });
     };
 
     const handleRestart = () => {
@@ -45,6 +51,36 @@ export const SoccerPinGoalSubBetOptions = ({ tolgeeNamespace }: { tolgeeNamespac
     };
 
     const isReadyToStart = playerTrack !== null && opponentTrack !== null;
+
+    // 監聽遊戲結果事件
+    useEffect(() => {
+        if (!gameMessageHandler) return;
+
+        const handlerId = gameMessageHandler.register(messageEventType.FINISH, ({ finish }) => {
+            if (finish && gameState === 'playing') {
+                const { result, settlementResult } = finish;
+                
+                // 根據後端結果決定勝負
+                let gameResult: GameResult;
+                if (result?.playerWin === true) {
+                    gameResult = 'Red';  // 玩家勝利
+                } else if (result?.playerWin === false) {
+                    gameResult = 'Blue'; // 對手勝利
+                } else {
+                    gameResult = 'Draw'; // 平局
+                }
+                
+                setGameResult(gameResult);
+                setGameState('result');
+                
+                console.log('[PinGoal] 收到遊戲結果:', { result, settlementResult, gameResult });
+            }
+        });
+
+        return () => {
+            gameMessageHandler.removeHandler(handlerId);
+        };
+    }, [gameMessageHandler, gameState]);
 
     return (
         <div className="bg-gray-800 rounded-2xl p-4 mt-2 w-full max-w-[558px]">
