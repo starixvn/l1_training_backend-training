@@ -28,9 +28,9 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
         this.playerResultBoardManager = playerResultBoardManager;
     }
 
-    consume(player: any, payload: any) {
-        console.log(`[SeDie UserSigninConsumer] 🚀 consume() called with player:`, player?.id || 'unknown', 'payload keys:', Object.keys(payload || {}));
-        super.consume(player, payload);
+    async consume(socketClient: Socket, payload: any): Promise<void> {
+        console.log(`[SeDie UserSigninConsumer] 🚀 consume() called with socketClient:`, socketClient?.id || 'unknown', 'payload keys:', Object.keys(payload || {}));
+        await super.consume(socketClient, payload);
         console.log(`[SeDie UserSigninConsumer] ✅ super.consume() completed`);
     }
 
@@ -44,9 +44,9 @@ export default class UserSigninConsumer extends Table.EventConsumers.TableUserSi
         console.log(`[SeDie UserSigninConsumer] 📊 Board data published to user: ${userInfo.id}`);
     }
 
-    handleSignInFailed(socketClient: Socket, reason: string) {
-        console.log(`[SeDie UserSigninConsumer] ❌ handleSignInFailed called for client: ${socketClient.id}, reason: ${reason}`);
-        super.handleSignInFailed(socketClient, reason);
-        console.log(`[SeDie UserSigninConsumer] ❌ super.handleSignInFailed completed`);
+    handleUnauthorizedSignIn(socketClient: Socket) {
+        console.log(`[SeDie UserSigninConsumer] ❌ handleUnauthorizedSignIn called for client: ${socketClient.id}`);
+        super.handleUnauthorizedSignIn(socketClient);
+        console.log(`[SeDie UserSigninConsumer] ❌ super.handleUnauthorizedSignIn completed`);
     }
 }

@@ -10,7 +10,11 @@ jest.mock("sc-game-base", () => ({
             TableUserSignInConsumer: class {
                 constructor(...args: any[]) {
                 }
+                async consume(socketClient: Socket, payload: any): Promise<void> {
+                    return Promise.resolve();
+                }
                 handleSignInSuccess(socketClient: Socket, userInfo: any, userSession: any) {}
+                handleUnauthorizedSignIn(socketClient: Socket) {}
             },
         },
     },
@@ -61,5 +65,22 @@ describe("UserSigninConsumer", () => {
 
         expect(mockManager.getBoardData).toHaveBeenCalled();
         expect(mockPublisher.publishBoardDataToUser).toHaveBeenCalledWith("user123", { playerResultBoard: { board: "data" } });
+    });
+
+    it("should call super.consume with correct parameters", async () => {
+        const mockPayload = { test: "data" };
+        const superConsumeSpy = jest.spyOn(Object.getPrototypeOf(Object.getPrototypeOf(consumer)), 'consume');
+
+        await consumer.consume(mockSocket, mockPayload);
+
+        expect(superConsumeSpy).toHaveBeenCalledWith(mockSocket, mockPayload);
+    });
+
+    it("should call super.handleUnauthorizedSignIn", () => {
+        const superHandleUnauthorizedSpy = jest.spyOn(Object.getPrototypeOf(Object.getPrototypeOf(consumer)), 'handleUnauthorizedSignIn');
+
+        consumer.handleUnauthorizedSignIn(mockSocket);
+
+        expect(superHandleUnauthorizedSpy).toHaveBeenCalledWith(mockSocket);
     });
 });
