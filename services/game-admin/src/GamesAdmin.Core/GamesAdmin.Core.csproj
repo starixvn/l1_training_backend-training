@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Configurations>Dev;SIT;UAT;PRO;LOCAL</Configurations>
     <CodeAnalysisRuleSet>..\..\.sonarlint\l1-game-admincsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>

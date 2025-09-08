@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Configurations>Dev;SIT;UAT;PRO;LOCAL</Configurations>
     <UserSecretsId>8bad5a68-0bbe-4e8a-b774-d9c83df657bb</UserSecretsId>
     <CodeAnalysisRuleSet>..\..\.sonarlint\l1-game-admincsharp.ruleset</CodeAnalysisRuleSet>
