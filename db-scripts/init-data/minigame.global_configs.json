@@ -1,0 +1,5246 @@
+[{
+  "_id": {
+    "$oid": "603778b9470dbe0001c6f653"
+  },
+  "time": {
+    "$date": "2023-01-16T03:46:31.029Z"
+  },
+  "__v": 0,
+  "type": "game_site_exclusions",
+  "configs": {
+    "1": [],
+    "2": [
+      "b88"
+    ],
+    "3": [],
+    "4": [
+      "b88"
+    ],
+    "5": [],
+    "6": [
+      "b88"
+    ],
+    "7": [],
+    "8": [
+      "b88"
+    ],
+    "9": [],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "17": [],
+    "18": [],
+    "19": [],
+    "21": [
+      "b88"
+    ],
+    "22": [],
+    "23": [],
+    "24": [],
+    "25": [],
+    "26": [],
+    "27": [],
+    "28": [],
+    "29": [],
+    "31": [],
+    "35": [],
+    "38": [],
+    "42": [],
+    "45": [],
+    "46": [],
+    "47": [],
+    "48": [],
+    "49": [],
+    "50": [],
+    "51": [],
+    "52": [],
+    "53": [],
+    "54": [],
+    "55": [],
+    "56": [],
+    "57": [],
+    "58": [],
+    "60": [],
+    "61": [],
+    "62": []
+  }
+},
+{
+  "_id": {
+    "$oid": "60dacb451ad8f8ffe72db4fc"
+  },
+  "type": "kenosoccer_liveodds",
+  "adjRate": {
+    "homeAway": 2,
+    "overUnder": 1.5
+  },
+  "homeAway": {
+    "0": {
+      "liveFTHome": 2.01,
+      "liveFTAway": 2
+    },
+    "1": {
+      "liveFTHome": 2,
+      "liveFTAway": 2.02
+    },
+    "2": {
+      "liveFTHome": 1.95,
+      "liveFTAway": 2.07
+    },
+    "3": {
+      "liveFTHome": 1.96,
+      "liveFTAway": 2.06
+    },
+    "4": {
+      "liveFTHome": 1.96,
+      "liveFTAway": 2.06
+    },
+    "5": {
+      "liveFTHome": 1.95,
+      "liveFTAway": 2.07
+    },
+    "6": {
+      "liveFTHome": 1.91,
+      "liveFTAway": 2.12
+    },
+    "7": {
+      "liveFTHome": 1.91,
+      "liveFTAway": 2.12
+    },
+    "8": {
+      "liveFTHome": 1.88,
+      "liveFTAway": 2.15
+    },
+    "9": {
+      "liveFTHome": 1.87,
+      "liveFTAway": 2.16
+    },
+    "10": {
+      "liveFTHome": 1.86,
+      "liveFTAway": 2.18
+    },
+    "11": {
+      "liveFTHome": 1.85,
+      "liveFTAway": 2.19
+    },
+    "12": {
+      "liveFTHome": 1.84,
+      "liveFTAway": 2.21
+    },
+    "13": {
+      "liveFTHome": 1.83,
+      "liveFTAway": 2.23
+    },
+    "14": {
+      "liveFTHome": 1.8,
+      "liveFTAway": 2.27
+    },
+    "15": {
+      "liveFTHome": 1.79,
+      "liveFTAway": 2.29
+    },
+    "16": {
+      "liveFTHome": 1.8,
+      "liveFTAway": 2.26
+    },
+    "17": {
+      "liveFTHome": 1.78,
+      "liveFTAway": 2.3
+    },
+    "18": {
+      "liveFTHome": 1.77,
+      "liveFTAway": 2.32
+    },
+    "19": {
+      "liveFTHome": 1.75,
+      "liveFTAway": 2.35
+    },
+    "20": {
+      "liveFTHome": 1.74,
+      "liveFTAway": 2.37
+    },
+    "21": {
+      "liveFTHome": 1.73,
+      "liveFTAway": 2.39
+    },
+    "22": {
+      "liveFTHome": 1.72,
+      "liveFTAway": 2.41
+    },
+    "23": {
+      "liveFTHome": 1.71,
+      "liveFTAway": 2.44
+    },
+    "24": {
+      "liveFTHome": 1.69,
+      "liveFTAway": 2.47
+    },
+    "25": {
+      "liveFTHome": 1.69,
+      "liveFTAway": 2.48
+    },
+    "26": {
+      "liveFTHome": 1.67,
+      "liveFTAway": 2.52
+    },
+    "27": {
+      "liveFTHome": 1.66,
+      "liveFTAway": 2.54
+    },
+    "28": {
+      "liveFTHome": 1.65,
+      "liveFTAway": 2.57
+    },
+    "29": {
+      "liveFTHome": 1.64,
+      "liveFTAway": 2.57
+    },
+    "30": {
+      "liveFTHome": 1.63,
+      "liveFTAway": 2.61
+    },
+    "31": {
+      "liveFTHome": 1.63,
+      "liveFTAway": 2.6
+    },
+    "32": {
+      "liveFTHome": 1.61,
+      "liveFTAway": 2.67
+    },
+    "33": {
+      "liveFTHome": 1.6,
+      "liveFTAway": 2.69
+    },
+    "34": {
+      "liveFTHome": 1.59,
+      "liveFTAway": 2.71
+    },
+    "35": {
+      "liveFTHome": 1.58,
+      "liveFTAway": 2.75
+    },
+    "36": {
+      "liveFTHome": 1.57,
+      "liveFTAway": 2.77
+    },
+    "37": {
+      "liveFTHome": 1.56,
+      "liveFTAway": 2.8
+    },
+    "38": {
+      "liveFTHome": 1.56,
+      "liveFTAway": 2.81
+    },
+    "39": {
+      "liveFTHome": 1.55,
+      "liveFTAway": 2.84
+    },
+    "40": {
+      "liveFTHome": 1.55,
+      "liveFTAway": 2.86
+    },
+    "41": {
+      "liveFTHome": 1.54,
+      "liveFTAway": 2.9
+    },
+    "42": {
+      "liveFTHome": 1.53,
+      "liveFTAway": 2.9
+    },
+    "43": {
+      "liveFTHome": 1.51,
+      "liveFTAway": 2.97
+    },
+    "44": {
+      "liveFTHome": 1.51,
+      "liveFTAway": 2.98
+    },
+    "45": {
+      "liveFTHome": 1.51,
+      "liveFTAway": 3.01
+    },
+    "46": {
+      "liveFTHome": 1.49,
+      "liveFTAway": 3.06
+    },
+    "47": {
+      "liveFTHome": 1.48,
+      "liveFTAway": 3.11
+    },
+    "48": {
+      "liveFTHome": 1.49,
+      "liveFTAway": 3.09
+    },
+    "49": {
+      "liveFTHome": 1.47,
+      "liveFTAway": 3.14
+    },
+    "50": {
+      "liveFTHome": 1.45,
+      "liveFTAway": 3.25
+    },
+    "51": {
+      "liveFTHome": 1.46,
+      "liveFTAway": 3.2
+    },
+    "52": {
+      "liveFTHome": 1.45,
+      "liveFTAway": 3.26
+    },
+    "53": {
+      "liveFTHome": 1.44,
+      "liveFTAway": 3.29
+    },
+    "54": {
+      "liveFTHome": 1.44,
+      "liveFTAway": 3.29
+    },
+    "55": {
+      "liveFTHome": 1.44,
+      "liveFTAway": 3.32
+    },
+    "56": {
+      "liveFTHome": 1.41,
+      "liveFTAway": 3.46
+    },
+    "57": {
+      "liveFTHome": 1.41,
+      "liveFTAway": 3.46
+    },
+    "58": {
+      "liveFTHome": 1.4,
+      "liveFTAway": 3.52
+    },
+    "59": {
+      "liveFTHome": 1.4,
+      "liveFTAway": 3.52
+    },
+    "60": {
+      "liveFTHome": 1.39,
+      "liveFTAway": 3.6
+    },
+    "61": {
+      "liveFTHome": 1.38,
+      "liveFTAway": 3.65
+    },
+    "62": {
+      "liveFTHome": 1.39,
+      "liveFTAway": 3.61
+    },
+    "63": {
+      "liveFTHome": 1.37,
+      "liveFTAway": 3.75
+    },
+    "64": {
+      "liveFTHome": 1.38,
+      "liveFTAway": 3.67
+    },
+    "65": {
+      "liveFTHome": 1.36,
+      "liveFTAway": 3.83
+    },
+    "66": {
+      "liveFTHome": 1.35,
+      "liveFTAway": 3.89
+    },
+    "67": {
+      "liveFTHome": 1.35,
+      "liveFTAway": 3.9
+    },
+    "68": {
+      "liveFTHome": 1.34,
+      "liveFTAway": 3.98
+    },
+    "69": {
+      "liveFTHome": 1.35,
+      "liveFTAway": 3.94
+    },
+    "70": {
+      "liveFTHome": 1.34,
+      "liveFTAway": 4
+    },
+    "71": {
+      "liveFTHome": 1.34,
+      "liveFTAway": 4.02
+    },
+    "72": {
+      "liveFTHome": 1.32,
+      "liveFTAway": 4.13
+    },
+    "73": {
+      "liveFTHome": 1.32,
+      "liveFTAway": 4.17
+    },
+    "74": {
+      "liveFTHome": 1.32,
+      "liveFTAway": 4.22
+    },
+    "75": {
+      "liveFTHome": 1.32,
+      "liveFTAway": 4.23
+    },
+    "76": {
+      "liveFTHome": 1.3,
+      "liveFTAway": 4.39
+    },
+    "77": {
+      "liveFTHome": 1.3,
+      "liveFTAway": 4.43
+    },
+    "78": {
+      "liveFTHome": 1.29,
+      "liveFTAway": 4.47
+    },
+    "79": {
+      "liveFTHome": 1.29,
+      "liveFTAway": 4.52
+    },
+    "80": {
+      "liveFTHome": 1.29,
+      "liveFTAway": 4.53
+    },
+    "81": {
+      "liveFTHome": 1.29,
+      "liveFTAway": 4.56
+    },
+    "82": {
+      "liveFTHome": 1.28,
+      "liveFTAway": 4.64
+    },
+    "83": {
+      "liveFTHome": 1.27,
+      "liveFTAway": 4.76
+    },
+    "84": {
+      "liveFTHome": 1.27,
+      "liveFTAway": 4.82
+    },
+    "85": {
+      "liveFTHome": 1.27,
+      "liveFTAway": 4.75
+    },
+    "86": {
+      "liveFTHome": 1.26,
+      "liveFTAway": 4.96
+    },
+    "87": {
+      "liveFTHome": 1.25,
+      "liveFTAway": 4.99
+    },
+    "88": {
+      "liveFTHome": 1.25,
+      "liveFTAway": 5.06
+    },
+    "89": {
+      "liveFTHome": 1.25,
+      "liveFTAway": 5.12
+    },
+    "90": {
+      "liveFTHome": 1.24,
+      "liveFTAway": 5.23
+    },
+    "91": {
+      "liveFTHome": 1.24,
+      "liveFTAway": 5.23
+    },
+    "92": {
+      "liveFTHome": 1.23,
+      "liveFTAway": 5.35
+    },
+    "93": {
+      "liveFTHome": 1.23,
+      "liveFTAway": 5.37
+    },
+    "94": {
+      "liveFTHome": 1.22,
+      "liveFTAway": 5.64
+    },
+    "95": {
+      "liveFTHome": 1.22,
+      "liveFTAway": 5.63
+    },
+    "96": {
+      "liveFTHome": 1.23,
+      "liveFTAway": 5.5
+    },
+    "97": {
+      "liveFTHome": 1.21,
+      "liveFTAway": 5.73
+    },
+    "98": {
+      "liveFTHome": 1.21,
+      "liveFTAway": 5.89
+    },
+    "99": {
+      "liveFTHome": 1.21,
+      "liveFTAway": 5.87
+    },
+    "100": {
+      "liveFTHome": 1.2,
+      "liveFTAway": 6.13
+    },
+    "101": {
+      "liveFTHome": 1.2,
+      "liveFTAway": 6.12
+    },
+    "102": {
+      "liveFTHome": 1.2,
+      "liveFTAway": 6.2
+    },
+    "103": {
+      "liveFTHome": 1.18,
+      "liveFTAway": 6.52
+    },
+    "104": {
+      "liveFTHome": 1.19,
+      "liveFTAway": 6.25
+    },
+    "105": {
+      "liveFTHome": 1.19,
+      "liveFTAway": 6.44
+    },
+    "106": {
+      "liveFTHome": 1.18,
+      "liveFTAway": 6.61
+    },
+    "107": {
+      "liveFTHome": 1.18,
+      "liveFTAway": 6.81
+    },
+    "108": {
+      "liveFTHome": 1.18,
+      "liveFTAway": 6.83
+    },
+    "109": {
+      "liveFTHome": 1.17,
+      "liveFTAway": 6.84
+    },
+    "110": {
+      "liveFTHome": 1.17,
+      "liveFTAway": 7.04
+    },
+    "111": {
+      "liveFTHome": 1.16,
+      "liveFTAway": 7.35
+    },
+    "112": {
+      "liveFTHome": 1.17,
+      "liveFTAway": 7.17
+    },
+    "113": {
+      "liveFTHome": 1.15,
+      "liveFTAway": 7.65
+    },
+    "114": {
+      "liveFTHome": 1.16,
+      "liveFTAway": 7.35
+    },
+    "115": {
+      "liveFTHome": 1.15,
+      "liveFTAway": 7.6
+    },
+    "116": {
+      "liveFTHome": 1.15,
+      "liveFTAway": 7.66
+    },
+    "117": {
+      "liveFTHome": 1.15,
+      "liveFTAway": 7.88
+    },
+    "118": {
+      "liveFTHome": 1.15,
+      "liveFTAway": 7.79
+    },
+    "119": {
+      "liveFTHome": 1.14,
+      "liveFTAway": 8.07
+    },
+    "120": {
+      "liveFTHome": 1.14,
+      "liveFTAway": 8.33
+    },
+    "121": {
+      "liveFTHome": 1.14,
+      "liveFTAway": 8.37
+    },
+    "122": {
+      "liveFTHome": 1.14,
+      "liveFTAway": 8.5
+    },
+    "123": {
+      "liveFTHome": 1.13,
+      "liveFTAway": 8.74
+    },
+    "124": {
+      "liveFTHome": 1.13,
+      "liveFTAway": 8.68
+    },
+    "125": {
+      "liveFTHome": 1.13,
+      "liveFTAway": 8.82
+    },
+    "126": {
+      "liveFTHome": 1.13,
+      "liveFTAway": 8.94
+    },
+    "127": {
+      "liveFTHome": 1.12,
+      "liveFTAway": 9.15
+    },
+    "128": {
+      "liveFTHome": 1.13,
+      "liveFTAway": 9.17
+    },
+    "129": {
+      "liveFTHome": 1.12,
+      "liveFTAway": 9.59
+    },
+    "130": {
+      "liveFTHome": 1.12,
+      "liveFTAway": 9.83
+    },
+    "131": {
+      "liveFTHome": 1.11,
+      "liveFTAway": 10.24
+    },
+    "132": {
+      "liveFTHome": 1.11,
+      "liveFTAway": 10.09
+    },
+    "133": {
+      "liveFTHome": 1.11,
+      "liveFTAway": 10.14
+    },
+    "134": {
+      "liveFTHome": 1.11,
+      "liveFTAway": 10.47
+    },
+    "135": {
+      "liveFTHome": 1.11,
+      "liveFTAway": 10.32
+    },
+    "136": {
+      "liveFTHome": 1.1,
+      "liveFTAway": 10.81
+    },
+    "137": {
+      "liveFTHome": 1.1,
+      "liveFTAway": 10.94
+    },
+    "138": {
+      "liveFTHome": 1.1,
+      "liveFTAway": 11.57
+    },
+    "139": {
+      "liveFTHome": 1.1,
+      "liveFTAway": 11.23
+    },
+    "140": {
+      "liveFTHome": 1.1,
+      "liveFTAway": 11.59
+    },
+    "141": {
+      "liveFTHome": 1.09,
+      "liveFTAway": 12.14
+    },
+    "142": {
+      "liveFTHome": 1.09,
+      "liveFTAway": 11.89
+    },
+    "143": {
+      "liveFTHome": 1.08,
+      "liveFTAway": 13.02
+    },
+    "144": {
+      "liveFTHome": 1.09,
+      "liveFTAway": 12.68
+    },
+    "145": {
+      "liveFTHome": 1.09,
+      "liveFTAway": 12.39
+    },
+    "146": {
+      "liveFTHome": 1.08,
+      "liveFTAway": 13.28
+    },
+    "147": {
+      "liveFTHome": 1.09,
+      "liveFTAway": 13.11
+    },
+    "148": {
+      "liveFTHome": 1.08,
+      "liveFTAway": 13.37
+    },
+    "149": {
+      "liveFTHome": 1.08,
+      "liveFTAway": 13.58
+    },
+    "150": {
+      "liveFTHome": 1.08,
+      "liveFTAway": 14.33
+    },
+    "-150": {
+      "liveFTHome": 14.23,
+      "liveFTAway": 1.08
+    },
+    "-149": {
+      "liveFTHome": 13.78,
+      "liveFTAway": 1.08
+    },
+    "-148": {
+      "liveFTHome": 13.6,
+      "liveFTAway": 1.08
+    },
+    "-147": {
+      "liveFTHome": 13.22,
+      "liveFTAway": 1.08
+    },
+    "-146": {
+      "liveFTHome": 13.04,
+      "liveFTAway": 1.08
+    },
+    "-145": {
+      "liveFTHome": 12.43,
+      "liveFTAway": 1.09
+    },
+    "-144": {
+      "liveFTHome": 12.52,
+      "liveFTAway": 1.09
+    },
+    "-143": {
+      "liveFTHome": 12.13,
+      "liveFTAway": 1.09
+    },
+    "-142": {
+      "liveFTHome": 12.19,
+      "liveFTAway": 1.09
+    },
+    "-141": {
+      "liveFTHome": 11.41,
+      "liveFTAway": 1.1
+    },
+    "-140": {
+      "liveFTHome": 11.09,
+      "liveFTAway": 1.1
+    },
+    "-139": {
+      "liveFTHome": 11.34,
+      "liveFTAway": 1.1
+    },
+    "-138": {
+      "liveFTHome": 11.28,
+      "liveFTAway": 1.1
+    },
+    "-137": {
+      "liveFTHome": 11.04,
+      "liveFTAway": 1.1
+    },
+    "-136": {
+      "liveFTHome": 10.47,
+      "liveFTAway": 1.11
+    },
+    "-135": {
+      "liveFTHome": 10.53,
+      "liveFTAway": 1.11
+    },
+    "-134": {
+      "liveFTHome": 10.2,
+      "liveFTAway": 1.11
+    },
+    "-133": {
+      "liveFTHome": 10.51,
+      "liveFTAway": 1.11
+    },
+    "-132": {
+      "liveFTHome": 10.34,
+      "liveFTAway": 1.11
+    },
+    "-131": {
+      "liveFTHome": 10.04,
+      "liveFTAway": 1.11
+    },
+    "-130": {
+      "liveFTHome": 9.91,
+      "liveFTAway": 1.11
+    },
+    "-129": {
+      "liveFTHome": 9.73,
+      "liveFTAway": 1.12
+    },
+    "-128": {
+      "liveFTHome": 9.23,
+      "liveFTAway": 1.12
+    },
+    "-127": {
+      "liveFTHome": 9.34,
+      "liveFTAway": 1.12
+    },
+    "-126": {
+      "liveFTHome": 9.05,
+      "liveFTAway": 1.13
+    },
+    "-125": {
+      "liveFTHome": 8.92,
+      "liveFTAway": 1.13
+    },
+    "-124": {
+      "liveFTHome": 8.66,
+      "liveFTAway": 1.13
+    },
+    "-123": {
+      "liveFTHome": 8.85,
+      "liveFTAway": 1.13
+    },
+    "-122": {
+      "liveFTHome": 8.48,
+      "liveFTAway": 1.14
+    },
+    "-121": {
+      "liveFTHome": 8.42,
+      "liveFTAway": 1.14
+    },
+    "-120": {
+      "liveFTHome": 8.45,
+      "liveFTAway": 1.14
+    },
+    "-119": {
+      "liveFTHome": 7.98,
+      "liveFTAway": 1.15
+    },
+    "-118": {
+      "liveFTHome": 7.87,
+      "liveFTAway": 1.15
+    },
+    "-117": {
+      "liveFTHome": 7.74,
+      "liveFTAway": 1.15
+    },
+    "-116": {
+      "liveFTHome": 7.77,
+      "liveFTAway": 1.15
+    },
+    "-115": {
+      "liveFTHome": 7.6,
+      "liveFTAway": 1.15
+    },
+    "-114": {
+      "liveFTHome": 7.43,
+      "liveFTAway": 1.16
+    },
+    "-113": {
+      "liveFTHome": 7.43,
+      "liveFTAway": 1.16
+    },
+    "-112": {
+      "liveFTHome": 7.26,
+      "liveFTAway": 1.16
+    },
+    "-111": {
+      "liveFTHome": 7.21,
+      "liveFTAway": 1.16
+    },
+    "-110": {
+      "liveFTHome": 7.09,
+      "liveFTAway": 1.17
+    },
+    "-109": {
+      "liveFTHome": 6.85,
+      "liveFTAway": 1.17
+    },
+    "-108": {
+      "liveFTHome": 6.67,
+      "liveFTAway": 1.18
+    },
+    "-107": {
+      "liveFTHome": 6.65,
+      "liveFTAway": 1.18
+    },
+    "-106": {
+      "liveFTHome": 6.73,
+      "liveFTAway": 1.18
+    },
+    "-105": {
+      "liveFTHome": 6.46,
+      "liveFTAway": 1.19
+    },
+    "-104": {
+      "liveFTHome": 6.33,
+      "liveFTAway": 1.19
+    },
+    "-103": {
+      "liveFTHome": 6.4,
+      "liveFTAway": 1.19
+    },
+    "-102": {
+      "liveFTHome": 6.13,
+      "liveFTAway": 1.2
+    },
+    "-101": {
+      "liveFTHome": 6.07,
+      "liveFTAway": 1.2
+    },
+    "-100": {
+      "liveFTHome": 6.1,
+      "liveFTAway": 1.2
+    },
+    "-99": {
+      "liveFTHome": 6.01,
+      "liveFTAway": 1.2
+    },
+    "-98": {
+      "liveFTHome": 5.67,
+      "liveFTAway": 1.22
+    },
+    "-97": {
+      "liveFTHome": 5.88,
+      "liveFTAway": 1.21
+    },
+    "-96": {
+      "liveFTHome": 5.64,
+      "liveFTAway": 1.22
+    },
+    "-95": {
+      "liveFTHome": 5.75,
+      "liveFTAway": 1.21
+    },
+    "-94": {
+      "liveFTHome": 5.53,
+      "liveFTAway": 1.23
+    },
+    "-93": {
+      "liveFTHome": 5.55,
+      "liveFTAway": 1.22
+    },
+    "-92": {
+      "liveFTHome": 5.46,
+      "liveFTAway": 1.23
+    },
+    "-91": {
+      "liveFTHome": 5.26,
+      "liveFTAway": 1.24
+    },
+    "-90": {
+      "liveFTHome": 5.19,
+      "liveFTAway": 1.24
+    },
+    "-89": {
+      "liveFTHome": 5.27,
+      "liveFTAway": 1.24
+    },
+    "-88": {
+      "liveFTHome": 5.02,
+      "liveFTAway": 1.25
+    },
+    "-87": {
+      "liveFTHome": 5,
+      "liveFTAway": 1.25
+    },
+    "-86": {
+      "liveFTHome": 4.93,
+      "liveFTAway": 1.26
+    },
+    "-85": {
+      "liveFTHome": 4.9,
+      "liveFTAway": 1.26
+    },
+    "-84": {
+      "liveFTHome": 4.88,
+      "liveFTAway": 1.26
+    },
+    "-83": {
+      "liveFTHome": 4.76,
+      "liveFTAway": 1.27
+    },
+    "-82": {
+      "liveFTHome": 4.75,
+      "liveFTAway": 1.27
+    },
+    "-81": {
+      "liveFTHome": 4.73,
+      "liveFTAway": 1.27
+    },
+    "-80": {
+      "liveFTHome": 4.52,
+      "liveFTAway": 1.29
+    },
+    "-79": {
+      "liveFTHome": 4.51,
+      "liveFTAway": 1.29
+    },
+    "-78": {
+      "liveFTHome": 4.47,
+      "liveFTAway": 1.29
+    },
+    "-77": {
+      "liveFTHome": 4.47,
+      "liveFTAway": 1.29
+    },
+    "-76": {
+      "liveFTHome": 4.33,
+      "liveFTAway": 1.31
+    },
+    "-75": {
+      "liveFTHome": 4.35,
+      "liveFTAway": 1.3
+    },
+    "-74": {
+      "liveFTHome": 4.2,
+      "liveFTAway": 1.32
+    },
+    "-73": {
+      "liveFTHome": 4.16,
+      "liveFTAway": 1.32
+    },
+    "-72": {
+      "liveFTHome": 4.09,
+      "liveFTAway": 1.33
+    },
+    "-71": {
+      "liveFTHome": 4.05,
+      "liveFTAway": 1.33
+    },
+    "-70": {
+      "liveFTHome": 4.04,
+      "liveFTAway": 1.33
+    },
+    "-69": {
+      "liveFTHome": 4.06,
+      "liveFTAway": 1.33
+    },
+    "-68": {
+      "liveFTHome": 3.97,
+      "liveFTAway": 1.34
+    },
+    "-67": {
+      "liveFTHome": 3.87,
+      "liveFTAway": 1.35
+    },
+    "-66": {
+      "liveFTHome": 3.88,
+      "liveFTAway": 1.35
+    },
+    "-65": {
+      "liveFTHome": 3.75,
+      "liveFTAway": 1.37
+    },
+    "-64": {
+      "liveFTHome": 3.8,
+      "liveFTAway": 1.36
+    },
+    "-63": {
+      "liveFTHome": 3.71,
+      "liveFTAway": 1.37
+    },
+    "-62": {
+      "liveFTHome": 3.68,
+      "liveFTAway": 1.38
+    },
+    "-61": {
+      "liveFTHome": 3.57,
+      "liveFTAway": 1.4
+    },
+    "-60": {
+      "liveFTHome": 3.58,
+      "liveFTAway": 1.39
+    },
+    "-59": {
+      "liveFTHome": 3.51,
+      "liveFTAway": 1.4
+    },
+    "-58": {
+      "liveFTHome": 3.46,
+      "liveFTAway": 1.41
+    },
+    "-57": {
+      "liveFTHome": 3.44,
+      "liveFTAway": 1.42
+    },
+    "-56": {
+      "liveFTHome": 3.43,
+      "liveFTAway": 1.42
+    },
+    "-55": {
+      "liveFTHome": 3.4,
+      "liveFTAway": 1.42
+    },
+    "-54": {
+      "liveFTHome": 3.33,
+      "liveFTAway": 1.44
+    },
+    "-53": {
+      "liveFTHome": 3.33,
+      "liveFTAway": 1.44
+    },
+    "-52": {
+      "liveFTHome": 3.24,
+      "liveFTAway": 1.45
+    },
+    "-51": {
+      "liveFTHome": 3.25,
+      "liveFTAway": 1.45
+    },
+    "-50": {
+      "liveFTHome": 3.24,
+      "liveFTAway": 1.45
+    },
+    "-49": {
+      "liveFTHome": 3.15,
+      "liveFTAway": 1.47
+    },
+    "-48": {
+      "liveFTHome": 3.13,
+      "liveFTAway": 1.48
+    },
+    "-47": {
+      "liveFTHome": 3.08,
+      "liveFTAway": 1.49
+    },
+    "-46": {
+      "liveFTHome": 3.05,
+      "liveFTAway": 1.49
+    },
+    "-45": {
+      "liveFTHome": 3.03,
+      "liveFTAway": 1.5
+    },
+    "-44": {
+      "liveFTHome": 3.01,
+      "liveFTAway": 1.51
+    },
+    "-43": {
+      "liveFTHome": 2.98,
+      "liveFTAway": 1.51
+    },
+    "-42": {
+      "liveFTHome": 2.91,
+      "liveFTAway": 1.53
+    },
+    "-41": {
+      "liveFTHome": 2.91,
+      "liveFTAway": 1.53
+    },
+    "-40": {
+      "liveFTHome": 2.86,
+      "liveFTAway": 1.54
+    },
+    "-39": {
+      "liveFTHome": 2.83,
+      "liveFTAway": 1.56
+    },
+    "-38": {
+      "liveFTHome": 2.84,
+      "liveFTAway": 1.55
+    },
+    "-37": {
+      "liveFTHome": 2.8,
+      "liveFTAway": 1.56
+    },
+    "-36": {
+      "liveFTHome": 2.74,
+      "liveFTAway": 1.59
+    },
+    "-35": {
+      "liveFTHome": 2.76,
+      "liveFTAway": 1.58
+    },
+    "-34": {
+      "liveFTHome": 2.71,
+      "liveFTAway": 1.59
+    },
+    "-33": {
+      "liveFTHome": 2.66,
+      "liveFTAway": 1.61
+    },
+    "-32": {
+      "liveFTHome": 2.65,
+      "liveFTAway": 1.61
+    },
+    "-31": {
+      "liveFTHome": 2.62,
+      "liveFTAway": 1.63
+    },
+    "-30": {
+      "liveFTHome": 2.62,
+      "liveFTAway": 1.63
+    },
+    "-29": {
+      "liveFTHome": 2.58,
+      "liveFTAway": 1.64
+    },
+    "-28": {
+      "liveFTHome": 2.56,
+      "liveFTAway": 1.65
+    },
+    "-27": {
+      "liveFTHome": 2.54,
+      "liveFTAway": 1.66
+    },
+    "-26": {
+      "liveFTHome": 2.49,
+      "liveFTAway": 1.68
+    },
+    "-25": {
+      "liveFTHome": 2.47,
+      "liveFTAway": 1.69
+    },
+    "-24": {
+      "liveFTHome": 2.46,
+      "liveFTAway": 1.7
+    },
+    "-23": {
+      "liveFTHome": 2.44,
+      "liveFTAway": 1.71
+    },
+    "-22": {
+      "liveFTHome": 2.4,
+      "liveFTAway": 1.72
+    },
+    "-21": {
+      "liveFTHome": 2.38,
+      "liveFTAway": 1.73
+    },
+    "-20": {
+      "liveFTHome": 2.39,
+      "liveFTAway": 1.73
+    },
+    "-19": {
+      "liveFTHome": 2.35,
+      "liveFTAway": 1.75
+    },
+    "-18": {
+      "liveFTHome": 2.34,
+      "liveFTAway": 1.76
+    },
+    "-17": {
+      "liveFTHome": 2.3,
+      "liveFTAway": 1.78
+    },
+    "-16": {
+      "liveFTHome": 2.28,
+      "liveFTAway": 1.79
+    },
+    "-15": {
+      "liveFTHome": 2.26,
+      "liveFTAway": 1.8
+    },
+    "-14": {
+      "liveFTHome": 2.23,
+      "liveFTAway": 1.83
+    },
+    "-13": {
+      "liveFTHome": 2.22,
+      "liveFTAway": 1.83
+    },
+    "-12": {
+      "liveFTHome": 2.23,
+      "liveFTAway": 1.83
+    },
+    "-11": {
+      "liveFTHome": 2.21,
+      "liveFTAway": 1.84
+    },
+    "-10": {
+      "liveFTHome": 2.16,
+      "liveFTAway": 1.88
+    },
+    "-9": {
+      "liveFTHome": 2.15,
+      "liveFTAway": 1.88
+    },
+    "-8": {
+      "liveFTHome": 2.16,
+      "liveFTAway": 1.88
+    },
+    "-7": {
+      "liveFTHome": 2.12,
+      "liveFTAway": 1.91
+    },
+    "-6": {
+      "liveFTHome": 2.12,
+      "liveFTAway": 1.91
+    },
+    "-5": {
+      "liveFTHome": 2.09,
+      "liveFTAway": 1.93
+    },
+    "-4": {
+      "liveFTHome": 2.06,
+      "liveFTAway": 1.96
+    },
+    "-3": {
+      "liveFTHome": 2.07,
+      "liveFTAway": 1.95
+    },
+    "-2": {
+      "liveFTHome": 2.05,
+      "liveFTAway": 1.97
+    },
+    "-1": {
+      "liveFTHome": 2.02,
+      "liveFTAway": 2
+    }
+  },
+  "overUnder": {
+    "661": {
+      "liveFTOver": 11.38,
+      "liveFTUnder": 1.1
+    },
+    "662": {
+      "liveFTOver": 11.62,
+      "liveFTUnder": 1.09
+    },
+    "663": {
+      "liveFTOver": 11.25,
+      "liveFTUnder": 1.1
+    },
+    "664": {
+      "liveFTOver": 10.39,
+      "liveFTUnder": 1.11
+    },
+    "665": {
+      "liveFTOver": 10.86,
+      "liveFTUnder": 1.1
+    },
+    "666": {
+      "liveFTOver": 10.85,
+      "liveFTUnder": 1.1
+    },
+    "667": {
+      "liveFTOver": 10.45,
+      "liveFTUnder": 1.11
+    },
+    "668": {
+      "liveFTOver": 10.21,
+      "liveFTUnder": 1.11
+    },
+    "669": {
+      "liveFTOver": 10.08,
+      "liveFTUnder": 1.11
+    },
+    "670": {
+      "liveFTOver": 9.89,
+      "liveFTUnder": 1.11
+    },
+    "671": {
+      "liveFTOver": 9.76,
+      "liveFTUnder": 1.11
+    },
+    "672": {
+      "liveFTOver": 9.83,
+      "liveFTUnder": 1.11
+    },
+    "673": {
+      "liveFTOver": 9.71,
+      "liveFTUnder": 1.11
+    },
+    "674": {
+      "liveFTOver": 9.09,
+      "liveFTUnder": 1.12
+    },
+    "675": {
+      "liveFTOver": 9.4,
+      "liveFTUnder": 1.12
+    },
+    "676": {
+      "liveFTOver": 9.21,
+      "liveFTUnder": 1.12
+    },
+    "677": {
+      "liveFTOver": 9.1,
+      "liveFTUnder": 1.12
+    },
+    "678": {
+      "liveFTOver": 8.96,
+      "liveFTUnder": 1.13
+    },
+    "679": {
+      "liveFTOver": 8.57,
+      "liveFTUnder": 1.13
+    },
+    "680": {
+      "liveFTOver": 8.93,
+      "liveFTUnder": 1.13
+    },
+    "681": {
+      "liveFTOver": 8.67,
+      "liveFTUnder": 1.13
+    },
+    "682": {
+      "liveFTOver": 8.54,
+      "liveFTUnder": 1.13
+    },
+    "683": {
+      "liveFTOver": 8.24,
+      "liveFTUnder": 1.14
+    },
+    "684": {
+      "liveFTOver": 8.13,
+      "liveFTUnder": 1.14
+    },
+    "685": {
+      "liveFTOver": 7.79,
+      "liveFTUnder": 1.15
+    },
+    "686": {
+      "liveFTOver": 7.86,
+      "liveFTUnder": 1.15
+    },
+    "687": {
+      "liveFTOver": 7.64,
+      "liveFTUnder": 1.15
+    },
+    "688": {
+      "liveFTOver": 7.98,
+      "liveFTUnder": 1.14
+    },
+    "689": {
+      "liveFTOver": 7.53,
+      "liveFTUnder": 1.15
+    },
+    "690": {
+      "liveFTOver": 7.44,
+      "liveFTUnder": 1.16
+    },
+    "691": {
+      "liveFTOver": 7.3,
+      "liveFTUnder": 1.16
+    },
+    "692": {
+      "liveFTOver": 7.1,
+      "liveFTUnder": 1.16
+    },
+    "693": {
+      "liveFTOver": 7.15,
+      "liveFTUnder": 1.16
+    },
+    "694": {
+      "liveFTOver": 7.02,
+      "liveFTUnder": 1.17
+    },
+    "695": {
+      "liveFTOver": 6.94,
+      "liveFTUnder": 1.17
+    },
+    "696": {
+      "liveFTOver": 7.02,
+      "liveFTUnder": 1.17
+    },
+    "697": {
+      "liveFTOver": 6.89,
+      "liveFTUnder": 1.17
+    },
+    "698": {
+      "liveFTOver": 6.78,
+      "liveFTUnder": 1.17
+    },
+    "699": {
+      "liveFTOver": 6.61,
+      "liveFTUnder": 1.18
+    },
+    "700": {
+      "liveFTOver": 6.68,
+      "liveFTUnder": 1.18
+    },
+    "701": {
+      "liveFTOver": 6.53,
+      "liveFTUnder": 1.18
+    },
+    "702": {
+      "liveFTOver": 6.44,
+      "liveFTUnder": 1.18
+    },
+    "703": {
+      "liveFTOver": 6.36,
+      "liveFTUnder": 1.19
+    },
+    "704": {
+      "liveFTOver": 6.26,
+      "liveFTUnder": 1.19
+    },
+    "705": {
+      "liveFTOver": 6.11,
+      "liveFTUnder": 1.2
+    },
+    "706": {
+      "liveFTOver": 5.99,
+      "liveFTUnder": 1.2
+    },
+    "707": {
+      "liveFTOver": 6.01,
+      "liveFTUnder": 1.2
+    },
+    "708": {
+      "liveFTOver": 6.19,
+      "liveFTUnder": 1.19
+    },
+    "709": {
+      "liveFTOver": 5.92,
+      "liveFTUnder": 1.2
+    },
+    "710": {
+      "liveFTOver": 5.86,
+      "liveFTUnder": 1.21
+    },
+    "711": {
+      "liveFTOver": 5.68,
+      "liveFTUnder": 1.21
+    },
+    "712": {
+      "liveFTOver": 5.85,
+      "liveFTUnder": 1.21
+    },
+    "713": {
+      "liveFTOver": 5.79,
+      "liveFTUnder": 1.21
+    },
+    "714": {
+      "liveFTOver": 5.52,
+      "liveFTUnder": 1.22
+    },
+    "715": {
+      "liveFTOver": 5.66,
+      "liveFTUnder": 1.21
+    },
+    "716": {
+      "liveFTOver": 5.44,
+      "liveFTUnder": 1.22
+    },
+    "717": {
+      "liveFTOver": 5.46,
+      "liveFTUnder": 1.22
+    },
+    "718": {
+      "liveFTOver": 5.37,
+      "liveFTUnder": 1.23
+    },
+    "719": {
+      "liveFTOver": 5.2,
+      "liveFTUnder": 1.24
+    },
+    "720": {
+      "liveFTOver": 5.07,
+      "liveFTUnder": 1.25
+    },
+    "721": {
+      "liveFTOver": 5.13,
+      "liveFTUnder": 1.24
+    },
+    "722": {
+      "liveFTOver": 5.2,
+      "liveFTUnder": 1.24
+    },
+    "723": {
+      "liveFTOver": 4.99,
+      "liveFTUnder": 1.25
+    },
+    "724": {
+      "liveFTOver": 4.88,
+      "liveFTUnder": 1.26
+    },
+    "725": {
+      "liveFTOver": 5,
+      "liveFTUnder": 1.25
+    },
+    "726": {
+      "liveFTOver": 4.91,
+      "liveFTUnder": 1.26
+    },
+    "727": {
+      "liveFTOver": 4.84,
+      "liveFTUnder": 1.26
+    },
+    "728": {
+      "liveFTOver": 4.87,
+      "liveFTUnder": 1.26
+    },
+    "729": {
+      "liveFTOver": 4.66,
+      "liveFTUnder": 1.27
+    },
+    "730": {
+      "liveFTOver": 4.76,
+      "liveFTUnder": 1.27
+    },
+    "731": {
+      "liveFTOver": 4.66,
+      "liveFTUnder": 1.27
+    },
+    "732": {
+      "liveFTOver": 4.54,
+      "liveFTUnder": 1.28
+    },
+    "733": {
+      "liveFTOver": 4.55,
+      "liveFTUnder": 1.28
+    },
+    "734": {
+      "liveFTOver": 4.51,
+      "liveFTUnder": 1.28
+    },
+    "735": {
+      "liveFTOver": 4.45,
+      "liveFTUnder": 1.29
+    },
+    "736": {
+      "liveFTOver": 4.42,
+      "liveFTUnder": 1.29
+    },
+    "737": {
+      "liveFTOver": 4.35,
+      "liveFTUnder": 1.3
+    },
+    "738": {
+      "liveFTOver": 4.35,
+      "liveFTUnder": 1.3
+    },
+    "739": {
+      "liveFTOver": 4.27,
+      "liveFTUnder": 1.31
+    },
+    "740": {
+      "liveFTOver": 4.2,
+      "liveFTUnder": 1.31
+    },
+    "741": {
+      "liveFTOver": 4.25,
+      "liveFTUnder": 1.31
+    },
+    "742": {
+      "liveFTOver": 4.07,
+      "liveFTUnder": 1.33
+    },
+    "743": {
+      "liveFTOver": 4.1,
+      "liveFTUnder": 1.32
+    },
+    "744": {
+      "liveFTOver": 4.03,
+      "liveFTUnder": 1.33
+    },
+    "745": {
+      "liveFTOver": 4.02,
+      "liveFTUnder": 1.33
+    },
+    "746": {
+      "liveFTOver": 3.94,
+      "liveFTUnder": 1.34
+    },
+    "747": {
+      "liveFTOver": 3.9,
+      "liveFTUnder": 1.35
+    },
+    "748": {
+      "liveFTOver": 3.95,
+      "liveFTUnder": 1.34
+    },
+    "749": {
+      "liveFTOver": 3.87,
+      "liveFTUnder": 1.35
+    },
+    "750": {
+      "liveFTOver": 3.75,
+      "liveFTUnder": 1.36
+    },
+    "751": {
+      "liveFTOver": 3.72,
+      "liveFTUnder": 1.37
+    },
+    "752": {
+      "liveFTOver": 3.69,
+      "liveFTUnder": 1.37
+    },
+    "753": {
+      "liveFTOver": 3.72,
+      "liveFTUnder": 1.37
+    },
+    "754": {
+      "liveFTOver": 3.64,
+      "liveFTUnder": 1.38
+    },
+    "755": {
+      "liveFTOver": 3.61,
+      "liveFTUnder": 1.38
+    },
+    "756": {
+      "liveFTOver": 3.58,
+      "liveFTUnder": 1.39
+    },
+    "757": {
+      "liveFTOver": 3.54,
+      "liveFTUnder": 1.39
+    },
+    "758": {
+      "liveFTOver": 3.52,
+      "liveFTUnder": 1.4
+    },
+    "759": {
+      "liveFTOver": 3.47,
+      "liveFTUnder": 1.4
+    },
+    "760": {
+      "liveFTOver": 3.46,
+      "liveFTUnder": 1.41
+    },
+    "761": {
+      "liveFTOver": 3.43,
+      "liveFTUnder": 1.41
+    },
+    "762": {
+      "liveFTOver": 3.44,
+      "liveFTUnder": 1.41
+    },
+    "763": {
+      "liveFTOver": 3.38,
+      "liveFTUnder": 1.42
+    },
+    "764": {
+      "liveFTOver": 3.37,
+      "liveFTUnder": 1.42
+    },
+    "765": {
+      "liveFTOver": 3.26,
+      "liveFTUnder": 1.44
+    },
+    "766": {
+      "liveFTOver": 3.23,
+      "liveFTUnder": 1.45
+    },
+    "767": {
+      "liveFTOver": 3.23,
+      "liveFTUnder": 1.45
+    },
+    "768": {
+      "liveFTOver": 3.22,
+      "liveFTUnder": 1.45
+    },
+    "769": {
+      "liveFTOver": 3.22,
+      "liveFTUnder": 1.45
+    },
+    "770": {
+      "liveFTOver": 3.17,
+      "liveFTUnder": 1.46
+    },
+    "771": {
+      "liveFTOver": 3.1,
+      "liveFTUnder": 1.48
+    },
+    "772": {
+      "liveFTOver": 3.13,
+      "liveFTUnder": 1.47
+    },
+    "773": {
+      "liveFTOver": 3.08,
+      "liveFTUnder": 1.48
+    },
+    "774": {
+      "liveFTOver": 3.06,
+      "liveFTUnder": 1.49
+    },
+    "775": {
+      "liveFTOver": 3.02,
+      "liveFTUnder": 1.5
+    },
+    "776": {
+      "liveFTOver": 3,
+      "liveFTUnder": 1.5
+    },
+    "777": {
+      "liveFTOver": 2.94,
+      "liveFTUnder": 1.52
+    },
+    "778": {
+      "liveFTOver": 2.97,
+      "liveFTUnder": 1.51
+    },
+    "779": {
+      "liveFTOver": 2.94,
+      "liveFTUnder": 1.51
+    },
+    "780": {
+      "liveFTOver": 2.91,
+      "liveFTUnder": 1.52
+    },
+    "781": {
+      "liveFTOver": 2.87,
+      "liveFTUnder": 1.53
+    },
+    "782": {
+      "liveFTOver": 2.85,
+      "liveFTUnder": 1.54
+    },
+    "783": {
+      "liveFTOver": 2.82,
+      "liveFTUnder": 1.55
+    },
+    "784": {
+      "liveFTOver": 2.82,
+      "liveFTUnder": 1.55
+    },
+    "785": {
+      "liveFTOver": 2.77,
+      "liveFTUnder": 1.56
+    },
+    "786": {
+      "liveFTOver": 2.76,
+      "liveFTUnder": 1.57
+    },
+    "787": {
+      "liveFTOver": 2.75,
+      "liveFTUnder": 1.57
+    },
+    "788": {
+      "liveFTOver": 2.7,
+      "liveFTUnder": 1.59
+    },
+    "789": {
+      "liveFTOver": 2.71,
+      "liveFTUnder": 1.58
+    },
+    "790": {
+      "liveFTOver": 2.65,
+      "liveFTUnder": 1.61
+    },
+    "791": {
+      "liveFTOver": 2.65,
+      "liveFTUnder": 1.61
+    },
+    "792": {
+      "liveFTOver": 2.62,
+      "liveFTUnder": 1.62
+    },
+    "793": {
+      "liveFTOver": 2.64,
+      "liveFTUnder": 1.61
+    },
+    "794": {
+      "liveFTOver": 2.58,
+      "liveFTUnder": 1.63
+    },
+    "795": {
+      "liveFTOver": 2.58,
+      "liveFTUnder": 1.63
+    },
+    "796": {
+      "liveFTOver": 2.56,
+      "liveFTUnder": 1.64
+    },
+    "797": {
+      "liveFTOver": 2.5,
+      "liveFTUnder": 1.67
+    },
+    "798": {
+      "liveFTOver": 2.51,
+      "liveFTUnder": 1.66
+    },
+    "799": {
+      "liveFTOver": 2.5,
+      "liveFTUnder": 1.67
+    },
+    "800": {
+      "liveFTOver": 2.47,
+      "liveFTUnder": 1.68
+    },
+    "801": {
+      "liveFTOver": 2.45,
+      "liveFTUnder": 1.69
+    },
+    "802": {
+      "liveFTOver": 2.45,
+      "liveFTUnder": 1.69
+    },
+    "803": {
+      "liveFTOver": 2.41,
+      "liveFTUnder": 1.71
+    },
+    "804": {
+      "liveFTOver": 2.38,
+      "liveFTUnder": 1.72
+    },
+    "805": {
+      "liveFTOver": 2.38,
+      "liveFTUnder": 1.73
+    },
+    "806": {
+      "liveFTOver": 2.35,
+      "liveFTUnder": 1.74
+    },
+    "807": {
+      "liveFTOver": 2.35,
+      "liveFTUnder": 1.74
+    },
+    "808": {
+      "liveFTOver": 2.32,
+      "liveFTUnder": 1.76
+    },
+    "809": {
+      "liveFTOver": 2.32,
+      "liveFTUnder": 1.76
+    },
+    "810": {
+      "liveFTOver": 2.31,
+      "liveFTUnder": 1.76
+    },
+    "811": {
+      "liveFTOver": 2.28,
+      "liveFTUnder": 1.78
+    },
+    "812": {
+      "liveFTOver": 2.28,
+      "liveFTUnder": 1.78
+    },
+    "813": {
+      "liveFTOver": 2.25,
+      "liveFTUnder": 1.8
+    },
+    "814": {
+      "liveFTOver": 2.25,
+      "liveFTUnder": 1.8
+    },
+    "815": {
+      "liveFTOver": 2.21,
+      "liveFTUnder": 1.83
+    },
+    "816": {
+      "liveFTOver": 2.21,
+      "liveFTUnder": 1.83
+    },
+    "817": {
+      "liveFTOver": 2.2,
+      "liveFTUnder": 1.83
+    },
+    "818": {
+      "liveFTOver": 2.19,
+      "liveFTUnder": 1.84
+    },
+    "819": {
+      "liveFTOver": 2.15,
+      "liveFTUnder": 1.87
+    },
+    "820": {
+      "liveFTOver": 2.15,
+      "liveFTUnder": 1.87
+    },
+    "821": {
+      "liveFTOver": 2.12,
+      "liveFTUnder": 1.89
+    },
+    "822": {
+      "liveFTOver": 2.11,
+      "liveFTUnder": 1.9
+    },
+    "823": {
+      "liveFTOver": 2.11,
+      "liveFTUnder": 1.9
+    },
+    "824": {
+      "liveFTOver": 2.1,
+      "liveFTUnder": 1.91
+    },
+    "825": {
+      "liveFTOver": 2.07,
+      "liveFTUnder": 1.93
+    },
+    "826": {
+      "liveFTOver": 2.04,
+      "liveFTUnder": 1.96
+    },
+    "827": {
+      "liveFTOver": 2.07,
+      "liveFTUnder": 1.93
+    },
+    "828": {
+      "liveFTOver": 2.04,
+      "liveFTUnder": 1.97
+    },
+    "829": {
+      "liveFTOver": 2.03,
+      "liveFTUnder": 1.97
+    },
+    "830": {
+      "liveFTOver": 2.02,
+      "liveFTUnder": 1.98
+    },
+    "831": {
+      "liveFTOver": 2.01,
+      "liveFTUnder": 1.99
+    },
+    "832": {
+      "liveFTOver": 1.99,
+      "liveFTUnder": 2.01
+    },
+    "833": {
+      "liveFTOver": 1.98,
+      "liveFTUnder": 2.02
+    },
+    "834": {
+      "liveFTOver": 1.95,
+      "liveFTUnder": 2.05
+    },
+    "835": {
+      "liveFTOver": 1.96,
+      "liveFTUnder": 2.05
+    },
+    "836": {
+      "liveFTOver": 1.93,
+      "liveFTUnder": 2.08
+    },
+    "837": {
+      "liveFTOver": 1.91,
+      "liveFTUnder": 2.09
+    },
+    "838": {
+      "liveFTOver": 1.92,
+      "liveFTUnder": 2.09
+    },
+    "839": {
+      "liveFTOver": 1.9,
+      "liveFTUnder": 2.11
+    },
+    "840": {
+      "liveFTOver": 1.89,
+      "liveFTUnder": 2.12
+    },
+    "841": {
+      "liveFTOver": 1.86,
+      "liveFTUnder": 2.16
+    },
+    "842": {
+      "liveFTOver": 1.87,
+      "liveFTUnder": 2.15
+    },
+    "843": {
+      "liveFTOver": 1.85,
+      "liveFTUnder": 2.18
+    },
+    "844": {
+      "liveFTOver": 1.86,
+      "liveFTUnder": 2.16
+    },
+    "845": {
+      "liveFTOver": 1.83,
+      "liveFTUnder": 2.2
+    },
+    "846": {
+      "liveFTOver": 1.84,
+      "liveFTUnder": 2.19
+    },
+    "847": {
+      "liveFTOver": 1.83,
+      "liveFTUnder": 2.21
+    },
+    "848": {
+      "liveFTOver": 1.8,
+      "liveFTUnder": 2.26
+    },
+    "849": {
+      "liveFTOver": 1.8,
+      "liveFTUnder": 2.25
+    },
+    "850": {
+      "liveFTOver": 1.79,
+      "liveFTUnder": 2.26
+    },
+    "851": {
+      "liveFTOver": 1.77,
+      "liveFTUnder": 2.29
+    },
+    "852": {
+      "liveFTOver": 1.77,
+      "liveFTUnder": 2.3
+    },
+    "853": {
+      "liveFTOver": 1.75,
+      "liveFTUnder": 2.33
+    },
+    "854": {
+      "liveFTOver": 1.75,
+      "liveFTUnder": 2.33
+    },
+    "855": {
+      "liveFTOver": 1.74,
+      "liveFTUnder": 2.34
+    },
+    "856": {
+      "liveFTOver": 1.73,
+      "liveFTUnder": 2.36
+    },
+    "857": {
+      "liveFTOver": 1.72,
+      "liveFTUnder": 2.39
+    },
+    "858": {
+      "liveFTOver": 1.71,
+      "liveFTUnder": 2.42
+    },
+    "859": {
+      "liveFTOver": 1.7,
+      "liveFTUnder": 2.42
+    },
+    "860": {
+      "liveFTOver": 1.69,
+      "liveFTUnder": 2.44
+    },
+    "861": {
+      "liveFTOver": 1.69,
+      "liveFTUnder": 2.46
+    },
+    "862": {
+      "liveFTOver": 1.68,
+      "liveFTUnder": 2.47
+    },
+    "863": {
+      "liveFTOver": 1.66,
+      "liveFTUnder": 2.52
+    },
+    "864": {
+      "liveFTOver": 1.67,
+      "liveFTUnder": 2.5
+    },
+    "865": {
+      "liveFTOver": 1.64,
+      "liveFTUnder": 2.56
+    },
+    "866": {
+      "liveFTOver": 1.65,
+      "liveFTUnder": 2.53
+    },
+    "867": {
+      "liveFTOver": 1.64,
+      "liveFTUnder": 2.57
+    },
+    "868": {
+      "liveFTOver": 1.62,
+      "liveFTUnder": 2.62
+    },
+    "869": {
+      "liveFTOver": 1.62,
+      "liveFTUnder": 2.6
+    },
+    "870": {
+      "liveFTOver": 1.61,
+      "liveFTUnder": 2.63
+    },
+    "871": {
+      "liveFTOver": 1.62,
+      "liveFTUnder": 2.62
+    },
+    "872": {
+      "liveFTOver": 1.59,
+      "liveFTUnder": 2.68
+    },
+    "873": {
+      "liveFTOver": 1.59,
+      "liveFTUnder": 2.71
+    },
+    "874": {
+      "liveFTOver": 1.58,
+      "liveFTUnder": 2.71
+    },
+    "875": {
+      "liveFTOver": 1.58,
+      "liveFTUnder": 2.72
+    },
+    "876": {
+      "liveFTOver": 1.57,
+      "liveFTUnder": 2.75
+    },
+    "877": {
+      "liveFTOver": 1.54,
+      "liveFTUnder": 2.84
+    },
+    "878": {
+      "liveFTOver": 1.55,
+      "liveFTUnder": 2.83
+    },
+    "879": {
+      "liveFTOver": 1.55,
+      "liveFTUnder": 2.82
+    },
+    "880": {
+      "liveFTOver": 1.55,
+      "liveFTUnder": 2.83
+    },
+    "881": {
+      "liveFTOver": 1.54,
+      "liveFTUnder": 2.87
+    },
+    "882": {
+      "liveFTOver": 1.53,
+      "liveFTUnder": 2.88
+    },
+    "883": {
+      "liveFTOver": 1.52,
+      "liveFTUnder": 2.94
+    },
+    "884": {
+      "liveFTOver": 1.51,
+      "liveFTUnder": 2.94
+    },
+    "885": {
+      "liveFTOver": 1.5,
+      "liveFTUnder": 3.01
+    },
+    "886": {
+      "liveFTOver": 1.49,
+      "liveFTUnder": 3.05
+    },
+    "887": {
+      "liveFTOver": 1.49,
+      "liveFTUnder": 3.04
+    },
+    "888": {
+      "liveFTOver": 1.5,
+      "liveFTUnder": 3
+    },
+    "889": {
+      "liveFTOver": 1.48,
+      "liveFTUnder": 3.1
+    },
+    "890": {
+      "liveFTOver": 1.47,
+      "liveFTUnder": 3.15
+    },
+    "891": {
+      "liveFTOver": 1.47,
+      "liveFTUnder": 3.12
+    },
+    "892": {
+      "liveFTOver": 1.46,
+      "liveFTUnder": 3.16
+    },
+    "893": {
+      "liveFTOver": 1.45,
+      "liveFTUnder": 3.22
+    },
+    "894": {
+      "liveFTOver": 1.46,
+      "liveFTUnder": 3.2
+    },
+    "895": {
+      "liveFTOver": 1.45,
+      "liveFTUnder": 3.24
+    },
+    "896": {
+      "liveFTOver": 1.44,
+      "liveFTUnder": 3.29
+    },
+    "897": {
+      "liveFTOver": 1.43,
+      "liveFTUnder": 3.33
+    },
+    "898": {
+      "liveFTOver": 1.43,
+      "liveFTUnder": 3.34
+    },
+    "899": {
+      "liveFTOver": 1.43,
+      "liveFTUnder": 3.33
+    },
+    "900": {
+      "liveFTOver": 1.42,
+      "liveFTUnder": 3.41
+    },
+    "901": {
+      "liveFTOver": 1.41,
+      "liveFTUnder": 3.43
+    },
+    "902": {
+      "liveFTOver": 1.41,
+      "liveFTUnder": 3.47
+    },
+    "903": {
+      "liveFTOver": 1.4,
+      "liveFTUnder": 3.51
+    },
+    "904": {
+      "liveFTOver": 1.4,
+      "liveFTUnder": 3.51
+    },
+    "905": {
+      "liveFTOver": 1.39,
+      "liveFTUnder": 3.56
+    },
+    "906": {
+      "liveFTOver": 1.38,
+      "liveFTUnder": 3.62
+    },
+    "907": {
+      "liveFTOver": 1.37,
+      "liveFTUnder": 3.69
+    },
+    "908": {
+      "liveFTOver": 1.38,
+      "liveFTUnder": 3.65
+    },
+    "909": {
+      "liveFTOver": 1.37,
+      "liveFTUnder": 3.69
+    },
+    "910": {
+      "liveFTOver": 1.37,
+      "liveFTUnder": 3.7
+    },
+    "911": {
+      "liveFTOver": 1.35,
+      "liveFTUnder": 3.84
+    },
+    "912": {
+      "liveFTOver": 1.35,
+      "liveFTUnder": 3.88
+    },
+    "913": {
+      "liveFTOver": 1.36,
+      "liveFTUnder": 3.8
+    },
+    "914": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 3.99
+    },
+    "915": {
+      "liveFTOver": 1.34,
+      "liveFTUnder": 3.94
+    },
+    "916": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 3.99
+    },
+    "917": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 4.03
+    },
+    "918": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 4.05
+    },
+    "919": {
+      "liveFTOver": 1.32,
+      "liveFTUnder": 4.11
+    },
+    "920": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 4.25
+    },
+    "921": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 4.21
+    },
+    "922": {
+      "liveFTOver": 1.3,
+      "liveFTUnder": 4.33
+    },
+    "923": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 4.26
+    },
+    "924": {
+      "liveFTOver": 1.29,
+      "liveFTUnder": 4.47
+    },
+    "925": {
+      "liveFTOver": 1.3,
+      "liveFTUnder": 4.29
+    },
+    "926": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 4.52
+    },
+    "927": {
+      "liveFTOver": 1.29,
+      "liveFTUnder": 4.39
+    },
+    "928": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 4.55
+    },
+    "929": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 4.62
+    },
+    "930": {
+      "liveFTOver": 1.27,
+      "liveFTUnder": 4.65
+    },
+    "931": {
+      "liveFTOver": 1.27,
+      "liveFTUnder": 4.72
+    },
+    "932": {
+      "liveFTOver": 1.27,
+      "liveFTUnder": 4.71
+    },
+    "933": {
+      "liveFTOver": 1.26,
+      "liveFTUnder": 4.81
+    },
+    "934": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 4.97
+    },
+    "935": {
+      "liveFTOver": 1.26,
+      "liveFTUnder": 4.79
+    },
+    "936": {
+      "liveFTOver": 1.26,
+      "liveFTUnder": 4.89
+    },
+    "937": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 4.93
+    },
+    "938": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 5.07
+    },
+    "939": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 5.03
+    },
+    "940": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 5.12
+    },
+    "941": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 5.14
+    },
+    "942": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 5.24
+    },
+    "943": {
+      "liveFTOver": 1.23,
+      "liveFTUnder": 5.3
+    },
+    "944": {
+      "liveFTOver": 1.23,
+      "liveFTUnder": 5.31
+    },
+    "945": {
+      "liveFTOver": 1.23,
+      "liveFTUnder": 5.35
+    },
+    "946": {
+      "liveFTOver": 1.22,
+      "liveFTUnder": 5.47
+    },
+    "947": {
+      "liveFTOver": 1.22,
+      "liveFTUnder": 5.63
+    },
+    "948": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 5.77
+    },
+    "949": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 5.77
+    },
+    "950": {
+      "liveFTOver": 1.22,
+      "liveFTUnder": 5.58
+    },
+    "951": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 5.85
+    },
+    "952": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 6.06
+    },
+    "953": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 6.05
+    },
+    "954": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 6.12
+    },
+    "955": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 6.22
+    },
+    "956": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 6.31
+    },
+    "957": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 6.11
+    },
+    "958": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 6.35
+    },
+    "959": {
+      "liveFTOver": 1.18,
+      "liveFTUnder": 6.54
+    },
+    "960": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 6.32
+    },
+    "961": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 6.79
+    },
+    "962": {
+      "liveFTOver": 1.18,
+      "liveFTUnder": 6.7
+    },
+    "963": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 7.04
+    },
+    "964": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 6.87
+    },
+    "965": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 6.92
+    },
+    "966": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 7.05
+    },
+    "967": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 7.27
+    },
+    "968": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 7.29
+    },
+    "969": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 7.37
+    },
+    "970": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 7.57
+    },
+    "971": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 7.82
+    },
+    "972": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 8.02
+    },
+    "973": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 8.05
+    },
+    "974": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 7.75
+    },
+    "975": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 7.83
+    },
+    "976": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.66
+    },
+    "977": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 8.38
+    },
+    "978": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.48
+    },
+    "979": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 9.05
+    },
+    "980": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.88
+    },
+    "981": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.6
+    },
+    "982": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.84
+    },
+    "983": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.53
+    },
+    "984": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 8.8
+    },
+    "985": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 9.72
+    },
+    "986": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 9.51
+    },
+    "987": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 9.5
+    },
+    "988": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 9.13
+    },
+    "989": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 9.19
+    },
+    "990": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 9.83
+    },
+    "991": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 9.71
+    },
+    "992": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 10.44
+    },
+    "993": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 10.71
+    },
+    "994": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 10.15
+    },
+    "995": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 11.43
+    },
+    "996": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 10.44
+    },
+    "997": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 11.1
+    },
+    "998": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 11.29
+    },
+    "999": {
+      "liveFTOver": 1.09,
+      "liveFTUnder": 11.58
+    },
+    "1000": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 11.43
+    }
+  },
+  "time": {
+    "$date": "2021-06-29T07:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "615a44006c6976656f646473"
+  },
+  "type": "kenomatch_liveodds",
+  "time": {
+    "$date": "2021-10-04T00:00:00.000Z"
+  },
+  "blueRed": {
+    "0": {
+      "liveFTBlue": 1.97,
+      "liveFTRed": 1.96
+    },
+    "1": {
+      "liveFTBlue": 1.96,
+      "liveFTRed": 1.97
+    },
+    "2": {
+      "liveFTBlue": 1.94,
+      "liveFTRed": 1.99
+    },
+    "3": {
+      "liveFTBlue": 1.93,
+      "liveFTRed": 2.01
+    },
+    "4": {
+      "liveFTBlue": 1.91,
+      "liveFTRed": 2.02
+    },
+    "5": {
+      "liveFTBlue": 1.91,
+      "liveFTRed": 2.03
+    },
+    "6": {
+      "liveFTBlue": 1.89,
+      "liveFTRed": 2.05
+    },
+    "7": {
+      "liveFTBlue": 1.88,
+      "liveFTRed": 2.06
+    },
+    "8": {
+      "liveFTBlue": 1.86,
+      "liveFTRed": 2.08
+    },
+    "9": {
+      "liveFTBlue": 1.85,
+      "liveFTRed": 2.1
+    },
+    "10": {
+      "liveFTBlue": 1.83,
+      "liveFTRed": 2.12
+    },
+    "11": {
+      "liveFTBlue": 1.82,
+      "liveFTRed": 2.13
+    },
+    "12": {
+      "liveFTBlue": 1.81,
+      "liveFTRed": 2.14
+    },
+    "13": {
+      "liveFTBlue": 1.79,
+      "liveFTRed": 2.17
+    },
+    "14": {
+      "liveFTBlue": 1.78,
+      "liveFTRed": 2.19
+    },
+    "15": {
+      "liveFTBlue": 1.78,
+      "liveFTRed": 2.18
+    },
+    "16": {
+      "liveFTBlue": 1.76,
+      "liveFTRed": 2.21
+    },
+    "17": {
+      "liveFTBlue": 1.75,
+      "liveFTRed": 2.23
+    },
+    "18": {
+      "liveFTBlue": 1.74,
+      "liveFTRed": 2.24
+    },
+    "19": {
+      "liveFTBlue": 1.73,
+      "liveFTRed": 2.26
+    },
+    "20": {
+      "liveFTBlue": 1.72,
+      "liveFTRed": 2.28
+    },
+    "21": {
+      "liveFTBlue": 1.71,
+      "liveFTRed": 2.29
+    },
+    "22": {
+      "liveFTBlue": 1.69,
+      "liveFTRed": 2.32
+    },
+    "23": {
+      "liveFTBlue": 1.69,
+      "liveFTRed": 2.33
+    },
+    "24": {
+      "liveFTBlue": 1.68,
+      "liveFTRed": 2.35
+    },
+    "25": {
+      "liveFTBlue": 1.67,
+      "liveFTRed": 2.37
+    },
+    "26": {
+      "liveFTBlue": 1.66,
+      "liveFTRed": 2.38
+    },
+    "27": {
+      "liveFTBlue": 1.64,
+      "liveFTRed": 2.42
+    },
+    "28": {
+      "liveFTBlue": 1.64,
+      "liveFTRed": 2.42
+    },
+    "29": {
+      "liveFTBlue": 1.62,
+      "liveFTRed": 2.46
+    },
+    "30": {
+      "liveFTBlue": 1.62,
+      "liveFTRed": 2.47
+    },
+    "31": {
+      "liveFTBlue": 1.61,
+      "liveFTRed": 2.49
+    },
+    "32": {
+      "liveFTBlue": 1.6,
+      "liveFTRed": 2.5
+    },
+    "33": {
+      "liveFTBlue": 1.59,
+      "liveFTRed": 2.52
+    },
+    "34": {
+      "liveFTBlue": 1.59,
+      "liveFTRed": 2.54
+    },
+    "35": {
+      "liveFTBlue": 1.57,
+      "liveFTRed": 2.58
+    },
+    "36": {
+      "liveFTBlue": 1.56,
+      "liveFTRed": 2.59
+    },
+    "37": {
+      "liveFTBlue": 1.55,
+      "liveFTRed": 2.63
+    },
+    "38": {
+      "liveFTBlue": 1.54,
+      "liveFTRed": 2.65
+    },
+    "39": {
+      "liveFTBlue": 1.54,
+      "liveFTRed": 2.66
+    },
+    "40": {
+      "liveFTBlue": 1.53,
+      "liveFTRed": 2.69
+    },
+    "41": {
+      "liveFTBlue": 1.52,
+      "liveFTRed": 2.71
+    },
+    "42": {
+      "liveFTBlue": 1.52,
+      "liveFTRed": 2.73
+    },
+    "43": {
+      "liveFTBlue": 1.51,
+      "liveFTRed": 2.75
+    },
+    "44": {
+      "liveFTBlue": 1.5,
+      "liveFTRed": 2.78
+    },
+    "45": {
+      "liveFTBlue": 1.49,
+      "liveFTRed": 2.81
+    },
+    "46": {
+      "liveFTBlue": 1.48,
+      "liveFTRed": 2.84
+    },
+    "47": {
+      "liveFTBlue": 1.47,
+      "liveFTRed": 2.87
+    },
+    "48": {
+      "liveFTBlue": 1.47,
+      "liveFTRed": 2.88
+    },
+    "49": {
+      "liveFTBlue": 1.46,
+      "liveFTRed": 2.9
+    },
+    "50": {
+      "liveFTBlue": 1.46,
+      "liveFTRed": 2.93
+    },
+    "51": {
+      "liveFTBlue": 1.45,
+      "liveFTRed": 2.96
+    },
+    "52": {
+      "liveFTBlue": 1.44,
+      "liveFTRed": 3
+    },
+    "53": {
+      "liveFTBlue": 1.43,
+      "liveFTRed": 3.03
+    },
+    "54": {
+      "liveFTBlue": 1.42,
+      "liveFTRed": 3.05
+    },
+    "55": {
+      "liveFTBlue": 1.42,
+      "liveFTRed": 3.07
+    },
+    "56": {
+      "liveFTBlue": 1.41,
+      "liveFTRed": 3.12
+    },
+    "57": {
+      "liveFTBlue": 1.4,
+      "liveFTRed": 3.15
+    },
+    "58": {
+      "liveFTBlue": 1.4,
+      "liveFTRed": 3.16
+    },
+    "59": {
+      "liveFTBlue": 1.39,
+      "liveFTRed": 3.21
+    },
+    "60": {
+      "liveFTBlue": 1.38,
+      "liveFTRed": 3.25
+    },
+    "61": {
+      "liveFTBlue": 1.38,
+      "liveFTRed": 3.27
+    },
+    "62": {
+      "liveFTBlue": 1.37,
+      "liveFTRed": 3.31
+    },
+    "63": {
+      "liveFTBlue": 1.36,
+      "liveFTRed": 3.36
+    },
+    "64": {
+      "liveFTBlue": 1.36,
+      "liveFTRed": 3.35
+    },
+    "65": {
+      "liveFTBlue": 1.35,
+      "liveFTRed": 3.4
+    },
+    "66": {
+      "liveFTBlue": 1.34,
+      "liveFTRed": 3.45
+    },
+    "67": {
+      "liveFTBlue": 1.34,
+      "liveFTRed": 3.47
+    },
+    "68": {
+      "liveFTBlue": 1.34,
+      "liveFTRed": 3.5
+    },
+    "69": {
+      "liveFTBlue": 1.33,
+      "liveFTRed": 3.55
+    },
+    "70": {
+      "liveFTBlue": 1.33,
+      "liveFTRed": 3.57
+    },
+    "71": {
+      "liveFTBlue": 1.32,
+      "liveFTRed": 3.61
+    },
+    "72": {
+      "liveFTBlue": 1.32,
+      "liveFTRed": 3.63
+    },
+    "73": {
+      "liveFTBlue": 1.31,
+      "liveFTRed": 3.71
+    },
+    "74": {
+      "liveFTBlue": 1.3,
+      "liveFTRed": 3.73
+    },
+    "75": {
+      "liveFTBlue": 1.3,
+      "liveFTRed": 3.78
+    },
+    "76": {
+      "liveFTBlue": 1.29,
+      "liveFTRed": 3.83
+    },
+    "77": {
+      "liveFTBlue": 1.29,
+      "liveFTRed": 3.86
+    },
+    "78": {
+      "liveFTBlue": 1.29,
+      "liveFTRed": 3.86
+    },
+    "79": {
+      "liveFTBlue": 1.28,
+      "liveFTRed": 3.94
+    },
+    "80": {
+      "liveFTBlue": 1.28,
+      "liveFTRed": 3.95
+    },
+    "81": {
+      "liveFTBlue": 1.27,
+      "liveFTRed": 4
+    },
+    "82": {
+      "liveFTBlue": 1.26,
+      "liveFTRed": 4.05
+    },
+    "83": {
+      "liveFTBlue": 1.26,
+      "liveFTRed": 4.13
+    },
+    "84": {
+      "liveFTBlue": 1.26,
+      "liveFTRed": 4.12
+    },
+    "85": {
+      "liveFTBlue": 1.25,
+      "liveFTRed": 4.2
+    },
+    "86": {
+      "liveFTBlue": 1.25,
+      "liveFTRed": 4.23
+    },
+    "87": {
+      "liveFTBlue": 1.24,
+      "liveFTRed": 4.3
+    },
+    "88": {
+      "liveFTBlue": 1.24,
+      "liveFTRed": 4.32
+    },
+    "89": {
+      "liveFTBlue": 1.23,
+      "liveFTRed": 4.37
+    },
+    "90": {
+      "liveFTBlue": 1.23,
+      "liveFTRed": 4.44
+    },
+    "91": {
+      "liveFTBlue": 1.22,
+      "liveFTRed": 4.51
+    },
+    "92": {
+      "liveFTBlue": 1.22,
+      "liveFTRed": 4.5
+    },
+    "93": {
+      "liveFTBlue": 1.21,
+      "liveFTRed": 4.63
+    },
+    "94": {
+      "liveFTBlue": 1.21,
+      "liveFTRed": 4.63
+    },
+    "95": {
+      "liveFTBlue": 1.21,
+      "liveFTRed": 4.69
+    },
+    "96": {
+      "liveFTBlue": 1.2,
+      "liveFTRed": 4.74
+    },
+    "97": {
+      "liveFTBlue": 1.2,
+      "liveFTRed": 4.8
+    },
+    "98": {
+      "liveFTBlue": 1.2,
+      "liveFTRed": 4.82
+    },
+    "99": {
+      "liveFTBlue": 1.19,
+      "liveFTRed": 4.88
+    },
+    "100": {
+      "liveFTBlue": 1.19,
+      "liveFTRed": 4.92
+    },
+    "101": {
+      "liveFTBlue": 1.19,
+      "liveFTRed": 5
+    },
+    "102": {
+      "liveFTBlue": 1.18,
+      "liveFTRed": 5.07
+    },
+    "103": {
+      "liveFTBlue": 1.18,
+      "liveFTRed": 5.15
+    },
+    "104": {
+      "liveFTBlue": 1.18,
+      "liveFTRed": 5.15
+    },
+    "105": {
+      "liveFTBlue": 1.17,
+      "liveFTRed": 5.26
+    },
+    "106": {
+      "liveFTBlue": 1.17,
+      "liveFTRed": 5.34
+    },
+    "107": {
+      "liveFTBlue": 1.16,
+      "liveFTRed": 5.41
+    },
+    "108": {
+      "liveFTBlue": 1.16,
+      "liveFTRed": 5.41
+    },
+    "109": {
+      "liveFTBlue": 1.15,
+      "liveFTRed": 5.58
+    },
+    "110": {
+      "liveFTBlue": 1.16,
+      "liveFTRed": 5.53
+    },
+    "111": {
+      "liveFTBlue": 1.15,
+      "liveFTRed": 5.6
+    },
+    "112": {
+      "liveFTBlue": 1.15,
+      "liveFTRed": 5.74
+    },
+    "113": {
+      "liveFTBlue": 1.15,
+      "liveFTRed": 5.76
+    },
+    "114": {
+      "liveFTBlue": 1.14,
+      "liveFTRed": 5.81
+    },
+    "115": {
+      "liveFTBlue": 1.14,
+      "liveFTRed": 5.83
+    },
+    "116": {
+      "liveFTBlue": 1.14,
+      "liveFTRed": 5.97
+    },
+    "117": {
+      "liveFTBlue": 1.13,
+      "liveFTRed": 6.1
+    },
+    "118": {
+      "liveFTBlue": 1.13,
+      "liveFTRed": 6.13
+    },
+    "119": {
+      "liveFTBlue": 1.13,
+      "liveFTRed": 6.18
+    },
+    "120": {
+      "liveFTBlue": 1.13,
+      "liveFTRed": 6.29
+    },
+    "121": {
+      "liveFTBlue": 1.13,
+      "liveFTRed": 6.27
+    },
+    "122": {
+      "liveFTBlue": 1.12,
+      "liveFTRed": 6.5
+    },
+    "123": {
+      "liveFTBlue": 1.12,
+      "liveFTRed": 6.53
+    },
+    "124": {
+      "liveFTBlue": 1.12,
+      "liveFTRed": 6.56
+    },
+    "125": {
+      "liveFTBlue": 1.11,
+      "liveFTRed": 6.65
+    },
+    "126": {
+      "liveFTBlue": 1.11,
+      "liveFTRed": 6.86
+    },
+    "127": {
+      "liveFTBlue": 1.11,
+      "liveFTRed": 6.77
+    },
+    "128": {
+      "liveFTBlue": 1.11,
+      "liveFTRed": 6.84
+    },
+    "129": {
+      "liveFTBlue": 1.1,
+      "liveFTRed": 6.94
+    },
+    "130": {
+      "liveFTBlue": 1.1,
+      "liveFTRed": 7.07
+    },
+    "131": {
+      "liveFTBlue": 1.1,
+      "liveFTRed": 7.15
+    },
+    "132": {
+      "liveFTBlue": 1.1,
+      "liveFTRed": 7.2
+    },
+    "133": {
+      "liveFTBlue": 1.09,
+      "liveFTRed": 7.42
+    },
+    "134": {
+      "liveFTBlue": 1.09,
+      "liveFTRed": 7.5
+    },
+    "135": {
+      "liveFTBlue": 1.09,
+      "liveFTRed": 7.47
+    },
+    "136": {
+      "liveFTBlue": 1.09,
+      "liveFTRed": 7.64
+    },
+    "137": {
+      "liveFTBlue": 1.08,
+      "liveFTRed": 7.73
+    },
+    "138": {
+      "liveFTBlue": 1.08,
+      "liveFTRed": 7.89
+    },
+    "139": {
+      "liveFTBlue": 1.08,
+      "liveFTRed": 7.89
+    },
+    "140": {
+      "liveFTBlue": 1.08,
+      "liveFTRed": 7.99
+    },
+    "141": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.14
+    },
+    "142": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.28
+    },
+    "143": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.42
+    },
+    "144": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.42
+    },
+    "145": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.49
+    },
+    "146": {
+      "liveFTBlue": 1.07,
+      "liveFTRed": 8.59
+    },
+    "147": {
+      "liveFTBlue": 1.06,
+      "liveFTRed": 8.86
+    },
+    "148": {
+      "liveFTBlue": 1.06,
+      "liveFTRed": 8.83
+    },
+    "149": {
+      "liveFTBlue": 1.06,
+      "liveFTRed": 8.86
+    },
+    "150": {
+      "liveFTBlue": 1.06,
+      "liveFTRed": 9.01
+    },
+    "-150": {
+      "liveFTBlue": 9.01,
+      "liveFTRed": 1.06
+    },
+    "-149": {
+      "liveFTBlue": 9,
+      "liveFTRed": 1.06
+    },
+    "-148": {
+      "liveFTBlue": 8.86,
+      "liveFTRed": 1.06
+    },
+    "-147": {
+      "liveFTBlue": 8.83,
+      "liveFTRed": 1.06
+    },
+    "-146": {
+      "liveFTBlue": 8.6,
+      "liveFTRed": 1.07
+    },
+    "-145": {
+      "liveFTBlue": 8.4,
+      "liveFTRed": 1.07
+    },
+    "-144": {
+      "liveFTBlue": 8.44,
+      "liveFTRed": 1.07
+    },
+    "-143": {
+      "liveFTBlue": 8.21,
+      "liveFTRed": 1.07
+    },
+    "-142": {
+      "liveFTBlue": 8.16,
+      "liveFTRed": 1.07
+    },
+    "-141": {
+      "liveFTBlue": 8.08,
+      "liveFTRed": 1.08
+    },
+    "-140": {
+      "liveFTBlue": 8.09,
+      "liveFTRed": 1.08
+    },
+    "-139": {
+      "liveFTBlue": 7.88,
+      "liveFTRed": 1.08
+    },
+    "-138": {
+      "liveFTBlue": 7.88,
+      "liveFTRed": 1.08
+    },
+    "-137": {
+      "liveFTBlue": 7.7,
+      "liveFTRed": 1.08
+    },
+    "-136": {
+      "liveFTBlue": 7.59,
+      "liveFTRed": 1.09
+    },
+    "-135": {
+      "liveFTBlue": 7.51,
+      "liveFTRed": 1.09
+    },
+    "-134": {
+      "liveFTBlue": 7.48,
+      "liveFTRed": 1.09
+    },
+    "-133": {
+      "liveFTBlue": 7.36,
+      "liveFTRed": 1.09
+    },
+    "-132": {
+      "liveFTBlue": 7.25,
+      "liveFTRed": 1.1
+    },
+    "-131": {
+      "liveFTBlue": 7.21,
+      "liveFTRed": 1.1
+    },
+    "-130": {
+      "liveFTBlue": 7.12,
+      "liveFTRed": 1.1
+    },
+    "-129": {
+      "liveFTBlue": 7.14,
+      "liveFTRed": 1.1
+    },
+    "-128": {
+      "liveFTBlue": 6.92,
+      "liveFTRed": 1.1
+    },
+    "-127": {
+      "liveFTBlue": 6.81,
+      "liveFTRed": 1.11
+    },
+    "-126": {
+      "liveFTBlue": 6.78,
+      "liveFTRed": 1.11
+    },
+    "-125": {
+      "liveFTBlue": 6.66,
+      "liveFTRed": 1.11
+    },
+    "-124": {
+      "liveFTBlue": 6.64,
+      "liveFTRed": 1.11
+    },
+    "-123": {
+      "liveFTBlue": 6.49,
+      "liveFTRed": 1.12
+    },
+    "-122": {
+      "liveFTBlue": 6.43,
+      "liveFTRed": 1.12
+    },
+    "-121": {
+      "liveFTBlue": 6.32,
+      "liveFTRed": 1.12
+    },
+    "-120": {
+      "liveFTBlue": 6.29,
+      "liveFTRed": 1.13
+    },
+    "-119": {
+      "liveFTBlue": 6.25,
+      "liveFTRed": 1.13
+    },
+    "-118": {
+      "liveFTBlue": 6.04,
+      "liveFTRed": 1.13
+    },
+    "-117": {
+      "liveFTBlue": 6.05,
+      "liveFTRed": 1.13
+    },
+    "-116": {
+      "liveFTBlue": 5.97,
+      "liveFTRed": 1.14
+    },
+    "-115": {
+      "liveFTBlue": 5.97,
+      "liveFTRed": 1.14
+    },
+    "-114": {
+      "liveFTBlue": 5.83,
+      "liveFTRed": 1.14
+    },
+    "-113": {
+      "liveFTBlue": 5.83,
+      "liveFTRed": 1.14
+    },
+    "-112": {
+      "liveFTBlue": 5.69,
+      "liveFTRed": 1.15
+    },
+    "-111": {
+      "liveFTBlue": 5.64,
+      "liveFTRed": 1.15
+    },
+    "-110": {
+      "liveFTBlue": 5.59,
+      "liveFTRed": 1.15
+    },
+    "-109": {
+      "liveFTBlue": 5.58,
+      "liveFTRed": 1.15
+    },
+    "-108": {
+      "liveFTBlue": 5.4,
+      "liveFTRed": 1.16
+    },
+    "-107": {
+      "liveFTBlue": 5.4,
+      "liveFTRed": 1.16
+    },
+    "-106": {
+      "liveFTBlue": 5.29,
+      "liveFTRed": 1.17
+    },
+    "-105": {
+      "liveFTBlue": 5.26,
+      "liveFTRed": 1.17
+    },
+    "-104": {
+      "liveFTBlue": 5.19,
+      "liveFTRed": 1.18
+    },
+    "-103": {
+      "liveFTBlue": 5.13,
+      "liveFTRed": 1.18
+    },
+    "-102": {
+      "liveFTBlue": 5.12,
+      "liveFTRed": 1.18
+    },
+    "-101": {
+      "liveFTBlue": 4.96,
+      "liveFTRed": 1.19
+    },
+    "-100": {
+      "liveFTBlue": 4.9,
+      "liveFTRed": 1.19
+    },
+    "-99": {
+      "liveFTBlue": 4.89,
+      "liveFTRed": 1.19
+    },
+    "-98": {
+      "liveFTBlue": 4.82,
+      "liveFTRed": 1.2
+    },
+    "-97": {
+      "liveFTBlue": 4.77,
+      "liveFTRed": 1.2
+    },
+    "-96": {
+      "liveFTBlue": 4.68,
+      "liveFTRed": 1.21
+    },
+    "-95": {
+      "liveFTBlue": 4.68,
+      "liveFTRed": 1.21
+    },
+    "-94": {
+      "liveFTBlue": 4.65,
+      "liveFTRed": 1.21
+    },
+    "-93": {
+      "liveFTBlue": 4.6,
+      "liveFTRed": 1.21
+    },
+    "-92": {
+      "liveFTBlue": 4.55,
+      "liveFTRed": 1.22
+    },
+    "-91": {
+      "liveFTBlue": 4.5,
+      "liveFTRed": 1.22
+    },
+    "-90": {
+      "liveFTBlue": 4.43,
+      "liveFTRed": 1.23
+    },
+    "-89": {
+      "liveFTBlue": 4.41,
+      "liveFTRed": 1.23
+    },
+    "-88": {
+      "liveFTBlue": 4.32,
+      "liveFTRed": 1.24
+    },
+    "-87": {
+      "liveFTBlue": 4.27,
+      "liveFTRed": 1.24
+    },
+    "-86": {
+      "liveFTBlue": 4.21,
+      "liveFTRed": 1.25
+    },
+    "-85": {
+      "liveFTBlue": 4.2,
+      "liveFTRed": 1.25
+    },
+    "-84": {
+      "liveFTBlue": 4.15,
+      "liveFTRed": 1.25
+    },
+    "-83": {
+      "liveFTBlue": 4.13,
+      "liveFTRed": 1.26
+    },
+    "-82": {
+      "liveFTBlue": 4.07,
+      "liveFTRed": 1.26
+    },
+    "-81": {
+      "liveFTBlue": 4.02,
+      "liveFTRed": 1.27
+    },
+    "-80": {
+      "liveFTBlue": 3.94,
+      "liveFTRed": 1.28
+    },
+    "-79": {
+      "liveFTBlue": 3.93,
+      "liveFTRed": 1.28
+    },
+    "-78": {
+      "liveFTBlue": 3.91,
+      "liveFTRed": 1.28
+    },
+    "-77": {
+      "liveFTBlue": 3.84,
+      "liveFTRed": 1.29
+    },
+    "-76": {
+      "liveFTBlue": 3.81,
+      "liveFTRed": 1.29
+    },
+    "-75": {
+      "liveFTBlue": 3.77,
+      "liveFTRed": 1.3
+    },
+    "-74": {
+      "liveFTBlue": 3.71,
+      "liveFTRed": 1.31
+    },
+    "-73": {
+      "liveFTBlue": 3.69,
+      "liveFTRed": 1.31
+    },
+    "-72": {
+      "liveFTBlue": 3.65,
+      "liveFTRed": 1.31
+    },
+    "-71": {
+      "liveFTBlue": 3.63,
+      "liveFTRed": 1.32
+    },
+    "-70": {
+      "liveFTBlue": 3.6,
+      "liveFTRed": 1.32
+    },
+    "-69": {
+      "liveFTBlue": 3.51,
+      "liveFTRed": 1.33
+    },
+    "-68": {
+      "liveFTBlue": 3.49,
+      "liveFTRed": 1.34
+    },
+    "-67": {
+      "liveFTBlue": 3.48,
+      "liveFTRed": 1.34
+    },
+    "-66": {
+      "liveFTBlue": 3.45,
+      "liveFTRed": 1.35
+    },
+    "-65": {
+      "liveFTBlue": 3.39,
+      "liveFTRed": 1.36
+    },
+    "-64": {
+      "liveFTBlue": 3.36,
+      "liveFTRed": 1.36
+    },
+    "-63": {
+      "liveFTBlue": 3.32,
+      "liveFTRed": 1.37
+    },
+    "-62": {
+      "liveFTBlue": 3.29,
+      "liveFTRed": 1.37
+    },
+    "-61": {
+      "liveFTBlue": 3.25,
+      "liveFTRed": 1.38
+    },
+    "-60": {
+      "liveFTBlue": 3.23,
+      "liveFTRed": 1.38
+    },
+    "-59": {
+      "liveFTBlue": 3.2,
+      "liveFTRed": 1.39
+    },
+    "-58": {
+      "liveFTBlue": 3.16,
+      "liveFTRed": 1.4
+    },
+    "-57": {
+      "liveFTBlue": 3.15,
+      "liveFTRed": 1.4
+    },
+    "-56": {
+      "liveFTBlue": 3.12,
+      "liveFTRed": 1.41
+    },
+    "-55": {
+      "liveFTBlue": 3.06,
+      "liveFTRed": 1.42
+    },
+    "-54": {
+      "liveFTBlue": 3.03,
+      "liveFTRed": 1.43
+    },
+    "-53": {
+      "liveFTBlue": 3.03,
+      "liveFTRed": 1.43
+    },
+    "-52": {
+      "liveFTBlue": 3,
+      "liveFTRed": 1.44
+    },
+    "-51": {
+      "liveFTBlue": 2.97,
+      "liveFTRed": 1.44
+    },
+    "-50": {
+      "liveFTBlue": 2.95,
+      "liveFTRed": 1.45
+    },
+    "-49": {
+      "liveFTBlue": 2.91,
+      "liveFTRed": 1.46
+    },
+    "-48": {
+      "liveFTBlue": 2.89,
+      "liveFTRed": 1.47
+    },
+    "-47": {
+      "liveFTBlue": 2.87,
+      "liveFTRed": 1.47
+    },
+    "-46": {
+      "liveFTBlue": 2.85,
+      "liveFTRed": 1.48
+    },
+    "-45": {
+      "liveFTBlue": 2.8,
+      "liveFTRed": 1.49
+    },
+    "-44": {
+      "liveFTBlue": 2.77,
+      "liveFTRed": 1.5
+    },
+    "-43": {
+      "liveFTBlue": 2.75,
+      "liveFTRed": 1.51
+    },
+    "-42": {
+      "liveFTBlue": 2.73,
+      "liveFTRed": 1.51
+    },
+    "-41": {
+      "liveFTBlue": 2.71,
+      "liveFTRed": 1.52
+    },
+    "-40": {
+      "liveFTBlue": 2.69,
+      "liveFTRed": 1.53
+    },
+    "-39": {
+      "liveFTBlue": 2.66,
+      "liveFTRed": 1.54
+    },
+    "-38": {
+      "liveFTBlue": 2.64,
+      "liveFTRed": 1.55
+    },
+    "-37": {
+      "liveFTBlue": 2.62,
+      "liveFTRed": 1.55
+    },
+    "-36": {
+      "liveFTBlue": 2.59,
+      "liveFTRed": 1.57
+    },
+    "-35": {
+      "liveFTBlue": 2.57,
+      "liveFTRed": 1.57
+    },
+    "-34": {
+      "liveFTBlue": 2.56,
+      "liveFTRed": 1.58
+    },
+    "-33": {
+      "liveFTBlue": 2.53,
+      "liveFTRed": 1.59
+    },
+    "-32": {
+      "liveFTBlue": 2.51,
+      "liveFTRed": 1.6
+    },
+    "-31": {
+      "liveFTBlue": 2.48,
+      "liveFTRed": 1.61
+    },
+    "-30": {
+      "liveFTBlue": 2.46,
+      "liveFTRed": 1.62
+    },
+    "-29": {
+      "liveFTBlue": 2.44,
+      "liveFTRed": 1.63
+    },
+    "-28": {
+      "liveFTBlue": 2.43,
+      "liveFTRed": 1.63
+    },
+    "-27": {
+      "liveFTBlue": 2.43,
+      "liveFTRed": 1.64
+    },
+    "-26": {
+      "liveFTBlue": 2.39,
+      "liveFTRed": 1.66
+    },
+    "-25": {
+      "liveFTBlue": 2.38,
+      "liveFTRed": 1.66
+    },
+    "-24": {
+      "liveFTBlue": 2.35,
+      "liveFTRed": 1.68
+    },
+    "-23": {
+      "liveFTBlue": 2.34,
+      "liveFTRed": 1.68
+    },
+    "-22": {
+      "liveFTBlue": 2.31,
+      "liveFTRed": 1.7
+    },
+    "-21": {
+      "liveFTBlue": 2.29,
+      "liveFTRed": 1.71
+    },
+    "-20": {
+      "liveFTBlue": 2.28,
+      "liveFTRed": 1.72
+    },
+    "-19": {
+      "liveFTBlue": 2.26,
+      "liveFTRed": 1.73
+    },
+    "-18": {
+      "liveFTBlue": 2.24,
+      "liveFTRed": 1.74
+    },
+    "-17": {
+      "liveFTBlue": 2.23,
+      "liveFTRed": 1.74
+    },
+    "-16": {
+      "liveFTBlue": 2.19,
+      "liveFTRed": 1.78
+    },
+    "-15": {
+      "liveFTBlue": 2.19,
+      "liveFTRed": 1.77
+    },
+    "-14": {
+      "liveFTBlue": 2.18,
+      "liveFTRed": 1.78
+    },
+    "-13": {
+      "liveFTBlue": 2.16,
+      "liveFTRed": 1.79
+    },
+    "-12": {
+      "liveFTBlue": 2.15,
+      "liveFTRed": 1.81
+    },
+    "-11": {
+      "liveFTBlue": 2.12,
+      "liveFTRed": 1.83
+    },
+    "-10": {
+      "liveFTBlue": 2.11,
+      "liveFTRed": 1.84
+    },
+    "-9": {
+      "liveFTBlue": 2.1,
+      "liveFTRed": 1.85
+    },
+    "-8": {
+      "liveFTBlue": 2.08,
+      "liveFTRed": 1.86
+    },
+    "-7": {
+      "liveFTBlue": 2.06,
+      "liveFTRed": 1.88
+    },
+    "-6": {
+      "liveFTBlue": 2.05,
+      "liveFTRed": 1.89
+    },
+    "-5": {
+      "liveFTBlue": 2.04,
+      "liveFTRed": 1.9
+    },
+    "-4": {
+      "liveFTBlue": 2.02,
+      "liveFTRed": 1.91
+    },
+    "-3": {
+      "liveFTBlue": 2.01,
+      "liveFTRed": 1.92
+    },
+    "-2": {
+      "liveFTBlue": 1.99,
+      "liveFTRed": 1.94
+    },
+    "-1": {
+      "liveFTBlue": 1.99,
+      "liveFTRed": 1.95
+    }
+  },
+  "overUnder": {
+    "661": {
+      "liveFTOver": 11.13,
+      "liveFTUnder": 1.04
+    },
+    "662": {
+      "liveFTOver": 10.95,
+      "liveFTUnder": 1.04
+    },
+    "663": {
+      "liveFTOver": 10.85,
+      "liveFTUnder": 1.04
+    },
+    "664": {
+      "liveFTOver": 10.86,
+      "liveFTUnder": 1.04
+    },
+    "665": {
+      "liveFTOver": 10.65,
+      "liveFTUnder": 1.04
+    },
+    "666": {
+      "liveFTOver": 10.51,
+      "liveFTUnder": 1.04
+    },
+    "667": {
+      "liveFTOver": 10.32,
+      "liveFTUnder": 1.05
+    },
+    "668": {
+      "liveFTOver": 10.35,
+      "liveFTUnder": 1.05
+    },
+    "669": {
+      "liveFTOver": 10.08,
+      "liveFTUnder": 1.05
+    },
+    "670": {
+      "liveFTOver": 9.97,
+      "liveFTUnder": 1.05
+    },
+    "671": {
+      "liveFTOver": 9.83,
+      "liveFTUnder": 1.05
+    },
+    "672": {
+      "liveFTOver": 9.78,
+      "liveFTUnder": 1.05
+    },
+    "673": {
+      "liveFTOver": 9.35,
+      "liveFTUnder": 1.06
+    },
+    "674": {
+      "liveFTOver": 9.32,
+      "liveFTUnder": 1.06
+    },
+    "675": {
+      "liveFTOver": 9.32,
+      "liveFTUnder": 1.06
+    },
+    "676": {
+      "liveFTOver": 9.15,
+      "liveFTUnder": 1.06
+    },
+    "677": {
+      "liveFTOver": 9.02,
+      "liveFTUnder": 1.06
+    },
+    "678": {
+      "liveFTOver": 8.92,
+      "liveFTUnder": 1.07
+    },
+    "679": {
+      "liveFTOver": 8.79,
+      "liveFTUnder": 1.07
+    },
+    "680": {
+      "liveFTOver": 8.76,
+      "liveFTUnder": 1.07
+    },
+    "681": {
+      "liveFTOver": 8.65,
+      "liveFTUnder": 1.07
+    },
+    "682": {
+      "liveFTOver": 8.47,
+      "liveFTUnder": 1.07
+    },
+    "683": {
+      "liveFTOver": 8.36,
+      "liveFTUnder": 1.07
+    },
+    "684": {
+      "liveFTOver": 8.42,
+      "liveFTUnder": 1.07
+    },
+    "685": {
+      "liveFTOver": 8.21,
+      "liveFTUnder": 1.08
+    },
+    "686": {
+      "liveFTOver": 8.04,
+      "liveFTUnder": 1.08
+    },
+    "687": {
+      "liveFTOver": 8,
+      "liveFTUnder": 1.08
+    },
+    "688": {
+      "liveFTOver": 7.86,
+      "liveFTUnder": 1.08
+    },
+    "689": {
+      "liveFTOver": 7.7,
+      "liveFTUnder": 1.09
+    },
+    "690": {
+      "liveFTOver": 7.71,
+      "liveFTUnder": 1.09
+    },
+    "691": {
+      "liveFTOver": 7.56,
+      "liveFTUnder": 1.09
+    },
+    "692": {
+      "liveFTOver": 7.36,
+      "liveFTUnder": 1.1
+    },
+    "693": {
+      "liveFTOver": 7.4,
+      "liveFTUnder": 1.09
+    },
+    "694": {
+      "liveFTOver": 7.29,
+      "liveFTUnder": 1.1
+    },
+    "695": {
+      "liveFTOver": 7.15,
+      "liveFTUnder": 1.1
+    },
+    "696": {
+      "liveFTOver": 7.03,
+      "liveFTUnder": 1.1
+    },
+    "697": {
+      "liveFTOver": 6.99,
+      "liveFTUnder": 1.11
+    },
+    "698": {
+      "liveFTOver": 6.88,
+      "liveFTUnder": 1.11
+    },
+    "699": {
+      "liveFTOver": 6.76,
+      "liveFTUnder": 1.11
+    },
+    "700": {
+      "liveFTOver": 6.72,
+      "liveFTUnder": 1.11
+    },
+    "701": {
+      "liveFTOver": 6.64,
+      "liveFTUnder": 1.12
+    },
+    "702": {
+      "liveFTOver": 6.5,
+      "liveFTUnder": 1.12
+    },
+    "703": {
+      "liveFTOver": 6.46,
+      "liveFTUnder": 1.12
+    },
+    "704": {
+      "liveFTOver": 6.44,
+      "liveFTUnder": 1.12
+    },
+    "705": {
+      "liveFTOver": 6.32,
+      "liveFTUnder": 1.13
+    },
+    "706": {
+      "liveFTOver": 6.21,
+      "liveFTUnder": 1.13
+    },
+    "707": {
+      "liveFTOver": 6.14,
+      "liveFTUnder": 1.13
+    },
+    "708": {
+      "liveFTOver": 6.04,
+      "liveFTUnder": 1.14
+    },
+    "709": {
+      "liveFTOver": 5.99,
+      "liveFTUnder": 1.14
+    },
+    "710": {
+      "liveFTOver": 5.95,
+      "liveFTUnder": 1.14
+    },
+    "711": {
+      "liveFTOver": 5.87,
+      "liveFTUnder": 1.14
+    },
+    "712": {
+      "liveFTOver": 5.78,
+      "liveFTUnder": 1.15
+    },
+    "713": {
+      "liveFTOver": 5.73,
+      "liveFTUnder": 1.15
+    },
+    "714": {
+      "liveFTOver": 5.62,
+      "liveFTUnder": 1.15
+    },
+    "715": {
+      "liveFTOver": 5.59,
+      "liveFTUnder": 1.16
+    },
+    "716": {
+      "liveFTOver": 5.45,
+      "liveFTUnder": 1.16
+    },
+    "717": {
+      "liveFTOver": 5.43,
+      "liveFTUnder": 1.16
+    },
+    "718": {
+      "liveFTOver": 5.32,
+      "liveFTUnder": 1.17
+    },
+    "719": {
+      "liveFTOver": 5.34,
+      "liveFTUnder": 1.17
+    },
+    "720": {
+      "liveFTOver": 5.27,
+      "liveFTUnder": 1.17
+    },
+    "721": {
+      "liveFTOver": 5.15,
+      "liveFTUnder": 1.18
+    },
+    "722": {
+      "liveFTOver": 5.1,
+      "liveFTUnder": 1.18
+    },
+    "723": {
+      "liveFTOver": 5.09,
+      "liveFTUnder": 1.18
+    },
+    "724": {
+      "liveFTOver": 5,
+      "liveFTUnder": 1.19
+    },
+    "725": {
+      "liveFTOver": 4.91,
+      "liveFTUnder": 1.19
+    },
+    "726": {
+      "liveFTOver": 4.87,
+      "liveFTUnder": 1.2
+    },
+    "727": {
+      "liveFTOver": 4.84,
+      "liveFTUnder": 1.2
+    },
+    "728": {
+      "liveFTOver": 4.77,
+      "liveFTUnder": 1.2
+    },
+    "729": {
+      "liveFTOver": 4.72,
+      "liveFTUnder": 1.21
+    },
+    "730": {
+      "liveFTOver": 4.61,
+      "liveFTUnder": 1.21
+    },
+    "731": {
+      "liveFTOver": 4.58,
+      "liveFTUnder": 1.22
+    },
+    "732": {
+      "liveFTOver": 4.55,
+      "liveFTUnder": 1.22
+    },
+    "733": {
+      "liveFTOver": 4.47,
+      "liveFTUnder": 1.22
+    },
+    "734": {
+      "liveFTOver": 4.45,
+      "liveFTUnder": 1.23
+    },
+    "735": {
+      "liveFTOver": 4.41,
+      "liveFTUnder": 1.23
+    },
+    "736": {
+      "liveFTOver": 4.34,
+      "liveFTUnder": 1.24
+    },
+    "737": {
+      "liveFTOver": 4.31,
+      "liveFTUnder": 1.24
+    },
+    "738": {
+      "liveFTOver": 4.24,
+      "liveFTUnder": 1.24
+    },
+    "739": {
+      "liveFTOver": 4.19,
+      "liveFTUnder": 1.25
+    },
+    "740": {
+      "liveFTOver": 4.14,
+      "liveFTUnder": 1.25
+    },
+    "741": {
+      "liveFTOver": 4.13,
+      "liveFTUnder": 1.25
+    },
+    "742": {
+      "liveFTOver": 4.08,
+      "liveFTUnder": 1.26
+    },
+    "743": {
+      "liveFTOver": 4.03,
+      "liveFTUnder": 1.27
+    },
+    "744": {
+      "liveFTOver": 3.97,
+      "liveFTUnder": 1.27
+    },
+    "745": {
+      "liveFTOver": 3.96,
+      "liveFTUnder": 1.27
+    },
+    "746": {
+      "liveFTOver": 3.87,
+      "liveFTUnder": 1.28
+    },
+    "747": {
+      "liveFTOver": 3.83,
+      "liveFTUnder": 1.29
+    },
+    "748": {
+      "liveFTOver": 3.83,
+      "liveFTUnder": 1.29
+    },
+    "749": {
+      "liveFTOver": 3.77,
+      "liveFTUnder": 1.3
+    },
+    "750": {
+      "liveFTOver": 3.72,
+      "liveFTUnder": 1.3
+    },
+    "751": {
+      "liveFTOver": 3.68,
+      "liveFTUnder": 1.31
+    },
+    "752": {
+      "liveFTOver": 3.65,
+      "liveFTUnder": 1.31
+    },
+    "753": {
+      "liveFTOver": 3.59,
+      "liveFTUnder": 1.32
+    },
+    "754": {
+      "liveFTOver": 3.57,
+      "liveFTUnder": 1.32
+    },
+    "755": {
+      "liveFTOver": 3.55,
+      "liveFTUnder": 1.33
+    },
+    "756": {
+      "liveFTOver": 3.49,
+      "liveFTUnder": 1.34
+    },
+    "757": {
+      "liveFTOver": 3.47,
+      "liveFTUnder": 1.34
+    },
+    "758": {
+      "liveFTOver": 3.43,
+      "liveFTUnder": 1.34
+    },
+    "759": {
+      "liveFTOver": 3.4,
+      "liveFTUnder": 1.35
+    },
+    "760": {
+      "liveFTOver": 3.36,
+      "liveFTUnder": 1.36
+    },
+    "761": {
+      "liveFTOver": 3.34,
+      "liveFTUnder": 1.36
+    },
+    "762": {
+      "liveFTOver": 3.3,
+      "liveFTUnder": 1.37
+    },
+    "763": {
+      "liveFTOver": 3.27,
+      "liveFTUnder": 1.37
+    },
+    "764": {
+      "liveFTOver": 3.22,
+      "liveFTUnder": 1.38
+    },
+    "765": {
+      "liveFTOver": 3.22,
+      "liveFTUnder": 1.38
+    },
+    "766": {
+      "liveFTOver": 3.17,
+      "liveFTUnder": 1.39
+    },
+    "767": {
+      "liveFTOver": 3.15,
+      "liveFTUnder": 1.4
+    },
+    "768": {
+      "liveFTOver": 3.13,
+      "liveFTUnder": 1.4
+    },
+    "769": {
+      "liveFTOver": 3.07,
+      "liveFTUnder": 1.41
+    },
+    "770": {
+      "liveFTOver": 3.04,
+      "liveFTUnder": 1.42
+    },
+    "771": {
+      "liveFTOver": 3.03,
+      "liveFTUnder": 1.42
+    },
+    "772": {
+      "liveFTOver": 3,
+      "liveFTUnder": 1.43
+    },
+    "773": {
+      "liveFTOver": 2.95,
+      "liveFTUnder": 1.44
+    },
+    "774": {
+      "liveFTOver": 2.94,
+      "liveFTUnder": 1.45
+    },
+    "775": {
+      "liveFTOver": 2.91,
+      "liveFTUnder": 1.45
+    },
+    "776": {
+      "liveFTOver": 2.88,
+      "liveFTUnder": 1.46
+    },
+    "777": {
+      "liveFTOver": 2.85,
+      "liveFTUnder": 1.47
+    },
+    "778": {
+      "liveFTOver": 2.85,
+      "liveFTUnder": 1.47
+    },
+    "779": {
+      "liveFTOver": 2.81,
+      "liveFTUnder": 1.48
+    },
+    "780": {
+      "liveFTOver": 2.78,
+      "liveFTUnder": 1.49
+    },
+    "781": {
+      "liveFTOver": 2.75,
+      "liveFTUnder": 1.5
+    },
+    "782": {
+      "liveFTOver": 2.73,
+      "liveFTUnder": 1.51
+    },
+    "783": {
+      "liveFTOver": 2.72,
+      "liveFTUnder": 1.51
+    },
+    "784": {
+      "liveFTOver": 2.67,
+      "liveFTUnder": 1.53
+    },
+    "785": {
+      "liveFTOver": 2.65,
+      "liveFTUnder": 1.53
+    },
+    "786": {
+      "liveFTOver": 2.65,
+      "liveFTUnder": 1.54
+    },
+    "787": {
+      "liveFTOver": 2.61,
+      "liveFTUnder": 1.55
+    },
+    "788": {
+      "liveFTOver": 2.6,
+      "liveFTUnder": 1.55
+    },
+    "789": {
+      "liveFTOver": 2.57,
+      "liveFTUnder": 1.56
+    },
+    "790": {
+      "liveFTOver": 2.55,
+      "liveFTUnder": 1.57
+    },
+    "791": {
+      "liveFTOver": 2.52,
+      "liveFTUnder": 1.59
+    },
+    "792": {
+      "liveFTOver": 2.49,
+      "liveFTUnder": 1.6
+    },
+    "793": {
+      "liveFTOver": 2.48,
+      "liveFTUnder": 1.6
+    },
+    "794": {
+      "liveFTOver": 2.46,
+      "liveFTUnder": 1.61
+    },
+    "795": {
+      "liveFTOver": 2.43,
+      "liveFTUnder": 1.63
+    },
+    "796": {
+      "liveFTOver": 2.43,
+      "liveFTUnder": 1.63
+    },
+    "797": {
+      "liveFTOver": 2.41,
+      "liveFTUnder": 1.64
+    },
+    "798": {
+      "liveFTOver": 2.39,
+      "liveFTUnder": 1.65
+    },
+    "799": {
+      "liveFTOver": 2.36,
+      "liveFTUnder": 1.66
+    },
+    "800": {
+      "liveFTOver": 2.35,
+      "liveFTUnder": 1.67
+    },
+    "801": {
+      "liveFTOver": 2.33,
+      "liveFTUnder": 1.68
+    },
+    "802": {
+      "liveFTOver": 2.3,
+      "liveFTUnder": 1.69
+    },
+    "803": {
+      "liveFTOver": 2.29,
+      "liveFTUnder": 1.7
+    },
+    "804": {
+      "liveFTOver": 2.27,
+      "liveFTUnder": 1.71
+    },
+    "805": {
+      "liveFTOver": 2.26,
+      "liveFTUnder": 1.72
+    },
+    "806": {
+      "liveFTOver": 2.24,
+      "liveFTUnder": 1.73
+    },
+    "807": {
+      "liveFTOver": 2.22,
+      "liveFTUnder": 1.74
+    },
+    "808": {
+      "liveFTOver": 2.19,
+      "liveFTUnder": 1.76
+    },
+    "809": {
+      "liveFTOver": 2.19,
+      "liveFTUnder": 1.77
+    },
+    "810": {
+      "liveFTOver": 2.17,
+      "liveFTUnder": 1.78
+    },
+    "811": {
+      "liveFTOver": 2.14,
+      "liveFTUnder": 1.8
+    },
+    "812": {
+      "liveFTOver": 2.13,
+      "liveFTUnder": 1.8
+    },
+    "813": {
+      "liveFTOver": 2.12,
+      "liveFTUnder": 1.81
+    },
+    "814": {
+      "liveFTOver": 2.11,
+      "liveFTUnder": 1.82
+    },
+    "815": {
+      "liveFTOver": 2.09,
+      "liveFTUnder": 1.84
+    },
+    "816": {
+      "liveFTOver": 2.07,
+      "liveFTUnder": 1.85
+    },
+    "817": {
+      "liveFTOver": 2.07,
+      "liveFTUnder": 1.86
+    },
+    "818": {
+      "liveFTOver": 2.04,
+      "liveFTUnder": 1.89
+    },
+    "819": {
+      "liveFTOver": 2.02,
+      "liveFTUnder": 1.9
+    },
+    "820": {
+      "liveFTOver": 2.02,
+      "liveFTUnder": 1.9
+    },
+    "821": {
+      "liveFTOver": 2,
+      "liveFTUnder": 1.92
+    },
+    "822": {
+      "liveFTOver": 1.98,
+      "liveFTUnder": 1.94
+    },
+    "823": {
+      "liveFTOver": 1.98,
+      "liveFTUnder": 1.94
+    },
+    "824": {
+      "liveFTOver": 1.96,
+      "liveFTUnder": 1.96
+    },
+    "825": {
+      "liveFTOver": 1.94,
+      "liveFTUnder": 1.98
+    },
+    "826": {
+      "liveFTOver": 1.93,
+      "liveFTUnder": 1.99
+    },
+    "827": {
+      "liveFTOver": 1.93,
+      "liveFTUnder": 1.99
+    },
+    "828": {
+      "liveFTOver": 1.91,
+      "liveFTUnder": 2.01
+    },
+    "829": {
+      "liveFTOver": 1.89,
+      "liveFTUnder": 2.03
+    },
+    "830": {
+      "liveFTOver": 1.88,
+      "liveFTUnder": 2.04
+    },
+    "831": {
+      "liveFTOver": 1.86,
+      "liveFTUnder": 2.06
+    },
+    "832": {
+      "liveFTOver": 1.84,
+      "liveFTUnder": 2.08
+    },
+    "833": {
+      "liveFTOver": 1.84,
+      "liveFTUnder": 2.09
+    },
+    "834": {
+      "liveFTOver": 1.81,
+      "liveFTUnder": 2.12
+    },
+    "835": {
+      "liveFTOver": 1.81,
+      "liveFTUnder": 2.12
+    },
+    "836": {
+      "liveFTOver": 1.81,
+      "liveFTUnder": 2.13
+    },
+    "837": {
+      "liveFTOver": 1.79,
+      "liveFTUnder": 2.15
+    },
+    "838": {
+      "liveFTOver": 1.79,
+      "liveFTUnder": 2.16
+    },
+    "839": {
+      "liveFTOver": 1.76,
+      "liveFTUnder": 2.19
+    },
+    "840": {
+      "liveFTOver": 1.76,
+      "liveFTUnder": 2.19
+    },
+    "841": {
+      "liveFTOver": 1.75,
+      "liveFTUnder": 2.22
+    },
+    "842": {
+      "liveFTOver": 1.73,
+      "liveFTUnder": 2.24
+    },
+    "843": {
+      "liveFTOver": 1.72,
+      "liveFTUnder": 2.26
+    },
+    "844": {
+      "liveFTOver": 1.71,
+      "liveFTUnder": 2.28
+    },
+    "845": {
+      "liveFTOver": 1.71,
+      "liveFTUnder": 2.28
+    },
+    "846": {
+      "liveFTOver": 1.69,
+      "liveFTUnder": 2.3
+    },
+    "847": {
+      "liveFTOver": 1.68,
+      "liveFTUnder": 2.32
+    },
+    "848": {
+      "liveFTOver": 1.67,
+      "liveFTUnder": 2.34
+    },
+    "849": {
+      "liveFTOver": 1.66,
+      "liveFTUnder": 2.36
+    },
+    "850": {
+      "liveFTOver": 1.65,
+      "liveFTUnder": 2.39
+    },
+    "851": {
+      "liveFTOver": 1.64,
+      "liveFTUnder": 2.4
+    },
+    "852": {
+      "liveFTOver": 1.63,
+      "liveFTUnder": 2.42
+    },
+    "853": {
+      "liveFTOver": 1.62,
+      "liveFTUnder": 2.45
+    },
+    "854": {
+      "liveFTOver": 1.62,
+      "liveFTUnder": 2.44
+    },
+    "855": {
+      "liveFTOver": 1.6,
+      "liveFTUnder": 2.49
+    },
+    "856": {
+      "liveFTOver": 1.59,
+      "liveFTUnder": 2.5
+    },
+    "857": {
+      "liveFTOver": 1.59,
+      "liveFTUnder": 2.52
+    },
+    "858": {
+      "liveFTOver": 1.57,
+      "liveFTUnder": 2.55
+    },
+    "859": {
+      "liveFTOver": 1.57,
+      "liveFTUnder": 2.57
+    },
+    "860": {
+      "liveFTOver": 1.56,
+      "liveFTUnder": 2.59
+    },
+    "861": {
+      "liveFTOver": 1.55,
+      "liveFTUnder": 2.61
+    },
+    "862": {
+      "liveFTOver": 1.54,
+      "liveFTUnder": 2.64
+    },
+    "863": {
+      "liveFTOver": 1.54,
+      "liveFTUnder": 2.65
+    },
+    "864": {
+      "liveFTOver": 1.53,
+      "liveFTUnder": 2.68
+    },
+    "865": {
+      "liveFTOver": 1.51,
+      "liveFTUnder": 2.71
+    },
+    "866": {
+      "liveFTOver": 1.51,
+      "liveFTUnder": 2.73
+    },
+    "867": {
+      "liveFTOver": 1.49,
+      "liveFTUnder": 2.77
+    },
+    "868": {
+      "liveFTOver": 1.49,
+      "liveFTUnder": 2.8
+    },
+    "869": {
+      "liveFTOver": 1.48,
+      "liveFTUnder": 2.81
+    },
+    "870": {
+      "liveFTOver": 1.47,
+      "liveFTUnder": 2.84
+    },
+    "871": {
+      "liveFTOver": 1.47,
+      "liveFTUnder": 2.86
+    },
+    "872": {
+      "liveFTOver": 1.46,
+      "liveFTUnder": 2.89
+    },
+    "873": {
+      "liveFTOver": 1.46,
+      "liveFTUnder": 2.9
+    },
+    "874": {
+      "liveFTOver": 1.45,
+      "liveFTUnder": 2.93
+    },
+    "875": {
+      "liveFTOver": 1.44,
+      "liveFTUnder": 2.95
+    },
+    "876": {
+      "liveFTOver": 1.43,
+      "liveFTUnder": 3
+    },
+    "877": {
+      "liveFTOver": 1.43,
+      "liveFTUnder": 3.02
+    },
+    "878": {
+      "liveFTOver": 1.42,
+      "liveFTUnder": 3.06
+    },
+    "879": {
+      "liveFTOver": 1.42,
+      "liveFTUnder": 3.06
+    },
+    "880": {
+      "liveFTOver": 1.41,
+      "liveFTUnder": 3.11
+    },
+    "881": {
+      "liveFTOver": 1.4,
+      "liveFTUnder": 3.15
+    },
+    "882": {
+      "liveFTOver": 1.39,
+      "liveFTUnder": 3.19
+    },
+    "883": {
+      "liveFTOver": 1.39,
+      "liveFTUnder": 3.19
+    },
+    "884": {
+      "liveFTOver": 1.38,
+      "liveFTUnder": 3.24
+    },
+    "885": {
+      "liveFTOver": 1.38,
+      "liveFTUnder": 3.26
+    },
+    "886": {
+      "liveFTOver": 1.37,
+      "liveFTUnder": 3.28
+    },
+    "887": {
+      "liveFTOver": 1.36,
+      "liveFTUnder": 3.33
+    },
+    "888": {
+      "liveFTOver": 1.35,
+      "liveFTUnder": 3.37
+    },
+    "889": {
+      "liveFTOver": 1.35,
+      "liveFTUnder": 3.39
+    },
+    "890": {
+      "liveFTOver": 1.34,
+      "liveFTUnder": 3.43
+    },
+    "891": {
+      "liveFTOver": 1.34,
+      "liveFTUnder": 3.46
+    },
+    "892": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 3.5
+    },
+    "893": {
+      "liveFTOver": 1.33,
+      "liveFTUnder": 3.56
+    },
+    "894": {
+      "liveFTOver": 1.32,
+      "liveFTUnder": 3.59
+    },
+    "895": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 3.64
+    },
+    "896": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 3.67
+    },
+    "897": {
+      "liveFTOver": 1.31,
+      "liveFTUnder": 3.69
+    },
+    "898": {
+      "liveFTOver": 1.3,
+      "liveFTUnder": 3.75
+    },
+    "899": {
+      "liveFTOver": 1.29,
+      "liveFTUnder": 3.78
+    },
+    "900": {
+      "liveFTOver": 1.29,
+      "liveFTUnder": 3.86
+    },
+    "901": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 3.89
+    },
+    "902": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 3.89
+    },
+    "903": {
+      "liveFTOver": 1.28,
+      "liveFTUnder": 3.91
+    },
+    "904": {
+      "liveFTOver": 1.27,
+      "liveFTUnder": 3.96
+    },
+    "905": {
+      "liveFTOver": 1.26,
+      "liveFTUnder": 4.05
+    },
+    "906": {
+      "liveFTOver": 1.26,
+      "liveFTUnder": 4.11
+    },
+    "907": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 4.16
+    },
+    "908": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 4.15
+    },
+    "909": {
+      "liveFTOver": 1.25,
+      "liveFTUnder": 4.2
+    },
+    "910": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 4.27
+    },
+    "911": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 4.33
+    },
+    "912": {
+      "liveFTOver": 1.24,
+      "liveFTUnder": 4.33
+    },
+    "913": {
+      "liveFTOver": 1.23,
+      "liveFTUnder": 4.45
+    },
+    "914": {
+      "liveFTOver": 1.23,
+      "liveFTUnder": 4.45
+    },
+    "915": {
+      "liveFTOver": 1.22,
+      "liveFTUnder": 4.53
+    },
+    "916": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 4.61
+    },
+    "917": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 4.61
+    },
+    "918": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 4.68
+    },
+    "919": {
+      "liveFTOver": 1.21,
+      "liveFTUnder": 4.69
+    },
+    "920": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 4.8
+    },
+    "921": {
+      "liveFTOver": 1.2,
+      "liveFTUnder": 4.82
+    },
+    "922": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 4.89
+    },
+    "923": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 4.98
+    },
+    "924": {
+      "liveFTOver": 1.19,
+      "liveFTUnder": 5.02
+    },
+    "925": {
+      "liveFTOver": 1.18,
+      "liveFTUnder": 5.07
+    },
+    "926": {
+      "liveFTOver": 1.18,
+      "liveFTUnder": 5.11
+    },
+    "927": {
+      "liveFTOver": 1.18,
+      "liveFTUnder": 5.16
+    },
+    "928": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 5.25
+    },
+    "929": {
+      "liveFTOver": 1.17,
+      "liveFTUnder": 5.34
+    },
+    "930": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 5.43
+    },
+    "931": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 5.41
+    },
+    "932": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 5.46
+    },
+    "933": {
+      "liveFTOver": 1.16,
+      "liveFTUnder": 5.55
+    },
+    "934": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 5.67
+    },
+    "935": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 5.75
+    },
+    "936": {
+      "liveFTOver": 1.15,
+      "liveFTUnder": 5.79
+    },
+    "937": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 5.91
+    },
+    "938": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 5.91
+    },
+    "939": {
+      "liveFTOver": 1.14,
+      "liveFTUnder": 5.95
+    },
+    "940": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 6.14
+    },
+    "941": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 6.14
+    },
+    "942": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 6.19
+    },
+    "943": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 6.35
+    },
+    "944": {
+      "liveFTOver": 1.13,
+      "liveFTUnder": 6.35
+    },
+    "945": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 6.4
+    },
+    "946": {
+      "liveFTOver": 1.12,
+      "liveFTUnder": 6.58
+    },
+    "947": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 6.69
+    },
+    "948": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 6.78
+    },
+    "949": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 6.83
+    },
+    "950": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 6.86
+    },
+    "951": {
+      "liveFTOver": 1.11,
+      "liveFTUnder": 6.97
+    },
+    "952": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 7.21
+    },
+    "953": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 7.18
+    },
+    "954": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 7.28
+    },
+    "955": {
+      "liveFTOver": 1.1,
+      "liveFTUnder": 7.29
+    },
+    "956": {
+      "liveFTOver": 1.09,
+      "liveFTUnder": 7.55
+    },
+    "957": {
+      "liveFTOver": 1.09,
+      "liveFTUnder": 7.71
+    },
+    "958": {
+      "liveFTOver": 1.09,
+      "liveFTUnder": 7.81
+    },
+    "959": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 7.89
+    },
+    "960": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 7.9
+    },
+    "961": {
+      "liveFTOver": 1.09,
+      "liveFTUnder": 7.81
+    },
+    "962": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 8.14
+    },
+    "963": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 8.19
+    },
+    "964": {
+      "liveFTOver": 1.07,
+      "liveFTUnder": 8.36
+    },
+    "965": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 8.33
+    },
+    "966": {
+      "liveFTOver": 1.08,
+      "liveFTUnder": 8.34
+    },
+    "967": {
+      "liveFTOver": 1.07,
+      "liveFTUnder": 8.64
+    },
+    "968": {
+      "liveFTOver": 1.07,
+      "liveFTUnder": 8.69
+    },
+    "969": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.09
+    },
+    "970": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.14
+    },
+    "971": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.06
+    },
+    "972": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.01
+    },
+    "973": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.55
+    },
+    "974": {
+      "liveFTOver": 1.06,
+      "liveFTUnder": 9.38
+    },
+    "975": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 9.65
+    },
+    "976": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 9.87
+    },
+    "977": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 10
+    },
+    "978": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 9.72
+    },
+    "979": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 10.07
+    },
+    "980": {
+      "liveFTOver": 1.05,
+      "liveFTUnder": 10.36
+    }
+  },
+  "adjRate": {
+    "blueRed": 2,
+    "overUnder": 1.5
+  }
+},
+{
+  "_id": {
+    "$oid": "61b7de8065785f636f646573"
+  },
+  "type": "exchange_codes",
+  "time": {
+    "$date": "2021-12-14T00:00:00.000Z"
+  },
+  "base": "USD",
+  "configs": {
+    "codes": [
+      "AED",
+      "AFN",
+      "AOA",
+      "ARS",
+      "AUD",
+      "BBD",
+      "BDT",
+      "BHD",
+      "BND",
+      "BOB",
+      "BRL",
+      "BTN",
+      "BWP",
+      "CAD",
+      "CHF",
+      "CLP",
+      "CNY",
+      "COP",
+      "CRC",
+      "CZK",
+      "DKK",
+      "DZD",
+      "EGP",
+      "ETB",
+      "EUR",
+      "GBP",
+      "GEL",
+      "GHS",
+      "GMD",
+      "HKD",
+      "HTG",
+      "IDR",
+      "INR",
+      "JMD",
+      "JPY",
+      "KES",
+      "KHR",
+      "KRW",
+      "KWD",
+      "KZT",
+      "LAK",
+      "LBP",
+      "LKR",
+      "MAD",
+      "MMK",
+      "MNT",
+      "MXN",
+      "MYR",
+      "NAD",
+      "NGN",
+      "NOK",
+      "NPR",
+      "NZD",
+      "OMR",
+      "PEN",
+      "PGK",
+      "PHP",
+      "PKR",
+      "PLN",
+      "PYG",
+      "RON",
+      "RUB",
+      "SAR",
+      "SEK",
+      "SGD",
+      "THB",
+      "TND",
+      "TRY",
+      "TTD",
+      "TWD",
+      "TZS",
+      "USD",
+      "UYU",
+      "VES",
+      "VND",
+      "XAF",
+      "YNG",
+      "ZAR",
+      "ZMW"
+    ]
+  }
+}]
